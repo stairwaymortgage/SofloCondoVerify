@@ -1,0 +1,24 @@
+.page { padding: 34px 0 56px; min-height: 60vh; }
+.crumb { font-size: 13px; color: var(--ink-3); margin-bottom: 18px; }
+
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 316px; gap: 28px; align-items: start; }
+
+.head { font-size: clamp(28px, 3.6vw, 38px); font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; color: var(--ink); }
+.lede { margin-top: 14px; font-size: 16.5px; color: var(--ink-2); line-height: 1.6; max-width: 60ch; }
+
+.side { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 20px; }
+.card { background: var(--panel); border: 1px solid var(--line); padding: 16px; }
+.cardHead { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 11px; }
+.plain { font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+
+.steps { list-style: none; display: flex; flex-direction: column; gap: 12px; counter-reset: step; }
+.steps li { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--ink-2); line-height: 1.5; }
+.stepN { flex: none; width: 20px; height: 20px; background: var(--teal); color: #fff; font-size: 11.5px; font-weight: 800; display: grid; place-items: center; margin-top: 1px; }
+
+.pageFoot { background: var(--mast); color: #a7bab0; padding: 34px 0; font-size: 13px; }
+.pageFoot :global(.wrap) { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .side { position: static; }
+}

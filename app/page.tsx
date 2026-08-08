@@ -1,8 +1,15 @@
 import Masthead from "@/components/Masthead";
 import LookupForm from "@/components/LookupForm";
+import { getTriCountyBuildingCount } from "@/lib/counts";
 import styles from "./page.module.css";
 
-export default function Home() {
+/** Re-check the building count hourly rather than on every request. */
+export const revalidate = 3600;
+
+export default async function Home() {
+  const buildingCount = await getTriCountyBuildingCount();
+  const buildingCountLabel = buildingCount.toLocaleString();
+
   return (
     <>
       <Masthead />
@@ -39,7 +46,7 @@ export default function Home() {
                 </li>
               </ul>
             </div>
-            <LookupForm />
+            <LookupForm buildingCountLabel={buildingCountLabel} />
           </div>
         </div>
       </section>
@@ -47,7 +54,7 @@ export default function Home() {
       {/* STAT BAR */}
       <section className={styles.statbar}>
         <div className={`wrap ${styles.statgrid}`}>
-          <Stat n="17,773" l="Buildings on file" />
+          <Stat n={buildingCountLabel} l="Buildings on file" />
           <Stat n="7×" l="Public sources per building" />
           <Stat n="164" l="Preconstruction projects" />
           <Stat n="639" l="Buildings flagged to review" />

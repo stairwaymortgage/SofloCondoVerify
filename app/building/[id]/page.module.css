@@ -1,0 +1,78 @@
+.page { padding: 34px 0 56px; min-height: 60vh; }
+.crumb { font-size: 13px; color: var(--ink-3); margin-bottom: 18px; }
+
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 316px; gap: 28px; align-items: start; }
+
+/* ---- record ---- */
+.record { background: var(--panel); border: 1px solid var(--line-strong); }
+.recHead { border-bottom: 2px solid var(--ink); padding: 20px 22px; }
+.doc { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.recHead h1 { font-size: clamp(21px, 2.6vw, 27px); font-weight: 800; letter-spacing: -0.015em; margin-top: 6px; line-height: 1.15; }
+.addr { font-size: 13px; color: var(--ink-2); margin-top: 5px; overflow-wrap: anywhere; }
+.rid { font-size: 11.5px; color: var(--ink-3); margin-top: 9px; }
+.rid b { color: var(--ink); }
+.precon { display: inline-block; margin-top: 11px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); background: var(--teal-bg); border: 1px solid var(--teal-l); padding: 3px 9px; }
+
+/* ---- signal table ---- */
+.sig { width: 100%; border-collapse: collapse; }
+.caption { text-align: left; font-size: 11.5px; color: var(--ink-3); padding: 11px 22px 0; caption-side: top; }
+.sig th { background: var(--bg-2); text-align: left; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); padding: 9px 22px; border-bottom: 1px solid var(--line); font-weight: 700; }
+.sig td { padding: 13px 22px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: middle; }
+.sig tbody th { background: transparent; text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--ink); padding: 13px 22px; }
+.snm { font-weight: 700; width: 38%; vertical-align: middle; }
+.srcx { display: block; font-weight: 400; font-size: 11px; color: var(--ink-3); margin-top: 2px; text-transform: none; letter-spacing: 0; }
+.status { display: inline-flex; align-items: baseline; gap: 8px; font-weight: 700; }
+.sq { width: 10px; height: 10px; flex: none; background: currentColor; align-self: center; }
+.asof { font-size: 11.5px; color: var(--ink-3); white-space: nowrap; }
+
+/* status colours — green is approved/go ONLY */
+.s_go { color: var(--go); }
+.s_flag { color: var(--flag); }
+.s_caution { color: var(--caution); }
+.s_none { color: var(--ink-3); }
+
+/* ---- rollup + footnotes ---- */
+.rollup { border-top: 1px solid var(--line); background: #fafbfb; padding: 13px 22px; display: flex; flex-direction: column; gap: 4px; }
+.rollupLabel { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); }
+.rollupVal { font-size: 12px; color: var(--ink-2); overflow-wrap: anywhere; }
+
+.recFoot { border-top: 1px solid var(--line); padding: 15px 22px 17px; display: flex; flex-direction: column; gap: 8px; }
+.recFoot p { font-size: 12.5px; color: var(--ink-3); line-height: 1.55; }
+.recFoot b { color: var(--ink-2); }
+.recFoot p:last-child { font-size: 11px; }
+
+/* ---- sidebar ---- */
+.side { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 20px; }
+
+.cta { background: var(--panel); border: 1px solid var(--line); border-top: 4px solid var(--teal); }
+.ctaHead { background: var(--bg-2); border-bottom: 1px solid var(--line); padding: 12px 16px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
+.ctaBody { padding: 16px; }
+.ctaLede { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
+.ctaBtns { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.btnPrimary, .btnSecondary { display: block; text-align: center; text-decoration: none; font-weight: 700; font-size: 14px; padding: 11px 14px; border: 1.5px solid var(--teal); }
+.btnPrimary { background: var(--teal); color: #fff; }
+.btnPrimary:hover { background: #0c5a63; border-color: #0c5a63; }
+.btnSecondary { background: #fff; color: var(--link); }
+.btnSecondary:hover { background: var(--teal-bg); }
+.ctaFine { margin-top: 11px; font-size: 11.5px; color: var(--ink-3); text-align: center; }
+
+.legend { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
+.legendHead { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 9px; }
+.legend ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.legend li { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--ink-2); }
+.legendSq { width: 10px; height: 10px; flex: none; background: currentColor; }
+
+/* ---- footer ---- */
+.pageFoot { background: var(--mast); color: #a7bab0; padding: 34px 0; font-size: 13px; }
+.pageFoot :global(.wrap) { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .side { position: static; }
+}
+@media (max-width: 560px) {
+  .sig th, .sig td, .sig tbody th { padding-left: 14px; padding-right: 14px; }
+  .caption { padding-left: 14px; padding-right: 14px; }
+  .snm { width: auto; }
+  .asof { white-space: normal; }
+}
