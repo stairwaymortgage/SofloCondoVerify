@@ -1,0 +1,1034 @@
+city,county,cluster,faq_pages,primary_keyword,hub_slug
+Atlantis,PALM BEACH,General,28,Atlantis condos,condos-palm-beach-atlantis
+Atlantis,PALM BEACH,Buying/Market,11,Atlantis condos,condos-palm-beach-atlantis
+Atlantis,PALM BEACH,FHA,8,Atlantis condos fha,condos-palm-beach-atlantis
+Atlantis,PALM BEACH,Structural/SIRS,5,Atlantis condos structural/sirs,condos-palm-beach-atlantis
+Atlantis,PALM BEACH,VA,4,Atlantis condos va,condos-palm-beach-atlantis
+Atlantis,PALM BEACH,Financing,4,Atlantis condos financing,condos-palm-beach-atlantis
+Atlantis,PALM BEACH,Fees/Assessments,4,Atlantis condos fees/assessments,condos-palm-beach-atlantis
+Atlantis,PALM BEACH,Insurance,3,Atlantis condos insurance,condos-palm-beach-atlantis
+Atlantis,PALM BEACH,STR/Rental,3,Atlantis condos str/rental,condos-palm-beach-atlantis
+Atlantis,PALM BEACH,Conventional,1,Atlantis condos conventional,condos-palm-beach-atlantis
+Aventura,MIAMI-DADE,General,28,Aventura condos,condos-miami-dade-aventura
+Aventura,MIAMI-DADE,Buying/Market,11,Aventura condos,condos-miami-dade-aventura
+Aventura,MIAMI-DADE,FHA,8,Aventura condos fha,condos-miami-dade-aventura
+Aventura,MIAMI-DADE,STR/Rental,8,Aventura condos str/rental,condos-miami-dade-aventura
+Aventura,MIAMI-DADE,Structural/SIRS,5,Aventura condos structural/sirs,condos-miami-dade-aventura
+Aventura,MIAMI-DADE,Fees/Assessments,5,Aventura condos fees/assessments,condos-miami-dade-aventura
+Aventura,MIAMI-DADE,VA,4,Aventura condos va,condos-miami-dade-aventura
+Aventura,MIAMI-DADE,Financing,4,Aventura condos financing,condos-miami-dade-aventura
+Aventura,MIAMI-DADE,Insurance,3,Aventura condos insurance,condos-miami-dade-aventura
+Aventura,MIAMI-DADE,Conventional,1,Aventura condos conventional,condos-miami-dade-aventura
+Bal Harbour,MIAMI-DADE,General,28,Bal Harbour condos,condos-miami-dade-bal-harbour
+Bal Harbour,MIAMI-DADE,Buying/Market,11,Bal Harbour condos,condos-miami-dade-bal-harbour
+Bal Harbour,MIAMI-DADE,FHA,8,Bal Harbour condos fha,condos-miami-dade-bal-harbour
+Bal Harbour,MIAMI-DADE,STR/Rental,8,Bal Harbour condos str/rental,condos-miami-dade-bal-harbour
+Bal Harbour,MIAMI-DADE,Structural/SIRS,5,Bal Harbour condos structural/sirs,condos-miami-dade-bal-harbour
+Bal Harbour,MIAMI-DADE,Fees/Assessments,5,Bal Harbour condos fees/assessments,condos-miami-dade-bal-harbour
+Bal Harbour,MIAMI-DADE,VA,4,Bal Harbour condos va,condos-miami-dade-bal-harbour
+Bal Harbour,MIAMI-DADE,Financing,4,Bal Harbour condos financing,condos-miami-dade-bal-harbour
+Bal Harbour,MIAMI-DADE,Insurance,3,Bal Harbour condos insurance,condos-miami-dade-bal-harbour
+Bal Harbour,MIAMI-DADE,Conventional,1,Bal Harbour condos conventional,condos-miami-dade-bal-harbour
+Bay Harbor Islands,MIAMI-DADE,General,28,Bay Harbor Islands condos,condos-miami-dade-bay-harbor-islands
+Bay Harbor Islands,MIAMI-DADE,Buying/Market,11,Bay Harbor Islands condos,condos-miami-dade-bay-harbor-islands
+Bay Harbor Islands,MIAMI-DADE,FHA,8,Bay Harbor Islands condos fha,condos-miami-dade-bay-harbor-islands
+Bay Harbor Islands,MIAMI-DADE,STR/Rental,8,Bay Harbor Islands condos str/rental,condos-miami-dade-bay-harbor-islands
+Bay Harbor Islands,MIAMI-DADE,Structural/SIRS,5,Bay Harbor Islands condos structural/sirs,condos-miami-dade-bay-harbor-islands
+Bay Harbor Islands,MIAMI-DADE,Fees/Assessments,5,Bay Harbor Islands condos fees/assessments,condos-miami-dade-bay-harbor-islands
+Bay Harbor Islands,MIAMI-DADE,VA,4,Bay Harbor Islands condos va,condos-miami-dade-bay-harbor-islands
+Bay Harbor Islands,MIAMI-DADE,Financing,4,Bay Harbor Islands condos financing,condos-miami-dade-bay-harbor-islands
+Bay Harbor Islands,MIAMI-DADE,Insurance,3,Bay Harbor Islands condos insurance,condos-miami-dade-bay-harbor-islands
+Bay Harbor Islands,MIAMI-DADE,Conventional,1,Bay Harbor Islands condos conventional,condos-miami-dade-bay-harbor-islands
+Belle Glade,PALM BEACH,General,28,Belle Glade condos,condos-palm-beach-belle-glade
+Belle Glade,PALM BEACH,Buying/Market,11,Belle Glade condos,condos-palm-beach-belle-glade
+Belle Glade,PALM BEACH,FHA,8,Belle Glade condos fha,condos-palm-beach-belle-glade
+Belle Glade,PALM BEACH,Structural/SIRS,5,Belle Glade condos structural/sirs,condos-palm-beach-belle-glade
+Belle Glade,PALM BEACH,VA,4,Belle Glade condos va,condos-palm-beach-belle-glade
+Belle Glade,PALM BEACH,Financing,4,Belle Glade condos financing,condos-palm-beach-belle-glade
+Belle Glade,PALM BEACH,Fees/Assessments,4,Belle Glade condos fees/assessments,condos-palm-beach-belle-glade
+Belle Glade,PALM BEACH,Insurance,3,Belle Glade condos insurance,condos-palm-beach-belle-glade
+Belle Glade,PALM BEACH,STR/Rental,3,Belle Glade condos str/rental,condos-palm-beach-belle-glade
+Belle Glade,PALM BEACH,Conventional,1,Belle Glade condos conventional,condos-palm-beach-belle-glade
+Biscayne Park,MIAMI-DADE,General,28,Biscayne Park condos,condos-miami-dade-biscayne-park
+Biscayne Park,MIAMI-DADE,Buying/Market,11,Biscayne Park condos,condos-miami-dade-biscayne-park
+Biscayne Park,MIAMI-DADE,FHA,8,Biscayne Park condos fha,condos-miami-dade-biscayne-park
+Biscayne Park,MIAMI-DADE,Structural/SIRS,5,Biscayne Park condos structural/sirs,condos-miami-dade-biscayne-park
+Biscayne Park,MIAMI-DADE,Fees/Assessments,5,Biscayne Park condos fees/assessments,condos-miami-dade-biscayne-park
+Biscayne Park,MIAMI-DADE,VA,4,Biscayne Park condos va,condos-miami-dade-biscayne-park
+Biscayne Park,MIAMI-DADE,Financing,4,Biscayne Park condos financing,condos-miami-dade-biscayne-park
+Biscayne Park,MIAMI-DADE,STR/Rental,4,Biscayne Park condos str/rental,condos-miami-dade-biscayne-park
+Biscayne Park,MIAMI-DADE,Insurance,3,Biscayne Park condos insurance,condos-miami-dade-biscayne-park
+Biscayne Park,MIAMI-DADE,Conventional,1,Biscayne Park condos conventional,condos-miami-dade-biscayne-park
+Boca Raton,PALM BEACH,General,28,Boca Raton condos,condos-palm-beach-boca-raton
+Boca Raton,PALM BEACH,Buying/Market,11,Boca Raton condos,condos-palm-beach-boca-raton
+Boca Raton,PALM BEACH,FHA,8,Boca Raton condos fha,condos-palm-beach-boca-raton
+Boca Raton,PALM BEACH,Structural/SIRS,5,Boca Raton condos structural/sirs,condos-palm-beach-boca-raton
+Boca Raton,PALM BEACH,VA,4,Boca Raton condos va,condos-palm-beach-boca-raton
+Boca Raton,PALM BEACH,Financing,4,Boca Raton condos financing,condos-palm-beach-boca-raton
+Boca Raton,PALM BEACH,Fees/Assessments,4,Boca Raton condos fees/assessments,condos-palm-beach-boca-raton
+Boca Raton,PALM BEACH,Insurance,3,Boca Raton condos insurance,condos-palm-beach-boca-raton
+Boca Raton,PALM BEACH,STR/Rental,3,Boca Raton condos str/rental,condos-palm-beach-boca-raton
+Boca Raton,PALM BEACH,Conventional,1,Boca Raton condos conventional,condos-palm-beach-boca-raton
+Boynton Beach,PALM BEACH,General,28,Boynton Beach condos,condos-palm-beach-boynton-beach
+Boynton Beach,PALM BEACH,Buying/Market,11,Boynton Beach condos,condos-palm-beach-boynton-beach
+Boynton Beach,PALM BEACH,FHA,8,Boynton Beach condos fha,condos-palm-beach-boynton-beach
+Boynton Beach,PALM BEACH,Structural/SIRS,5,Boynton Beach condos structural/sirs,condos-palm-beach-boynton-beach
+Boynton Beach,PALM BEACH,VA,4,Boynton Beach condos va,condos-palm-beach-boynton-beach
+Boynton Beach,PALM BEACH,Financing,4,Boynton Beach condos financing,condos-palm-beach-boynton-beach
+Boynton Beach,PALM BEACH,Fees/Assessments,4,Boynton Beach condos fees/assessments,condos-palm-beach-boynton-beach
+Boynton Beach,PALM BEACH,Insurance,3,Boynton Beach condos insurance,condos-palm-beach-boynton-beach
+Boynton Beach,PALM BEACH,STR/Rental,3,Boynton Beach condos str/rental,condos-palm-beach-boynton-beach
+Boynton Beach,PALM BEACH,Conventional,1,Boynton Beach condos conventional,condos-palm-beach-boynton-beach
+Briny Breezes,PALM BEACH,General,28,Briny Breezes condos,condos-palm-beach-briny-breezes
+Briny Breezes,PALM BEACH,Buying/Market,11,Briny Breezes condos,condos-palm-beach-briny-breezes
+Briny Breezes,PALM BEACH,FHA,8,Briny Breezes condos fha,condos-palm-beach-briny-breezes
+Briny Breezes,PALM BEACH,Structural/SIRS,5,Briny Breezes condos structural/sirs,condos-palm-beach-briny-breezes
+Briny Breezes,PALM BEACH,VA,4,Briny Breezes condos va,condos-palm-beach-briny-breezes
+Briny Breezes,PALM BEACH,Financing,4,Briny Breezes condos financing,condos-palm-beach-briny-breezes
+Briny Breezes,PALM BEACH,Fees/Assessments,4,Briny Breezes condos fees/assessments,condos-palm-beach-briny-breezes
+Briny Breezes,PALM BEACH,Insurance,3,Briny Breezes condos insurance,condos-palm-beach-briny-breezes
+Briny Breezes,PALM BEACH,STR/Rental,3,Briny Breezes condos str/rental,condos-palm-beach-briny-breezes
+Briny Breezes,PALM BEACH,Conventional,1,Briny Breezes condos conventional,condos-palm-beach-briny-breezes
+Cloud Lake,PALM BEACH,General,28,Cloud Lake condos,condos-palm-beach-cloud-lake
+Cloud Lake,PALM BEACH,Buying/Market,11,Cloud Lake condos,condos-palm-beach-cloud-lake
+Cloud Lake,PALM BEACH,FHA,8,Cloud Lake condos fha,condos-palm-beach-cloud-lake
+Cloud Lake,PALM BEACH,Structural/SIRS,5,Cloud Lake condos structural/sirs,condos-palm-beach-cloud-lake
+Cloud Lake,PALM BEACH,VA,4,Cloud Lake condos va,condos-palm-beach-cloud-lake
+Cloud Lake,PALM BEACH,Financing,4,Cloud Lake condos financing,condos-palm-beach-cloud-lake
+Cloud Lake,PALM BEACH,Fees/Assessments,4,Cloud Lake condos fees/assessments,condos-palm-beach-cloud-lake
+Cloud Lake,PALM BEACH,Insurance,3,Cloud Lake condos insurance,condos-palm-beach-cloud-lake
+Cloud Lake,PALM BEACH,STR/Rental,3,Cloud Lake condos str/rental,condos-palm-beach-cloud-lake
+Cloud Lake,PALM BEACH,Conventional,1,Cloud Lake condos conventional,condos-palm-beach-cloud-lake
+Coconut Creek,BROWARD,General,28,Coconut Creek condos,condos-broward-coconut-creek
+Coconut Creek,BROWARD,Buying/Market,11,Coconut Creek condos,condos-broward-coconut-creek
+Coconut Creek,BROWARD,FHA,8,Coconut Creek condos fha,condos-broward-coconut-creek
+Coconut Creek,BROWARD,Structural/SIRS,5,Coconut Creek condos structural/sirs,condos-broward-coconut-creek
+Coconut Creek,BROWARD,VA,4,Coconut Creek condos va,condos-broward-coconut-creek
+Coconut Creek,BROWARD,Financing,4,Coconut Creek condos financing,condos-broward-coconut-creek
+Coconut Creek,BROWARD,Fees/Assessments,4,Coconut Creek condos fees/assessments,condos-broward-coconut-creek
+Coconut Creek,BROWARD,Insurance,3,Coconut Creek condos insurance,condos-broward-coconut-creek
+Coconut Creek,BROWARD,STR/Rental,3,Coconut Creek condos str/rental,condos-broward-coconut-creek
+Coconut Creek,BROWARD,Conventional,1,Coconut Creek condos conventional,condos-broward-coconut-creek
+Cooper City,BROWARD,General,28,Cooper City condos,condos-broward-cooper-city
+Cooper City,BROWARD,Buying/Market,11,Cooper City condos,condos-broward-cooper-city
+Cooper City,BROWARD,FHA,8,Cooper City condos fha,condos-broward-cooper-city
+Cooper City,BROWARD,Structural/SIRS,5,Cooper City condos structural/sirs,condos-broward-cooper-city
+Cooper City,BROWARD,VA,4,Cooper City condos va,condos-broward-cooper-city
+Cooper City,BROWARD,Financing,4,Cooper City condos financing,condos-broward-cooper-city
+Cooper City,BROWARD,Fees/Assessments,4,Cooper City condos fees/assessments,condos-broward-cooper-city
+Cooper City,BROWARD,Insurance,3,Cooper City condos insurance,condos-broward-cooper-city
+Cooper City,BROWARD,STR/Rental,3,Cooper City condos str/rental,condos-broward-cooper-city
+Cooper City,BROWARD,Conventional,1,Cooper City condos conventional,condos-broward-cooper-city
+Coral Gables,MIAMI-DADE,General,28,Coral Gables condos,condos-miami-dade-coral-gables
+Coral Gables,MIAMI-DADE,Buying/Market,11,Coral Gables condos,condos-miami-dade-coral-gables
+Coral Gables,MIAMI-DADE,FHA,8,Coral Gables condos fha,condos-miami-dade-coral-gables
+Coral Gables,MIAMI-DADE,STR/Rental,8,Coral Gables condos str/rental,condos-miami-dade-coral-gables
+Coral Gables,MIAMI-DADE,Structural/SIRS,5,Coral Gables condos structural/sirs,condos-miami-dade-coral-gables
+Coral Gables,MIAMI-DADE,Fees/Assessments,5,Coral Gables condos fees/assessments,condos-miami-dade-coral-gables
+Coral Gables,MIAMI-DADE,VA,4,Coral Gables condos va,condos-miami-dade-coral-gables
+Coral Gables,MIAMI-DADE,Financing,4,Coral Gables condos financing,condos-miami-dade-coral-gables
+Coral Gables,MIAMI-DADE,Insurance,3,Coral Gables condos insurance,condos-miami-dade-coral-gables
+Coral Gables,MIAMI-DADE,Conventional,1,Coral Gables condos conventional,condos-miami-dade-coral-gables
+Coral Springs,BROWARD,General,28,Coral Springs condos,condos-broward-coral-springs
+Coral Springs,BROWARD,Buying/Market,11,Coral Springs condos,condos-broward-coral-springs
+Coral Springs,BROWARD,FHA,8,Coral Springs condos fha,condos-broward-coral-springs
+Coral Springs,BROWARD,Structural/SIRS,5,Coral Springs condos structural/sirs,condos-broward-coral-springs
+Coral Springs,BROWARD,VA,4,Coral Springs condos va,condos-broward-coral-springs
+Coral Springs,BROWARD,Financing,4,Coral Springs condos financing,condos-broward-coral-springs
+Coral Springs,BROWARD,Fees/Assessments,4,Coral Springs condos fees/assessments,condos-broward-coral-springs
+Coral Springs,BROWARD,Insurance,3,Coral Springs condos insurance,condos-broward-coral-springs
+Coral Springs,BROWARD,STR/Rental,3,Coral Springs condos str/rental,condos-broward-coral-springs
+Coral Springs,BROWARD,Conventional,1,Coral Springs condos conventional,condos-broward-coral-springs
+Cutler Bay,MIAMI-DADE,General,28,Cutler Bay condos,condos-miami-dade-cutler-bay
+Cutler Bay,MIAMI-DADE,Buying/Market,11,Cutler Bay condos,condos-miami-dade-cutler-bay
+Cutler Bay,MIAMI-DADE,FHA,8,Cutler Bay condos fha,condos-miami-dade-cutler-bay
+Cutler Bay,MIAMI-DADE,STR/Rental,8,Cutler Bay condos str/rental,condos-miami-dade-cutler-bay
+Cutler Bay,MIAMI-DADE,Structural/SIRS,5,Cutler Bay condos structural/sirs,condos-miami-dade-cutler-bay
+Cutler Bay,MIAMI-DADE,Fees/Assessments,5,Cutler Bay condos fees/assessments,condos-miami-dade-cutler-bay
+Cutler Bay,MIAMI-DADE,VA,4,Cutler Bay condos va,condos-miami-dade-cutler-bay
+Cutler Bay,MIAMI-DADE,Financing,4,Cutler Bay condos financing,condos-miami-dade-cutler-bay
+Cutler Bay,MIAMI-DADE,Insurance,3,Cutler Bay condos insurance,condos-miami-dade-cutler-bay
+Cutler Bay,MIAMI-DADE,Conventional,1,Cutler Bay condos conventional,condos-miami-dade-cutler-bay
+Dania Beach,BROWARD,General,28,Dania Beach condos,condos-broward-dania-beach
+Dania Beach,BROWARD,Buying/Market,11,Dania Beach condos,condos-broward-dania-beach
+Dania Beach,BROWARD,FHA,8,Dania Beach condos fha,condos-broward-dania-beach
+Dania Beach,BROWARD,Structural/SIRS,5,Dania Beach condos structural/sirs,condos-broward-dania-beach
+Dania Beach,BROWARD,VA,4,Dania Beach condos va,condos-broward-dania-beach
+Dania Beach,BROWARD,Financing,4,Dania Beach condos financing,condos-broward-dania-beach
+Dania Beach,BROWARD,Fees/Assessments,4,Dania Beach condos fees/assessments,condos-broward-dania-beach
+Dania Beach,BROWARD,Insurance,3,Dania Beach condos insurance,condos-broward-dania-beach
+Dania Beach,BROWARD,STR/Rental,3,Dania Beach condos str/rental,condos-broward-dania-beach
+Dania Beach,BROWARD,Conventional,1,Dania Beach condos conventional,condos-broward-dania-beach
+Davie,BROWARD,General,28,Davie condos,condos-broward-davie
+Davie,BROWARD,Buying/Market,11,Davie condos,condos-broward-davie
+Davie,BROWARD,FHA,8,Davie condos fha,condos-broward-davie
+Davie,BROWARD,Structural/SIRS,5,Davie condos structural/sirs,condos-broward-davie
+Davie,BROWARD,VA,4,Davie condos va,condos-broward-davie
+Davie,BROWARD,Financing,4,Davie condos financing,condos-broward-davie
+Davie,BROWARD,Fees/Assessments,4,Davie condos fees/assessments,condos-broward-davie
+Davie,BROWARD,Insurance,3,Davie condos insurance,condos-broward-davie
+Davie,BROWARD,STR/Rental,3,Davie condos str/rental,condos-broward-davie
+Davie,BROWARD,Conventional,1,Davie condos conventional,condos-broward-davie
+Deerfield Beach,BROWARD,General,28,Deerfield Beach condos,condos-broward-deerfield-beach
+Deerfield Beach,BROWARD,Buying/Market,11,Deerfield Beach condos,condos-broward-deerfield-beach
+Deerfield Beach,BROWARD,FHA,8,Deerfield Beach condos fha,condos-broward-deerfield-beach
+Deerfield Beach,BROWARD,Structural/SIRS,5,Deerfield Beach condos structural/sirs,condos-broward-deerfield-beach
+Deerfield Beach,BROWARD,VA,4,Deerfield Beach condos va,condos-broward-deerfield-beach
+Deerfield Beach,BROWARD,Financing,4,Deerfield Beach condos financing,condos-broward-deerfield-beach
+Deerfield Beach,BROWARD,Fees/Assessments,4,Deerfield Beach condos fees/assessments,condos-broward-deerfield-beach
+Deerfield Beach,BROWARD,Insurance,3,Deerfield Beach condos insurance,condos-broward-deerfield-beach
+Deerfield Beach,BROWARD,STR/Rental,3,Deerfield Beach condos str/rental,condos-broward-deerfield-beach
+Deerfield Beach,BROWARD,Conventional,1,Deerfield Beach condos conventional,condos-broward-deerfield-beach
+Delray Beach,PALM BEACH,General,28,Delray Beach condos,condos-palm-beach-delray-beach
+Delray Beach,PALM BEACH,Buying/Market,11,Delray Beach condos,condos-palm-beach-delray-beach
+Delray Beach,PALM BEACH,FHA,8,Delray Beach condos fha,condos-palm-beach-delray-beach
+Delray Beach,PALM BEACH,Structural/SIRS,5,Delray Beach condos structural/sirs,condos-palm-beach-delray-beach
+Delray Beach,PALM BEACH,VA,4,Delray Beach condos va,condos-palm-beach-delray-beach
+Delray Beach,PALM BEACH,Financing,4,Delray Beach condos financing,condos-palm-beach-delray-beach
+Delray Beach,PALM BEACH,Fees/Assessments,4,Delray Beach condos fees/assessments,condos-palm-beach-delray-beach
+Delray Beach,PALM BEACH,Insurance,3,Delray Beach condos insurance,condos-palm-beach-delray-beach
+Delray Beach,PALM BEACH,STR/Rental,3,Delray Beach condos str/rental,condos-palm-beach-delray-beach
+Delray Beach,PALM BEACH,Conventional,1,Delray Beach condos conventional,condos-palm-beach-delray-beach
+Doral,MIAMI-DADE,General,28,Doral condos,condos-miami-dade-doral
+Doral,MIAMI-DADE,Buying/Market,11,Doral condos,condos-miami-dade-doral
+Doral,MIAMI-DADE,FHA,8,Doral condos fha,condos-miami-dade-doral
+Doral,MIAMI-DADE,Structural/SIRS,5,Doral condos structural/sirs,condos-miami-dade-doral
+Doral,MIAMI-DADE,Fees/Assessments,5,Doral condos fees/assessments,condos-miami-dade-doral
+Doral,MIAMI-DADE,VA,4,Doral condos va,condos-miami-dade-doral
+Doral,MIAMI-DADE,Financing,4,Doral condos financing,condos-miami-dade-doral
+Doral,MIAMI-DADE,STR/Rental,4,Doral condos str/rental,condos-miami-dade-doral
+Doral,MIAMI-DADE,Insurance,3,Doral condos insurance,condos-miami-dade-doral
+Doral,MIAMI-DADE,Conventional,1,Doral condos conventional,condos-miami-dade-doral
+El Portal,MIAMI-DADE,General,28,El Portal condos,condos-miami-dade-el-portal
+El Portal,MIAMI-DADE,Buying/Market,11,El Portal condos,condos-miami-dade-el-portal
+El Portal,MIAMI-DADE,FHA,8,El Portal condos fha,condos-miami-dade-el-portal
+El Portal,MIAMI-DADE,Structural/SIRS,5,El Portal condos structural/sirs,condos-miami-dade-el-portal
+El Portal,MIAMI-DADE,Fees/Assessments,5,El Portal condos fees/assessments,condos-miami-dade-el-portal
+El Portal,MIAMI-DADE,VA,4,El Portal condos va,condos-miami-dade-el-portal
+El Portal,MIAMI-DADE,Financing,4,El Portal condos financing,condos-miami-dade-el-portal
+El Portal,MIAMI-DADE,STR/Rental,4,El Portal condos str/rental,condos-miami-dade-el-portal
+El Portal,MIAMI-DADE,Insurance,3,El Portal condos insurance,condos-miami-dade-el-portal
+El Portal,MIAMI-DADE,Conventional,1,El Portal condos conventional,condos-miami-dade-el-portal
+Florida City,MIAMI-DADE,General,28,Florida City condos,condos-miami-dade-florida-city
+Florida City,MIAMI-DADE,Buying/Market,11,Florida City condos,condos-miami-dade-florida-city
+Florida City,MIAMI-DADE,FHA,8,Florida City condos fha,condos-miami-dade-florida-city
+Florida City,MIAMI-DADE,Structural/SIRS,5,Florida City condos structural/sirs,condos-miami-dade-florida-city
+Florida City,MIAMI-DADE,Fees/Assessments,5,Florida City condos fees/assessments,condos-miami-dade-florida-city
+Florida City,MIAMI-DADE,VA,4,Florida City condos va,condos-miami-dade-florida-city
+Florida City,MIAMI-DADE,Financing,4,Florida City condos financing,condos-miami-dade-florida-city
+Florida City,MIAMI-DADE,STR/Rental,4,Florida City condos str/rental,condos-miami-dade-florida-city
+Florida City,MIAMI-DADE,Insurance,3,Florida City condos insurance,condos-miami-dade-florida-city
+Florida City,MIAMI-DADE,Conventional,1,Florida City condos conventional,condos-miami-dade-florida-city
+Fort Lauderdale,BROWARD,General,28,Fort Lauderdale condos,condos-broward-fort-lauderdale
+Fort Lauderdale,BROWARD,Buying/Market,11,Fort Lauderdale condos,condos-broward-fort-lauderdale
+Fort Lauderdale,BROWARD,FHA,8,Fort Lauderdale condos fha,condos-broward-fort-lauderdale
+Fort Lauderdale,BROWARD,STR/Rental,7,Fort Lauderdale condos str/rental,condos-broward-fort-lauderdale
+Fort Lauderdale,BROWARD,Structural/SIRS,5,Fort Lauderdale condos structural/sirs,condos-broward-fort-lauderdale
+Fort Lauderdale,BROWARD,VA,4,Fort Lauderdale condos va,condos-broward-fort-lauderdale
+Fort Lauderdale,BROWARD,Financing,4,Fort Lauderdale condos financing,condos-broward-fort-lauderdale
+Fort Lauderdale,BROWARD,Fees/Assessments,4,Fort Lauderdale condos fees/assessments,condos-broward-fort-lauderdale
+Fort Lauderdale,BROWARD,Insurance,3,Fort Lauderdale condos insurance,condos-broward-fort-lauderdale
+Fort Lauderdale,BROWARD,Conventional,1,Fort Lauderdale condos conventional,condos-broward-fort-lauderdale
+Glen Ridge,PALM BEACH,General,28,Glen Ridge condos,condos-palm-beach-glen-ridge
+Glen Ridge,PALM BEACH,Buying/Market,11,Glen Ridge condos,condos-palm-beach-glen-ridge
+Glen Ridge,PALM BEACH,FHA,8,Glen Ridge condos fha,condos-palm-beach-glen-ridge
+Glen Ridge,PALM BEACH,Structural/SIRS,5,Glen Ridge condos structural/sirs,condos-palm-beach-glen-ridge
+Glen Ridge,PALM BEACH,VA,4,Glen Ridge condos va,condos-palm-beach-glen-ridge
+Glen Ridge,PALM BEACH,Financing,4,Glen Ridge condos financing,condos-palm-beach-glen-ridge
+Glen Ridge,PALM BEACH,Fees/Assessments,4,Glen Ridge condos fees/assessments,condos-palm-beach-glen-ridge
+Glen Ridge,PALM BEACH,Insurance,3,Glen Ridge condos insurance,condos-palm-beach-glen-ridge
+Glen Ridge,PALM BEACH,STR/Rental,3,Glen Ridge condos str/rental,condos-palm-beach-glen-ridge
+Glen Ridge,PALM BEACH,Conventional,1,Glen Ridge condos conventional,condos-palm-beach-glen-ridge
+Golden Beach,MIAMI-DADE,General,28,Golden Beach condos,condos-miami-dade-golden-beach
+Golden Beach,MIAMI-DADE,Buying/Market,11,Golden Beach condos,condos-miami-dade-golden-beach
+Golden Beach,MIAMI-DADE,FHA,8,Golden Beach condos fha,condos-miami-dade-golden-beach
+Golden Beach,MIAMI-DADE,Structural/SIRS,5,Golden Beach condos structural/sirs,condos-miami-dade-golden-beach
+Golden Beach,MIAMI-DADE,Fees/Assessments,5,Golden Beach condos fees/assessments,condos-miami-dade-golden-beach
+Golden Beach,MIAMI-DADE,VA,4,Golden Beach condos va,condos-miami-dade-golden-beach
+Golden Beach,MIAMI-DADE,Financing,4,Golden Beach condos financing,condos-miami-dade-golden-beach
+Golden Beach,MIAMI-DADE,STR/Rental,4,Golden Beach condos str/rental,condos-miami-dade-golden-beach
+Golden Beach,MIAMI-DADE,Insurance,3,Golden Beach condos insurance,condos-miami-dade-golden-beach
+Golden Beach,MIAMI-DADE,Conventional,1,Golden Beach condos conventional,condos-miami-dade-golden-beach
+Golf,PALM BEACH,General,28,Golf condos,condos-palm-beach-golf
+Golf,PALM BEACH,Buying/Market,11,Golf condos,condos-palm-beach-golf
+Golf,PALM BEACH,FHA,8,Golf condos fha,condos-palm-beach-golf
+Golf,PALM BEACH,Structural/SIRS,5,Golf condos structural/sirs,condos-palm-beach-golf
+Golf,PALM BEACH,VA,4,Golf condos va,condos-palm-beach-golf
+Golf,PALM BEACH,Financing,4,Golf condos financing,condos-palm-beach-golf
+Golf,PALM BEACH,Fees/Assessments,4,Golf condos fees/assessments,condos-palm-beach-golf
+Golf,PALM BEACH,Insurance,3,Golf condos insurance,condos-palm-beach-golf
+Golf,PALM BEACH,STR/Rental,3,Golf condos str/rental,condos-palm-beach-golf
+Golf,PALM BEACH,Conventional,1,Golf condos conventional,condos-palm-beach-golf
+Greenacres,PALM BEACH,General,28,Greenacres condos,condos-palm-beach-greenacres
+Greenacres,PALM BEACH,Buying/Market,11,Greenacres condos,condos-palm-beach-greenacres
+Greenacres,PALM BEACH,FHA,8,Greenacres condos fha,condos-palm-beach-greenacres
+Greenacres,PALM BEACH,Structural/SIRS,5,Greenacres condos structural/sirs,condos-palm-beach-greenacres
+Greenacres,PALM BEACH,VA,4,Greenacres condos va,condos-palm-beach-greenacres
+Greenacres,PALM BEACH,Financing,4,Greenacres condos financing,condos-palm-beach-greenacres
+Greenacres,PALM BEACH,Fees/Assessments,4,Greenacres condos fees/assessments,condos-palm-beach-greenacres
+Greenacres,PALM BEACH,Insurance,3,Greenacres condos insurance,condos-palm-beach-greenacres
+Greenacres,PALM BEACH,STR/Rental,3,Greenacres condos str/rental,condos-palm-beach-greenacres
+Greenacres,PALM BEACH,Conventional,1,Greenacres condos conventional,condos-palm-beach-greenacres
+Gulf Stream,PALM BEACH,STR/Rental,58,Gulf Stream condos str/rental,condos-palm-beach-gulf-stream
+Gulf Stream,PALM BEACH,FHA,8,Gulf Stream condos fha,condos-palm-beach-gulf-stream
+Gulf Stream,PALM BEACH,VA,4,Gulf Stream condos va,condos-palm-beach-gulf-stream
+Gulf Stream,PALM BEACH,Conventional,1,Gulf Stream condos conventional,condos-palm-beach-gulf-stream
+Hallandale Beach,BROWARD,General,28,Hallandale Beach condos,condos-broward-hallandale-beach
+Hallandale Beach,BROWARD,Buying/Market,11,Hallandale Beach condos,condos-broward-hallandale-beach
+Hallandale Beach,BROWARD,FHA,8,Hallandale Beach condos fha,condos-broward-hallandale-beach
+Hallandale Beach,BROWARD,STR/Rental,7,Hallandale Beach condos str/rental,condos-broward-hallandale-beach
+Hallandale Beach,BROWARD,Structural/SIRS,5,Hallandale Beach condos structural/sirs,condos-broward-hallandale-beach
+Hallandale Beach,BROWARD,VA,4,Hallandale Beach condos va,condos-broward-hallandale-beach
+Hallandale Beach,BROWARD,Financing,4,Hallandale Beach condos financing,condos-broward-hallandale-beach
+Hallandale Beach,BROWARD,Fees/Assessments,4,Hallandale Beach condos fees/assessments,condos-broward-hallandale-beach
+Hallandale Beach,BROWARD,Insurance,3,Hallandale Beach condos insurance,condos-broward-hallandale-beach
+Hallandale Beach,BROWARD,Conventional,1,Hallandale Beach condos conventional,condos-broward-hallandale-beach
+Haverhill,PALM BEACH,General,28,Haverhill condos,condos-palm-beach-haverhill
+Haverhill,PALM BEACH,Buying/Market,11,Haverhill condos,condos-palm-beach-haverhill
+Haverhill,PALM BEACH,FHA,8,Haverhill condos fha,condos-palm-beach-haverhill
+Haverhill,PALM BEACH,Structural/SIRS,5,Haverhill condos structural/sirs,condos-palm-beach-haverhill
+Haverhill,PALM BEACH,VA,4,Haverhill condos va,condos-palm-beach-haverhill
+Haverhill,PALM BEACH,Financing,4,Haverhill condos financing,condos-palm-beach-haverhill
+Haverhill,PALM BEACH,Fees/Assessments,4,Haverhill condos fees/assessments,condos-palm-beach-haverhill
+Haverhill,PALM BEACH,Insurance,3,Haverhill condos insurance,condos-palm-beach-haverhill
+Haverhill,PALM BEACH,STR/Rental,3,Haverhill condos str/rental,condos-palm-beach-haverhill
+Haverhill,PALM BEACH,Conventional,1,Haverhill condos conventional,condos-palm-beach-haverhill
+Hialeah,MIAMI-DADE,General,28,Hialeah condos,condos-miami-dade-hialeah
+Hialeah,MIAMI-DADE,Buying/Market,11,Hialeah condos,condos-miami-dade-hialeah
+Hialeah,MIAMI-DADE,FHA,8,Hialeah condos fha,condos-miami-dade-hialeah
+Hialeah,MIAMI-DADE,STR/Rental,8,Hialeah condos str/rental,condos-miami-dade-hialeah
+Hialeah,MIAMI-DADE,Structural/SIRS,5,Hialeah condos structural/sirs,condos-miami-dade-hialeah
+Hialeah,MIAMI-DADE,Fees/Assessments,5,Hialeah condos fees/assessments,condos-miami-dade-hialeah
+Hialeah,MIAMI-DADE,VA,4,Hialeah condos va,condos-miami-dade-hialeah
+Hialeah,MIAMI-DADE,Financing,4,Hialeah condos financing,condos-miami-dade-hialeah
+Hialeah,MIAMI-DADE,Insurance,3,Hialeah condos insurance,condos-miami-dade-hialeah
+Hialeah,MIAMI-DADE,Conventional,1,Hialeah condos conventional,condos-miami-dade-hialeah
+Hialeah Gardens,MIAMI-DADE,General,28,Hialeah Gardens condos,condos-miami-dade-hialeah-gardens
+Hialeah Gardens,MIAMI-DADE,Buying/Market,11,Hialeah Gardens condos,condos-miami-dade-hialeah-gardens
+Hialeah Gardens,MIAMI-DADE,FHA,8,Hialeah Gardens condos fha,condos-miami-dade-hialeah-gardens
+Hialeah Gardens,MIAMI-DADE,Structural/SIRS,5,Hialeah Gardens condos structural/sirs,condos-miami-dade-hialeah-gardens
+Hialeah Gardens,MIAMI-DADE,Fees/Assessments,5,Hialeah Gardens condos fees/assessments,condos-miami-dade-hialeah-gardens
+Hialeah Gardens,MIAMI-DADE,VA,4,Hialeah Gardens condos va,condos-miami-dade-hialeah-gardens
+Hialeah Gardens,MIAMI-DADE,Financing,4,Hialeah Gardens condos financing,condos-miami-dade-hialeah-gardens
+Hialeah Gardens,MIAMI-DADE,STR/Rental,4,Hialeah Gardens condos str/rental,condos-miami-dade-hialeah-gardens
+Hialeah Gardens,MIAMI-DADE,Insurance,3,Hialeah Gardens condos insurance,condos-miami-dade-hialeah-gardens
+Hialeah Gardens,MIAMI-DADE,Conventional,1,Hialeah Gardens condos conventional,condos-miami-dade-hialeah-gardens
+Highland Beach,PALM BEACH,General,28,Highland Beach condos,condos-palm-beach-highland-beach
+Highland Beach,PALM BEACH,Buying/Market,11,Highland Beach condos,condos-palm-beach-highland-beach
+Highland Beach,PALM BEACH,FHA,8,Highland Beach condos fha,condos-palm-beach-highland-beach
+Highland Beach,PALM BEACH,Structural/SIRS,5,Highland Beach condos structural/sirs,condos-palm-beach-highland-beach
+Highland Beach,PALM BEACH,VA,4,Highland Beach condos va,condos-palm-beach-highland-beach
+Highland Beach,PALM BEACH,Financing,4,Highland Beach condos financing,condos-palm-beach-highland-beach
+Highland Beach,PALM BEACH,Fees/Assessments,4,Highland Beach condos fees/assessments,condos-palm-beach-highland-beach
+Highland Beach,PALM BEACH,Insurance,3,Highland Beach condos insurance,condos-palm-beach-highland-beach
+Highland Beach,PALM BEACH,STR/Rental,3,Highland Beach condos str/rental,condos-palm-beach-highland-beach
+Highland Beach,PALM BEACH,Conventional,1,Highland Beach condos conventional,condos-palm-beach-highland-beach
+Hillsboro Beach,BROWARD,General,28,Hillsboro Beach condos,condos-broward-hillsboro-beach
+Hillsboro Beach,BROWARD,Buying/Market,11,Hillsboro Beach condos,condos-broward-hillsboro-beach
+Hillsboro Beach,BROWARD,FHA,8,Hillsboro Beach condos fha,condos-broward-hillsboro-beach
+Hillsboro Beach,BROWARD,STR/Rental,7,Hillsboro Beach condos str/rental,condos-broward-hillsboro-beach
+Hillsboro Beach,BROWARD,Structural/SIRS,5,Hillsboro Beach condos structural/sirs,condos-broward-hillsboro-beach
+Hillsboro Beach,BROWARD,VA,4,Hillsboro Beach condos va,condos-broward-hillsboro-beach
+Hillsboro Beach,BROWARD,Financing,4,Hillsboro Beach condos financing,condos-broward-hillsboro-beach
+Hillsboro Beach,BROWARD,Fees/Assessments,4,Hillsboro Beach condos fees/assessments,condos-broward-hillsboro-beach
+Hillsboro Beach,BROWARD,Insurance,3,Hillsboro Beach condos insurance,condos-broward-hillsboro-beach
+Hillsboro Beach,BROWARD,Conventional,1,Hillsboro Beach condos conventional,condos-broward-hillsboro-beach
+Hollywood,BROWARD,General,28,Hollywood condos,condos-broward-hollywood
+Hollywood,BROWARD,Buying/Market,11,Hollywood condos,condos-broward-hollywood
+Hollywood,BROWARD,FHA,8,Hollywood condos fha,condos-broward-hollywood
+Hollywood,BROWARD,STR/Rental,7,Hollywood condos str/rental,condos-broward-hollywood
+Hollywood,BROWARD,Structural/SIRS,5,Hollywood condos structural/sirs,condos-broward-hollywood
+Hollywood,BROWARD,VA,4,Hollywood condos va,condos-broward-hollywood
+Hollywood,BROWARD,Financing,4,Hollywood condos financing,condos-broward-hollywood
+Hollywood,BROWARD,Fees/Assessments,4,Hollywood condos fees/assessments,condos-broward-hollywood
+Hollywood,BROWARD,Insurance,3,Hollywood condos insurance,condos-broward-hollywood
+Hollywood,BROWARD,Conventional,1,Hollywood condos conventional,condos-broward-hollywood
+Homestead,MIAMI-DADE,General,28,Homestead condos,condos-miami-dade-homestead
+Homestead,MIAMI-DADE,Buying/Market,11,Homestead condos,condos-miami-dade-homestead
+Homestead,MIAMI-DADE,FHA,8,Homestead condos fha,condos-miami-dade-homestead
+Homestead,MIAMI-DADE,Structural/SIRS,5,Homestead condos structural/sirs,condos-miami-dade-homestead
+Homestead,MIAMI-DADE,Fees/Assessments,5,Homestead condos fees/assessments,condos-miami-dade-homestead
+Homestead,MIAMI-DADE,VA,4,Homestead condos va,condos-miami-dade-homestead
+Homestead,MIAMI-DADE,Financing,4,Homestead condos financing,condos-miami-dade-homestead
+Homestead,MIAMI-DADE,STR/Rental,4,Homestead condos str/rental,condos-miami-dade-homestead
+Homestead,MIAMI-DADE,Insurance,3,Homestead condos insurance,condos-miami-dade-homestead
+Homestead,MIAMI-DADE,Conventional,1,Homestead condos conventional,condos-miami-dade-homestead
+Hypoluxo,PALM BEACH,General,28,Hypoluxo condos,condos-palm-beach-hypoluxo
+Hypoluxo,PALM BEACH,Buying/Market,11,Hypoluxo condos,condos-palm-beach-hypoluxo
+Hypoluxo,PALM BEACH,FHA,8,Hypoluxo condos fha,condos-palm-beach-hypoluxo
+Hypoluxo,PALM BEACH,Structural/SIRS,5,Hypoluxo condos structural/sirs,condos-palm-beach-hypoluxo
+Hypoluxo,PALM BEACH,VA,4,Hypoluxo condos va,condos-palm-beach-hypoluxo
+Hypoluxo,PALM BEACH,Financing,4,Hypoluxo condos financing,condos-palm-beach-hypoluxo
+Hypoluxo,PALM BEACH,Fees/Assessments,4,Hypoluxo condos fees/assessments,condos-palm-beach-hypoluxo
+Hypoluxo,PALM BEACH,Insurance,3,Hypoluxo condos insurance,condos-palm-beach-hypoluxo
+Hypoluxo,PALM BEACH,STR/Rental,3,Hypoluxo condos str/rental,condos-palm-beach-hypoluxo
+Hypoluxo,PALM BEACH,Conventional,1,Hypoluxo condos conventional,condos-palm-beach-hypoluxo
+Indian Creek,MIAMI-DADE,General,28,Indian Creek condos,condos-miami-dade-indian-creek
+Indian Creek,MIAMI-DADE,Buying/Market,11,Indian Creek condos,condos-miami-dade-indian-creek
+Indian Creek,MIAMI-DADE,FHA,8,Indian Creek condos fha,condos-miami-dade-indian-creek
+Indian Creek,MIAMI-DADE,Structural/SIRS,5,Indian Creek condos structural/sirs,condos-miami-dade-indian-creek
+Indian Creek,MIAMI-DADE,Fees/Assessments,5,Indian Creek condos fees/assessments,condos-miami-dade-indian-creek
+Indian Creek,MIAMI-DADE,VA,4,Indian Creek condos va,condos-miami-dade-indian-creek
+Indian Creek,MIAMI-DADE,Financing,4,Indian Creek condos financing,condos-miami-dade-indian-creek
+Indian Creek,MIAMI-DADE,STR/Rental,4,Indian Creek condos str/rental,condos-miami-dade-indian-creek
+Indian Creek,MIAMI-DADE,Insurance,3,Indian Creek condos insurance,condos-miami-dade-indian-creek
+Indian Creek,MIAMI-DADE,Conventional,1,Indian Creek condos conventional,condos-miami-dade-indian-creek
+Juno Beach,PALM BEACH,General,28,Juno Beach condos,condos-palm-beach-juno-beach
+Juno Beach,PALM BEACH,Buying/Market,11,Juno Beach condos,condos-palm-beach-juno-beach
+Juno Beach,PALM BEACH,FHA,8,Juno Beach condos fha,condos-palm-beach-juno-beach
+Juno Beach,PALM BEACH,Structural/SIRS,5,Juno Beach condos structural/sirs,condos-palm-beach-juno-beach
+Juno Beach,PALM BEACH,VA,4,Juno Beach condos va,condos-palm-beach-juno-beach
+Juno Beach,PALM BEACH,Financing,4,Juno Beach condos financing,condos-palm-beach-juno-beach
+Juno Beach,PALM BEACH,Fees/Assessments,4,Juno Beach condos fees/assessments,condos-palm-beach-juno-beach
+Juno Beach,PALM BEACH,Insurance,3,Juno Beach condos insurance,condos-palm-beach-juno-beach
+Juno Beach,PALM BEACH,STR/Rental,3,Juno Beach condos str/rental,condos-palm-beach-juno-beach
+Juno Beach,PALM BEACH,Conventional,1,Juno Beach condos conventional,condos-palm-beach-juno-beach
+Jupiter,PALM BEACH,General,28,Jupiter condos,condos-palm-beach-jupiter
+Jupiter,PALM BEACH,Buying/Market,11,Jupiter condos,condos-palm-beach-jupiter
+Jupiter,PALM BEACH,FHA,8,Jupiter condos fha,condos-palm-beach-jupiter
+Jupiter,PALM BEACH,Structural/SIRS,5,Jupiter condos structural/sirs,condos-palm-beach-jupiter
+Jupiter,PALM BEACH,VA,4,Jupiter condos va,condos-palm-beach-jupiter
+Jupiter,PALM BEACH,Financing,4,Jupiter condos financing,condos-palm-beach-jupiter
+Jupiter,PALM BEACH,Fees/Assessments,4,Jupiter condos fees/assessments,condos-palm-beach-jupiter
+Jupiter,PALM BEACH,Insurance,3,Jupiter condos insurance,condos-palm-beach-jupiter
+Jupiter,PALM BEACH,STR/Rental,3,Jupiter condos str/rental,condos-palm-beach-jupiter
+Jupiter,PALM BEACH,Conventional,1,Jupiter condos conventional,condos-palm-beach-jupiter
+Jupiter Inlet Colony,PALM BEACH,General,28,Jupiter Inlet Colony condos,condos-palm-beach-jupiter-inlet-colony
+Jupiter Inlet Colony,PALM BEACH,Buying/Market,11,Jupiter Inlet Colony condos,condos-palm-beach-jupiter-inlet-colony
+Jupiter Inlet Colony,PALM BEACH,FHA,8,Jupiter Inlet Colony condos fha,condos-palm-beach-jupiter-inlet-colony
+Jupiter Inlet Colony,PALM BEACH,Structural/SIRS,5,Jupiter Inlet Colony condos structural/sirs,condos-palm-beach-jupiter-inlet-colony
+Jupiter Inlet Colony,PALM BEACH,VA,4,Jupiter Inlet Colony condos va,condos-palm-beach-jupiter-inlet-colony
+Jupiter Inlet Colony,PALM BEACH,Financing,4,Jupiter Inlet Colony condos financing,condos-palm-beach-jupiter-inlet-colony
+Jupiter Inlet Colony,PALM BEACH,Fees/Assessments,4,Jupiter Inlet Colony condos fees/assessments,condos-palm-beach-jupiter-inlet-colony
+Jupiter Inlet Colony,PALM BEACH,Insurance,3,Jupiter Inlet Colony condos insurance,condos-palm-beach-jupiter-inlet-colony
+Jupiter Inlet Colony,PALM BEACH,STR/Rental,3,Jupiter Inlet Colony condos str/rental,condos-palm-beach-jupiter-inlet-colony
+Jupiter Inlet Colony,PALM BEACH,Conventional,1,Jupiter Inlet Colony condos conventional,condos-palm-beach-jupiter-inlet-colony
+Key Biscayne,MIAMI-DADE,General,28,Key Biscayne condos,condos-miami-dade-key-biscayne
+Key Biscayne,MIAMI-DADE,Buying/Market,11,Key Biscayne condos,condos-miami-dade-key-biscayne
+Key Biscayne,MIAMI-DADE,FHA,8,Key Biscayne condos fha,condos-miami-dade-key-biscayne
+Key Biscayne,MIAMI-DADE,Structural/SIRS,5,Key Biscayne condos structural/sirs,condos-miami-dade-key-biscayne
+Key Biscayne,MIAMI-DADE,Fees/Assessments,5,Key Biscayne condos fees/assessments,condos-miami-dade-key-biscayne
+Key Biscayne,MIAMI-DADE,VA,4,Key Biscayne condos va,condos-miami-dade-key-biscayne
+Key Biscayne,MIAMI-DADE,Financing,4,Key Biscayne condos financing,condos-miami-dade-key-biscayne
+Key Biscayne,MIAMI-DADE,STR/Rental,4,Key Biscayne condos str/rental,condos-miami-dade-key-biscayne
+Key Biscayne,MIAMI-DADE,Insurance,3,Key Biscayne condos insurance,condos-miami-dade-key-biscayne
+Key Biscayne,MIAMI-DADE,Conventional,1,Key Biscayne condos conventional,condos-miami-dade-key-biscayne
+Lake Clarke Shores,PALM BEACH,General,28,Lake Clarke Shores condos,condos-palm-beach-lake-clarke-shores
+Lake Clarke Shores,PALM BEACH,Buying/Market,11,Lake Clarke Shores condos,condos-palm-beach-lake-clarke-shores
+Lake Clarke Shores,PALM BEACH,FHA,8,Lake Clarke Shores condos fha,condos-palm-beach-lake-clarke-shores
+Lake Clarke Shores,PALM BEACH,Structural/SIRS,5,Lake Clarke Shores condos structural/sirs,condos-palm-beach-lake-clarke-shores
+Lake Clarke Shores,PALM BEACH,VA,4,Lake Clarke Shores condos va,condos-palm-beach-lake-clarke-shores
+Lake Clarke Shores,PALM BEACH,Financing,4,Lake Clarke Shores condos financing,condos-palm-beach-lake-clarke-shores
+Lake Clarke Shores,PALM BEACH,Fees/Assessments,4,Lake Clarke Shores condos fees/assessments,condos-palm-beach-lake-clarke-shores
+Lake Clarke Shores,PALM BEACH,Insurance,3,Lake Clarke Shores condos insurance,condos-palm-beach-lake-clarke-shores
+Lake Clarke Shores,PALM BEACH,STR/Rental,3,Lake Clarke Shores condos str/rental,condos-palm-beach-lake-clarke-shores
+Lake Clarke Shores,PALM BEACH,Conventional,1,Lake Clarke Shores condos conventional,condos-palm-beach-lake-clarke-shores
+Lake Park,PALM BEACH,General,28,Lake Park condos,condos-palm-beach-lake-park
+Lake Park,PALM BEACH,Buying/Market,11,Lake Park condos,condos-palm-beach-lake-park
+Lake Park,PALM BEACH,FHA,8,Lake Park condos fha,condos-palm-beach-lake-park
+Lake Park,PALM BEACH,Structural/SIRS,5,Lake Park condos structural/sirs,condos-palm-beach-lake-park
+Lake Park,PALM BEACH,VA,4,Lake Park condos va,condos-palm-beach-lake-park
+Lake Park,PALM BEACH,Financing,4,Lake Park condos financing,condos-palm-beach-lake-park
+Lake Park,PALM BEACH,Fees/Assessments,4,Lake Park condos fees/assessments,condos-palm-beach-lake-park
+Lake Park,PALM BEACH,Insurance,3,Lake Park condos insurance,condos-palm-beach-lake-park
+Lake Park,PALM BEACH,STR/Rental,3,Lake Park condos str/rental,condos-palm-beach-lake-park
+Lake Park,PALM BEACH,Conventional,1,Lake Park condos conventional,condos-palm-beach-lake-park
+Lake Worth Beach,PALM BEACH,Buying/Market,39,Lake Worth Beach condos,condos-palm-beach-lake-worth-beach
+Lake Worth Beach,PALM BEACH,FHA,8,Lake Worth Beach condos fha,condos-palm-beach-lake-worth-beach
+Lake Worth Beach,PALM BEACH,Structural/SIRS,5,Lake Worth Beach condos structural/sirs,condos-palm-beach-lake-worth-beach
+Lake Worth Beach,PALM BEACH,VA,4,Lake Worth Beach condos va,condos-palm-beach-lake-worth-beach
+Lake Worth Beach,PALM BEACH,Financing,4,Lake Worth Beach condos financing,condos-palm-beach-lake-worth-beach
+Lake Worth Beach,PALM BEACH,Fees/Assessments,4,Lake Worth Beach condos fees/assessments,condos-palm-beach-lake-worth-beach
+Lake Worth Beach,PALM BEACH,Insurance,3,Lake Worth Beach condos insurance,condos-palm-beach-lake-worth-beach
+Lake Worth Beach,PALM BEACH,STR/Rental,3,Lake Worth Beach condos str/rental,condos-palm-beach-lake-worth-beach
+Lake Worth Beach,PALM BEACH,Conventional,1,Lake Worth Beach condos conventional,condos-palm-beach-lake-worth-beach
+Lantana,PALM BEACH,General,28,Lantana condos,condos-palm-beach-lantana
+Lantana,PALM BEACH,Buying/Market,11,Lantana condos,condos-palm-beach-lantana
+Lantana,PALM BEACH,FHA,8,Lantana condos fha,condos-palm-beach-lantana
+Lantana,PALM BEACH,Structural/SIRS,5,Lantana condos structural/sirs,condos-palm-beach-lantana
+Lantana,PALM BEACH,VA,4,Lantana condos va,condos-palm-beach-lantana
+Lantana,PALM BEACH,Financing,4,Lantana condos financing,condos-palm-beach-lantana
+Lantana,PALM BEACH,Fees/Assessments,4,Lantana condos fees/assessments,condos-palm-beach-lantana
+Lantana,PALM BEACH,Insurance,3,Lantana condos insurance,condos-palm-beach-lantana
+Lantana,PALM BEACH,STR/Rental,3,Lantana condos str/rental,condos-palm-beach-lantana
+Lantana,PALM BEACH,Conventional,1,Lantana condos conventional,condos-palm-beach-lantana
+Lauderdale Lakes,BROWARD,General,28,Lauderdale Lakes condos,condos-broward-lauderdale-lakes
+Lauderdale Lakes,BROWARD,Buying/Market,11,Lauderdale Lakes condos,condos-broward-lauderdale-lakes
+Lauderdale Lakes,BROWARD,FHA,8,Lauderdale Lakes condos fha,condos-broward-lauderdale-lakes
+Lauderdale Lakes,BROWARD,Structural/SIRS,5,Lauderdale Lakes condos structural/sirs,condos-broward-lauderdale-lakes
+Lauderdale Lakes,BROWARD,VA,4,Lauderdale Lakes condos va,condos-broward-lauderdale-lakes
+Lauderdale Lakes,BROWARD,Financing,4,Lauderdale Lakes condos financing,condos-broward-lauderdale-lakes
+Lauderdale Lakes,BROWARD,Fees/Assessments,4,Lauderdale Lakes condos fees/assessments,condos-broward-lauderdale-lakes
+Lauderdale Lakes,BROWARD,Insurance,3,Lauderdale Lakes condos insurance,condos-broward-lauderdale-lakes
+Lauderdale Lakes,BROWARD,STR/Rental,3,Lauderdale Lakes condos str/rental,condos-broward-lauderdale-lakes
+Lauderdale Lakes,BROWARD,Conventional,1,Lauderdale Lakes condos conventional,condos-broward-lauderdale-lakes
+Lauderdale-By-The-Sea,BROWARD,General,28,Lauderdale-By-The-Sea condos,condos-broward-lauderdale-by-the-sea
+Lauderdale-By-The-Sea,BROWARD,Buying/Market,11,Lauderdale-By-The-Sea condos,condos-broward-lauderdale-by-the-sea
+Lauderdale-By-The-Sea,BROWARD,FHA,8,Lauderdale-By-The-Sea condos fha,condos-broward-lauderdale-by-the-sea
+Lauderdale-By-The-Sea,BROWARD,Structural/SIRS,5,Lauderdale-By-The-Sea condos structural/sirs,condos-broward-lauderdale-by-the-sea
+Lauderdale-By-The-Sea,BROWARD,VA,4,Lauderdale-By-The-Sea condos va,condos-broward-lauderdale-by-the-sea
+Lauderdale-By-The-Sea,BROWARD,Financing,4,Lauderdale-By-The-Sea condos financing,condos-broward-lauderdale-by-the-sea
+Lauderdale-By-The-Sea,BROWARD,Fees/Assessments,4,Lauderdale-By-The-Sea condos fees/assessments,condos-broward-lauderdale-by-the-sea
+Lauderdale-By-The-Sea,BROWARD,Insurance,3,Lauderdale-By-The-Sea condos insurance,condos-broward-lauderdale-by-the-sea
+Lauderdale-By-The-Sea,BROWARD,STR/Rental,3,Lauderdale-By-The-Sea condos str/rental,condos-broward-lauderdale-by-the-sea
+Lauderdale-By-The-Sea,BROWARD,Conventional,1,Lauderdale-By-The-Sea condos conventional,condos-broward-lauderdale-by-the-sea
+Lauderhill,BROWARD,General,28,Lauderhill condos,condos-broward-lauderhill
+Lauderhill,BROWARD,Buying/Market,11,Lauderhill condos,condos-broward-lauderhill
+Lauderhill,BROWARD,FHA,8,Lauderhill condos fha,condos-broward-lauderhill
+Lauderhill,BROWARD,Structural/SIRS,5,Lauderhill condos structural/sirs,condos-broward-lauderhill
+Lauderhill,BROWARD,VA,4,Lauderhill condos va,condos-broward-lauderhill
+Lauderhill,BROWARD,Financing,4,Lauderhill condos financing,condos-broward-lauderhill
+Lauderhill,BROWARD,Fees/Assessments,4,Lauderhill condos fees/assessments,condos-broward-lauderhill
+Lauderhill,BROWARD,Insurance,3,Lauderhill condos insurance,condos-broward-lauderhill
+Lauderhill,BROWARD,STR/Rental,3,Lauderhill condos str/rental,condos-broward-lauderhill
+Lauderhill,BROWARD,Conventional,1,Lauderhill condos conventional,condos-broward-lauderhill
+Lazy Lake,BROWARD,General,28,Lazy Lake condos,condos-broward-lazy-lake
+Lazy Lake,BROWARD,Buying/Market,11,Lazy Lake condos,condos-broward-lazy-lake
+Lazy Lake,BROWARD,FHA,8,Lazy Lake condos fha,condos-broward-lazy-lake
+Lazy Lake,BROWARD,Structural/SIRS,5,Lazy Lake condos structural/sirs,condos-broward-lazy-lake
+Lazy Lake,BROWARD,VA,4,Lazy Lake condos va,condos-broward-lazy-lake
+Lazy Lake,BROWARD,Financing,4,Lazy Lake condos financing,condos-broward-lazy-lake
+Lazy Lake,BROWARD,Fees/Assessments,4,Lazy Lake condos fees/assessments,condos-broward-lazy-lake
+Lazy Lake,BROWARD,Insurance,3,Lazy Lake condos insurance,condos-broward-lazy-lake
+Lazy Lake,BROWARD,STR/Rental,3,Lazy Lake condos str/rental,condos-broward-lazy-lake
+Lazy Lake,BROWARD,Conventional,1,Lazy Lake condos conventional,condos-broward-lazy-lake
+Lighthouse Point,BROWARD,General,28,Lighthouse Point condos,condos-broward-lighthouse-point
+Lighthouse Point,BROWARD,Buying/Market,11,Lighthouse Point condos,condos-broward-lighthouse-point
+Lighthouse Point,BROWARD,FHA,8,Lighthouse Point condos fha,condos-broward-lighthouse-point
+Lighthouse Point,BROWARD,Structural/SIRS,5,Lighthouse Point condos structural/sirs,condos-broward-lighthouse-point
+Lighthouse Point,BROWARD,VA,4,Lighthouse Point condos va,condos-broward-lighthouse-point
+Lighthouse Point,BROWARD,Financing,4,Lighthouse Point condos financing,condos-broward-lighthouse-point
+Lighthouse Point,BROWARD,Fees/Assessments,4,Lighthouse Point condos fees/assessments,condos-broward-lighthouse-point
+Lighthouse Point,BROWARD,Insurance,3,Lighthouse Point condos insurance,condos-broward-lighthouse-point
+Lighthouse Point,BROWARD,STR/Rental,3,Lighthouse Point condos str/rental,condos-broward-lighthouse-point
+Lighthouse Point,BROWARD,Conventional,1,Lighthouse Point condos conventional,condos-broward-lighthouse-point
+Loxahatchee Groves,PALM BEACH,General,28,Loxahatchee Groves condos,condos-palm-beach-loxahatchee-groves
+Loxahatchee Groves,PALM BEACH,Buying/Market,11,Loxahatchee Groves condos,condos-palm-beach-loxahatchee-groves
+Loxahatchee Groves,PALM BEACH,FHA,8,Loxahatchee Groves condos fha,condos-palm-beach-loxahatchee-groves
+Loxahatchee Groves,PALM BEACH,Structural/SIRS,5,Loxahatchee Groves condos structural/sirs,condos-palm-beach-loxahatchee-groves
+Loxahatchee Groves,PALM BEACH,VA,4,Loxahatchee Groves condos va,condos-palm-beach-loxahatchee-groves
+Loxahatchee Groves,PALM BEACH,Financing,4,Loxahatchee Groves condos financing,condos-palm-beach-loxahatchee-groves
+Loxahatchee Groves,PALM BEACH,Fees/Assessments,4,Loxahatchee Groves condos fees/assessments,condos-palm-beach-loxahatchee-groves
+Loxahatchee Groves,PALM BEACH,Insurance,3,Loxahatchee Groves condos insurance,condos-palm-beach-loxahatchee-groves
+Loxahatchee Groves,PALM BEACH,STR/Rental,3,Loxahatchee Groves condos str/rental,condos-palm-beach-loxahatchee-groves
+Loxahatchee Groves,PALM BEACH,Conventional,1,Loxahatchee Groves condos conventional,condos-palm-beach-loxahatchee-groves
+Manalapan,PALM BEACH,General,28,Manalapan condos,condos-palm-beach-manalapan
+Manalapan,PALM BEACH,Buying/Market,11,Manalapan condos,condos-palm-beach-manalapan
+Manalapan,PALM BEACH,FHA,8,Manalapan condos fha,condos-palm-beach-manalapan
+Manalapan,PALM BEACH,Structural/SIRS,5,Manalapan condos structural/sirs,condos-palm-beach-manalapan
+Manalapan,PALM BEACH,VA,4,Manalapan condos va,condos-palm-beach-manalapan
+Manalapan,PALM BEACH,Financing,4,Manalapan condos financing,condos-palm-beach-manalapan
+Manalapan,PALM BEACH,Fees/Assessments,4,Manalapan condos fees/assessments,condos-palm-beach-manalapan
+Manalapan,PALM BEACH,Insurance,3,Manalapan condos insurance,condos-palm-beach-manalapan
+Manalapan,PALM BEACH,STR/Rental,3,Manalapan condos str/rental,condos-palm-beach-manalapan
+Manalapan,PALM BEACH,Conventional,1,Manalapan condos conventional,condos-palm-beach-manalapan
+Mangonia Park,PALM BEACH,General,28,Mangonia Park condos,condos-palm-beach-mangonia-park
+Mangonia Park,PALM BEACH,Buying/Market,11,Mangonia Park condos,condos-palm-beach-mangonia-park
+Mangonia Park,PALM BEACH,FHA,8,Mangonia Park condos fha,condos-palm-beach-mangonia-park
+Mangonia Park,PALM BEACH,Structural/SIRS,5,Mangonia Park condos structural/sirs,condos-palm-beach-mangonia-park
+Mangonia Park,PALM BEACH,VA,4,Mangonia Park condos va,condos-palm-beach-mangonia-park
+Mangonia Park,PALM BEACH,Financing,4,Mangonia Park condos financing,condos-palm-beach-mangonia-park
+Mangonia Park,PALM BEACH,Fees/Assessments,4,Mangonia Park condos fees/assessments,condos-palm-beach-mangonia-park
+Mangonia Park,PALM BEACH,Insurance,3,Mangonia Park condos insurance,condos-palm-beach-mangonia-park
+Mangonia Park,PALM BEACH,STR/Rental,3,Mangonia Park condos str/rental,condos-palm-beach-mangonia-park
+Mangonia Park,PALM BEACH,Conventional,1,Mangonia Park condos conventional,condos-palm-beach-mangonia-park
+Margate,BROWARD,General,28,Margate condos,condos-broward-margate
+Margate,BROWARD,Buying/Market,11,Margate condos,condos-broward-margate
+Margate,BROWARD,FHA,8,Margate condos fha,condos-broward-margate
+Margate,BROWARD,Structural/SIRS,5,Margate condos structural/sirs,condos-broward-margate
+Margate,BROWARD,VA,4,Margate condos va,condos-broward-margate
+Margate,BROWARD,Financing,4,Margate condos financing,condos-broward-margate
+Margate,BROWARD,Fees/Assessments,4,Margate condos fees/assessments,condos-broward-margate
+Margate,BROWARD,Insurance,3,Margate condos insurance,condos-broward-margate
+Margate,BROWARD,STR/Rental,3,Margate condos str/rental,condos-broward-margate
+Margate,BROWARD,Conventional,1,Margate condos conventional,condos-broward-margate
+Medley,MIAMI-DADE,General,28,Medley condos,condos-miami-dade-medley
+Medley,MIAMI-DADE,Buying/Market,11,Medley condos,condos-miami-dade-medley
+Medley,MIAMI-DADE,FHA,8,Medley condos fha,condos-miami-dade-medley
+Medley,MIAMI-DADE,Structural/SIRS,5,Medley condos structural/sirs,condos-miami-dade-medley
+Medley,MIAMI-DADE,Fees/Assessments,5,Medley condos fees/assessments,condos-miami-dade-medley
+Medley,MIAMI-DADE,VA,4,Medley condos va,condos-miami-dade-medley
+Medley,MIAMI-DADE,Financing,4,Medley condos financing,condos-miami-dade-medley
+Medley,MIAMI-DADE,STR/Rental,4,Medley condos str/rental,condos-miami-dade-medley
+Medley,MIAMI-DADE,Insurance,3,Medley condos insurance,condos-miami-dade-medley
+Medley,MIAMI-DADE,Conventional,1,Medley condos conventional,condos-miami-dade-medley
+Miami,MIAMI-DADE,General,28,Miami condos,condos-miami-dade-miami
+Miami,MIAMI-DADE,Buying/Market,11,Miami condos,condos-miami-dade-miami
+Miami,MIAMI-DADE,FHA,8,Miami condos fha,condos-miami-dade-miami
+Miami,MIAMI-DADE,STR/Rental,8,Miami condos str/rental,condos-miami-dade-miami
+Miami,MIAMI-DADE,Structural/SIRS,5,Miami condos structural/sirs,condos-miami-dade-miami
+Miami,MIAMI-DADE,Fees/Assessments,5,Miami condos fees/assessments,condos-miami-dade-miami
+Miami,MIAMI-DADE,VA,4,Miami condos va,condos-miami-dade-miami
+Miami,MIAMI-DADE,Financing,4,Miami condos financing,condos-miami-dade-miami
+Miami,MIAMI-DADE,Insurance,3,Miami condos insurance,condos-miami-dade-miami
+Miami,MIAMI-DADE,Conventional,1,Miami condos conventional,condos-miami-dade-miami
+Miami Beach,MIAMI-DADE,General,28,Miami Beach condos,condos-miami-dade-miami-beach
+Miami Beach,MIAMI-DADE,Buying/Market,11,Miami Beach condos,condos-miami-dade-miami-beach
+Miami Beach,MIAMI-DADE,FHA,8,Miami Beach condos fha,condos-miami-dade-miami-beach
+Miami Beach,MIAMI-DADE,STR/Rental,8,Miami Beach condos str/rental,condos-miami-dade-miami-beach
+Miami Beach,MIAMI-DADE,Structural/SIRS,5,Miami Beach condos structural/sirs,condos-miami-dade-miami-beach
+Miami Beach,MIAMI-DADE,Fees/Assessments,5,Miami Beach condos fees/assessments,condos-miami-dade-miami-beach
+Miami Beach,MIAMI-DADE,VA,4,Miami Beach condos va,condos-miami-dade-miami-beach
+Miami Beach,MIAMI-DADE,Financing,4,Miami Beach condos financing,condos-miami-dade-miami-beach
+Miami Beach,MIAMI-DADE,Insurance,3,Miami Beach condos insurance,condos-miami-dade-miami-beach
+Miami Beach,MIAMI-DADE,Conventional,1,Miami Beach condos conventional,condos-miami-dade-miami-beach
+Miami Gardens,MIAMI-DADE,General,28,Miami Gardens condos,condos-miami-dade-miami-gardens
+Miami Gardens,MIAMI-DADE,Buying/Market,11,Miami Gardens condos,condos-miami-dade-miami-gardens
+Miami Gardens,MIAMI-DADE,FHA,8,Miami Gardens condos fha,condos-miami-dade-miami-gardens
+Miami Gardens,MIAMI-DADE,Structural/SIRS,5,Miami Gardens condos structural/sirs,condos-miami-dade-miami-gardens
+Miami Gardens,MIAMI-DADE,Fees/Assessments,5,Miami Gardens condos fees/assessments,condos-miami-dade-miami-gardens
+Miami Gardens,MIAMI-DADE,VA,4,Miami Gardens condos va,condos-miami-dade-miami-gardens
+Miami Gardens,MIAMI-DADE,Financing,4,Miami Gardens condos financing,condos-miami-dade-miami-gardens
+Miami Gardens,MIAMI-DADE,STR/Rental,4,Miami Gardens condos str/rental,condos-miami-dade-miami-gardens
+Miami Gardens,MIAMI-DADE,Insurance,3,Miami Gardens condos insurance,condos-miami-dade-miami-gardens
+Miami Gardens,MIAMI-DADE,Conventional,1,Miami Gardens condos conventional,condos-miami-dade-miami-gardens
+Miami Lakes,MIAMI-DADE,General,28,Miami Lakes condos,condos-miami-dade-miami-lakes
+Miami Lakes,MIAMI-DADE,Buying/Market,11,Miami Lakes condos,condos-miami-dade-miami-lakes
+Miami Lakes,MIAMI-DADE,FHA,8,Miami Lakes condos fha,condos-miami-dade-miami-lakes
+Miami Lakes,MIAMI-DADE,Structural/SIRS,5,Miami Lakes condos structural/sirs,condos-miami-dade-miami-lakes
+Miami Lakes,MIAMI-DADE,Fees/Assessments,5,Miami Lakes condos fees/assessments,condos-miami-dade-miami-lakes
+Miami Lakes,MIAMI-DADE,VA,4,Miami Lakes condos va,condos-miami-dade-miami-lakes
+Miami Lakes,MIAMI-DADE,Financing,4,Miami Lakes condos financing,condos-miami-dade-miami-lakes
+Miami Lakes,MIAMI-DADE,STR/Rental,4,Miami Lakes condos str/rental,condos-miami-dade-miami-lakes
+Miami Lakes,MIAMI-DADE,Insurance,3,Miami Lakes condos insurance,condos-miami-dade-miami-lakes
+Miami Lakes,MIAMI-DADE,Conventional,1,Miami Lakes condos conventional,condos-miami-dade-miami-lakes
+Miami Shores,MIAMI-DADE,General,28,Miami Shores condos,condos-miami-dade-miami-shores
+Miami Shores,MIAMI-DADE,Buying/Market,11,Miami Shores condos,condos-miami-dade-miami-shores
+Miami Shores,MIAMI-DADE,FHA,8,Miami Shores condos fha,condos-miami-dade-miami-shores
+Miami Shores,MIAMI-DADE,Structural/SIRS,5,Miami Shores condos structural/sirs,condos-miami-dade-miami-shores
+Miami Shores,MIAMI-DADE,Fees/Assessments,5,Miami Shores condos fees/assessments,condos-miami-dade-miami-shores
+Miami Shores,MIAMI-DADE,VA,4,Miami Shores condos va,condos-miami-dade-miami-shores
+Miami Shores,MIAMI-DADE,Financing,4,Miami Shores condos financing,condos-miami-dade-miami-shores
+Miami Shores,MIAMI-DADE,STR/Rental,4,Miami Shores condos str/rental,condos-miami-dade-miami-shores
+Miami Shores,MIAMI-DADE,Insurance,3,Miami Shores condos insurance,condos-miami-dade-miami-shores
+Miami Shores,MIAMI-DADE,Conventional,1,Miami Shores condos conventional,condos-miami-dade-miami-shores
+Miami Springs,MIAMI-DADE,General,28,Miami Springs condos,condos-miami-dade-miami-springs
+Miami Springs,MIAMI-DADE,Buying/Market,11,Miami Springs condos,condos-miami-dade-miami-springs
+Miami Springs,MIAMI-DADE,FHA,8,Miami Springs condos fha,condos-miami-dade-miami-springs
+Miami Springs,MIAMI-DADE,Structural/SIRS,5,Miami Springs condos structural/sirs,condos-miami-dade-miami-springs
+Miami Springs,MIAMI-DADE,Fees/Assessments,5,Miami Springs condos fees/assessments,condos-miami-dade-miami-springs
+Miami Springs,MIAMI-DADE,VA,4,Miami Springs condos va,condos-miami-dade-miami-springs
+Miami Springs,MIAMI-DADE,Financing,4,Miami Springs condos financing,condos-miami-dade-miami-springs
+Miami Springs,MIAMI-DADE,STR/Rental,4,Miami Springs condos str/rental,condos-miami-dade-miami-springs
+Miami Springs,MIAMI-DADE,Insurance,3,Miami Springs condos insurance,condos-miami-dade-miami-springs
+Miami Springs,MIAMI-DADE,Conventional,1,Miami Springs condos conventional,condos-miami-dade-miami-springs
+Miramar,BROWARD,General,28,Miramar condos,condos-broward-miramar
+Miramar,BROWARD,Buying/Market,11,Miramar condos,condos-broward-miramar
+Miramar,BROWARD,FHA,8,Miramar condos fha,condos-broward-miramar
+Miramar,BROWARD,Structural/SIRS,5,Miramar condos structural/sirs,condos-broward-miramar
+Miramar,BROWARD,VA,4,Miramar condos va,condos-broward-miramar
+Miramar,BROWARD,Financing,4,Miramar condos financing,condos-broward-miramar
+Miramar,BROWARD,Fees/Assessments,4,Miramar condos fees/assessments,condos-broward-miramar
+Miramar,BROWARD,Insurance,3,Miramar condos insurance,condos-broward-miramar
+Miramar,BROWARD,STR/Rental,3,Miramar condos str/rental,condos-broward-miramar
+Miramar,BROWARD,Conventional,1,Miramar condos conventional,condos-broward-miramar
+North Bay Village,MIAMI-DADE,General,28,North Bay Village condos,condos-miami-dade-north-bay-village
+North Bay Village,MIAMI-DADE,Buying/Market,11,North Bay Village condos,condos-miami-dade-north-bay-village
+North Bay Village,MIAMI-DADE,FHA,8,North Bay Village condos fha,condos-miami-dade-north-bay-village
+North Bay Village,MIAMI-DADE,STR/Rental,8,North Bay Village condos str/rental,condos-miami-dade-north-bay-village
+North Bay Village,MIAMI-DADE,Structural/SIRS,5,North Bay Village condos structural/sirs,condos-miami-dade-north-bay-village
+North Bay Village,MIAMI-DADE,Fees/Assessments,5,North Bay Village condos fees/assessments,condos-miami-dade-north-bay-village
+North Bay Village,MIAMI-DADE,VA,4,North Bay Village condos va,condos-miami-dade-north-bay-village
+North Bay Village,MIAMI-DADE,Financing,4,North Bay Village condos financing,condos-miami-dade-north-bay-village
+North Bay Village,MIAMI-DADE,Insurance,3,North Bay Village condos insurance,condos-miami-dade-north-bay-village
+North Bay Village,MIAMI-DADE,Conventional,1,North Bay Village condos conventional,condos-miami-dade-north-bay-village
+North Lauderdale,BROWARD,General,28,North Lauderdale condos,condos-broward-north-lauderdale
+North Lauderdale,BROWARD,Buying/Market,11,North Lauderdale condos,condos-broward-north-lauderdale
+North Lauderdale,BROWARD,FHA,8,North Lauderdale condos fha,condos-broward-north-lauderdale
+North Lauderdale,BROWARD,Structural/SIRS,5,North Lauderdale condos structural/sirs,condos-broward-north-lauderdale
+North Lauderdale,BROWARD,VA,4,North Lauderdale condos va,condos-broward-north-lauderdale
+North Lauderdale,BROWARD,Financing,4,North Lauderdale condos financing,condos-broward-north-lauderdale
+North Lauderdale,BROWARD,Fees/Assessments,4,North Lauderdale condos fees/assessments,condos-broward-north-lauderdale
+North Lauderdale,BROWARD,Insurance,3,North Lauderdale condos insurance,condos-broward-north-lauderdale
+North Lauderdale,BROWARD,STR/Rental,3,North Lauderdale condos str/rental,condos-broward-north-lauderdale
+North Lauderdale,BROWARD,Conventional,1,North Lauderdale condos conventional,condos-broward-north-lauderdale
+North Miami,MIAMI-DADE,General,28,North Miami condos,condos-miami-dade-north-miami
+North Miami,MIAMI-DADE,Buying/Market,11,North Miami condos,condos-miami-dade-north-miami
+North Miami,MIAMI-DADE,FHA,8,North Miami condos fha,condos-miami-dade-north-miami
+North Miami,MIAMI-DADE,STR/Rental,8,North Miami condos str/rental,condos-miami-dade-north-miami
+North Miami,MIAMI-DADE,Structural/SIRS,5,North Miami condos structural/sirs,condos-miami-dade-north-miami
+North Miami,MIAMI-DADE,Fees/Assessments,5,North Miami condos fees/assessments,condos-miami-dade-north-miami
+North Miami,MIAMI-DADE,VA,4,North Miami condos va,condos-miami-dade-north-miami
+North Miami,MIAMI-DADE,Financing,4,North Miami condos financing,condos-miami-dade-north-miami
+North Miami,MIAMI-DADE,Insurance,3,North Miami condos insurance,condos-miami-dade-north-miami
+North Miami,MIAMI-DADE,Conventional,1,North Miami condos conventional,condos-miami-dade-north-miami
+North Miami Beach,MIAMI-DADE,General,28,North Miami Beach condos,condos-miami-dade-north-miami-beach
+North Miami Beach,MIAMI-DADE,Buying/Market,11,North Miami Beach condos,condos-miami-dade-north-miami-beach
+North Miami Beach,MIAMI-DADE,FHA,8,North Miami Beach condos fha,condos-miami-dade-north-miami-beach
+North Miami Beach,MIAMI-DADE,STR/Rental,8,North Miami Beach condos str/rental,condos-miami-dade-north-miami-beach
+North Miami Beach,MIAMI-DADE,Structural/SIRS,5,North Miami Beach condos structural/sirs,condos-miami-dade-north-miami-beach
+North Miami Beach,MIAMI-DADE,Fees/Assessments,5,North Miami Beach condos fees/assessments,condos-miami-dade-north-miami-beach
+North Miami Beach,MIAMI-DADE,VA,4,North Miami Beach condos va,condos-miami-dade-north-miami-beach
+North Miami Beach,MIAMI-DADE,Financing,4,North Miami Beach condos financing,condos-miami-dade-north-miami-beach
+North Miami Beach,MIAMI-DADE,Insurance,3,North Miami Beach condos insurance,condos-miami-dade-north-miami-beach
+North Miami Beach,MIAMI-DADE,Conventional,1,North Miami Beach condos conventional,condos-miami-dade-north-miami-beach
+North Palm Beach,PALM BEACH,General,28,North Palm Beach condos,condos-palm-beach-north-palm-beach
+North Palm Beach,PALM BEACH,Buying/Market,11,North Palm Beach condos,condos-palm-beach-north-palm-beach
+North Palm Beach,PALM BEACH,FHA,8,North Palm Beach condos fha,condos-palm-beach-north-palm-beach
+North Palm Beach,PALM BEACH,Structural/SIRS,5,North Palm Beach condos structural/sirs,condos-palm-beach-north-palm-beach
+North Palm Beach,PALM BEACH,VA,4,North Palm Beach condos va,condos-palm-beach-north-palm-beach
+North Palm Beach,PALM BEACH,Financing,4,North Palm Beach condos financing,condos-palm-beach-north-palm-beach
+North Palm Beach,PALM BEACH,Fees/Assessments,4,North Palm Beach condos fees/assessments,condos-palm-beach-north-palm-beach
+North Palm Beach,PALM BEACH,Insurance,3,North Palm Beach condos insurance,condos-palm-beach-north-palm-beach
+North Palm Beach,PALM BEACH,STR/Rental,3,North Palm Beach condos str/rental,condos-palm-beach-north-palm-beach
+North Palm Beach,PALM BEACH,Conventional,1,North Palm Beach condos conventional,condos-palm-beach-north-palm-beach
+Oakland Park,BROWARD,General,28,Oakland Park condos,condos-broward-oakland-park
+Oakland Park,BROWARD,Buying/Market,11,Oakland Park condos,condos-broward-oakland-park
+Oakland Park,BROWARD,FHA,8,Oakland Park condos fha,condos-broward-oakland-park
+Oakland Park,BROWARD,Structural/SIRS,5,Oakland Park condos structural/sirs,condos-broward-oakland-park
+Oakland Park,BROWARD,VA,4,Oakland Park condos va,condos-broward-oakland-park
+Oakland Park,BROWARD,Financing,4,Oakland Park condos financing,condos-broward-oakland-park
+Oakland Park,BROWARD,Fees/Assessments,4,Oakland Park condos fees/assessments,condos-broward-oakland-park
+Oakland Park,BROWARD,Insurance,3,Oakland Park condos insurance,condos-broward-oakland-park
+Oakland Park,BROWARD,STR/Rental,3,Oakland Park condos str/rental,condos-broward-oakland-park
+Oakland Park,BROWARD,Conventional,1,Oakland Park condos conventional,condos-broward-oakland-park
+Ocean Ridge,PALM BEACH,General,28,Ocean Ridge condos,condos-palm-beach-ocean-ridge
+Ocean Ridge,PALM BEACH,Buying/Market,11,Ocean Ridge condos,condos-palm-beach-ocean-ridge
+Ocean Ridge,PALM BEACH,FHA,8,Ocean Ridge condos fha,condos-palm-beach-ocean-ridge
+Ocean Ridge,PALM BEACH,Structural/SIRS,5,Ocean Ridge condos structural/sirs,condos-palm-beach-ocean-ridge
+Ocean Ridge,PALM BEACH,VA,4,Ocean Ridge condos va,condos-palm-beach-ocean-ridge
+Ocean Ridge,PALM BEACH,Financing,4,Ocean Ridge condos financing,condos-palm-beach-ocean-ridge
+Ocean Ridge,PALM BEACH,Fees/Assessments,4,Ocean Ridge condos fees/assessments,condos-palm-beach-ocean-ridge
+Ocean Ridge,PALM BEACH,Insurance,3,Ocean Ridge condos insurance,condos-palm-beach-ocean-ridge
+Ocean Ridge,PALM BEACH,STR/Rental,3,Ocean Ridge condos str/rental,condos-palm-beach-ocean-ridge
+Ocean Ridge,PALM BEACH,Conventional,1,Ocean Ridge condos conventional,condos-palm-beach-ocean-ridge
+Opa-locka,MIAMI-DADE,General,28,Opa-locka condos,condos-miami-dade-opa-locka
+Opa-locka,MIAMI-DADE,Buying/Market,11,Opa-locka condos,condos-miami-dade-opa-locka
+Opa-locka,MIAMI-DADE,FHA,8,Opa-locka condos fha,condos-miami-dade-opa-locka
+Opa-locka,MIAMI-DADE,Structural/SIRS,5,Opa-locka condos structural/sirs,condos-miami-dade-opa-locka
+Opa-locka,MIAMI-DADE,Fees/Assessments,5,Opa-locka condos fees/assessments,condos-miami-dade-opa-locka
+Opa-locka,MIAMI-DADE,VA,4,Opa-locka condos va,condos-miami-dade-opa-locka
+Opa-locka,MIAMI-DADE,Financing,4,Opa-locka condos financing,condos-miami-dade-opa-locka
+Opa-locka,MIAMI-DADE,STR/Rental,4,Opa-locka condos str/rental,condos-miami-dade-opa-locka
+Opa-locka,MIAMI-DADE,Insurance,3,Opa-locka condos insurance,condos-miami-dade-opa-locka
+Opa-locka,MIAMI-DADE,Conventional,1,Opa-locka condos conventional,condos-miami-dade-opa-locka
+Pahokee,PALM BEACH,General,28,Pahokee condos,condos-palm-beach-pahokee
+Pahokee,PALM BEACH,Buying/Market,11,Pahokee condos,condos-palm-beach-pahokee
+Pahokee,PALM BEACH,FHA,8,Pahokee condos fha,condos-palm-beach-pahokee
+Pahokee,PALM BEACH,Structural/SIRS,5,Pahokee condos structural/sirs,condos-palm-beach-pahokee
+Pahokee,PALM BEACH,VA,4,Pahokee condos va,condos-palm-beach-pahokee
+Pahokee,PALM BEACH,Financing,4,Pahokee condos financing,condos-palm-beach-pahokee
+Pahokee,PALM BEACH,Fees/Assessments,4,Pahokee condos fees/assessments,condos-palm-beach-pahokee
+Pahokee,PALM BEACH,Insurance,3,Pahokee condos insurance,condos-palm-beach-pahokee
+Pahokee,PALM BEACH,STR/Rental,3,Pahokee condos str/rental,condos-palm-beach-pahokee
+Pahokee,PALM BEACH,Conventional,1,Pahokee condos conventional,condos-palm-beach-pahokee
+Palm Beach,PALM BEACH,General,28,Palm Beach condos,condos-palm-beach-palm-beach
+Palm Beach,PALM BEACH,Buying/Market,11,Palm Beach condos,condos-palm-beach-palm-beach
+Palm Beach,PALM BEACH,FHA,8,Palm Beach condos fha,condos-palm-beach-palm-beach
+Palm Beach,PALM BEACH,Structural/SIRS,5,Palm Beach condos structural/sirs,condos-palm-beach-palm-beach
+Palm Beach,PALM BEACH,VA,4,Palm Beach condos va,condos-palm-beach-palm-beach
+Palm Beach,PALM BEACH,Financing,4,Palm Beach condos financing,condos-palm-beach-palm-beach
+Palm Beach,PALM BEACH,Fees/Assessments,4,Palm Beach condos fees/assessments,condos-palm-beach-palm-beach
+Palm Beach,PALM BEACH,Insurance,3,Palm Beach condos insurance,condos-palm-beach-palm-beach
+Palm Beach,PALM BEACH,STR/Rental,3,Palm Beach condos str/rental,condos-palm-beach-palm-beach
+Palm Beach,PALM BEACH,Conventional,1,Palm Beach condos conventional,condos-palm-beach-palm-beach
+Palm Beach Gardens,PALM BEACH,General,28,Palm Beach Gardens condos,condos-palm-beach-palm-beach-gardens
+Palm Beach Gardens,PALM BEACH,Buying/Market,11,Palm Beach Gardens condos,condos-palm-beach-palm-beach-gardens
+Palm Beach Gardens,PALM BEACH,FHA,8,Palm Beach Gardens condos fha,condos-palm-beach-palm-beach-gardens
+Palm Beach Gardens,PALM BEACH,Structural/SIRS,5,Palm Beach Gardens condos structural/sirs,condos-palm-beach-palm-beach-gardens
+Palm Beach Gardens,PALM BEACH,VA,4,Palm Beach Gardens condos va,condos-palm-beach-palm-beach-gardens
+Palm Beach Gardens,PALM BEACH,Financing,4,Palm Beach Gardens condos financing,condos-palm-beach-palm-beach-gardens
+Palm Beach Gardens,PALM BEACH,Fees/Assessments,4,Palm Beach Gardens condos fees/assessments,condos-palm-beach-palm-beach-gardens
+Palm Beach Gardens,PALM BEACH,Insurance,3,Palm Beach Gardens condos insurance,condos-palm-beach-palm-beach-gardens
+Palm Beach Gardens,PALM BEACH,STR/Rental,3,Palm Beach Gardens condos str/rental,condos-palm-beach-palm-beach-gardens
+Palm Beach Gardens,PALM BEACH,Conventional,1,Palm Beach Gardens condos conventional,condos-palm-beach-palm-beach-gardens
+Palm Beach Shores,PALM BEACH,General,28,Palm Beach Shores condos,condos-palm-beach-palm-beach-shores
+Palm Beach Shores,PALM BEACH,Buying/Market,11,Palm Beach Shores condos,condos-palm-beach-palm-beach-shores
+Palm Beach Shores,PALM BEACH,FHA,8,Palm Beach Shores condos fha,condos-palm-beach-palm-beach-shores
+Palm Beach Shores,PALM BEACH,Structural/SIRS,5,Palm Beach Shores condos structural/sirs,condos-palm-beach-palm-beach-shores
+Palm Beach Shores,PALM BEACH,VA,4,Palm Beach Shores condos va,condos-palm-beach-palm-beach-shores
+Palm Beach Shores,PALM BEACH,Financing,4,Palm Beach Shores condos financing,condos-palm-beach-palm-beach-shores
+Palm Beach Shores,PALM BEACH,Fees/Assessments,4,Palm Beach Shores condos fees/assessments,condos-palm-beach-palm-beach-shores
+Palm Beach Shores,PALM BEACH,Insurance,3,Palm Beach Shores condos insurance,condos-palm-beach-palm-beach-shores
+Palm Beach Shores,PALM BEACH,STR/Rental,3,Palm Beach Shores condos str/rental,condos-palm-beach-palm-beach-shores
+Palm Beach Shores,PALM BEACH,Conventional,1,Palm Beach Shores condos conventional,condos-palm-beach-palm-beach-shores
+Palm Springs,PALM BEACH,General,28,Palm Springs condos,condos-palm-beach-palm-springs
+Palm Springs,PALM BEACH,Buying/Market,11,Palm Springs condos,condos-palm-beach-palm-springs
+Palm Springs,PALM BEACH,FHA,8,Palm Springs condos fha,condos-palm-beach-palm-springs
+Palm Springs,PALM BEACH,Structural/SIRS,5,Palm Springs condos structural/sirs,condos-palm-beach-palm-springs
+Palm Springs,PALM BEACH,VA,4,Palm Springs condos va,condos-palm-beach-palm-springs
+Palm Springs,PALM BEACH,Financing,4,Palm Springs condos financing,condos-palm-beach-palm-springs
+Palm Springs,PALM BEACH,Fees/Assessments,4,Palm Springs condos fees/assessments,condos-palm-beach-palm-springs
+Palm Springs,PALM BEACH,Insurance,3,Palm Springs condos insurance,condos-palm-beach-palm-springs
+Palm Springs,PALM BEACH,STR/Rental,3,Palm Springs condos str/rental,condos-palm-beach-palm-springs
+Palm Springs,PALM BEACH,Conventional,1,Palm Springs condos conventional,condos-palm-beach-palm-springs
+Palmetto Bay,MIAMI-DADE,General,28,Palmetto Bay condos,condos-miami-dade-palmetto-bay
+Palmetto Bay,MIAMI-DADE,Buying/Market,11,Palmetto Bay condos,condos-miami-dade-palmetto-bay
+Palmetto Bay,MIAMI-DADE,FHA,8,Palmetto Bay condos fha,condos-miami-dade-palmetto-bay
+Palmetto Bay,MIAMI-DADE,Structural/SIRS,5,Palmetto Bay condos structural/sirs,condos-miami-dade-palmetto-bay
+Palmetto Bay,MIAMI-DADE,Fees/Assessments,5,Palmetto Bay condos fees/assessments,condos-miami-dade-palmetto-bay
+Palmetto Bay,MIAMI-DADE,VA,4,Palmetto Bay condos va,condos-miami-dade-palmetto-bay
+Palmetto Bay,MIAMI-DADE,Financing,4,Palmetto Bay condos financing,condos-miami-dade-palmetto-bay
+Palmetto Bay,MIAMI-DADE,STR/Rental,4,Palmetto Bay condos str/rental,condos-miami-dade-palmetto-bay
+Palmetto Bay,MIAMI-DADE,Insurance,3,Palmetto Bay condos insurance,condos-miami-dade-palmetto-bay
+Palmetto Bay,MIAMI-DADE,Conventional,1,Palmetto Bay condos conventional,condos-miami-dade-palmetto-bay
+Parkland,BROWARD,General,28,Parkland condos,condos-broward-parkland
+Parkland,BROWARD,Buying/Market,11,Parkland condos,condos-broward-parkland
+Parkland,BROWARD,FHA,8,Parkland condos fha,condos-broward-parkland
+Parkland,BROWARD,Structural/SIRS,5,Parkland condos structural/sirs,condos-broward-parkland
+Parkland,BROWARD,VA,4,Parkland condos va,condos-broward-parkland
+Parkland,BROWARD,Financing,4,Parkland condos financing,condos-broward-parkland
+Parkland,BROWARD,Fees/Assessments,4,Parkland condos fees/assessments,condos-broward-parkland
+Parkland,BROWARD,Insurance,3,Parkland condos insurance,condos-broward-parkland
+Parkland,BROWARD,STR/Rental,3,Parkland condos str/rental,condos-broward-parkland
+Parkland,BROWARD,Conventional,1,Parkland condos conventional,condos-broward-parkland
+Pembroke Park,BROWARD,General,28,Pembroke Park condos,condos-broward-pembroke-park
+Pembroke Park,BROWARD,Buying/Market,11,Pembroke Park condos,condos-broward-pembroke-park
+Pembroke Park,BROWARD,FHA,8,Pembroke Park condos fha,condos-broward-pembroke-park
+Pembroke Park,BROWARD,Structural/SIRS,5,Pembroke Park condos structural/sirs,condos-broward-pembroke-park
+Pembroke Park,BROWARD,VA,4,Pembroke Park condos va,condos-broward-pembroke-park
+Pembroke Park,BROWARD,Financing,4,Pembroke Park condos financing,condos-broward-pembroke-park
+Pembroke Park,BROWARD,Fees/Assessments,4,Pembroke Park condos fees/assessments,condos-broward-pembroke-park
+Pembroke Park,BROWARD,Insurance,3,Pembroke Park condos insurance,condos-broward-pembroke-park
+Pembroke Park,BROWARD,STR/Rental,3,Pembroke Park condos str/rental,condos-broward-pembroke-park
+Pembroke Park,BROWARD,Conventional,1,Pembroke Park condos conventional,condos-broward-pembroke-park
+Pembroke Pines,BROWARD,General,28,Pembroke Pines condos,condos-broward-pembroke-pines
+Pembroke Pines,BROWARD,Buying/Market,11,Pembroke Pines condos,condos-broward-pembroke-pines
+Pembroke Pines,BROWARD,FHA,8,Pembroke Pines condos fha,condos-broward-pembroke-pines
+Pembroke Pines,BROWARD,Structural/SIRS,5,Pembroke Pines condos structural/sirs,condos-broward-pembroke-pines
+Pembroke Pines,BROWARD,VA,4,Pembroke Pines condos va,condos-broward-pembroke-pines
+Pembroke Pines,BROWARD,Financing,4,Pembroke Pines condos financing,condos-broward-pembroke-pines
+Pembroke Pines,BROWARD,Fees/Assessments,4,Pembroke Pines condos fees/assessments,condos-broward-pembroke-pines
+Pembroke Pines,BROWARD,Insurance,3,Pembroke Pines condos insurance,condos-broward-pembroke-pines
+Pembroke Pines,BROWARD,STR/Rental,3,Pembroke Pines condos str/rental,condos-broward-pembroke-pines
+Pembroke Pines,BROWARD,Conventional,1,Pembroke Pines condos conventional,condos-broward-pembroke-pines
+Pinecrest,MIAMI-DADE,General,28,Pinecrest condos,condos-miami-dade-pinecrest
+Pinecrest,MIAMI-DADE,Buying/Market,11,Pinecrest condos,condos-miami-dade-pinecrest
+Pinecrest,MIAMI-DADE,FHA,8,Pinecrest condos fha,condos-miami-dade-pinecrest
+Pinecrest,MIAMI-DADE,Structural/SIRS,5,Pinecrest condos structural/sirs,condos-miami-dade-pinecrest
+Pinecrest,MIAMI-DADE,Fees/Assessments,5,Pinecrest condos fees/assessments,condos-miami-dade-pinecrest
+Pinecrest,MIAMI-DADE,VA,4,Pinecrest condos va,condos-miami-dade-pinecrest
+Pinecrest,MIAMI-DADE,Financing,4,Pinecrest condos financing,condos-miami-dade-pinecrest
+Pinecrest,MIAMI-DADE,STR/Rental,4,Pinecrest condos str/rental,condos-miami-dade-pinecrest
+Pinecrest,MIAMI-DADE,Insurance,3,Pinecrest condos insurance,condos-miami-dade-pinecrest
+Pinecrest,MIAMI-DADE,Conventional,1,Pinecrest condos conventional,condos-miami-dade-pinecrest
+Plantation,BROWARD,General,28,Plantation condos,condos-broward-plantation
+Plantation,BROWARD,Buying/Market,11,Plantation condos,condos-broward-plantation
+Plantation,BROWARD,FHA,8,Plantation condos fha,condos-broward-plantation
+Plantation,BROWARD,Structural/SIRS,5,Plantation condos structural/sirs,condos-broward-plantation
+Plantation,BROWARD,VA,4,Plantation condos va,condos-broward-plantation
+Plantation,BROWARD,Financing,4,Plantation condos financing,condos-broward-plantation
+Plantation,BROWARD,Fees/Assessments,4,Plantation condos fees/assessments,condos-broward-plantation
+Plantation,BROWARD,Insurance,3,Plantation condos insurance,condos-broward-plantation
+Plantation,BROWARD,STR/Rental,3,Plantation condos str/rental,condos-broward-plantation
+Plantation,BROWARD,Conventional,1,Plantation condos conventional,condos-broward-plantation
+Pompano Beach,BROWARD,General,28,Pompano Beach condos,condos-broward-pompano-beach
+Pompano Beach,BROWARD,Buying/Market,11,Pompano Beach condos,condos-broward-pompano-beach
+Pompano Beach,BROWARD,FHA,8,Pompano Beach condos fha,condos-broward-pompano-beach
+Pompano Beach,BROWARD,STR/Rental,7,Pompano Beach condos str/rental,condos-broward-pompano-beach
+Pompano Beach,BROWARD,Structural/SIRS,5,Pompano Beach condos structural/sirs,condos-broward-pompano-beach
+Pompano Beach,BROWARD,VA,4,Pompano Beach condos va,condos-broward-pompano-beach
+Pompano Beach,BROWARD,Financing,4,Pompano Beach condos financing,condos-broward-pompano-beach
+Pompano Beach,BROWARD,Fees/Assessments,4,Pompano Beach condos fees/assessments,condos-broward-pompano-beach
+Pompano Beach,BROWARD,Insurance,3,Pompano Beach condos insurance,condos-broward-pompano-beach
+Pompano Beach,BROWARD,Conventional,1,Pompano Beach condos conventional,condos-broward-pompano-beach
+Riviera Beach,PALM BEACH,General,28,Riviera Beach condos,condos-palm-beach-riviera-beach
+Riviera Beach,PALM BEACH,Buying/Market,11,Riviera Beach condos,condos-palm-beach-riviera-beach
+Riviera Beach,PALM BEACH,FHA,8,Riviera Beach condos fha,condos-palm-beach-riviera-beach
+Riviera Beach,PALM BEACH,Structural/SIRS,5,Riviera Beach condos structural/sirs,condos-palm-beach-riviera-beach
+Riviera Beach,PALM BEACH,VA,4,Riviera Beach condos va,condos-palm-beach-riviera-beach
+Riviera Beach,PALM BEACH,Financing,4,Riviera Beach condos financing,condos-palm-beach-riviera-beach
+Riviera Beach,PALM BEACH,Fees/Assessments,4,Riviera Beach condos fees/assessments,condos-palm-beach-riviera-beach
+Riviera Beach,PALM BEACH,Insurance,3,Riviera Beach condos insurance,condos-palm-beach-riviera-beach
+Riviera Beach,PALM BEACH,STR/Rental,3,Riviera Beach condos str/rental,condos-palm-beach-riviera-beach
+Riviera Beach,PALM BEACH,Conventional,1,Riviera Beach condos conventional,condos-palm-beach-riviera-beach
+Royal Palm Beach,PALM BEACH,General,28,Royal Palm Beach condos,condos-palm-beach-royal-palm-beach
+Royal Palm Beach,PALM BEACH,Buying/Market,11,Royal Palm Beach condos,condos-palm-beach-royal-palm-beach
+Royal Palm Beach,PALM BEACH,FHA,8,Royal Palm Beach condos fha,condos-palm-beach-royal-palm-beach
+Royal Palm Beach,PALM BEACH,Structural/SIRS,5,Royal Palm Beach condos structural/sirs,condos-palm-beach-royal-palm-beach
+Royal Palm Beach,PALM BEACH,VA,4,Royal Palm Beach condos va,condos-palm-beach-royal-palm-beach
+Royal Palm Beach,PALM BEACH,Financing,4,Royal Palm Beach condos financing,condos-palm-beach-royal-palm-beach
+Royal Palm Beach,PALM BEACH,Fees/Assessments,4,Royal Palm Beach condos fees/assessments,condos-palm-beach-royal-palm-beach
+Royal Palm Beach,PALM BEACH,Insurance,3,Royal Palm Beach condos insurance,condos-palm-beach-royal-palm-beach
+Royal Palm Beach,PALM BEACH,STR/Rental,3,Royal Palm Beach condos str/rental,condos-palm-beach-royal-palm-beach
+Royal Palm Beach,PALM BEACH,Conventional,1,Royal Palm Beach condos conventional,condos-palm-beach-royal-palm-beach
+Sea Ranch Lakes,BROWARD,General,28,Sea Ranch Lakes condos,condos-broward-sea-ranch-lakes
+Sea Ranch Lakes,BROWARD,Buying/Market,11,Sea Ranch Lakes condos,condos-broward-sea-ranch-lakes
+Sea Ranch Lakes,BROWARD,FHA,8,Sea Ranch Lakes condos fha,condos-broward-sea-ranch-lakes
+Sea Ranch Lakes,BROWARD,Structural/SIRS,5,Sea Ranch Lakes condos structural/sirs,condos-broward-sea-ranch-lakes
+Sea Ranch Lakes,BROWARD,VA,4,Sea Ranch Lakes condos va,condos-broward-sea-ranch-lakes
+Sea Ranch Lakes,BROWARD,Financing,4,Sea Ranch Lakes condos financing,condos-broward-sea-ranch-lakes
+Sea Ranch Lakes,BROWARD,Fees/Assessments,4,Sea Ranch Lakes condos fees/assessments,condos-broward-sea-ranch-lakes
+Sea Ranch Lakes,BROWARD,Insurance,3,Sea Ranch Lakes condos insurance,condos-broward-sea-ranch-lakes
+Sea Ranch Lakes,BROWARD,STR/Rental,3,Sea Ranch Lakes condos str/rental,condos-broward-sea-ranch-lakes
+Sea Ranch Lakes,BROWARD,Conventional,1,Sea Ranch Lakes condos conventional,condos-broward-sea-ranch-lakes
+South Bay,PALM BEACH,General,28,South Bay condos,condos-palm-beach-south-bay
+South Bay,PALM BEACH,Buying/Market,11,South Bay condos,condos-palm-beach-south-bay
+South Bay,PALM BEACH,FHA,8,South Bay condos fha,condos-palm-beach-south-bay
+South Bay,PALM BEACH,Structural/SIRS,5,South Bay condos structural/sirs,condos-palm-beach-south-bay
+South Bay,PALM BEACH,VA,4,South Bay condos va,condos-palm-beach-south-bay
+South Bay,PALM BEACH,Financing,4,South Bay condos financing,condos-palm-beach-south-bay
+South Bay,PALM BEACH,Fees/Assessments,4,South Bay condos fees/assessments,condos-palm-beach-south-bay
+South Bay,PALM BEACH,Insurance,3,South Bay condos insurance,condos-palm-beach-south-bay
+South Bay,PALM BEACH,STR/Rental,3,South Bay condos str/rental,condos-palm-beach-south-bay
+South Bay,PALM BEACH,Conventional,1,South Bay condos conventional,condos-palm-beach-south-bay
+South Miami,MIAMI-DADE,General,28,South Miami condos,condos-miami-dade-south-miami
+South Miami,MIAMI-DADE,Buying/Market,11,South Miami condos,condos-miami-dade-south-miami
+South Miami,MIAMI-DADE,FHA,8,South Miami condos fha,condos-miami-dade-south-miami
+South Miami,MIAMI-DADE,Structural/SIRS,5,South Miami condos structural/sirs,condos-miami-dade-south-miami
+South Miami,MIAMI-DADE,Fees/Assessments,5,South Miami condos fees/assessments,condos-miami-dade-south-miami
+South Miami,MIAMI-DADE,VA,4,South Miami condos va,condos-miami-dade-south-miami
+South Miami,MIAMI-DADE,Financing,4,South Miami condos financing,condos-miami-dade-south-miami
+South Miami,MIAMI-DADE,STR/Rental,4,South Miami condos str/rental,condos-miami-dade-south-miami
+South Miami,MIAMI-DADE,Insurance,3,South Miami condos insurance,condos-miami-dade-south-miami
+South Miami,MIAMI-DADE,Conventional,1,South Miami condos conventional,condos-miami-dade-south-miami
+South Palm Beach,PALM BEACH,General,28,South Palm Beach condos,condos-palm-beach-south-palm-beach
+South Palm Beach,PALM BEACH,Buying/Market,11,South Palm Beach condos,condos-palm-beach-south-palm-beach
+South Palm Beach,PALM BEACH,FHA,8,South Palm Beach condos fha,condos-palm-beach-south-palm-beach
+South Palm Beach,PALM BEACH,Structural/SIRS,5,South Palm Beach condos structural/sirs,condos-palm-beach-south-palm-beach
+South Palm Beach,PALM BEACH,VA,4,South Palm Beach condos va,condos-palm-beach-south-palm-beach
+South Palm Beach,PALM BEACH,Financing,4,South Palm Beach condos financing,condos-palm-beach-south-palm-beach
+South Palm Beach,PALM BEACH,Fees/Assessments,4,South Palm Beach condos fees/assessments,condos-palm-beach-south-palm-beach
+South Palm Beach,PALM BEACH,Insurance,3,South Palm Beach condos insurance,condos-palm-beach-south-palm-beach
+South Palm Beach,PALM BEACH,STR/Rental,3,South Palm Beach condos str/rental,condos-palm-beach-south-palm-beach
+South Palm Beach,PALM BEACH,Conventional,1,South Palm Beach condos conventional,condos-palm-beach-south-palm-beach
+Southwest Ranches,BROWARD,General,28,Southwest Ranches condos,condos-broward-southwest-ranches
+Southwest Ranches,BROWARD,Buying/Market,11,Southwest Ranches condos,condos-broward-southwest-ranches
+Southwest Ranches,BROWARD,FHA,8,Southwest Ranches condos fha,condos-broward-southwest-ranches
+Southwest Ranches,BROWARD,Structural/SIRS,5,Southwest Ranches condos structural/sirs,condos-broward-southwest-ranches
+Southwest Ranches,BROWARD,VA,4,Southwest Ranches condos va,condos-broward-southwest-ranches
+Southwest Ranches,BROWARD,Financing,4,Southwest Ranches condos financing,condos-broward-southwest-ranches
+Southwest Ranches,BROWARD,Fees/Assessments,4,Southwest Ranches condos fees/assessments,condos-broward-southwest-ranches
+Southwest Ranches,BROWARD,Insurance,3,Southwest Ranches condos insurance,condos-broward-southwest-ranches
+Southwest Ranches,BROWARD,STR/Rental,3,Southwest Ranches condos str/rental,condos-broward-southwest-ranches
+Southwest Ranches,BROWARD,Conventional,1,Southwest Ranches condos conventional,condos-broward-southwest-ranches
+Sunny Isles Beach,MIAMI-DADE,General,28,Sunny Isles Beach condos,condos-miami-dade-sunny-isles-beach
+Sunny Isles Beach,MIAMI-DADE,Buying/Market,11,Sunny Isles Beach condos,condos-miami-dade-sunny-isles-beach
+Sunny Isles Beach,MIAMI-DADE,FHA,8,Sunny Isles Beach condos fha,condos-miami-dade-sunny-isles-beach
+Sunny Isles Beach,MIAMI-DADE,STR/Rental,8,Sunny Isles Beach condos str/rental,condos-miami-dade-sunny-isles-beach
+Sunny Isles Beach,MIAMI-DADE,Structural/SIRS,5,Sunny Isles Beach condos structural/sirs,condos-miami-dade-sunny-isles-beach
+Sunny Isles Beach,MIAMI-DADE,Fees/Assessments,5,Sunny Isles Beach condos fees/assessments,condos-miami-dade-sunny-isles-beach
+Sunny Isles Beach,MIAMI-DADE,VA,4,Sunny Isles Beach condos va,condos-miami-dade-sunny-isles-beach
+Sunny Isles Beach,MIAMI-DADE,Financing,4,Sunny Isles Beach condos financing,condos-miami-dade-sunny-isles-beach
+Sunny Isles Beach,MIAMI-DADE,Insurance,3,Sunny Isles Beach condos insurance,condos-miami-dade-sunny-isles-beach
+Sunny Isles Beach,MIAMI-DADE,Conventional,1,Sunny Isles Beach condos conventional,condos-miami-dade-sunny-isles-beach
+Sunrise,BROWARD,General,28,Sunrise condos,condos-broward-sunrise
+Sunrise,BROWARD,Buying/Market,11,Sunrise condos,condos-broward-sunrise
+Sunrise,BROWARD,FHA,8,Sunrise condos fha,condos-broward-sunrise
+Sunrise,BROWARD,Structural/SIRS,5,Sunrise condos structural/sirs,condos-broward-sunrise
+Sunrise,BROWARD,VA,4,Sunrise condos va,condos-broward-sunrise
+Sunrise,BROWARD,Financing,4,Sunrise condos financing,condos-broward-sunrise
+Sunrise,BROWARD,Fees/Assessments,4,Sunrise condos fees/assessments,condos-broward-sunrise
+Sunrise,BROWARD,Insurance,3,Sunrise condos insurance,condos-broward-sunrise
+Sunrise,BROWARD,STR/Rental,3,Sunrise condos str/rental,condos-broward-sunrise
+Sunrise,BROWARD,Conventional,1,Sunrise condos conventional,condos-broward-sunrise
+Surfside,MIAMI-DADE,General,28,Surfside condos,condos-miami-dade-surfside
+Surfside,MIAMI-DADE,Buying/Market,11,Surfside condos,condos-miami-dade-surfside
+Surfside,MIAMI-DADE,FHA,8,Surfside condos fha,condos-miami-dade-surfside
+Surfside,MIAMI-DADE,STR/Rental,8,Surfside condos str/rental,condos-miami-dade-surfside
+Surfside,MIAMI-DADE,Structural/SIRS,5,Surfside condos structural/sirs,condos-miami-dade-surfside
+Surfside,MIAMI-DADE,Fees/Assessments,5,Surfside condos fees/assessments,condos-miami-dade-surfside
+Surfside,MIAMI-DADE,VA,4,Surfside condos va,condos-miami-dade-surfside
+Surfside,MIAMI-DADE,Financing,4,Surfside condos financing,condos-miami-dade-surfside
+Surfside,MIAMI-DADE,Insurance,3,Surfside condos insurance,condos-miami-dade-surfside
+Surfside,MIAMI-DADE,Conventional,1,Surfside condos conventional,condos-miami-dade-surfside
+Sweetwater,MIAMI-DADE,General,28,Sweetwater condos,condos-miami-dade-sweetwater
+Sweetwater,MIAMI-DADE,Buying/Market,11,Sweetwater condos,condos-miami-dade-sweetwater
+Sweetwater,MIAMI-DADE,FHA,8,Sweetwater condos fha,condos-miami-dade-sweetwater
+Sweetwater,MIAMI-DADE,Structural/SIRS,5,Sweetwater condos structural/sirs,condos-miami-dade-sweetwater
+Sweetwater,MIAMI-DADE,Fees/Assessments,5,Sweetwater condos fees/assessments,condos-miami-dade-sweetwater
+Sweetwater,MIAMI-DADE,VA,4,Sweetwater condos va,condos-miami-dade-sweetwater
+Sweetwater,MIAMI-DADE,Financing,4,Sweetwater condos financing,condos-miami-dade-sweetwater
+Sweetwater,MIAMI-DADE,STR/Rental,4,Sweetwater condos str/rental,condos-miami-dade-sweetwater
+Sweetwater,MIAMI-DADE,Insurance,3,Sweetwater condos insurance,condos-miami-dade-sweetwater
+Sweetwater,MIAMI-DADE,Conventional,1,Sweetwater condos conventional,condos-miami-dade-sweetwater
+Tamarac,BROWARD,General,28,Tamarac condos,condos-broward-tamarac
+Tamarac,BROWARD,Buying/Market,11,Tamarac condos,condos-broward-tamarac
+Tamarac,BROWARD,FHA,8,Tamarac condos fha,condos-broward-tamarac
+Tamarac,BROWARD,Structural/SIRS,5,Tamarac condos structural/sirs,condos-broward-tamarac
+Tamarac,BROWARD,VA,4,Tamarac condos va,condos-broward-tamarac
+Tamarac,BROWARD,Financing,4,Tamarac condos financing,condos-broward-tamarac
+Tamarac,BROWARD,Fees/Assessments,4,Tamarac condos fees/assessments,condos-broward-tamarac
+Tamarac,BROWARD,Insurance,3,Tamarac condos insurance,condos-broward-tamarac
+Tamarac,BROWARD,STR/Rental,3,Tamarac condos str/rental,condos-broward-tamarac
+Tamarac,BROWARD,Conventional,1,Tamarac condos conventional,condos-broward-tamarac
+Tequesta,PALM BEACH,General,28,Tequesta condos,condos-palm-beach-tequesta
+Tequesta,PALM BEACH,Buying/Market,11,Tequesta condos,condos-palm-beach-tequesta
+Tequesta,PALM BEACH,FHA,8,Tequesta condos fha,condos-palm-beach-tequesta
+Tequesta,PALM BEACH,Structural/SIRS,5,Tequesta condos structural/sirs,condos-palm-beach-tequesta
+Tequesta,PALM BEACH,VA,4,Tequesta condos va,condos-palm-beach-tequesta
+Tequesta,PALM BEACH,Financing,4,Tequesta condos financing,condos-palm-beach-tequesta
+Tequesta,PALM BEACH,Fees/Assessments,4,Tequesta condos fees/assessments,condos-palm-beach-tequesta
+Tequesta,PALM BEACH,Insurance,3,Tequesta condos insurance,condos-palm-beach-tequesta
+Tequesta,PALM BEACH,STR/Rental,3,Tequesta condos str/rental,condos-palm-beach-tequesta
+Tequesta,PALM BEACH,Conventional,1,Tequesta condos conventional,condos-palm-beach-tequesta
+Virginia Gardens,MIAMI-DADE,General,28,Virginia Gardens condos,condos-miami-dade-virginia-gardens
+Virginia Gardens,MIAMI-DADE,Buying/Market,11,Virginia Gardens condos,condos-miami-dade-virginia-gardens
+Virginia Gardens,MIAMI-DADE,FHA,8,Virginia Gardens condos fha,condos-miami-dade-virginia-gardens
+Virginia Gardens,MIAMI-DADE,Structural/SIRS,5,Virginia Gardens condos structural/sirs,condos-miami-dade-virginia-gardens
+Virginia Gardens,MIAMI-DADE,Fees/Assessments,5,Virginia Gardens condos fees/assessments,condos-miami-dade-virginia-gardens
+Virginia Gardens,MIAMI-DADE,VA,4,Virginia Gardens condos va,condos-miami-dade-virginia-gardens
+Virginia Gardens,MIAMI-DADE,Financing,4,Virginia Gardens condos financing,condos-miami-dade-virginia-gardens
+Virginia Gardens,MIAMI-DADE,STR/Rental,4,Virginia Gardens condos str/rental,condos-miami-dade-virginia-gardens
+Virginia Gardens,MIAMI-DADE,Insurance,3,Virginia Gardens condos insurance,condos-miami-dade-virginia-gardens
+Virginia Gardens,MIAMI-DADE,Conventional,1,Virginia Gardens condos conventional,condos-miami-dade-virginia-gardens
+Wellington,PALM BEACH,General,28,Wellington condos,condos-palm-beach-wellington
+Wellington,PALM BEACH,Buying/Market,11,Wellington condos,condos-palm-beach-wellington
+Wellington,PALM BEACH,FHA,8,Wellington condos fha,condos-palm-beach-wellington
+Wellington,PALM BEACH,Structural/SIRS,5,Wellington condos structural/sirs,condos-palm-beach-wellington
+Wellington,PALM BEACH,VA,4,Wellington condos va,condos-palm-beach-wellington
+Wellington,PALM BEACH,Financing,4,Wellington condos financing,condos-palm-beach-wellington
+Wellington,PALM BEACH,Fees/Assessments,4,Wellington condos fees/assessments,condos-palm-beach-wellington
+Wellington,PALM BEACH,Insurance,3,Wellington condos insurance,condos-palm-beach-wellington
+Wellington,PALM BEACH,STR/Rental,3,Wellington condos str/rental,condos-palm-beach-wellington
+Wellington,PALM BEACH,Conventional,1,Wellington condos conventional,condos-palm-beach-wellington
+West Miami,MIAMI-DADE,General,28,West Miami condos,condos-miami-dade-west-miami
+West Miami,MIAMI-DADE,Buying/Market,11,West Miami condos,condos-miami-dade-west-miami
+West Miami,MIAMI-DADE,FHA,8,West Miami condos fha,condos-miami-dade-west-miami
+West Miami,MIAMI-DADE,Structural/SIRS,5,West Miami condos structural/sirs,condos-miami-dade-west-miami
+West Miami,MIAMI-DADE,Fees/Assessments,5,West Miami condos fees/assessments,condos-miami-dade-west-miami
+West Miami,MIAMI-DADE,VA,4,West Miami condos va,condos-miami-dade-west-miami
+West Miami,MIAMI-DADE,Financing,4,West Miami condos financing,condos-miami-dade-west-miami
+West Miami,MIAMI-DADE,STR/Rental,4,West Miami condos str/rental,condos-miami-dade-west-miami
+West Miami,MIAMI-DADE,Insurance,3,West Miami condos insurance,condos-miami-dade-west-miami
+West Miami,MIAMI-DADE,Conventional,1,West Miami condos conventional,condos-miami-dade-west-miami
+West Palm Beach,PALM BEACH,General,28,West Palm Beach condos,condos-palm-beach-west-palm-beach
+West Palm Beach,PALM BEACH,Buying/Market,11,West Palm Beach condos,condos-palm-beach-west-palm-beach
+West Palm Beach,PALM BEACH,FHA,8,West Palm Beach condos fha,condos-palm-beach-west-palm-beach
+West Palm Beach,PALM BEACH,Structural/SIRS,5,West Palm Beach condos structural/sirs,condos-palm-beach-west-palm-beach
+West Palm Beach,PALM BEACH,VA,4,West Palm Beach condos va,condos-palm-beach-west-palm-beach
+West Palm Beach,PALM BEACH,Financing,4,West Palm Beach condos financing,condos-palm-beach-west-palm-beach
+West Palm Beach,PALM BEACH,Fees/Assessments,4,West Palm Beach condos fees/assessments,condos-palm-beach-west-palm-beach
+West Palm Beach,PALM BEACH,Insurance,3,West Palm Beach condos insurance,condos-palm-beach-west-palm-beach
+West Palm Beach,PALM BEACH,STR/Rental,3,West Palm Beach condos str/rental,condos-palm-beach-west-palm-beach
+West Palm Beach,PALM BEACH,Conventional,1,West Palm Beach condos conventional,condos-palm-beach-west-palm-beach
+West Park,BROWARD,General,28,West Park condos,condos-broward-west-park
+West Park,BROWARD,Buying/Market,11,West Park condos,condos-broward-west-park
+West Park,BROWARD,FHA,8,West Park condos fha,condos-broward-west-park
+West Park,BROWARD,Structural/SIRS,5,West Park condos structural/sirs,condos-broward-west-park
+West Park,BROWARD,VA,4,West Park condos va,condos-broward-west-park
+West Park,BROWARD,Financing,4,West Park condos financing,condos-broward-west-park
+West Park,BROWARD,Fees/Assessments,4,West Park condos fees/assessments,condos-broward-west-park
+West Park,BROWARD,Insurance,3,West Park condos insurance,condos-broward-west-park
+West Park,BROWARD,STR/Rental,3,West Park condos str/rental,condos-broward-west-park
+West Park,BROWARD,Conventional,1,West Park condos conventional,condos-broward-west-park
+Westlake,PALM BEACH,General,28,Westlake condos,condos-palm-beach-westlake
+Westlake,PALM BEACH,Buying/Market,11,Westlake condos,condos-palm-beach-westlake
+Westlake,PALM BEACH,FHA,8,Westlake condos fha,condos-palm-beach-westlake
+Westlake,PALM BEACH,Structural/SIRS,5,Westlake condos structural/sirs,condos-palm-beach-westlake
+Westlake,PALM BEACH,VA,4,Westlake condos va,condos-palm-beach-westlake
+Westlake,PALM BEACH,Financing,4,Westlake condos financing,condos-palm-beach-westlake
+Westlake,PALM BEACH,Fees/Assessments,4,Westlake condos fees/assessments,condos-palm-beach-westlake
+Westlake,PALM BEACH,Insurance,3,Westlake condos insurance,condos-palm-beach-westlake
+Westlake,PALM BEACH,STR/Rental,3,Westlake condos str/rental,condos-palm-beach-westlake
+Westlake,PALM BEACH,Conventional,1,Westlake condos conventional,condos-palm-beach-westlake
+Weston,BROWARD,General,28,Weston condos,condos-broward-weston
+Weston,BROWARD,Buying/Market,11,Weston condos,condos-broward-weston
+Weston,BROWARD,FHA,8,Weston condos fha,condos-broward-weston
+Weston,BROWARD,Structural/SIRS,5,Weston condos structural/sirs,condos-broward-weston
+Weston,BROWARD,VA,4,Weston condos va,condos-broward-weston
+Weston,BROWARD,Financing,4,Weston condos financing,condos-broward-weston
+Weston,BROWARD,Fees/Assessments,4,Weston condos fees/assessments,condos-broward-weston
+Weston,BROWARD,Insurance,3,Weston condos insurance,condos-broward-weston
+Weston,BROWARD,STR/Rental,3,Weston condos str/rental,condos-broward-weston
+Weston,BROWARD,Conventional,1,Weston condos conventional,condos-broward-weston
+Wilton Manors,BROWARD,General,28,Wilton Manors condos,condos-broward-wilton-manors
+Wilton Manors,BROWARD,Buying/Market,11,Wilton Manors condos,condos-broward-wilton-manors
+Wilton Manors,BROWARD,FHA,8,Wilton Manors condos fha,condos-broward-wilton-manors
+Wilton Manors,BROWARD,Structural/SIRS,5,Wilton Manors condos structural/sirs,condos-broward-wilton-manors
+Wilton Manors,BROWARD,VA,4,Wilton Manors condos va,condos-broward-wilton-manors
+Wilton Manors,BROWARD,Financing,4,Wilton Manors condos financing,condos-broward-wilton-manors
+Wilton Manors,BROWARD,Fees/Assessments,4,Wilton Manors condos fees/assessments,condos-broward-wilton-manors
+Wilton Manors,BROWARD,Insurance,3,Wilton Manors condos insurance,condos-broward-wilton-manors
+Wilton Manors,BROWARD,STR/Rental,3,Wilton Manors condos str/rental,condos-broward-wilton-manors
+Wilton Manors,BROWARD,Conventional,1,Wilton Manors condos conventional,condos-broward-wilton-manors

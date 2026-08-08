@@ -1,0 +1,31 @@
+col,record_category,owner_accessible,retention_period,notes
+#,Record Category,Owner Accessible?,Retention Period,Notes
+1,"Plans, permits, warranties and other items provided by the developer",Yes,Permanent,
+2,Recorded declaration of condominium and each amendment,Yes,Permanent,
+3,Recorded bylaws of the association and each amendment,Yes,Permanent,Tenants may inspect/copy bylaws and rules only
+4,Certified copy of articles of incorporation and each amendment,Yes,Permanent,
+5,Current rules of the association,Yes,Permanent,Tenants may inspect/copy bylaws and rules only
+6,"Minutes of all association, board, and unit owner meetings",Yes,Permanent,
+7,Current roster of unit owners with addresses and unit IDs,Partial,Current,Email/fax numbers accessible only with consent; personal info must be redacted for third parties
+8,All current insurance policies of the association,Yes,Current,
+9,"Current management agreements, leases, or other contracts",Yes,Current,
+10,Bills of sale or transfer for association-owned property,Yes,Not specified,
+11,"Accounting records (receipts, expenditures, invoices, statements of account)",Yes,7 years (general),"Includes audits, reviews, financial reports"
+11d,Structural integrity reserve studies,Yes,15 years after completion,Critical for buyer due diligence
+11e,Contracts and bids for work to be performed,Yes,1 year after receipt,
+12,"Ballots, sign-in sheets, voting proxies",Yes,1 year from the vote/meeting,
+13,Rental records when the association acts as rental agent,Yes,Not specified,
+14,Current Questions and Answers sheet (s. 718.504),Yes,Current,
+15,"Structural / life safety inspection reports (ss. 553.899, 718.301(4)(p))",Yes,15 years after receipt,Critical for buyer due diligence
+16,"Bids for materials, equipment, or services",Yes,Not specified,
+17,Affirmative acknowledgements under s. 718.121(4)(c),Yes,Not specified,
+18,All building permits,Yes,Not specified,
+19,Completed board member educational certificates,Yes,Not specified,
+20,All other written records related to association operation,Yes,Not specified,
+X1,Attorney work product for pending litigation,NO,N/A,Protected until conclusion of proceedings
+X2,Information obtained in connection with lease/sale/transfer approval,NO,N/A,
+X3,Personnel records of association or management employees,NO,N/A,Employment agreements and compensation-related budget records ARE accessible
+X4,Medical records of unit owners,NO,N/A,
+X5,"SSNs, driver's license numbers, credit card numbers, personal identifying info",NO,N/A,"Name, unit designation, and notice-purpose addresses ARE accessible"
+X6,Electronic security measures including passwords,NO,N/A,
+X7,Association software and operating systems,NO,N/A,The underlying data IS part of official records

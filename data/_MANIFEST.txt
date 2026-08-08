@@ -1,0 +1,40 @@
+precon_miami: 127 rows, 15 cols, gated=False
+  cols: project, neighborhood, status, sold_out, str_allowed, str_detail, price_from, bedrooms, commission, delivery, delivery_year, architect, lead_developer, url_slug, developer_page_slug
+precon_broward: 37 rows, 17 cols, gated=False
+  cols: project, city, area, status, sold_out, str_allowed, str_detail, price_from, bedrooms, sf_range, units, floors, delivery, address, developer, url_slug, developer_page_slug
+existing_towers: 431 rows, 11 cols, gated=False
+  cols: building, neighborhood, units, floors, year_built, str_allowed, str_detail, architect, lead_developer, url_slug, developer_page_slug
+companies: 511 rows, 5 cols, gated=False
+  cols: company, type, developments, headquarters, url_slug
+people: 174 rows, 9 cols, gated=False
+  cols: name, role, company, title, current_projects, past_projects, website_linkedin, profile_depth, url_slug
+city_hubs: 104 rows, 18 cols, gated=False
+  cols: city, county, population, coastal_water, identity_nickname, known_for_hooks, condo_relevance, buildings_tracked, fha_approved, fha_expired, va_accepted, va_rejected, precon_pipeline, 2_flags, url_slug_hub, primary_keyword, page_template, wikipedia_ref
+faq: 7524 rows, 10 cols, gated=False
+  cols: city, county, col, question, answer, cluster, url_slug, primary_keyword, page_template, city_hub_slug
+keyword_map: 1033 rows, 6 cols, gated=False
+  cols: city, county, cluster, faq_pages, primary_keyword, hub_slug
+statutes: 16 rows, 6 cols, gated=False
+  cols: ref, citation, topic, requirement_threshold, retention_deadline, source_doc
+records_access: 30 rows, 5 cols, gated=False
+  cols: col, record_category, owner_accessible, retention_period, notes
+market_stats: 24 rows, 9 cols, gated=False
+  cols: metric_id, metric, county_scope, period, value, comparison_period, comparison_value, change, source
+agencies: 15 rows, 11 cols, gated=False
+  cols: organization_office, sub_office_role, category, phone, toll_free_alt, email, address, website, status, notes, source
+legal_aid: 10 rows, 11 cols, gated=False
+  cols: organization_firm, contact_role, category, phone, toll_free_alt, email, address_location, website, status, notes, source
+authority_links: 128 rows, 4 cols, gated=False
+  cols: url, domain, type, use_for_outbound_link
+forms: 9 rows, 5 cols, gated=False
+  cols: form_template, purpose, source_authority, host_or_link, status
+board_contacts: 1090 rows, 9 cols, gated=True
+  cols: association, city, county, contact_name, position, mailing_address, phone, source, publish
+management_firms: 12596 rows, 7 cols, gated=False
+  cols: firm_name, street, city, county, zip, license, status
+cam_licensees: 10093 rows, 7 cols, gated=True
+  cols: name, street, city, zip, license, expiration, ce_credits
+building_officials: 32 rows, 6 cols, gated=False
+  cols: jurisdiction, building_official, address, phone, fax, email
+assn_registry: 4055 rows, 7 cols, gated=False
+  cols: registration, association_name, address, type, registration_status, enforcement_status, reg_date

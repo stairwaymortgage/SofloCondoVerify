@@ -1,0 +1,25 @@
+metric_id,metric,county_scope,period,value,comparison_period,comparison_value,change,source
+Metric ID,Metric,County / Scope,Period,Value,Comparison Period,Comparison Value,Change,Source Doc
+STAT-01,Median monthly condo association fee,Miami-Dade County,Apr-Jun 2024,$900,Apr-Jun 2019,$567,+59% (stated as 'more than 59%'),SRC-1
+STAT-02,Median monthly condo association fee,Broward County,Apr-Jun 2024,$613,Apr-Jun 2019,$392,+56% (stated as 'more than 56%'),SRC-1
+STAT-03,"Median monthly fee, year-over-year",Miami-Dade County,Q2 2024,$900,Q2 2023,$820,+10%,SRC-1
+STAT-04,"Median monthly fee, year-over-year",Broward County,Q2 2024,$613,Q2 2023,$526,+17%,SRC-1
+STAT-05,Regional HOA fee increase,South Florida,2019-2024,~60%,,,Headline figure,SRC-1
+STAT-06,"Condo sales volume, year-over-year",Miami-Dade County,June 2024,Down ~27%,June 2023,,-27%,SRC-1
+STAT-07,"Condo sales volume, year-over-year",Broward County,June 2024,Down 32%,June 2023,,-32%,SRC-1
+STAT-08,Number of condo associations,Miami-Dade + Broward + Palm Beach,Dec 2023,"12,925",,,~26% of state total,SRC-1
+STAT-09,Number of condo associations,State of Florida,Dec 2023,"~50,000",,,,SRC-1
+STAT-10,MLS data coverage of listed condos,Miami-Dade + Broward,2024,97%,,,Methodology note,SRC-1
+STAT-11,Reserve study deadline for buildings 3+ stories,State of Florida,January 2025,Required,,,Statutory deadline,SRC-1
+STAT-12,Budget increase threshold triggering owner pushback,State of Florida,2024,15% over prior year,,,Allows members to propose alternative budget,SRC-1
+MDC MEDIAN HOA FEE SERIES (FIU Pérez Metropolitan Center),,,,,,,,
+Year,Median HOA Fee,Change vs Prior Yr,Cumulative vs 2016,,,,,
+2016,372,,0,,,,,
+2017,391,0.0510752688172043,0.0510752688172043,,,,,
+2018,399,0.020460358056266,0.0725806451612903,,,,,
+2019,402,0.0075187969924812,0.0806451612903226,,,,,
+2020,431,0.0721393034825871,0.158602150537634,,,,,
+2021,473,0.0974477958236659,0.271505376344086,,,,,
+2022,511,0.080338266384778,0.373655913978495,,,,,
+2023,590,0.154598825831703,0.586021505376344,,,,,
+2024,635,0.076271186440678,0.706989247311828,,,,,

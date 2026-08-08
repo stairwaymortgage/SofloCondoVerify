@@ -1,0 +1,432 @@
+building,neighborhood,units,floors,year_built,str_allowed,str_detail,architect,lead_developer,url_slug,developer_page_slug
+1 Hotel & Homes South Beach,South Beach,148,17,2015,Yes,Yes/Hotel Prog.,"HKS Inc., Kobi Karp Architecture & Interior Design",LeFrak,condos-south-beach-1-hotel-homes-south-beach,developers-lefrak
+100 Andalusia,Coral Gables,96,8,2005,No,No,,,condos-coral-gables-100-andalusia,developers
+1000 Venetian Way,Venetian Islands,117,22,1983,No,No,,,condos-venetian-islands-1000-venetian-way,developers
+1010 Brickell,Brickell,387,49,2017,No,No,Sieger Suarez Architects,Key International,condos-brickell-1010-brickell,developers-key-international
+1060 Brickell (1050 Tower),Brickell,262,35,2008,No,No,SB Architects,Extell Development,condos-brickell-1060-brickell-1050-tower,developers-extell-development
+1060 Brickell (1060 Tower),Brickell,314,46,2008,No,No,SB Architects,Extell Development,condos-brickell-1060-brickell-1060-tower,developers-extell-development
+1100 Millecento,Brickell,382,43,2015,No,No,Carlos Ott Architects,Related Group,condos-brickell-1100-millecento,developers-related-group
+1300 Ponce Condo,Coral Gables,124,12,2009,Unknown,,Fullerton Diaz Architects,,condos-coral-gables-1300-ponce-condo,developers
+1500 Ocean Drive,South Beach,113,16,1998,No,No,,,condos-south-beach-1500-ocean-drive,developers
+1800 Biscayne Plaza,Edgewater,195,22,2005,Unknown,,,The Melo Group,condos-edgewater-1800-biscayne-plaza,developers-the-melo-group
+1800 Club,Edgewater,469,42,2007,No,No,Bermello Ajamil & Partners,BCOM,condos-edgewater-1800-club,
+2 Midtown - The Mews,Midtown Miami,14,7,2007,No,No,Zyscovich Architects,Midtown Group,condos-midtown-miami-2-midtown-the-mews,developers-midtown-group
+2 Midtown - The Midrise,Midtown Miami,62,10,2007,No,No,Zyscovich Architects,Midtown Group,condos-midtown-miami-2-midtown-the-midrise,developers-midtown-group
+2 Midtown - The Tower,Midtown Miami,261,31,2007,No,No,Zyscovich Architects,Midtown Group,condos-midtown-miami-2-midtown-the-tower,developers-midtown-group
+23 Biscayne Bay,Edgewater,96,18,2012,Unknown,,,The Melo Group,condos-edgewater-23-biscayne-bay,developers-the-melo-group
+250 Wynwood,Wynwood,11,6,2015,Unknown,,,,condos-wynwood-250-wynwood,developers
+26 Edgewater,Edgewater,86,10,2018,Unknown,,,Stripey Real Estate Development,condos-edgewater-26-edgewater,developers-stripey-real-estate-development
+3030 Aventura,Aventura,45,7,2007,Unknown,,,,condos-aventura-3030-aventura,developers
+321 Ocean,South of Fifth,21,9,2015,No,No,TEN Arquitectos,AGM Aria,condos-south-of-fifth-321-ocean,developers-agm-aria
+360 Condo A,North Bay Village,278,16,2007,Unknown,,,,condos-north-bay-village-360-condo-a,developers
+360 Condo B,North Bay Village,99,12,2007,Unknown,,,,condos-north-bay-village-360-condo-b,developers
+360 Condo C,North Bay Village,36,3,2007,Unknown,,,,condos-north-bay-village-360-condo-c,developers
+4 Midtown,Midtown Miami,392,33,2008,No,No,Nichols Architects,Midtown Group,condos-midtown-miami-4-midtown,developers-midtown-group
+400 Sunny Isles,Sunny Isles Beach,230,21,2015,Unknown,,Oppenheim Architecture & Design,Key International,condos-sunny-isles-beach-400-sunny-isles,developers-key-international
+42 Pine,Miami Beach,50,7,2025,Unknown,,Arquitectonica,,condos-miami-beach-42-pine,developers
+50 Biscayne,Downtown Miami,527,54,2007,No,No,Sieger Suarez Architects,Related Group,condos-downtown-miami-50-biscayne,developers-related-group
+500 Brickell East,Brickell,320,43,2008,No,No,Arquitectonica,Related Group,condos-brickell-500-brickell-east,developers-related-group
+500 Brickell West,Brickell,315,43,2008,No,No,Arquitectonica,Related Group,condos-brickell-500-brickell-west,developers-related-group
+501 FIRST Residences,Downtown Miami,476,40,2026,Yes,Yes,Revuelta Architecture International,Aria Development Group,condos-downtown-miami-501-first-residences,developers-aria-development-group
+55 Merrick,Coral Gables,166,8,2008,Unknown,,Fullerton Diaz Architects,,condos-coral-gables-55-merrick,developers
+57 Ocean,Miami Beach,69,19,2021,No,No,Arquitectonica,Multiplan Real Estate Asset Management,condos-miami-beach-57-ocean,developers-multiplan-real-estate-asset-management
+72 Park,Miami Beach,206,22,2025,Unknown,,Built Form,Lefferts,condos-miami-beach-72-park,developers-lefferts
+900 Biscayne Bay,Park West,508,63,2008,No,No,Revuelta Vega Leon,Terra,condos-park-west-900-biscayne-bay,developers-terra
+Acqualina Residences,Sunny Isles Beach,,51,2006,Unknown,,,,condos-sunny-isles-beach-acqualina-residences,developers
+Akoya,Miami Beach,385,47,2004,No,No,,,condos-miami-beach-akoya,developers
+Alana Bay Harbor Islands,Bay Harbor Islands,29,7,2025,Unknown,,,Alta Developers,condos-bay-harbor-islands-alana-bay-harbor-islands,developers-alta-developers
+Alaqua,Aventura,193,7,2007,Unknown,,,,condos-aventura-alaqua,developers
+Alliage Lofts,South Beach,12,5,2004,Unknown,,,,condos-south-beach-alliage-lofts,developers
+Apogee South Beach,South of Fifth,67,23,2008,No,No,Sieger Suarez Architects,Related Group,condos-south-of-fifth-apogee-south-beach,developers-related-group
+Aria on the Bay,Edgewater,648,53,2018,No,No,,The Melo Group,condos-edgewater-aria-on-the-bay,developers-the-melo-group
+Aria Reserve South,Edgewater,383,62,2025,No,No,Arquitectonica,The Melo Group,condos-edgewater-aria-reserve-south,developers-the-melo-group
+Arlen House Condo,Sunny Isles Beach,312,22,1968,Unknown,,,,condos-sunny-isles-beach-arlen-house-condo,developers
+Arlen House East,Sunny Isles Beach,599,22,1975,Unknown,,,,condos-sunny-isles-beach-arlen-house-east,developers
+Arlen House West,Sunny Isles Beach,312,22,1969,Unknown,,,,condos-sunny-isles-beach-arlen-house-west,developers
+Arte,Surfside,16,12,2020,No,No,ACPV Architects,Sapir Corp LTD,condos-surfside-arte,developers-sapir-corp-ltd
+Artech,Aventura,231,9,2008,Unknown,,Carlos Ott Architects,Fortune International Group,condos-aventura-artech,developers-fortune-international-group
+Artecity Governor,South Beach,61,3,1936,Unknown,,,,condos-south-beach-artecity-governor,developers
+Artecity Plaza,South Beach,7,2,1948,Unknown,,,,condos-south-beach-artecity-plaza,developers
+Artepark North,South Beach,55,6,2011,Unknown,,,,condos-south-beach-artepark-north,developers
+Artepark South,South Beach,57,5,2011,Unknown,,,,condos-south-beach-artepark-south,developers
+Asia,Brickell Key,122,36,2008,No,No,,Swire Properties,condos-brickell-key-asia,developers-swire-properties
+Aston Martin Residences,Downtown Miami,392,66,2024,No,No,Bodas Miani Anger,G&G Business Developments,condos-downtown-miami-aston-martin-residences,developers-g-g-business-developments
+Atlantis on Brickell,Brickell,96,21,1982,Unknown,,Arquitectonica,,condos-brickell-atlantis-on-brickell,developers
+Aurora,Sunny Isles Beach,61,17,2023,Unknown,,,,condos-sunny-isles-beach-aurora,developers
+Aventura Marina 1,Aventura,126,18,2005,Unknown,,,Related Group,condos-aventura-aventura-marina-1,developers-related-group
+Aventura Marina 2,Aventura,250,32,2006,Unknown,,,Related Group,condos-aventura-aventura-marina-2,developers-related-group
+Axis on Brickell North,Brickell,366,40,2008,No,No,Arquitectonica,Brack Capital Real Estate,condos-brickell-axis-on-brickell-north,developers-brack-capital-real-estate
+Axis on Brickell South,Brickell,352,40,2008,No,No,Arquitectonica,Brack Capital Real Estate,condos-brickell-axis-on-brickell-south,developers-brack-capital-real-estate
+Azure,Surfside,73,12,2005,Unknown,,Revuelta Vega Leon,Azure Beach Development,condos-surfside-azure,developers-azure-beach-development
+Bal Harbour 101,Bal Harbour,171,20,1977,Unknown,,,,condos-bal-harbour-bal-harbour-101,developers
+Balmoral,Bal Harbour,423,21,1977,Unknown,,,,condos-bal-harbour-balmoral,developers
+Baltus House,Miami Design District,167,16,2015,No,No,CFE Architects,Related Group,condos-miami-design-district-baltus-house,developers-related-group
+Bay Harbor Club,Bay Harbor Islands,42,8,2015,Unknown,,,Blue Road,condos-bay-harbor-islands-bay-harbor-club,developers-blue-road
+Bay Harbor One,Bay Harbor Islands,36,8,2019,Unknown,,,,condos-bay-harbor-islands-bay-harbor-one,developers
+Bay House,Edgewater,165,38,2015,No,No,The Melo Group,The Melo Group,condos-edgewater-bay-house,developers-the-melo-group
+Bayside Village,Fisher Island,,,,Unknown,,,Island Developers,condos-fisher-island-bayside-village,developers-island-developers
+Bayview,Fisher Island,,,,Unknown,,,Island Developers,condos-fisher-island-bayview,developers-island-developers
+Beach House 8,Miami Beach,7,10,2016,Unknown,,Arquitectonica,,condos-miami-beach-beach-house-8,developers
+Beacon Harbour,Coconut Grove,9,6,2004,Unknown,,,,condos-coconut-grove-beacon-harbour,developers
+Bel Aire on the Ocean,Miami Beach,129,19,2004,Unknown,,,,condos-miami-beach-bel-aire-on-the-ocean,developers
+Bellini Bal Harbour,Bal Harbour,77,23,2004,Unknown,,CFE Architects,Martin Z. Margulies,condos-bal-harbour-bellini-bal-harbour,developers-martin-z-margulies
+Bentley Bay North,South Beach,87,24,2004,Unknown,,Arquitectonica,Florida Development Associates,condos-south-beach-bentley-bay-north,developers-florida-development-associates
+Bentley Bay South,South Beach,80,26,2004,Unknown,,Arquitectonica,Florida Development Associates,condos-south-beach-bentley-bay-south,developers-florida-development-associates
+Biscayne Beach,Edgewater,391,52,2017,No,No,WHLC Architecture,GTIS Partners,condos-edgewater-biscayne-beach,developers-gtis-partners
+Blue Diamond,Miami Beach,310,45,2000,No,No,,,condos-miami-beach-blue-diamond,developers
+Blue on the Bay,Edgewater,328,36,2005,No,No,Arquitectonica,Hyperion Group,condos-edgewater-blue-on-the-bay,developers-hyperion-group
+Botanica at Key Colony,Key Biscayne,292,4,1981,Unknown,,,,condos-key-biscayne-botanica-at-key-colony,developers
+Brickell Arch,Brickell,116,36,2004,Unknown,,Kohn Pedersen Fox Associates,Estoril,condos-brickell-brickell-arch,
+Brickell Bay Club,Brickell,442,31,1974,No,No,,,condos-brickell-brickell-bay-club,developers
+Brickell East,Brickell,64,28,1983,Unknown,,,,condos-brickell-brickell-east,developers
+Brickell Flatiron,Brickell,523,64,2019,No,No,Revuelta Architecture International,CMC Group,condos-brickell-brickell-flatiron,developers-cmc-group
+Brickell Harbour,Brickell,157,18,1974,Unknown,,,,condos-brickell-brickell-harbour,developers
+Brickell Heights East,Brickell,358,49,2017,No,No,Arquitectonica,Related Group,condos-brickell-brickell-heights-east,developers-related-group
+Brickell Heights West,Brickell,332,46,2017,No,No,Arquitectonica,Related Group,condos-brickell-brickell-heights-west,developers-related-group
+Brickell House,Brickell,374,45,2014,No,No,Sieger Suarez Architects,Newgard Development Group,condos-brickell-brickell-house,developers-newgard-development-group
+Brickell Key One,Brickell Key,315,22,1982,No,No,,Swire Properties,condos-brickell-key-brickell-key-one,developers-swire-properties
+Brickell Key Two,Brickell Key,390,18,1991,No,No,,Swire Properties,condos-brickell-key-brickell-key-two,developers-swire-properties
+Brickell on the River North,Brickell,384,43,2006,No,No,CFE Architects,Groupe Pacific International,condos-brickell-brickell-on-the-river-north,developers-groupe-pacific-international
+Brickell on the River South,Brickell,327,46,2006,No,No,CFE Architects,Groupe Pacific International,condos-brickell-brickell-on-the-river-south,developers-groupe-pacific-international
+Brickell Place I,Brickell,274,23,1975,Unknown,,,,condos-brickell-brickell-place-i,developers
+Brickell Place II,Brickell,302,26,1975,Unknown,,,,condos-brickell-brickell-place-ii,developers
+Brickell Place III,Brickell,175,18,1980,Unknown,,,,condos-brickell-brickell-place-iii,developers
+Brickell Place IV,Brickell,219,23,1980,Unknown,,,,condos-brickell-brickell-place-iv,developers
+Brickell Ten,Brickell,155,22,2016,No,No,,,condos-brickell-brickell-ten,developers
+Brickell Townhouse,Brickell,351,22,1963,No,No,Steward-Skinner Associates,,condos-brickell-brickell-townhouse,developers
+Bristol Tower,Brickell,146,41,1993,No,No,Fullerton Diaz Revuelta,CMC Group,condos-brickell-bristol-tower,developers-cmc-group
+Canvas,A+E District,513,38,2018,No,No,CFE Architects,NR Investments,condos-a-e-district-canvas,developers-nr-investments
+Capri South Beach Building A,South Beach,6,3,2008,No,No,,,condos-south-beach-capri-south-beach-building-a,developers
+Capri South Beach Building B,South Beach,55,14,2008,No,No,,,condos-south-beach-capri-south-beach-building-b,developers
+Capri South Beach Building C,South Beach,6,6,2008,No,No,,,condos-south-beach-capri-south-beach-building-c,developers
+Carbonell,Brickell Key,284,38,2005,No,No,,Swire Properties,condos-brickell-key-carbonell,developers-swire-properties
+Carlisle on the Ocean,Surfside,115,12,1965,Unknown,,,,condos-surfside-carlisle-on-the-ocean,developers
+Casa Del Mar,Key Biscayne,235,27,1971,Unknown,,,,condos-key-biscayne-casa-del-mar,developers
+Cassa Brickell,Brickell,80,10,2016,Unknown,,,,condos-brickell-cassa-brickell,developers
+Centro,Downtown Miami,352,37,2016,No,No,,Newgard Development Group,condos-downtown-miami-centro,developers-newgard-development-group
+Champlain Towers East,Surfside,98,12,1994,Unknown,,,,condos-surfside-champlain-towers-east,developers
+Champlain Towers North,Surfside,111,13,1981,Unknown,,,,condos-surfside-champlain-towers-north,developers
+Charter Club,Edgewater,445,23,1973,Unknown,,,,condos-edgewater-charter-club,developers
+Chateau Beach Residences,Sunny Isles Beach,81,33,2016,Unknown,,Kobi Karp Architecture & Interior Design,Chateau Group,condos-sunny-isles-beach-chateau-beach-residences,developers-chateau-group
+Cielo on the Bay,North Bay Village,35,16,2009,Unknown,,Revuelta Vega Leon,,condos-north-bay-village-cielo-on-the-bay,developers
+Cite on the Bay East,Edgewater,249,16,2004,No,No,,,condos-edgewater-cite-on-the-bay-east,developers
+Cite on the Bay West,Edgewater,185,6,2004,No,No,,,condos-edgewater-cite-on-the-bay-west,developers
+City 24,Edgewater,119,15,2008,Unknown,,Revuelta Vega Leon,,condos-edgewater-city-24,developers
+Cloisters on the Bay,Coconut Grove,40,3,2002,Unknown,,,,condos-coconut-grove-cloisters-on-the-bay,developers
+Club Tower One,Key Biscayne,93,21,1998,Unknown,,,,condos-key-biscayne-club-tower-one,developers
+Club Tower Three,Key Biscayne,94,,1999,Unknown,,,,condos-key-biscayne-club-tower-three,developers
+Club Tower Two,Key Biscayne,100,,1998,Unknown,,,,condos-key-biscayne-club-tower-two,developers
+Commodore Club East,Key Biscayne,185,12,1971,Unknown,,,,condos-key-biscayne-commodore-club-east,developers
+Commodore Club South,Key Biscayne,180,12,1974,Unknown,,,,condos-key-biscayne-commodore-club-south,developers
+Commodore Club West,Key Biscayne,184,12,1973,Unknown,,,,condos-key-biscayne-commodore-club-west,developers
+Continuum South Beach North Tower,South of Fifth,202,37,2008,Unknown,,Fullerton Diaz Architects,Continuum Company,condos-south-of-fifth-continuum-south-beach-north-tower,developers-continuum-company
+Continuum South Beach South Tower,South of Fifth,294,42,2002,Unknown,,Fullerton Diaz Architects,Continuum Company,condos-south-of-fifth-continuum-south-beach-south-tower,developers-continuum-company
+Costa Bella,Brickell,230,21,1977,Unknown,,,,condos-brickell-costa-bella,developers
+Courts Brickell Key,Brickell Key,318,33,2002,No,No,,Swire Properties,condos-brickell-key-courts-brickell-key,developers-swire-properties
+Courvoisier Courts,Brickell Key,270,27,1997,Unknown,,,Swire Properties,condos-brickell-key-courvoisier-courts,developers-swire-properties
+District 225,Downtown Miami,343,37,2025,Yes,Yes/Airbnb,Sieger Suarez Architects,Related Group,condos-downtown-miami-district-225,developers-related-group
+Dua Miami,Brickell,453,53,2016,No,No,Arquitectonica,Related Group,condos-brickell-dua-miami,developers-related-group
+Echo Aventura East,Aventura,102,11,2015,Unknown,,Carlos Ott Architects,Property Markets Group,condos-aventura-echo-aventura-east,developers-property-markets-group
+Echo Aventura West,Aventura,88,11,2015,Unknown,,Carlos Ott Architects,Property Markets Group,condos-aventura-echo-aventura-west,developers-property-markets-group
+Echo Brickell,Brickell,171,57,2017,No,No,Carlos Ott Architects,Property Markets Group,condos-brickell-echo-brickell,developers-property-markets-group
+Edgewater Lofts,Edgewater,68,11,2008,Unknown,,Revuelta Vega Leon,,condos-edgewater-edgewater-lofts,developers
+Eighty Seven Park,Miami Beach,66,18,2019,No,No,Renzo Piano Building Workshop,Terra,condos-miami-beach-eighty-seven-park,developers-terra
+Eloquence on the Bay,North Bay Village,120,21,2009,Unknown,,,,condos-north-bay-village-eloquence-on-the-bay,developers
+Elysee Miami,Edgewater,95,57,2021,No,No,Arquitectonica,Two Roads Development,condos-edgewater-elysee-miami,developers-two-roads-development
+Emerald at Brickell,Brickell,142,27,2006,No,No,Fullerton Diaz Architects,Sunvest Resort Communities,condos-brickell-emerald-at-brickell,developers-sunvest-resort-communities
+Emerald Bay at Key Colony,Key Biscayne,283,12,1980,Unknown,,,,condos-key-biscayne-emerald-bay-at-key-colony,developers
+Emilia Edgewater,Edgewater,30,7,2018,Yes,Yes,,,condos-edgewater-emilia-edgewater,developers
+Epic Residences,Downtown Miami,342,55,2008,No,No,Revuelta Vega Leon,CMC Group,condos-downtown-miami-epic-residences,developers-cmc-group
+Faena House,Miami Beach,44,16,2015,No,No,,,condos-miami-beach-faena-house,developers
+Fendi Chateau Residences,Surfside,57,12,2016,No,No,Arquitectonica,,condos-surfside-fendi-chateau-residences,developers
+Five Park,South Beach,226,48,2025,No,No,Arquitectonica,Terra,condos-south-beach-five-park,developers-terra
+Flamingo South Beach,South Beach,561,15,1960,Unknown,,,,condos-south-beach-flamingo-south-beach,developers
+Fontainebleau II,Miami Beach,461,37,2005,Unknown,,Nichols Architects,Turnberry Associates,condos-miami-beach-fontainebleau-ii,developers-turnberry-associates
+Fontainebleau III,Miami Beach,285,19,2008,Unknown,,Nichols Architects,Turnberry Associates,condos-miami-beach-fontainebleau-iii,developers-turnberry-associates
+Fortune House,Brickell,296,29,1998,Unknown,,,,condos-brickell-fortune-house,developers
+Four Seasons Residences Miami,Brickell,176,70,2003,No,No,"Handel Architects, Bermello Ajamil & Partners",Millennium Partners MDA Associates,condos-brickell-four-seasons-residences-miami,developers-millennium-partners-mda-associates
+Gables Club Tower I,Coral Gables,96,19,1996,Unknown,,,,condos-coral-gables-gables-club-tower-i,developers
+Gables Club Tower II,Coral Gables,99,19,2003,Unknown,,,,condos-coral-gables-gables-club-tower-ii,developers
+Gables Marquis,Coral Gables,177,20,2007,Unknown,,,EB Developers,condos-coral-gables-gables-marquis,developers-eb-developers
+Gale Miami Hotel & Residences,Park West,608,51,2024,Yes,Yes/Airbnb,Arquitectonica,GFO Investments,condos-park-west-gale-miami-hotel-residences,developers-gfo-investments
+Gallery Art,Edgewater,183,19,2008,Unknown,,,,condos-edgewater-gallery-art,developers
+Glass Miami Beach,South of Fifth,18,10,2015,No,No,Rene Gonzalez Architect,Terra,condos-south-of-fifth-glass-miami-beach,developers-terra
+Glasshaus,Coconut Grove,23,5,2021,Unknown,,,,condos-coconut-grove-glasshaus,developers
+Gran Paraiso,Edgewater,312,55,2019,No,No,Arquitectonica,Related Group,condos-edgewater-gran-paraiso,developers-related-group
+Grand Bay Residences,Key Biscayne,137,,1996,Unknown,,,,condos-key-biscayne-grand-bay-residences,developers
+Grand Venetian,South Beach,122,26,2001,Unknown,,,,condos-south-beach-grand-venetian,developers
+Green Diamond,Miami Beach,310,45,2000,Unknown,,,,condos-miami-beach-green-diamond,developers
+Grove at Grand Bay North,Coconut Grove,57,22,2016,No,No,Bjarke Ingels Group,Terra,condos-coconut-grove-grove-at-grand-bay-north,developers-terra
+Grove at Grand Bay South,Coconut Grove,41,22,2016,No,No,Bjarke Ingels Group,Terra,condos-coconut-grove-grove-at-grand-bay-south,developers-terra
+Grove Hill Tower,Coconut Grove,76,22,1996,Unknown,,Bermello Ajamil & Partners,,condos-coconut-grove-grove-hill-tower,developers
+Grove Towers,Coconut Grove,99,,1982,Unknown,,,,condos-coconut-grove-grove-towers,developers
+Grovenor House,Coconut Grove,166,32,2005,No,No,Revuelta Vega Leon,CMC Group,condos-coconut-grove-grovenor-house,developers-cmc-group
+Hamptons South,Aventura,250,28,2004,Unknown,,,,condos-aventura-hamptons-south,developers
+Hamptons West,Aventura,342,26,1984,Unknown,,,,condos-aventura-hamptons-west,developers
+Harborview,Fisher Island,,,,Unknown,,,Island Developers,condos-fisher-island-harborview,developers-island-developers
+Harbour House,Bal Harbour,449,16,1964,Unknown,,,,condos-bal-harbour-harbour-house,developers
+Harbour Park,Bay Harbor Islands,17,9,2016,Unknown,,LSN Arquitectos,Art+Tec Development,condos-bay-harbor-islands-harbour-park,developers-art-tec-development
+Hilton Bentley Miami/South Beach East,South of Fifth,53,10,2003,Unknown,,,,condos-south-of-fifth-hilton-bentley-miami-south-beach-east,developers
+Hilton Bentley Miami/South Beach West,South of Fifth,57,10,2003,Unknown,,,,condos-south-of-fifth-hilton-bentley-miami-south-beach-west,developers
+Hyde Midtown,Midtown Miami,410,33,2018,No,No,Arquitectonica,Related Group,condos-midtown-miami-hyde-midtown,developers-related-group
+Icon Bay,Edgewater,299,43,2015,No,No,Arquitectonica,Related Group,condos-edgewater-icon-bay,developers-related-group
+Icon Brickell I East,Brickell,325,58,2008,No,No,Arquitectonica,Related Group,condos-brickell-icon-brickell-i-east,developers-related-group
+Icon Brickell I West,Brickell,387,52,2008,No,No,Arquitectonica,Related Group,condos-brickell-icon-brickell-i-west,developers-related-group
+Icon Brickell II,Brickell,560,58,2009,No,No,Arquitectonica,Related Group,condos-brickell-icon-brickell-ii,developers-related-group
+Icon Brickell III,Brickell,372,50,2009,Yes,Yes/Airbnb,Arquitectonica,Related Group,condos-brickell-icon-brickell-iii,developers-related-group
+Icon South Beach,South of Fifth,274,42,2005,No,No,Sieger Suarez Architects,Related Group,condos-south-of-fifth-icon-south-beach,developers-related-group
+Il Villaggio,South Beach,120,17,1998,Unknown,,Fullerton Diaz Revuelta,Worldinvest Joint Venture,condos-south-beach-il-villaggio,developers-worldinvest-joint-venture
+Imperial at Brickell,Brickell,161,30,1983,Unknown,,Arquitectonica,,condos-brickell-imperial-at-brickell,developers
+Industry Lofts,South Beach,17,3,1953,Unknown,,,,condos-south-beach-industry-lofts,developers
+Infinity at Brickell,Brickell,459,53,2008,No,No,,,condos-brickell-infinity-at-brickell,developers
+Isola,Brickell Key,300,23,1990,No,No,,Swire Properties,condos-brickell-key-isola,developers-swire-properties
+Jade at Brickell Bay,Brickell,338,48,2004,No,No,Revuelta Vega Leon,Fortune International Group,condos-brickell-jade-at-brickell-bay,developers-fortune-international-group
+Jade Beach,Sunny Isles Beach,248,51,2008,Unknown,,Carlos Ott Architects,Fortune International Group,condos-sunny-isles-beach-jade-beach,developers-fortune-international-group
+Jade Ocean,Sunny Isles Beach,254,49,2009,No,No,Carlos Ott Architects,Fortune International Group,condos-sunny-isles-beach-jade-ocean,developers-fortune-international-group
+Jade Signature,Sunny Isles Beach,191,57,2018,No,No,Herzog & de Meuron,Fortune International Group,condos-sunny-isles-beach-jade-signature,developers-fortune-international-group
+KAI at Bay Harbor Islands,Bay Harbor Islands,54,8,2016,Unknown,,,,condos-bay-harbor-islands-kai-at-bay-harbor-islands,developers
+King David Condo,Sunny Isles Beach,88,15,2005,Unknown,,,,condos-sunny-isles-beach-king-david-condo,developers
+L'Atelier Miami Beach,Miami Beach,25,18,2019,No,No,,,condos-miami-beach-l-atelier-miami-beach,developers
+La Baia South,Bay Harbor Islands,68,8,2026,No,No,Revuelta Architecture International,Continuum Company,condos-bay-harbor-islands-la-baia-south,developers-continuum-company
+La Gorce Palace,Miami Beach,208,34,1995,Unknown,,,,condos-miami-beach-la-gorce-palace,developers
+La Perla,Sunny Isles Beach,326,43,2006,Yes,Yes,,,condos-sunny-isles-beach-la-perla,developers
+La Tour Condo,Miami Beach,64,26,1995,Unknown,,Fullerton Diaz Revuelta,,condos-miami-beach-la-tour-condo,developers
+Latitude on the River,Miami River,452,44,2007,No,No,,,condos-miami-river-latitude-on-the-river,developers
+Le Parc at Brickell,Brickell,128,12,2016,No,No,,,condos-brickell-le-parc-at-brickell,developers
+Loft Downtown I,Downtown Miami,194,24,2005,No,No,,Related Group,condos-downtown-miami-loft-downtown-i,developers-related-group
+Lofts on Brickell One,Brickell,24,5,2006,Unknown,,,,condos-brickell-lofts-on-brickell-one,developers
+Lofts on Brickell Two,Brickell,24,5,2007,Unknown,,,,condos-brickell-lofts-on-brickell-two,developers
+Louver House,South of Fifth,10,4,2017,No,No,Rene Gonzalez Architect,Mast Capital,condos-south-of-fifth-louver-house,developers-mast-capital
+Madison Downtown East,Park West,152,17,1989,Unknown,,,,condos-park-west-madison-downtown-east,developers
+Madison Downtown West,Park West,203,22,1989,Unknown,,,,condos-park-west-madison-downtown-west,developers
+Majestic Tower,Bal Harbour,166,22,1998,Unknown,,,Oren Development,condos-bal-harbour-majestic-tower,developers-oren-development
+Mar Azul,Key Biscayne,124,,1974,Unknown,,,,condos-key-biscayne-mar-azul,developers
+Marbella,Surfside,87,12,1989,Unknown,,,,condos-surfside-marbella,developers
+Marea,South of Fifth,30,6,2015,Unknown,,Sieger Suarez Architects,Related Group,condos-south-of-fifth-marea,developers-related-group
+Marina Blue,Park West,514,58,2008,No,No,Arquitectonica,Hyperion Group,condos-park-west-marina-blue,developers-hyperion-group
+Marina Palms North,North Miami Beach,234,25,2015,No,No,Slattery and Associates,The Plaza Group,condos-north-miami-beach-marina-palms-north,developers-the-plaza-group
+Marina Palms South,North Miami Beach,234,25,2017,Unknown,,Slattery and Associates,The Plaza Group,condos-north-miami-beach-marina-palms-south,developers-the-plaza-group
+Marquis Residences,Park West,285,67,2009,No,No,Arquitectonica,Africa Israel Investments Ltd,condos-park-west-marquis-residences,developers-africa-israel-investments-ltd
+Mei,Miami Beach,132,22,2008,Unknown,,,,condos-miami-beach-mei,developers
+Meridian Lofts,South Beach,111,6,2005,Unknown,,,,condos-south-beach-meridian-lofts,developers
+Merrick Manor,Coral Gables,227,10,2019,Unknown,,,,condos-coral-gables-merrick-manor,developers
+Met 1,Downtown Miami,447,40,2008,No,No,Nichols Architects,MDM Group,condos-downtown-miami-met-1,developers-mdm-group
+Midblock,Midtown Miami,173,11,2007,Yes,Yes/Airbnb,,,condos-midtown-miami-midblock,developers
+Mint,Miami River,527,53,2010,Unknown,,Revuelta Vega Leon,Key International,condos-miami-river-mint,developers-key-international
+Mirador 1000,South Beach,446,17,1968,Unknown,,,,condos-south-beach-mirador-1000,developers
+Mirador 1200,South Beach,408,17,1965,Unknown,,,,condos-south-beach-mirador-1200,developers
+Mirador East,South Beach,64,9,1979,Unknown,,,,condos-south-beach-mirador-east,developers
+Mirage,Surfside,99,12,1995,Unknown,,,,condos-surfside-mirage,developers
+Missoni Baia,Edgewater,246,57,2023,No,No,,,condos-edgewater-missoni-baia,developers
+Monaco Yacht Club & Residences,Miami Beach,39,11,2022,Unknown,,Arquitectonica,Optimum Development USA,condos-miami-beach-monaco-yacht-club-residences,developers-optimum-development-usa
+Monad Terrace,South Beach,59,13,2021,Unknown,,,,condos-south-beach-monad-terrace,developers
+Mondrian South Beach,South Beach,334,17,2008,Unknown,,,,condos-south-beach-mondrian-south-beach,developers
+Montclair Lofts,South Beach,40,5,2005,Unknown,,,Gregg Covin Real Estate Development,condos-south-beach-montclair-lofts,developers-gregg-covin-real-estate-development
+Moon Bay,Edgewater,60,12,2007,Unknown,,,Gilcar LLC,condos-edgewater-moon-bay,developers-gilcar-llc
+Mosaic,Miami Beach,85,21,2006,Unknown,,Fullerton Diaz Architects,,condos-miami-beach-mosaic,developers
+Mr. C Residences Bayshore Tower,Coconut Grove,95,21,2024,No,No,Arquitectonica,Terra,condos-coconut-grove-mr-c-residences-bayshore-tower,developers-terra
+Mr. C Residences Tigertail Tower,Coconut Grove,134,21,2024,No,No,Arquitectonica,Terra,condos-coconut-grove-mr-c-residences-tigertail-tower,developers-terra
+Murano at Portofino,South of Fifth,189,39,2001,Unknown,,Sieger Suarez Architects,Related Group,condos-south-of-fifth-murano-at-portofino,developers-related-group
+Murano Grande,South of Fifth,265,38,2003,Unknown,,Sieger Suarez Architects,Related Group,condos-south-of-fifth-murano-grande,developers-related-group
+Muse,Sunny Isles Beach,62,49,2018,Unknown,,Carlos Ott Architects,Property Markets Group,condos-sunny-isles-beach-muse,developers-property-markets-group
+Mutiny Park Hotel Arya,Coconut Grove,211,23,2001,Unknown,,,,condos-coconut-grove-mutiny-park-hotel-arya,developers
+MyBrickell,Brickell,192,27,2014,No,No,,Related Group,condos-brickell-mybrickell,developers-related-group
+Neo Lofts,Miami River,196,21,2003,Unknown,,,,condos-miami-river-neo-lofts,developers
+Neo Vertika,Miami River,442,36,2006,No,No,Revuelta Vega Leon,,condos-miami-river-neo-vertika,developers
+New Wave,Edgewater,76,20,2006,Unknown,,,,condos-edgewater-new-wave,developers
+Nine at Mary Brickell Village,Brickell,390,35,2015,No,No,Behar Font & Partners,LYND,condos-brickell-nine-at-mary-brickell-village,developers-lynd
+O Residences,Bay Harbor Islands,41,9,2017,Unknown,,Frankel Benayoun Architects,S2 Development,condos-bay-harbor-islands-o-residences,developers-s2-development
+Ocean Four,Sunny Isles Beach,281,41,2006,Unknown,,,Related Group,condos-sunny-isles-beach-ocean-four,developers-related-group
+Ocean House,South of Fifth,31,7,2009,Unknown,,Nichols Architects,iStar Residential,condos-south-of-fifth-ocean-house,developers-istar-residential
+Ocean One,Sunny Isles Beach,241,30,1999,Unknown,,,Related Group,condos-sunny-isles-beach-ocean-one,developers-related-group
+Ocean Park,South of Fifth,9,4,2023,Unknown,,Revuelta Architecture International,Multiplan Real Estate Asset Management,condos-south-of-fifth-ocean-park,developers-multiplan-real-estate-asset-management
+Ocean Place East,South of Fifth,25,8,2003,Unknown,,,,condos-south-of-fifth-ocean-place-east,developers
+Ocean Place West,South of Fifth,23,8,2004,Unknown,,,,condos-south-of-fifth-ocean-place-west,developers
+Ocean Seven,Surfside,7,4,2014,Unknown,,,,condos-surfside-ocean-seven,developers
+Ocean Three,Sunny Isles Beach,215,38,2003,Unknown,,,Related Group,condos-sunny-isles-beach-ocean-three,developers-related-group
+Ocean Tower One,Key Biscayne,111,,2002,Unknown,,,,condos-key-biscayne-ocean-tower-one,developers
+Ocean Tower Two,Key Biscayne,111,,2001,Unknown,,,,condos-key-biscayne-ocean-tower-two,developers
+Ocean Two,Sunny Isles Beach,253,42,2001,Unknown,,,Related Group,condos-sunny-isles-beach-ocean-two,developers-related-group
+Oceana Bal Harbour North,Bal Harbour,99,28,2016,Unknown,,Arquitectonica,Consultatio Real Estate,condos-bal-harbour-oceana-bal-harbour-north,developers-consultatio-real-estate
+Oceana Bal Harbour South,Bal Harbour,137,28,2016,Unknown,,Arquitectonica,Consultatio Real Estate,condos-bal-harbour-oceana-bal-harbour-south,developers-consultatio-real-estate
+Oceana Key Biscayne North,Key Biscayne,70,15,2014,Unknown,,Arquitectonica,Consultatio Real Estate,condos-key-biscayne-oceana-key-biscayne-north,developers-consultatio-real-estate
+Oceana Key Biscayne South,Key Biscayne,71,15,2014,Unknown,,Arquitectonica,Consultatio Real Estate,condos-key-biscayne-oceana-key-biscayne-south,developers-consultatio-real-estate
+Oceana Key Biscayne Villas,Key Biscayne,12,2,2014,Unknown,,Arquitectonica,Consultatio Real Estate,condos-key-biscayne-oceana-key-biscayne-villas,developers-consultatio-real-estate
+Oceanside,Fisher Island,,,,Unknown,,,Fisher Island Holdings,condos-fisher-island-oceanside,developers-fisher-island-holdings
+Oceansound at Key Colony,Key Biscayne,311,12,1979,Unknown,,,,condos-key-biscayne-oceansound-at-key-colony,developers
+Onda Residences,Bay Harbor Islands,41,8,2024,Unknown,,Arquitectonica,CMC Group,condos-bay-harbor-islands-onda-residences,developers-cmc-group
+One Bal Harbour,Bal Harbour,184,26,2007,No,No,,,condos-bal-harbour-one-bal-harbour,developers
+One Bay Harbor,Bay Harbor Islands,17,7,2019,Unknown,,,Tross Group,condos-bay-harbor-islands-one-bay-harbor,developers-tross-group
+One Bay Residences,Miami Design District,38,3,2018,Unknown,,IDEA Architects,G&L Real Estate Development,condos-miami-design-district-one-bay-residences,developers-g-l-real-estate-development
+One Grove Isle,Coconut Grove,167,19,1979,Unknown,,,Martin Z. Margulies,condos-coconut-grove-one-grove-isle,developers-martin-z-margulies
+One Island Place I,Aventura,112,30,1990,Unknown,,,,condos-aventura-one-island-place-i,developers
+One Island Place II,Aventura,115,30,1991,Unknown,,,,condos-aventura-one-island-place-ii,developers
+One Miami East,Downtown Miami,451,44,2005,No,No,,,condos-downtown-miami-one-miami-east,developers
+One Miami West,Downtown Miami,440,45,2005,No,No,,,condos-downtown-miami-one-miami-west,developers
+One Ocean,South of Fifth,49,7,2016,Unknown,,TEN Arquitectos,Related Group,condos-south-of-fifth-one-ocean,developers-related-group
+One Paraiso,Edgewater,273,53,2018,No,No,Arquitectonica,Related Group,condos-edgewater-one-paraiso,developers-related-group
+One Park Grove,Coconut Grove,66,23,2020,No,No,Office for Metropolitan Architecture,Related Group,condos-coconut-grove-one-park-grove,developers-related-group
+One Tequesta Point,Brickell Key,287,30,1995,No,No,,Swire Properties,condos-brickell-key-one-tequesta-point,developers-swire-properties
+One Thousand Museum,Park West,84,61,2019,No,No,Zaha Hadid Architects,1000 Biscayne Tower LLC,condos-park-west-one-thousand-museum,developers-1000-biscayne-tower-llc
+Onyx on the Bay,Edgewater,117,28,2007,No,No,Bermello Ajamil & Partners,BAP Development,condos-edgewater-onyx-on-the-bay,developers-bap-development
+Opera Tower,Edgewater,635,56,2007,No,No,,,condos-edgewater-opera-tower,developers
+Palau Sunset Harbour,South Beach,43,5,2016,No,No,Kobi Karp Architecture & Interior Design,SMG Management,condos-south-beach-palau-sunset-harbour,developers-smg-management
+Palazzo Del Mare,Fisher Island,,,,No,No,,Fisher Island Holdings,condos-fisher-island-palazzo-del-mare,developers-fisher-island-holdings
+Palazzo Del Sol,Fisher Island,,,,No,No,,Fisher Island Holdings,condos-fisher-island-palazzo-del-sol,developers-fisher-island-holdings
+Palazzo Della Luna,Fisher Island,49,10,2019,No,No,,Fisher Island Holdings,condos-fisher-island-palazzo-della-luna,developers-fisher-island-holdings
+Paraiso Bay,Edgewater,364,54,2018,No,No,Arquitectonica,Related Group,condos-edgewater-paraiso-bay,developers-related-group
+Paraiso Bayviews,Edgewater,382,44,2018,No,No,Arquitectonica,Related Group,condos-edgewater-paraiso-bayviews,developers-related-group
+Paramount Bay,Edgewater,344,47,2010,No,No,Arquitectonica,,condos-edgewater-paramount-bay,developers
+Paramount Miami Worldcenter,Park West,567,58,2019,Varies,Varies,Elkus Manfredi Architects,Paramount Ventures,condos-park-west-paramount-miami-worldcenter,developers-paramount-ventures
+Parc Lofts,A+E District,70,6,2005,Unknown,,Bermello Ajamil & Partners,The Intrepid Real Estate Company,condos-a-e-district-parc-lofts,developers-the-intrepid-real-estate-company
+Park Grove Club Residences,Coconut Grove,132,23,2018,No,No,Office for Metropolitan Architecture,Related Group,condos-coconut-grove-park-grove-club-residences,developers-related-group
+Park Villas East,South Beach,10,2,2013,Unknown,,,,condos-south-beach-park-villas-east,developers
+Park Villas West,South Beach,8,2,2013,Unknown,,,,condos-south-beach-park-villas-west,developers
+Parque Towers East,Sunny Isles Beach,159,27,2019,Unknown,,,,condos-sunny-isles-beach-parque-towers-east,developers
+Parque Towers West,Sunny Isles Beach,161,30,2019,Unknown,,,,condos-sunny-isles-beach-parque-towers-west,developers
+Peninsula I,Aventura,221,31,2003,Unknown,,,,condos-aventura-peninsula-i,developers
+Peninsula II,Aventura,222,31,2007,Unknown,,,,condos-aventura-peninsula-ii,developers
+Pinnacle,Sunny Isles Beach,242,42,1998,Unknown,,Sieger Suarez Architects,,condos-sunny-isles-beach-pinnacle,developers
+Platinum Condominium,Edgewater,119,22,2006,Unknown,,Fullerton Diaz Architects,,condos-edgewater-platinum-condominium,developers
+Porsche Design Tower,Sunny Isles Beach,132,58,2016,No,No,Sieger Suarez Architects,Dezer Development,condos-sunny-isles-beach-porsche-design-tower,developers-dezer-development
+Porto Bellagio Building 1,Sunny Isles Beach,149,9,2003,Unknown,,,,condos-sunny-isles-beach-porto-bellagio-building-1,developers
+Porto Bellagio Building 2,Sunny Isles Beach,195,9,2003,Unknown,,,,condos-sunny-isles-beach-porto-bellagio-building-2,developers
+Porto Bellagio Building 3,Sunny Isles Beach,78,6,2003,Unknown,,,,condos-sunny-isles-beach-porto-bellagio-building-3,developers
+Porto Bellagio Building 4,Sunny Isles Beach,78,6,2003,Unknown,,,,condos-sunny-isles-beach-porto-bellagio-building-4,developers
+Porto Vita North,Aventura,122,31,2003,Unknown,,Revuelta Vega Leon,CMC Group,condos-aventura-porto-vita-north,developers-cmc-group
+Porto Vita South,Aventura,150,32,2000,Unknown,,Revuelta Vega Leon,CMC Group,condos-aventura-porto-vita-south,developers-cmc-group
+Porto Vita Townhomes,Aventura,26,,,Unknown,,Revuelta Vega Leon,CMC Group,condos-aventura-porto-vita-townhomes,developers-cmc-group
+Portofino Tower,South of Fifth,216,46,1996,Unknown,,Sieger Suarez Architects,Portofino Group,condos-south-of-fifth-portofino-tower,developers-portofino-group
+Prive North,Aventura,80,16,2017,Unknown,,Sieger Suarez Architects,Gary Cohen,condos-aventura-prive-north,developers-gary-cohen
+Prive South,Aventura,80,16,2018,Unknown,,Sieger Suarez Architects,Gary Cohen,condos-aventura-prive-south,developers-gary-cohen
+Quadro,Miami Design District,198,12,2019,Yes,Yes,,,condos-miami-design-district-quadro,developers
+Quantum on the Bay,Edgewater,697,51,2007,No,No,Nichols Architects,Terra,condos-edgewater-quantum-on-the-bay,developers-terra
+Reach,Brickell,390,43,2016,No,No,Arquitectonica,Swire Properties,condos-brickell-reach,developers-swire-properties
+Regalia,Sunny Isles Beach,39,44,2014,Unknown,,Arquitectonica,,condos-sunny-isles-beach-regalia,developers
+Residences at Vizcaya,Coconut Grove,18,7,2011,Unknown,,,,condos-coconut-grove-residences-at-vizcaya,developers
+Residences by Armani/Casa,Sunny Isles Beach,308,56,2019,No,No,Pelli Clarke & Partners,Related Group,condos-sunny-isles-beach-residences-by-armani-casa,developers-related-group
+Rise,Brickell,388,43,2016,No,No,Arquitectonica,Swire Properties,condos-brickell-rise,developers-swire-properties
+Riva Bay Harbor,Bay Harbor Islands,25,7,2013,Unknown,,,,condos-bay-harbor-islands-riva-bay-harbor,developers
+Roney Palace,South Beach,557,17,1926,Unknown,,,,condos-south-beach-roney-palace,developers
+Santa Maria,Brickell,174,51,1997,Unknown,,Fullerton Diaz Revuelta,CMC Group,condos-brickell-santa-maria,developers-cmc-group
+Sayan,Sunny Isles Beach,90,30,2007,Unknown,,,,condos-sunny-isles-beach-sayan,developers
+Seaside Village,Fisher Island,,,,Unknown,,,Island Developers,condos-fisher-island-seaside-village,developers-island-developers
+Seaside Villas,Fisher Island,,,,Unknown,,,Island Developers,condos-fisher-island-seaside-villas,developers-island-developers
+Seaway at The Surf Club,Surfside,36,11,2024,Unknown,,,,condos-surfside-seaway-at-the-surf-club,developers
+Sereno Residences,Bay Harbor Islands,38,7,2016,Unknown,,Corwil Architects,Integra Investments,condos-bay-harbor-islands-sereno-residences,developers-integra-investments
+Skyline on Brickell,Brickell,360,35,2004,Unknown,,Bermello Ajamil & Partners,Skyline Equities Realty,condos-brickell-skyline-on-brickell,developers-skyline-equities-realty
+SLS Lux,Brickell,521,58,2018,Varies,Varies,Arquitectonica,Related Group,condos-brickell-sls-lux,developers-related-group
+Smart Brickell I,Brickell,50,23,2023,Yes,Yes/Airbnb & Building Prog.,HAC Architects,Habitat Group,condos-brickell-smart-brickell-i,developers-habitat-group
+Solaris at Brickell,Brickell,138,23,2006,Unknown,,,H&H Development,condos-brickell-solaris-at-brickell,developers-h-h-development
+Sole on the Ocean,Sunny Isles Beach,147,24,2007,Unknown,,,,condos-sunny-isles-beach-sole-on-the-ocean,developers
+Solimar North,Surfside,108,12,2002,Unknown,,,,condos-surfside-solimar-north,developers
+Solimar South,Surfside,106,12,2001,Unknown,,,,condos-surfside-solimar-south,developers
+South Bay Club,South Beach,341,10,1966,Unknown,,,,condos-south-beach-south-bay-club,developers
+South Pointe Towers,South of Fifth,202,25,1987,Unknown,,,,condos-south-of-fifth-south-pointe-towers,developers
+Space 01,North Bay Village,53,16,2006,Unknown,,,,condos-north-bay-village-space-01,developers
+Spiaggia,Surfside,104,12,1965,Unknown,,,,condos-surfside-spiaggia,developers
+St Louis,Brickell Key,129,31,1995,Unknown,,,Swire Properties,condos-brickell-key-st-louis,developers-swire-properties
+St Tropez on the Bay I,Sunny Isles Beach,93,21,2009,Unknown,,,,condos-sunny-isles-beach-st-tropez-on-the-bay-i,developers
+St Tropez on the Bay II,Sunny Isles Beach,89,21,2009,Unknown,,,,condos-sunny-isles-beach-st-tropez-on-the-bay-ii,developers
+St Tropez on the Bay III,Sunny Isles Beach,98,20,2010,Unknown,,,,condos-sunny-isles-beach-st-tropez-on-the-bay-iii,developers
+St. Regis Bal Harbour Center,Bal Harbour,267,27,2011,Unknown,,Sieger Suarez Architects,Related Group,condos-bal-harbour-st-regis-bal-harbour-center,developers-related-group
+St. Regis Bal Harbour North,Bal Harbour,107,27,2011,Unknown,,Sieger Suarez Architects,Related Group,condos-bal-harbour-st-regis-bal-harbour-north,developers-related-group
+St. Regis Bal Harbour South,Bal Harbour,95,27,2011,Unknown,,Sieger Suarez Architects,Related Group,condos-bal-harbour-st-regis-bal-harbour-south,developers-related-group
+Star Lofts,Edgewater,47,24,2007,Unknown,,,,condos-edgewater-star-lofts,developers
+Sunset Harbour North,South Beach,219,26,1996,Unknown,,,,condos-south-beach-sunset-harbour-north,developers
+Sunset Harbour South,South Beach,208,26,1998,Unknown,,,,condos-south-beach-sunset-harbour-south,developers
+Ten Aragon Condo,Coral Gables,183,16,2004,Unknown,,,,condos-coral-gables-ten-aragon-condo,developers
+Ten Museum Park,Park West,200,48,2007,No,No,Oppenheim Architecture & Design,Gregg Covin Real Estate Development,condos-park-west-ten-museum-park,developers-gregg-covin-real-estate-development
+Ten Thousand Plaza North,Bay Harbor Islands,29,7,1977,Unknown,,,,condos-bay-harbor-islands-ten-thousand-plaza-north,developers
+Ten Thousand Plaza South,Bay Harbor Islands,29,7,1977,Unknown,,,,condos-bay-harbor-islands-ten-thousand-plaza-south,developers
+Ten30 South Beach,South Beach,32,3,2022,Unknown,,,,condos-south-beach-ten30-south-beach,developers
+Terra Beachside Villas,Miami Beach,116,6,2010,Unknown,,Sieger Suarez Architects,BSG Development,condos-miami-beach-terra-beachside-villas,developers-bsg-development
+The Altair,Bay Harbor Islands,96,6,2018,Unknown,,,PPG Development,condos-bay-harbor-islands-the-altair,developers-ppg-development
+The Atrium at Aventura,Aventura,192,12,2007,Unknown,,,,condos-aventura-the-atrium-at-aventura,developers
+The Bath Club,Miami Beach,113,20,2005,Unknown,,Revuelta Vega Leon,Peebles Atlantic Development,condos-miami-beach-the-bath-club,developers-peebles-atlantic-development
+The Bond on Brickell,Brickell,328,44,2016,No,No,Nichols Architects,Rilea Group,condos-brickell-the-bond-on-brickell,developers-rilea-group
+The Bridgewater,North Bay Village,118,21,2006,Unknown,,,,condos-north-bay-village-the-bridgewater,developers
+The Caribbean North,Miami Beach,36,8,1941,Unknown,,,,condos-miami-beach-the-caribbean-north,developers
+The Caribbean South,Miami Beach,68,19,2008,Unknown,,,,condos-miami-beach-the-caribbean-south,developers
+The Carillon Center Tower,Miami Beach,229,16,2008,Unknown,,Arquitectonica,,condos-miami-beach-the-carillon-center-tower,developers
+The Carillon North Tower,Miami Beach,199,35,2008,Unknown,,Arquitectonica,,condos-miami-beach-the-carillon-north-tower,developers
+The Carillon South Tower,Miami Beach,141,21,2008,Unknown,,Arquitectonica,,condos-miami-beach-the-carillon-south-tower,developers
+The Club at Brickell Bay,Brickell,643,43,2005,Yes,Yes/Airbnb,,,condos-brickell-the-club-at-brickell-bay,developers
+The Cosmopolitan Building 1,South of Fifth,136,8,2004,Unknown,,,,condos-south-of-fifth-the-cosmopolitan-building-1,developers
+The Cosmopolitan Building 2,South of Fifth,85,6,2004,Unknown,,,,condos-south-of-fifth-the-cosmopolitan-building-2,developers
+The Crimson,Edgewater,90,19,2016,Unknown,,,,condos-edgewater-the-crimson,developers
+The Crosby Miami Worldcenter,Park West,450,33,2026,Yes,Yes/Airbnb,CFE Architects,Related Group,condos-park-west-the-crosby-miami-worldcenter,developers-related-group
+The Decoplage,South Beach,614,17,1965,Unknown,,,,condos-south-beach-the-decoplage,developers
+The Elser Hotel & Residences,Downtown Miami,646,47,2022,Unknown,,Sieger Suarez Architects,Property Markets Group,condos-downtown-miami-the-elser-hotel-residences,developers-property-markets-group
+The Estates at Acqualina North,Sunny Isles Beach,83,49,2023,Unknown,,,,condos-sunny-isles-beach-the-estates-at-acqualina-north,developers
+The Estates at Acqualina South,Sunny Isles Beach,149,49,2022,Unknown,,,,condos-sunny-isles-beach-the-estates-at-acqualina-south,developers
+The Fairchild Coconut Grove,Coconut Grove,26,6,2020,Unknown,,,,condos-coconut-grove-the-fairchild-coconut-grove,developers
+The Floridian,South Beach,334,34,1997,Unknown,,,Gumenick Properties,condos-south-beach-the-floridian,developers-gumenick-properties
+The Ivory,Bay Harbor Islands,40,9,2017,Unknown,,,Brick O. Real Estate,condos-bay-harbor-islands-the-ivory,developers-brick-o-real-estate
+The Ivy at Riverfront,Miami River,504,46,2008,No,No,Revuelta Vega Leon,Key International,condos-miami-river-the-ivy-at-riverfront,developers-key-international
+The Loft 2,Downtown Miami,495,36,2007,No,No,,Related Group,condos-downtown-miami-the-loft-2,developers-related-group
+The Mansions at Acqualina,Sunny Isles Beach,84,47,2015,Unknown,,,,condos-sunny-isles-beach-the-mansions-at-acqualina,developers
+The Mark on Brickell,Brickell,359,37,2001,No,No,,Related Group,condos-brickell-the-mark-on-brickell,developers-related-group
+The Metropolitan,Brickell,198,27,2001,Unknown,,,,condos-brickell-the-metropolitan,developers
+The Palace,Brickell,248,42,1981,Unknown,,Arquitectonica,Harry B. Helmsley,condos-brickell-the-palace,developers-harry-b-helmsley
+The Palace at Bal Harbour,Bal Harbour,103,21,1994,Unknown,,,Oren Development,condos-bal-harbour-the-palace-at-bal-harbour,developers-oren-development
+The Palms,Bay Harbor Islands,42,8,2018,Unknown,,,Blue Road,condos-bay-harbor-islands-the-palms,developers-blue-road
+The Parc at Turnberry Isle,Aventura,111,22,2005,Unknown,,,,condos-aventura-the-parc-at-turnberry-isle,developers
+The Plaza on Brickell East,Brickell,560,56,2008,No,No,Nichols Architects,Related Group,condos-brickell-the-plaza-on-brickell-east,developers-related-group
+The Plaza on Brickell West,Brickell,439,44,2008,No,No,Nichols Architects,Related Group,condos-brickell-the-plaza-on-brickell-west,developers-related-group
+The Residences at The Miami Beach Edition,Miami Beach,24,17,2014,Unknown,,,,condos-miami-beach-the-residences-at-the-miami-beach-edition,developers
+The Ritz-Carlton Bal Harbour,Bal Harbour,124,18,2007,Unknown,,,,condos-bal-harbour-the-ritz-carlton-bal-harbour,developers
+The Ritz-Carlton Miami Beach Villas,Miami Beach,15,2,2022,Unknown,,Lissoni Associati,Lionheart Capital,condos-miami-beach-the-ritz-carlton-miami-beach-villas,developers-lionheart-capital
+The Ritz-Carlton Residences Coconut Grove - Executive Residences,Coconut Grove,87,22,2002,No,No,,,condos-coconut-grove-the-ritz-carlton-residences-coconut-grove-executive-residences,developers
+The Ritz-Carlton Residences Coconut Grove - Tower Residences,Coconut Grove,126,22,2001,No,No,,,condos-coconut-grove-the-ritz-carlton-residences-coconut-grove-tower-residences,developers
+The Ritz-Carlton Residences Miami Beach,Miami Beach,110,8,2019,Unknown,,Lissoni Associati,Lionheart Capital,condos-miami-beach-the-ritz-carlton-residences-miami-beach,developers-lionheart-capital
+The Ritz-Carlton Residences Sunny Isles Beach,Sunny Isles Beach,209,52,2020,Unknown,,Arquitectonica,Fortune International Group,condos-sunny-isles-beach-the-ritz-carlton-residences-sunny-isles-beach,developers-fortune-international-group
+The Sail,Brickell,151,30,2006,Unknown,,,,condos-brickell-the-sail,developers
+The Setai Miami Beach,South Beach,159,41,2004,Yes,Yes,,,condos-south-beach-the-setai-miami-beach,developers
+The Surf Club Four Seasons North,Surfside,68,12,2017,No,No,Meier Architects,Fort Partners,condos-surfside-the-surf-club-four-seasons-north,developers-fort-partners
+The Surf Club Four Seasons South,Surfside,80,12,2017,Unknown,,Meier Architects,Fort Partners,condos-surfside-the-surf-club-four-seasons-south,developers-fort-partners
+The Towers of Key Biscayne - Phase I,Key Biscayne,261,,1972,Unknown,,,,condos-key-biscayne-the-towers-of-key-biscayne-phase-i,developers
+The Towers of Key Biscayne - Phase II,Key Biscayne,268,,1971,Unknown,,,,condos-key-biscayne-the-towers-of-key-biscayne-phase-ii,developers
+The Waverly at South Beach,South Beach,395,36,2001,Unknown,,Arquitectonica,,condos-south-beach-the-waverly-at-south-beach,developers
+The Waverly at Surfside,Surfside,64,12,2003,Unknown,,,,condos-surfside-the-waverly-at-surfside,developers
+The Waves,Surfside,106,13,1991,Unknown,,,,condos-surfside-the-waves,developers
+The Yorker,Edgewater,62,11,2005,Unknown,,,,condos-edgewater-the-yorker,developers
+Three Grove Isle,Coconut Grove,162,19,1981,Unknown,,,Martin Z. Margulies,condos-coconut-grove-three-grove-isle,developers-martin-z-margulies
+Three Hundred Collins,South of Fifth,19,5,2018,Unknown,,,,condos-south-of-fifth-three-hundred-collins,developers
+Three Tequesta Point,Brickell Key,235,46,2001,No,No,,Swire Properties,condos-brickell-key-three-tequesta-point,developers-swire-properties
+Tidemark at Key Colony,Key Biscayne,282,12,1978,Unknown,,,,condos-key-biscayne-tidemark-at-key-colony,developers
+Tiffany of Bal Harbour,Bal Harbour,135,18,1982,Unknown,,,,condos-bal-harbour-tiffany-of-bal-harbour,developers
+Trump Palace,Sunny Isles Beach,274,56,2006,Unknown,,,Dezer Development,condos-sunny-isles-beach-trump-palace,developers-dezer-development
+Trump Royale,Sunny Isles Beach,382,57,2008,Unknown,,,Dezer Development,condos-sunny-isles-beach-trump-royale,developers-dezer-development
+Trump Tower I,Sunny Isles Beach,271,43,2008,Unknown,,,Dezer Development,condos-sunny-isles-beach-trump-tower-i,developers-dezer-development
+Trump Tower II,Sunny Isles Beach,271,43,2008,Unknown,,,Dezer Development,condos-sunny-isles-beach-trump-tower-ii,developers-dezer-development
+Trump Tower III,Sunny Isles Beach,271,43,2010,Unknown,,,Dezer Development,condos-sunny-isles-beach-trump-tower-iii,developers-dezer-development
+Turnberry Ocean Club,Sunny Isles Beach,154,54,2020,Unknown,,Carlos Zapata Studio,Turnberry Associates,condos-sunny-isles-beach-turnberry-ocean-club,developers-turnberry-associates
+Turnberry Ocean Colony North,Sunny Isles Beach,130,37,2006,Unknown,,,,condos-sunny-isles-beach-turnberry-ocean-colony-north,developers
+Turnberry Ocean Colony South,Sunny Isles Beach,128,37,2007,Unknown,,,,condos-sunny-isles-beach-turnberry-ocean-colony-south,developers
+Two Grove Isle,Coconut Grove,168,19,1980,Unknown,,,Martin Z. Margulies,condos-coconut-grove-two-grove-isle,developers-martin-z-margulies
+Two Park Grove,Coconut Grove,73,23,2018,No,No,Office for Metropolitan Architecture,Related Group,condos-coconut-grove-two-park-grove,developers-related-group
+Two Tequesta Point,Brickell Key,267,39,1998,Unknown,,,Swire Properties,condos-brickell-key-two-tequesta-point,developers-swire-properties
+Uptown Lofts,Edgewater,66,12,2005,Unknown,,,Cobalt Development Group,condos-edgewater-uptown-lofts,developers-cobalt-development-group
+Uptown Marina Lofts,Aventura,216,11,2006,Unknown,,,Shefaor Development,condos-aventura-uptown-marina-lofts,developers-shefaor-development
+Venture at Aventura East,Aventura,309,11,2005,Unknown,,,Related Group,condos-aventura-venture-at-aventura-east,developers-related-group
+Venture at Aventura West,Aventura,191,7,2005,Unknown,,,Related Group,condos-aventura-venture-at-aventura-west,developers-related-group
+Villa Del Mare,Fisher Island,,,,Unknown,,,Island Developers,condos-fisher-island-villa-del-mare,developers-island-developers
+Villa Regina,Brickell,200,31,1982,Unknown,,William Dorsky Associates,,condos-brickell-villa-regina,developers
+Vita at Grove Isle,Coconut Grove,65,7,2025,Unknown,,,CMC Group,condos-coconut-grove-vita-at-grove-isle,developers-cmc-group
+Vizcayne North,Downtown Miami,408,51,2008,No,No,Fullerton Diaz Architects,GICSA,condos-downtown-miami-vizcayne-north,developers-gicsa
+Vizcayne South,Downtown Miami,438,51,2008,No,No,Fullerton Diaz Architects,GICSA,condos-downtown-miami-vizcayne-south,developers-gicsa
+Vue at Brickell,Brickell,323,36,2004,Unknown,,Bermello Ajamil & Partners,BAP Development,condos-brickell-vue-at-brickell,developers-bap-development
+W South Beach,South Beach,407,20,2009,Unknown,,,,condos-south-beach-w-south-beach,developers
+Wind,Miami River,489,41,2008,Unknown,,Revuelta Vega Leon,Neo Epoch,condos-miami-river-wind,developers-neo-epoch
+Winston Tower 100,Sunny Isles Beach,408,23,1970,Unknown,,,,condos-sunny-isles-beach-winston-tower-100,developers
+Winston Tower 200,Sunny Isles Beach,407,23,1971,Unknown,,,,condos-sunny-isles-beach-winston-tower-200,developers
+Winston Tower 300,Sunny Isles Beach,417,24,1973,Unknown,,,,condos-sunny-isles-beach-winston-tower-300,developers
+Winston Tower 400,Sunny Isles Beach,420,24,1974,Unknown,,,,condos-sunny-isles-beach-winston-tower-400,developers
+Winston Tower 500,Sunny Isles Beach,420,24,1976,Unknown,,,,condos-sunny-isles-beach-winston-tower-500,developers
+Winston Tower 600,Sunny Isles Beach,391,24,1981,Unknown,,,,condos-sunny-isles-beach-winston-tower-600,developers
+Winston Tower 700,Sunny Isles Beach,391,24,1980,Unknown,,,,condos-sunny-isles-beach-winston-tower-700,developers
+Wynwood Lofts,Wynwood,35,4,2005,Unknown,,,,condos-wynwood-wynwood-lofts,developers
+Yacht Club at Portofino,South of Fifth,359,34,1999,Unknown,,,Related Group,condos-south-of-fifth-yacht-club-at-portofino,developers-related-group
+Yacht Harbour,Coconut Grove,136,18,1975,Unknown,,,,condos-coconut-grove-yacht-harbour,developers
+YotelPad Miami,Downtown Miami,231,31,2022,Yes,Yes,,Aria Development Group,condos-downtown-miami-yotelpad-miami,developers-aria-development-group

@@ -1,0 +1,17 @@
+ref,citation,topic,requirement_threshold,retention_deadline,source_doc
+Ref,Citation,Topic,Requirement / Threshold,Retention or Deadline,Source Doc ID
+ST-01,"s. 718.111(12), F.S.",Official records - general,Association must maintain official records within the state and in an organized manner facilitating owner inspection.,At least 7 years (general),DOC-001
+ST-02,"s. 718.111(12), F.S.",Records inspection response,Records must be made available after written request to the board or its designee.,10 working days,DOC-001
+ST-03,"s. 718.111(12)(c), F.S.",Denial of access damages,Failure to produce within 10 working days creates presumption of willful noncompliance.,"$50 per calendar day, up to 10 days, beginning 11th working day",DOC-001
+ST-04,"s. 718.111(12), F.S.",Records request checklist,Association must simultaneously provide a checklist of records made available and records withheld.,Checklist retained 7 years,DOC-001
+ST-05,"s. 718.111(12)(g), F.S.",Website posting - large associations,Associations with 150+ units (no timeshare units) must post certain documents online.,Currently in effect,DOC-001
+ST-06,"s. 718.111(12)(g), F.S.",Website posting - expanded,Associations managing a condominium with 25+ units (no timeshare units) must post certain documents online.,"Effective January 1, 2026",DOC-001
+ST-07,"s. 718.111(12), F.S.",Structural integrity reserve studies,Must be retained as part of accounting records.,At least 15 years after study completion,DOC-001
+ST-08,"ss. 553.899 and 718.301(4)(p), F.S.",Structural / life safety inspection reports,Copy of inspection report must be retained by the association.,15 years after receipt,DOC-001
+ST-09,"s. 718.111(12), F.S.",Contracts and bids for work,"Contracts for work to be performed, including bids.",1 year after receipt,DOC-001
+ST-10,"s. 718.111(12), F.S.",Voting materials,"Ballots, sign-in sheets, voting proxies and related papers.","1 year from date of election, vote, or meeting",DOC-001
+ST-11,"s. 718.111(12), F.S.",Permanent records,"Plans/permits/warranties, declaration, bylaws, articles of incorporation, current rules, and meeting minutes.",Permanently maintained,DOC-001
+ST-12,"s. 775.082 / s. 775.083, F.S.",Repeated records violations,"Director, board member, or CAM who knowingly, willfully, and repeatedly violates records law commits a 2nd degree misdemeanor and must be removed from office.",'Repeatedly' = 2+ violations in a 12-month period,DOC-001
+ST-13,"s. 918.13 / s. 843.02, F.S.",Destruction of records,Destroying official records in furtherance of a crime is punishable as evidence tampering or obstruction of justice.,N/A,DOC-001
+ST-14,"s. 718.1255, F.S.",Dispute resolution,Owners generally must file a petition for alternative dispute resolution before a records dispute is heard by a court.,Appeal within 30 days of arbitrator's final order,DOC-001
+ST-15,"SB 4D (enacted May 26, 2022)",Milestone inspection / reserves,"Stricter inspection and HOA budgeting rules, particularly for condos three stories or higher.","Implementation required by December 31, 2024",DOC-002

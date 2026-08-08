@@ -24,6 +24,12 @@ yarn-error.log*
 .env
 .env*.local
 
+# Source CSVs holding personal data (names, home addresses, phones).
+# This repo is public; these are gated behind RLS in Supabase and must not be
+# published here. Keep them locally to run `npm run load:workbooks`.
+data/board_contacts.csv
+data/cam_licensees.csv
+
 # vercel
 .vercel
 
