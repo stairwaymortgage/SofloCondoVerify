@@ -4,10 +4,16 @@ import type { Database } from "./database.types";
 const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const publishableKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 
-if (!url) throw new Error("Missing NEXT_PUBLIC_SUPABASE_URL in .env.local");
-if (!publishableKey) {
-  throw new Error("Missing NEXT_PUBLIC_SUPABASE_ANON_KEY in .env.local");
+/** Locally these come from .env.local; on Vercel, from project settings. */
+function missing(name: string): Error {
+  return new Error(
+    `Missing ${name}. Set it in .env.local locally, and in the Vercel project's ` +
+      `Environment Variables for deployed builds.`
+  );
 }
+
+if (!url) throw missing("NEXT_PUBLIC_SUPABASE_URL");
+if (!publishableKey) throw missing("NEXT_PUBLIC_SUPABASE_ANON_KEY");
 
 /**
  * Browser / anon client. Uses the publishable (sb_publishable_…) key, so it is
@@ -30,12 +36,8 @@ export function createAdminClient(): SupabaseClient<Database> {
   }
 
   const secretKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (!url) throw new Error("Missing NEXT_PUBLIC_SUPABASE_URL in .env.local");
-  if (!secretKey) {
-    throw new Error(
-      "Missing SUPABASE_SERVICE_ROLE_KEY in .env.local — fill it in before running server tasks."
-    );
-  }
+  if (!url) throw missing("NEXT_PUBLIC_SUPABASE_URL");
+  if (!secretKey) throw missing("SUPABASE_SERVICE_ROLE_KEY");
 
   return createClient<Database>(url, secretKey, {
     auth: { persistSession: false, autoRefreshToken: false },
