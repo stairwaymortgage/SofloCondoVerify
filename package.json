@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "load:buildings": "tsx scripts/load-buildings.ts",
-    "load:workbooks": "tsx scripts/load-workbooks.ts"
+    "load:workbooks": "tsx scripts/load-workbooks.ts",
+    "types:gen": "supabase gen types typescript --project-id erccluueswqqbukaikut > lib/database.generated.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.112.2",

@@ -1,180 +1,54 @@
 /**
- * Generated from the Supabase schema (project: scv / erccluueswqqbukaikut).
- * Regenerate with:  npx supabase gen types typescript --project-id erccluueswqqbukaikut
+ * App-level type aliases over the generated Supabase schema.
+ *
+ * The generated schema lives in ./database.generated.ts and is overwritten by
+ * `npm run types:gen`. Keep hand-written types HERE so regeneration never
+ * clobbers them.
  */
 
-export type Json =
-  | string
-  | number
-  | boolean
-  | null
-  | { [key: string]: Json | undefined }
-  | Json[]
+import type { Tables, TablesInsert } from "./database.generated";
 
-export type Database = {
-  // Allows to automatically instantiate createClient with right options
-  // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
-  __InternalSupabase: {
-    PostgrestVersion: "14.15"
-  }
-  public: {
-    Tables: {
-      buildings: {
-        Row: {
-          address: string | null
-          building_name: string | null
-          city: string | null
-          conv_date: string | null
-          conv_review: string | null
-          county: string | null
-          created_at: string
-          fha_exp: string | null
-          fha_method: string | null
-          fha_status: string | null
-          id: number
-          precon: string | null
-          precon_status: string | null
-          recert_status: string | null
-          recert_year: number | null
-          registry_enf: string | null
-          registry_status: string | null
-          sb4d: string | null
-          sb4d_bldgs_3plus: number | null
-          sb4d_units: number | null
-          signal_count: number | null
-          signals: string | null
-          sirs_filed: string | null
-          tri_county: string | null
-          va_date: string | null
-          va_status: string | null
-          zip: string | null
-        }
-        Insert: {
-          address?: string | null
-          building_name?: string | null
-          city?: string | null
-          conv_date?: string | null
-          conv_review?: string | null
-          county?: string | null
-          created_at?: string
-          fha_exp?: string | null
-          fha_method?: string | null
-          fha_status?: string | null
-          id?: never
-          precon?: string | null
-          precon_status?: string | null
-          recert_status?: string | null
-          recert_year?: number | null
-          registry_enf?: string | null
-          registry_status?: string | null
-          sb4d?: string | null
-          sb4d_bldgs_3plus?: number | null
-          sb4d_units?: number | null
-          signal_count?: number | null
-          signals?: string | null
-          sirs_filed?: string | null
-          tri_county?: string | null
-          va_date?: string | null
-          va_status?: string | null
-          zip?: string | null
-        }
-        Update: {
-          address?: string | null
-          building_name?: string | null
-          city?: string | null
-          conv_date?: string | null
-          conv_review?: string | null
-          county?: string | null
-          created_at?: string
-          fha_exp?: string | null
-          fha_method?: string | null
-          fha_status?: string | null
-          id?: never
-          precon?: string | null
-          precon_status?: string | null
-          recert_status?: string | null
-          recert_year?: number | null
-          registry_enf?: string | null
-          registry_status?: string | null
-          sb4d?: string | null
-          sb4d_bldgs_3plus?: number | null
-          sb4d_units?: number | null
-          signal_count?: number | null
-          signals?: string | null
-          sirs_filed?: string | null
-          tri_county?: string | null
-          va_date?: string | null
-          va_status?: string | null
-          zip?: string | null
-        }
-        Relationships: []
-      }
-      leads: {
-        Row: {
-          building_id: number | null
-          created_at: string
-          email: string | null
-          id: number
-          intent: string
-          message: string | null
-          name: string
-          phone: string | null
-        }
-        Insert: {
-          building_id?: number | null
-          created_at?: string
-          email?: string | null
-          id?: never
-          intent: string
-          message?: string | null
-          name: string
-          phone?: string | null
-        }
-        Update: {
-          building_id?: number | null
-          created_at?: string
-          email?: string | null
-          id?: never
-          intent?: string
-          message?: string | null
-          name?: string
-          phone?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "leads_building_id_fkey"
-            columns: ["building_id"]
-            isOneToOne: false
-            referencedRelation: "buildings"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
-    }
-    Views: {
-      [_ in never]: never
-    }
-    Functions: {
-      [_ in never]: never
-    }
-    Enums: {
-      [_ in never]: never
-    }
-    CompositeTypes: {
-      [_ in never]: never
-    }
-  }
-}
+export type { Database, Json, Tables, TablesInsert, TablesUpdate } from "./database.generated";
 
-/* ---- app-level aliases ---- */
+export type Building = Tables<"buildings">
+export type BuildingInsert = TablesInsert<"buildings">
 
-/** One row of the `buildings` table. */
-export type Building = Database["public"]["Tables"]["buildings"]["Row"]
+export type Lead = Tables<"leads">
+export type LeadInsert = TablesInsert<"leads">
 
-/** Columns supplied on insert (id / created_at are database-generated). */
-export type BuildingInsert = Database["public"]["Tables"]["buildings"]["Insert"]
+// Precon / existing inventory
+export type PreconMiami = Tables<"precon_miami">
+export type PreconBroward = Tables<"precon_broward">
+export type ExistingTower = Tables<"existing_towers">
 
-/** One captured lead from /connect. */
-export type Lead = Database["public"]["Tables"]["leads"]["Row"]
+// Companies / people
+export type Company = Tables<"companies">
+export type Person = Tables<"people">
 
-export type LeadInsert = Database["public"]["Tables"]["leads"]["Insert"]
+// Content / cities
+export type CityHub = Tables<"city_hubs">
+export type Faq = Tables<"faq">
+export type KeywordMap = Tables<"keyword_map">
+
+// Reference
+export type Statute = Tables<"statutes">
+export type RecordsAccess = Tables<"records_access">
+export type MarketStat = Tables<"market_stats">
+export type Agency = Tables<"agencies">
+export type LegalAid = Tables<"legal_aid">
+export type AuthorityLink = Tables<"authority_links">
+export type Form = Tables<"forms">
+
+// Associations
+export type ManagementFirm = Tables<"management_firms">
+export type BuildingOfficial = Tables<"building_officials">
+export type AssnRegistryEntry = Tables<"assn_registry">
+
+/**
+ * Gated: RLS with no policies, so these are only reachable with the secret
+ * key. Read board contacts through BoardContactPublishable (the
+ * board_contacts_publishable view) rather than the base table.
+ */
+export type BoardContact = Tables<"board_contacts">
+export type BoardContactPublishable = Tables<"board_contacts_publishable">
+export type CamLicensee = Tables<"cam_licensees">
