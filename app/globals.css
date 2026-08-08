@@ -1,0 +1,46 @@
+/* SoFloCondoVerify — global styles & design tokens
+   Theme: Ocean Teal government-authority.
+   RULE: green = status only (approved/go). teal = brand/action. */
+
+:root {
+  --ink: #15201f;
+  --ink-2: #3b4746;
+  --ink-3: #6d7877;
+  --bg: #eef1f2;
+  --bg-2: #dfe5e6;
+  --panel: #ffffff;
+  --line: #c3cccd;
+  --line-strong: #95a1a3;
+  --mast: #12363b;
+  --mast-2: #0c282c;
+  --teal: #0f6d78;
+  --teal-l: #7fcdd4;
+  --teal-bg: #d5e8ea;
+  --link: #0d5a63;
+  --go: #1a7f37;        /* GREEN = approved / go status ONLY */
+  --go-bg: #e5f2e8;
+  --flag: #a4262c;
+  --flag-bg: #f4e3e3;
+  --caution: #8a6a00;
+  --caution-bg: #f5eccf;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-public-sans), system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--link); }
+.mono { font-family: var(--font-roboto-mono), ui-monospace, monospace; }
+.wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+/* focus visibility (accessibility floor) */
+:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
