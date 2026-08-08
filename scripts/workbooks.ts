@@ -82,7 +82,8 @@ export const WORKBOOKS: WorkbookSpec[] = [
   {
     table: "companies",
     file: "companies.csv",
-    expected: 511,
+    // 510 after removing the "✕" placeholder row (slug "developers").
+    expected: 510,
     gated: false,
     columns: { company: T, type: T, developments: I, headquarters: T, url_slug: T },
     lowerIndexes: ["url_slug"],
@@ -197,7 +198,8 @@ export const WORKBOOKS: WorkbookSpec[] = [
   {
     table: "authority_links",
     file: "authority_links.csv",
-    expected: 128,
+    // 127 after de-duplicating the statutes URL that differed only by case.
+    expected: 127,
     gated: false,
     columns: { url: T, domain: T, type: T, use_for_outbound_link: T },
   },
