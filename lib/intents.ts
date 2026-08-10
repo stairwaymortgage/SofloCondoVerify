@@ -1,4 +1,4 @@
-/** The four lead intents. Stored verbatim in leads.intent. */
+/** The lead intents. Stored verbatim in leads.intent. */
 export const INTENTS = [
   {
     value: "finance",
@@ -19,6 +19,11 @@ export const INTENTS = [
     value: "check-building",
     label: "Check a building",
     hint: "You want a professional to look past the public record.",
+  },
+  {
+    value: "board",
+    label: "I'm on a condo board",
+    hint: "Your building needs its FHA, VA or lender standing sorted out.",
   },
 ] as const;
 

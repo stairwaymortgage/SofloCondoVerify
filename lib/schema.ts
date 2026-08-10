@@ -98,6 +98,25 @@ export function preconSchema(project: PreconProject): Json {
   });
 }
 
+/** An explainer page. Article rather than FAQPage — these aren't Q&A. */
+export function articleSchema(
+  headline: string,
+  description: string,
+  path: string,
+  dateModified: string
+): Json {
+  return compact({
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "@id": siteUrl(path),
+    headline,
+    description,
+    url: siteUrl(path),
+    dateModified,
+    publisher: { "@type": "Organization", name: "SoFloCondoVerify" },
+  });
+}
+
 /**
  * A company we hold a record for. Address is emitted as a plain string because
  * companies.headquarters is a single free-text field, not parsed components.

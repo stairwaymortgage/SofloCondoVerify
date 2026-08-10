@@ -11,6 +11,8 @@ export function GET() {
       "/sitemap-buildings.xml",
       "/sitemap-precon.xml",
       "/sitemap-developers.xml",
+      "/sitemap-associations.xml",
+      "/sitemap-resources.xml",
     ])
   );
 }

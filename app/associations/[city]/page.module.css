@@ -1,0 +1,39 @@
+.page { padding: 34px 0 56px; min-height: 60vh; }
+
+.head { background: var(--panel); border: 1px solid var(--line-strong); border-top: 4px solid var(--teal); padding: 22px; }
+.doc { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.head h1 { font-size: clamp(22px, 2.8vw, 29px); font-weight: 800; letter-spacing: -0.02em; margin-top: 6px; line-height: 1.15; }
+.lede { font-size: 14.5px; color: var(--ink-2); line-height: 1.6; margin-top: 10px; max-width: 74ch; }
+.warn { margin-top: 12px; background: var(--caution-bg); border-left: 3px solid var(--caution); padding: 11px 14px; font-size: 13px; color: var(--ink-2); line-height: 1.6; max-width: 78ch; }
+.warn b { color: var(--ink); }
+
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 316px; gap: 28px; align-items: start; margin-top: 24px; }
+.side { position: sticky; top: 20px; }
+
+.list { list-style: none; background: var(--panel); border: 1px solid var(--line-strong); }
+.row { display: flex; flex-direction: column; gap: 3px; padding: 12px 18px; border-bottom: 1px solid var(--line); }
+.row:last-child { border-bottom: none; }
+.rowName { font-size: 14px; font-weight: 600; line-height: 1.35; }
+.rowAddr { font-size: 11px; color: var(--ink-3); }
+
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 4px; }
+.chip { font-size: 10px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 6px; border: 1px solid currentColor; }
+/* green marks an issued registration — a clearance in this one narrow record */
+.t_go { color: var(--go); background: var(--go-bg); }
+.t_flag { color: var(--flag); background: var(--flag-bg); }
+.t_caution { color: var(--caution); background: var(--caution-bg); }
+.t_none { color: var(--ink-2); background: var(--bg-2); border-color: var(--line-strong); }
+
+.back { margin-top: 18px; font-size: 13.5px; }
+
+.pageFoot { background: var(--mast); color: #a7bab0; padding: 34px 0; font-size: 13px; }
+.pageFoot :global(.wrap) { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .side { position: static; }
+}
+@media (max-width: 560px) {
+  .head { padding: 18px 16px; }
+  .row { padding: 12px 14px; }
+}

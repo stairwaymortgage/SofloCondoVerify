@@ -38,6 +38,8 @@ export default function Masthead() {
             <Link href="/#buyers">Buyers</Link>
             <Link href="/#sellers">Sellers</Link>
             <Link href="/#foreign">Foreign buyers</Link>
+            <Link href="/rules">Rules</Link>
+            <Link href="/for-boards">For boards</Link>
             <Link href="/advertise" className={styles.cta}>
               Advertise with us
             </Link>

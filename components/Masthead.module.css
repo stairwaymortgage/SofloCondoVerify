@@ -55,8 +55,10 @@
   font-weight: 600;
   display: block;
 }
-.links { display: flex; gap: 22px; align-items: center; }
-.links a { color: #e7ede9; text-decoration: none; font-size: 14.5px; font-weight: 600; }
+/* Eight items plus the CTA: never break a label mid-word, and drop to a
+   second row rather than overflowing when the viewport is tight. */
+.links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px 17px; align-items: center; }
+.links a { color: #e7ede9; text-decoration: none; font-size: 14.5px; font-weight: 600; white-space: nowrap; }
 .links a:hover { color: #fff; }
 .cta {
   background: var(--teal);
