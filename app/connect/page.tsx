@@ -4,6 +4,7 @@ import Masthead from "@/components/Masthead";
 import ConnectForm from "@/components/ConnectForm";
 import { supabase } from "@/lib/supabase";
 import { normalizeIntent } from "@/lib/intents";
+import { getPreconBySlug } from "@/lib/precon";
 import styles from "./page.module.css";
 
 export const dynamic = "force-dynamic";
@@ -14,12 +15,18 @@ export const metadata: Metadata = {
     "Tell us what you need and we’ll pass your request to licensed professionals in our network. Free, no obligation.",
 };
 
-/** Prefill text for the building field, when arriving from a record page. */
-async function getBuildingPrefill(
+/**
+ * Prefill text for the building field, when arriving from a record page.
+ * ?record= carries a numeric buildings.id from a verification record, or a
+ * precon url_slug from a preconstruction project page.
+ */
+async function getPrefill(
   rawRecord: string | undefined
-): Promise<{ id: number; label: string } | null> {
+): Promise<{ id: number | null; label: string } | null> {
+  if (!rawRecord) return null;
+
   const id = Number(rawRecord);
-  if (!Number.isInteger(id) || id < 1) return null;
+  if (!Number.isInteger(id) || id < 1) return getPreconPrefill(rawRecord);
 
   const { data, error } = await supabase
     .from("buildings")
@@ -39,12 +46,26 @@ async function getBuildingPrefill(
   return { id: data.id, label };
 }
 
+/**
+ * Preconstruction projects aren't rows in `buildings`, so there is no
+ * building_id to attach — the label carries the project instead.
+ */
+async function getPreconPrefill(
+  rawRecord: string
+): Promise<{ id: null; label: string } | null> {
+  const project = await getPreconBySlug(rawRecord);
+  if (!project) return null;
+
+  const where = [project.area, project.county].filter(Boolean).join(", ");
+  return { id: null, label: `${project.project} — ${where} (preconstruction)` };
+}
+
 export default async function ConnectPage({
   searchParams,
 }: {
   searchParams: { record?: string; intent?: string };
 }) {
-  const building = await getBuildingPrefill(searchParams.record);
+  const building = await getPrefill(searchParams.record);
   const intent = normalizeIntent(searchParams.intent);
 
   return (
