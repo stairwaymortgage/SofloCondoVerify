@@ -13,28 +13,19 @@
 .rid b { color: var(--ink); }
 .precon { display: inline-block; margin-top: 11px; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); background: var(--teal-bg); border: 1px solid var(--teal-l); padding: 3px 9px; }
 
-/* ---- signal table ---- */
-.sig { width: 100%; border-collapse: collapse; }
-.caption { text-align: left; font-size: 11.5px; color: var(--ink-3); padding: 11px 22px 0; caption-side: top; }
-.sig th { background: var(--bg-2); text-align: left; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); padding: 9px 22px; border-bottom: 1px solid var(--line); font-weight: 700; }
-.sig td { padding: 13px 22px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: middle; }
-.sig tbody th { background: transparent; text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--ink); padding: 13px 22px; }
-.snm { font-weight: 700; width: 38%; vertical-align: middle; }
-.srcx { display: block; font-weight: 400; font-size: 11px; color: var(--ink-3); margin-top: 2px; text-transform: none; letter-spacing: 0; }
-.status { display: inline-flex; align-items: baseline; gap: 8px; font-weight: 700; }
-.sq { width: 10px; height: 10px; flex: none; background: currentColor; align-self: center; }
-.asof { font-size: 11.5px; color: var(--ink-3); white-space: nowrap; }
-
-/* status colours — green is approved/go ONLY */
-.s_go { color: var(--go); }
-.s_flag { color: var(--flag); }
-.s_caution { color: var(--caution); }
-.s_none { color: var(--ink-3); }
+/* The signal table and its legend live in components/SignalTable.module.css —
+   the risk page renders the same markup. */
 
 /* ---- rollup + footnotes ---- */
 .rollup { border-top: 1px solid var(--line); background: #fafbfb; padding: 13px 22px; display: flex; flex-direction: column; gap: 4px; }
 .rollupLabel { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); }
 .rollupVal { font-size: 12px; color: var(--ink-2); overflow-wrap: anywhere; }
+
+/* ---- due-diligence read link (stacked flags only) ---- */
+.riskLink { display: flex; flex-direction: column; gap: 3px; border-top: 1px solid var(--line); border-left: 4px solid var(--caution); background: #fcfaf3; padding: 14px 22px; text-decoration: none; }
+.riskLink:hover { background: var(--caution-bg); }
+.riskLinkHead { font-size: 13.5px; font-weight: 700; color: var(--link); }
+.riskLinkBody { font-size: 12.5px; color: var(--ink-2); line-height: 1.55; }
 
 .recFoot { border-top: 1px solid var(--line); padding: 15px 22px 17px; display: flex; flex-direction: column; gap: 8px; }
 .recFoot p { font-size: 12.5px; color: var(--ink-3); line-height: 1.55; }
@@ -56,12 +47,6 @@
 .btnSecondary:hover { background: var(--teal-bg); }
 .ctaFine { margin-top: 11px; font-size: 11.5px; color: var(--ink-3); text-align: center; }
 
-.legend { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
-.legendHead { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 9px; }
-.legend ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-.legend li { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--ink-2); }
-.legendSq { width: 10px; height: 10px; flex: none; background: currentColor; }
-
 /* ---- footer ---- */
 .pageFoot { background: var(--mast); color: #a7bab0; padding: 34px 0; font-size: 13px; }
 .pageFoot :global(.wrap) { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
@@ -71,8 +56,5 @@
   .side { position: static; }
 }
 @media (max-width: 560px) {
-  .sig th, .sig td, .sig tbody th { padding-left: 14px; padding-right: 14px; }
-  .caption { padding-left: 14px; padding-right: 14px; }
-  .snm { width: auto; }
-  .asof { white-space: normal; }
+  .recHead, .rollup, .riskLink, .recFoot { padding-left: 16px; padding-right: 16px; }
 }

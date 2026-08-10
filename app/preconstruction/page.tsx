@@ -1,6 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema } from "@/lib/schema";
 import {
   formatPrice,
   getPreconProjects,
@@ -71,6 +73,14 @@ export default async function PreconstructionIndex() {
 
   return (
     <>
+      <JsonLd
+        schemas={[
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Preconstruction", path: "/preconstruction" },
+          ]),
+        ]}
+      />
       <Masthead />
 
       <section className={styles.page}>

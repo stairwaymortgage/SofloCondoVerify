@@ -2,28 +2,26 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
-import { supabase } from "@/lib/supabase";
-import { buildSignals, recordId, type Signal } from "@/lib/signals";
-import type { Building } from "@/lib/database.types";
+import SignalTable, { SignalLegend } from "@/components/SignalTable";
+import JsonLd from "@/components/JsonLd";
+import { getBuilding, getPriorityBuildingIds } from "@/lib/buildings";
+import { buildSignals, hasStackedFlags, recordId } from "@/lib/signals";
+import { breadcrumbSchema, buildingSchema } from "@/lib/schema";
 import styles from "./page.module.css";
 
-export const dynamic = "force-dynamic";
+/**
+ * ISR: the priority set is prebuilt (see generateStaticParams) and the rest of
+ * the tri-county file renders on first request, then caches for an hour.
+ */
+export const revalidate = 3600;
 
-async function getBuilding(rawId: string): Promise<Building | null> {
-  const id = Number(rawId);
-  if (!Number.isInteger(id) || id < 1) return null;
-
-  const { data, error } = await supabase
-    .from("buildings")
-    .select("*")
-    .eq("id", id)
-    .maybeSingle();
-
-  if (error) {
-    console.error("[building/[id]]", error.message);
-    return null;
-  }
-  return data as Building | null;
+/**
+ * ~8,700 tri-county buildings is more than is worth prebuilding, so only the
+ * priority set ships in the build. Everything else is generated on demand.
+ */
+export async function generateStaticParams() {
+  const ids = await getPriorityBuildingIds();
+  return ids.map((id) => ({ id: String(id) }));
 }
 
 export async function generateMetadata({
@@ -49,19 +47,28 @@ export default async function BuildingPage({ params }: { params: { id: string } 
 
   const signals = buildSignals(building);
   const pulled = new Date(building.created_at).toISOString().slice(0, 10);
+  const name = building.building_name ?? "Unnamed building";
   const location = [building.city, building.county ? `${building.county} COUNTY` : null, building.zip]
     .filter(Boolean)
     .join(" · ");
 
   return (
     <>
+      <JsonLd
+        schemas={[
+          buildingSchema(building),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name, path: `/building/${building.id}` },
+          ]),
+        ]}
+      />
       <Masthead />
 
       <section className={styles.page}>
         <div className="wrap">
           <div className={`${styles.crumb} mono`}>
-            <Link href="/">Home</Link> / Condo verification lookup /{" "}
-            {building.building_name ?? "Record"}
+            <Link href="/">Home</Link> / Condo verification lookup / {name}
           </div>
 
           <div className={styles.grid}>
@@ -69,7 +76,7 @@ export default async function BuildingPage({ params }: { params: { id: string } 
               <article className={styles.record}>
                 <header className={styles.recHead}>
                   <div className={`${styles.doc} mono`}>Condo Verification Record</div>
-                  <h1>{building.building_name ?? "Unnamed building"}</h1>
+                  <h1>{name}</h1>
                   <div className={`${styles.addr} mono`}>
                     {building.address ?? "Address not on file"}
                     {location ? ` · ${location}` : ""}
@@ -86,23 +93,10 @@ export default async function BuildingPage({ params }: { params: { id: string } 
                   )}
                 </header>
 
-                <table className={styles.sig}>
-                  <caption className={styles.caption}>
-                    Seven independent public sources, read for this building.
-                  </caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Signal</th>
-                      <th scope="col">Status</th>
-                      <th scope="col">As of</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {signals.map((signal) => (
-                      <SignalRow key={signal.name} signal={signal} />
-                    ))}
-                  </tbody>
-                </table>
+                <SignalTable
+                  signals={signals}
+                  caption="Seven independent public sources, read for this building."
+                />
 
                 {building.signals && (
                   <div className={styles.rollup}>
@@ -112,6 +106,21 @@ export default async function BuildingPage({ params }: { params: { id: string } 
                     </span>
                     <span className={`${styles.rollupVal} mono`}>{building.signals}</span>
                   </div>
+                )}
+
+                {hasStackedFlags(building) && (
+                  <Link
+                    className={styles.riskLink}
+                    href={`/building/${building.id}/risk`}
+                  >
+                    <span className={styles.riskLinkHead}>
+                      See the due-diligence read →
+                    </span>
+                    <span className={styles.riskLinkBody}>
+                      The same record ordered by what to look into first, with what
+                      it means for financing, for selling, and for a cash purchase.
+                    </span>
+                  </Link>
                 )}
 
                 <footer className={styles.recFoot}>
@@ -171,15 +180,7 @@ export default async function BuildingPage({ params }: { params: { id: string } 
                 </div>
               </div>
 
-              <div className={styles.legend}>
-                <div className={styles.legendHead}>How to read a status</div>
-                <ul>
-                  <LegendItem tone="go" label="Approved / cleared in the record" />
-                  <LegendItem tone="flag" label="Rejected or revoked" />
-                  <LegendItem tone="caution" label="Unconfirmed — worth checking" />
-                  <LegendItem tone="none" label="Nothing on file / informational" />
-                </ul>
-              </div>
+              <SignalLegend />
             </aside>
           </div>
         </div>
@@ -195,31 +196,5 @@ export default async function BuildingPage({ params }: { params: { id: string } 
         </div>
       </footer>
     </>
-  );
-}
-
-function SignalRow({ signal }: { signal: Signal }) {
-  return (
-    <tr>
-      <th scope="row" className={styles.snm}>
-        {signal.name}
-        <span className={`${styles.srcx} mono`}>{signal.source}</span>
-      </th>
-      <td>
-        <span className={`${styles.status} ${styles[`s_${signal.tone}`]}`}>
-          <span className={styles.sq} aria-hidden /> {signal.value}
-        </span>
-      </td>
-      <td className={`${styles.asof} mono`}>{signal.asOf}</td>
-    </tr>
-  );
-}
-
-function LegendItem({ tone, label }: { tone: string; label: string }) {
-  return (
-    <li>
-      <span className={`${styles.legendSq} ${styles[`s_${tone}`]}`} aria-hidden />
-      {label}
-    </li>
   );
 }

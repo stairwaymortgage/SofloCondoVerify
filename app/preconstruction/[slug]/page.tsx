@@ -2,11 +2,14 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
+import JsonLd from "@/components/JsonLd";
+import { breadcrumbSchema, preconSchema } from "@/lib/schema";
 import {
   developerHref,
   financingIllustration,
   formatPrice,
   getPreconBySlug,
+  getPreconProjects,
   getRelatedPrecon,
   preconHref,
   preconRecordId,
@@ -18,6 +21,12 @@ import {
 import styles from "./page.module.css";
 
 export const revalidate = 3600;
+
+/** All 164 projects prebuild — the set is small and every page is indexable. */
+export async function generateStaticParams() {
+  const projects = await getPreconProjects();
+  return projects.map((project) => ({ slug: project.slug }));
+}
 
 export async function generateMetadata({
   params,
@@ -64,6 +73,16 @@ export default async function PreconProjectPage({
 
   return (
     <>
+      <JsonLd
+        schemas={[
+          preconSchema(project),
+          breadcrumbSchema([
+            { name: "Home", path: "/" },
+            { name: "Preconstruction", path: "/preconstruction" },
+            { name: project.project, path: `/preconstruction/${project.slug}` },
+          ]),
+        ]}
+      />
       <Masthead />
 
       <section className={styles.page}>

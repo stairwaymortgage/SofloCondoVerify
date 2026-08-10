@@ -1,0 +1,37 @@
+/* The seven-signal table and its legend, shared by the building record and the
+   risk / due-diligence read. Status colours follow the site rule: green is
+   approved/go ONLY. */
+
+.sig { width: 100%; border-collapse: collapse; }
+.caption { text-align: left; font-size: 11.5px; color: var(--ink-3); padding: 11px 22px 0; caption-side: top; }
+.sig th { background: var(--bg-2); text-align: left; font-size: 10.5px; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); padding: 9px 22px; border-bottom: 1px solid var(--line); font-weight: 700; }
+.sig td { padding: 13px 22px; border-bottom: 1px solid var(--line); font-size: 14px; vertical-align: middle; }
+.sig tbody th { background: transparent; text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--ink); padding: 13px 22px; }
+.snm { font-weight: 700; width: 38%; vertical-align: middle; }
+.srcx { display: block; font-weight: 400; font-size: 11px; color: var(--ink-3); margin-top: 2px; text-transform: none; letter-spacing: 0; }
+.status { display: inline-flex; align-items: baseline; gap: 8px; font-weight: 700; }
+.sq { width: 10px; height: 10px; flex: none; background: currentColor; align-self: center; }
+.asof { font-size: 11.5px; color: var(--ink-3); white-space: nowrap; }
+
+/* A row carrying a flag or a caution, when the table is ordered by attention. */
+.lead { background: #fcfaf3; }
+.leadMark { display: block; font-size: 9.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--caution); margin-top: 3px; }
+
+/* status colours — green is approved/go ONLY */
+.s_go { color: var(--go); }
+.s_flag { color: var(--flag); }
+.s_caution { color: var(--caution); }
+.s_none { color: var(--ink-3); }
+
+.legend { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
+.legendHead { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 9px; }
+.legend ul { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.legend li { display: flex; align-items: center; gap: 9px; font-size: 12.5px; color: var(--ink-2); }
+.legendSq { width: 10px; height: 10px; flex: none; background: currentColor; }
+
+@media (max-width: 560px) {
+  .sig th, .sig td, .sig tbody th { padding-left: 14px; padding-right: 14px; }
+  .caption { padding-left: 14px; padding-right: 14px; }
+  .snm { width: auto; }
+  .asof { white-space: normal; }
+}

@@ -251,6 +251,28 @@ export function buildSignals(building: Building): Signal[] {
   ];
 }
 
+/** Attention order for the due-diligence read: what to look into first. */
+const TONE_ORDER: Record<Tone, number> = { flag: 0, caution: 1, none: 2, go: 3 };
+
+/**
+ * The same seven signals, reordered so anything rejected or unconfirmed leads.
+ * Stable within a tone, so the record order is preserved inside each group.
+ */
+export function flaggedFirst(signals: Signal[]): Signal[] {
+  return [...signals].sort((a, b) => TONE_ORDER[a.tone] - TONE_ORDER[b.tone]);
+}
+
+/**
+ * The priority set: tri-county buildings carrying two or more flagged signals
+ * in the source data. Stacked flags are what makes a due-diligence read worth
+ * publishing — one unconfirmed filing on its own rarely is.
+ */
+export function hasStackedFlags(
+  building: Pick<Building, "tri_county" | "signal_count">
+): boolean {
+  return building.tri_county === "Yes" && (building.signal_count ?? 0) >= 2;
+}
+
 /**
  * Compact tones for the FHA/VA chips on a search-result card. These take the
  * narrow projection the search API returns, so `fha_method` may be absent.
