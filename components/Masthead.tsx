@@ -34,6 +34,7 @@ export default function Masthead() {
           <nav className={styles.links}>
             <Link href="/">Look up</Link>
             <Link href="/preconstruction">Preconstruction</Link>
+            <Link href="/developers">Developers</Link>
             <Link href="/#buyers">Buyers</Link>
             <Link href="/#sellers">Sellers</Link>
             <Link href="/#foreign">Foreign buyers</Link>

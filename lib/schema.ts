@@ -99,6 +99,25 @@ export function preconSchema(project: PreconProject): Json {
 }
 
 /**
+ * A company we hold a record for. Address is emitted as a plain string because
+ * companies.headquarters is a single free-text field, not parsed components.
+ */
+export function organizationSchema(
+  name: string,
+  path: string,
+  headquarters: string | null
+): Json {
+  return compact({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": siteUrl(path),
+    name,
+    url: siteUrl(path),
+    address: text(headquarters),
+  });
+}
+
+/**
  * One question and its answer. FAQPage is only emitted for answers that pass
  * the thin-content guard — marking up a one-line answer invites a manual
  * action rather than a rich result.

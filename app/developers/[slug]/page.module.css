@@ -1,0 +1,74 @@
+.page { padding: 34px 0 56px; min-height: 60vh; }
+
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 316px; gap: 28px; align-items: start; }
+.main { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+
+/* ---- header ---- */
+.record { background: var(--panel); border: 1px solid var(--line-strong); }
+.recHead { border-bottom: 2px solid var(--ink); padding: 20px 22px; }
+.doc { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.recHead h1 { font-size: clamp(21px, 2.6vw, 28px); font-weight: 800; letter-spacing: -0.02em; margin-top: 6px; line-height: 1.15; }
+.badges { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.badge { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 9px; color: var(--teal); background: var(--teal-bg); border: 1px solid var(--teal-l); }
+.hq { font-size: 12.5px; color: var(--ink-2); margin-top: 9px; overflow-wrap: anywhere; }
+.rid { font-size: 11.5px; color: var(--ink-3); margin-top: 8px; }
+
+.intro { padding: 15px 22px; }
+.intro p { font-size: 13.5px; color: var(--ink-2); line-height: 1.6; max-width: 78ch; }
+
+/* ---- portfolio blocks ---- */
+.block { background: var(--panel); border: 1px solid var(--line-strong); padding-bottom: 18px; }
+.blockHead { display: flex; align-items: baseline; gap: 10px; font-size: 17px; font-weight: 800; letter-spacing: -0.01em; padding: 15px 20px; border-bottom: 2px solid var(--ink); }
+.blockN { font-size: 11.5px; font-weight: 500; color: var(--ink-3); letter-spacing: 0; }
+.blockNote { font-size: 12.5px; color: var(--ink-3); line-height: 1.55; padding: 12px 20px 0; max-width: 78ch; }
+
+.cards { list-style: none; display: grid; grid-template-columns: repeat(auto-fill, minmax(238px, 1fr)); gap: 10px; padding: 14px 20px 0; }
+.card { display: flex; }
+.cardLink { display: flex; flex-direction: column; flex: 1; background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--line-strong); padding: 13px 15px; text-decoration: none; color: inherit; }
+a.cardLink:hover { border-color: var(--teal-l); border-left-color: var(--teal); background: #fbfdfd; }
+.cardStatic { background: #fafbfb; }
+.cardName { font-size: 14.5px; font-weight: 700; color: var(--ink); line-height: 1.3; }
+.cardWhere { font-size: 11px; color: var(--ink-3); margin-top: 4px; }
+.cardCta { font-size: 12px; font-weight: 600; color: var(--link); margin-top: 9px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 9px; }
+.chip { font-size: 10px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 6px; border: 1px solid currentColor; }
+/* status tones — green is approved/go status only, so it is absent here */
+.t_none { color: var(--ink-2); background: var(--bg-2); border-color: var(--line-strong); }
+.t_caution { color: var(--caution); background: var(--caution-bg); }
+.chipStr { color: var(--teal); background: var(--teal-bg); border-color: var(--teal-l); }
+
+.facts { display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: auto; padding-top: 10px; }
+.fact { display: flex; flex-direction: column; gap: 1px; }
+.factL { font-size: 9.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-3); }
+.factV { font-size: 12.5px; font-weight: 600; color: var(--ink); }
+
+/* ---- portfolio financing ---- */
+.finance { background: var(--mast); border-left: 4px solid var(--teal-l); padding: 22px; }
+.financeKicker { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-l); }
+.finance h2 { color: #fff; font-size: clamp(18px, 2.3vw, 23px); font-weight: 800; letter-spacing: -0.015em; margin-top: 7px; line-height: 1.2; }
+.finance p { color: #cadadb; font-size: 14px; line-height: 1.65; margin-top: 10px; max-width: 74ch; }
+.financeBtn { display: inline-block; margin-top: 15px; background: var(--teal-l); color: var(--mast-2); text-decoration: none; font-weight: 700; font-size: 14px; padding: 11px 18px; border: 1.5px solid var(--teal-l); }
+.financeBtn:hover { background: #fff; border-color: #fff; }
+.financeFine { font-size: 11.5px; color: #93aaab; margin-top: 10px; }
+
+.related { background: var(--panel); border: 1px solid var(--line); padding: 16px 18px 18px; }
+.relatedHead { font-size: 10.5px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-2); }
+.related ul { list-style: none; margin-top: 9px; display: flex; flex-wrap: wrap; gap: 7px 22px; font-size: 13.5px; }
+
+.side { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 20px; }
+.note { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
+.noteHead { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 8px; }
+.note p { font-size: 12.5px; color: var(--ink-3); line-height: 1.6; }
+
+.pageFoot { background: var(--mast); color: #a7bab0; padding: 34px 0; font-size: 13px; }
+.pageFoot :global(.wrap) { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .side { position: static; }
+}
+@media (max-width: 560px) {
+  .recHead, .intro, .blockHead, .blockNote, .cards, .finance { padding-left: 16px; padding-right: 16px; }
+  .cards { grid-template-columns: 1fr; }
+}

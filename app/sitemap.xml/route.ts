@@ -10,6 +10,7 @@ export function GET() {
       "/sitemap-faq.xml",
       "/sitemap-buildings.xml",
       "/sitemap-precon.xml",
+      "/sitemap-developers.xml",
     ])
   );
 }

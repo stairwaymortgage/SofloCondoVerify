@@ -222,6 +222,24 @@ export async function getPreconInArea(
     .slice(0, limit);
 }
 
+/** Every precon project linked to a company, for its portfolio page. */
+export async function getPreconByCompany(companyId: number): Promise<PreconProject[]> {
+  const [miami, broward] = await Promise.all([
+    supabase.from("precon_miami").select("*").eq("company_id", companyId),
+    supabase.from("precon_broward").select("*").eq("company_id", companyId),
+  ]);
+
+  if (miami.error) console.error("[precon/company] miami:", miami.error.message);
+  if (broward.error) console.error("[precon/company] broward:", broward.error.message);
+
+  return [
+    ...(miami.data ?? []).map(fromMiami),
+    ...(broward.data ?? []).map(fromBroward),
+  ]
+    .filter((project) => project.slug)
+    .sort(byProjectName);
+}
+
 /* ------------------------------------------------------------------ */
 /* presentation helpers                                                */
 /* ------------------------------------------------------------------ */
@@ -241,15 +259,10 @@ export function preconHref(project: Pick<PreconProject, "slug">): string {
 }
 
 /**
- * Developer pages are keyed by companies.url_slug, which is stored with a
- * "developers-" prefix. Kept in one place so the route can move without
- * touching the pages.
+ * Developer links are built in lib/companies, which also owns the route that
+ * resolves them — re-exported here so project pages have one import.
  */
-export function developerHref(slug: string | null): string | null {
-  const clean = text(slug);
-  if (!clean) return null;
-  return `/developers/${clean.replace(/^developers-/, "")}`;
-}
+export { developerHref } from "./companies";
 
 /**
  * Tones follow the site rule: green (go) is approved/cleared status ONLY, and
