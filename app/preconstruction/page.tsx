@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema } from "@/lib/schema";
+import { num } from "@/lib/format";
 import {
   formatPrice,
   getPreconProjects,
@@ -102,15 +103,15 @@ export default async function PreconstructionIndex() {
           </header>
 
           <div className={styles.stats}>
-            <Stat n={projects.length.toLocaleString()} l="Projects tracked" />
+            <Stat n={num(projects.length)} l="Projects tracked" />
             {counties.map((county) => (
               <Stat
                 key={county.county}
-                n={county.projects.toLocaleString()}
+                n={num(county.projects)}
                 l={`${county.county} projects`}
               />
             ))}
-            <Stat n={strCount.toLocaleString()} l="Short-term rental allowed" />
+            <Stat n={num(strCount)} l="Short-term rental allowed" />
           </div>
 
           {/* Foreign-national financing — the reason most overseas buyers

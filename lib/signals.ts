@@ -1,4 +1,5 @@
 import type { Building } from "./database.types";
+import { num } from "./format";
 
 /**
  * Status tones. The rule, applied everywhere:
@@ -129,7 +130,7 @@ function sb4dSignal(b: Building): Signal {
 
   const detail = [
     buildings ? `${buildings} bldg${buildings === 1 ? "" : "s"} 3+ stories` : null,
-    units ? `${units.toLocaleString()} units` : null,
+    units ? `${num(units)} units` : null,
   ]
     .filter(Boolean)
     .join(" · ");

@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbSchema, preconSchema } from "@/lib/schema";
+import { cityHubHref, getCityHubForBuilding } from "@/lib/cities";
 import {
   developerHref,
   financingIllustration,
@@ -66,6 +67,14 @@ export default async function PreconProjectPage({
   const illustration = financingIllustration(project.priceFrom);
   const devHref = developerHref(project.developerSlug);
   const str = strFact(project);
+
+  // Miami rows are keyed by neighborhood, so this only resolves where the area
+  // is itself a city with a hub (Miami Beach, Aventura, Fort Lauderdale …).
+  const hub = await getCityHubForBuilding({
+    city: project.area,
+    county: project.county,
+  });
+  const hubHref = hub ? cityHubHref(hub) : null;
   const connect = (intent: string) =>
     `/connect?intent=${intent}&record=${encodeURIComponent(project.slug)}`;
 
@@ -267,6 +276,13 @@ export default async function PreconProjectPage({
                     <li>
                       <Link href={devHref}>
                         More from {project.developer}
+                      </Link>
+                    </li>
+                  )}
+                  {hubHref && hub?.city && (
+                    <li>
+                      <Link href={hubHref}>
+                        {hub.city} condo verification data
                       </Link>
                     </li>
                   )}

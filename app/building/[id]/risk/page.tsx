@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import SignalTable, { SignalLegend } from "@/components/SignalTable";
 import JsonLd from "@/components/JsonLd";
 import { getBuilding, getPriorityBuildingIds } from "@/lib/buildings";
@@ -11,6 +12,7 @@ import {
   hasStackedFlags,
   recordId,
 } from "@/lib/signals";
+import { cityHubHref, countyByDb, getCityHubForBuilding } from "@/lib/cities";
 import { breadcrumbSchema, buildingSchema } from "@/lib/schema";
 import type { Building } from "@/lib/database.types";
 import styles from "./page.module.css";
@@ -65,27 +67,32 @@ export default async function RiskPage({ params }: { params: { id: string } }) {
 
   const loans = loanPaths(building);
 
+  // Home > County > City > Building > this read.
+  const hub = await getCityHubForBuilding(building);
+  const county = countyByDb(building.county);
+  const hubHref = hub ? cityHubHref(hub) : null;
+
+  const trail = [
+    { name: "Home", path: "/" },
+    ...(county ? [{ name: `${county.name} County`, path: `/condos/${county.slug}` }] : []),
+    ...(hub?.city && hubHref ? [{ name: hub.city, path: hubHref }] : []),
+    { name, path: `/building/${building.id}` },
+    { name: "Risk & due-diligence read", path: `/building/${building.id}/risk` },
+  ];
+
   return (
     <>
-      <JsonLd
-        schemas={[
-          buildingSchema(building),
-          breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name, path: `/building/${building.id}` },
-            { name: "Risk & due-diligence read", path: `/building/${building.id}/risk` },
-          ]),
-        ]}
-      />
+      <JsonLd schemas={[buildingSchema(building), breadcrumbSchema(trail)]} />
       <Masthead />
 
       <section className={styles.page}>
         <div className="wrap">
-          <div className={`${styles.crumb} mono`}>
-            <Link href="/">Home</Link> / Condo verification lookup /{" "}
-            <Link href={`/building/${building.id}`}>{name}</Link> /
-            Risk &amp; due-diligence read
-          </div>
+          <Breadcrumbs
+            trail={trail.map((crumb, index) => ({
+              name: crumb.name,
+              href: index < trail.length - 1 ? crumb.path : undefined,
+            }))}
+          />
 
           <div className={styles.grid}>
             <main className={styles.main}>

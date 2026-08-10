@@ -1,6 +1,7 @@
 import Masthead from "@/components/Masthead";
 import LookupForm from "@/components/LookupForm";
 import { getTriCountyBuildingCount } from "@/lib/counts";
+import { num } from "@/lib/format";
 import styles from "./page.module.css";
 
 /** Re-check the building count hourly rather than on every request. */
@@ -8,7 +9,7 @@ export const revalidate = 3600;
 
 export default async function Home() {
   const buildingCount = await getTriCountyBuildingCount();
-  const buildingCountLabel = buildingCount.toLocaleString();
+  const buildingCountLabel = num(buildingCount);
 
   return (
     <>

@@ -1,0 +1,62 @@
+.page { padding: 34px 0 56px; }
+
+.head { background: var(--panel); border: 1px solid var(--line-strong); border-top: 4px solid var(--teal); padding: 22px; }
+.doc { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.head h1 { font-size: clamp(23px, 3vw, 31px); font-weight: 800; letter-spacing: -0.02em; margin-top: 6px; line-height: 1.15; }
+.lede { font-size: 14.5px; color: var(--ink-2); line-height: 1.65; margin-top: 11px; max-width: 74ch; }
+
+/* ---- live counts ---- */
+.stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line-strong); border-top: none; }
+.stat { background: var(--panel); padding: 14px 16px; }
+.statN { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; color: var(--teal); }
+/* green = approved / cleared status only */
+.statGo { color: var(--go); }
+.statL { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-3); margin-top: 3px; }
+.statsNote { font-size: 11.5px; color: var(--ink-3); line-height: 1.6; margin-top: 9px; max-width: 84ch; }
+.statsNote b { color: var(--ink-2); }
+
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 316px; gap: 28px; align-items: start; margin-top: 28px; }
+.main { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.side { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 20px; }
+
+/* ---- content blocks ---- */
+.block { background: var(--panel); border: 1px solid var(--line-strong); padding: 0 0 18px; }
+.blockHead { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; padding: 15px 20px; border-bottom: 2px solid var(--ink); }
+.subHead { font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink-2); padding: 16px 20px 0; }
+.subNote { font-size: 12.5px; color: var(--ink-3); line-height: 1.55; padding: 8px 20px 0; max-width: 76ch; }
+
+.buildingList, .linkList { list-style: none; padding: 10px 20px 0; display: flex; flex-direction: column; gap: 11px; }
+.buildingList li, .linkList li { display: flex; flex-direction: column; gap: 1px; font-size: 14px; border-left: 2px solid var(--line); padding-left: 11px; }
+.linkMeta { font-size: 11.5px; color: var(--ink-3); }
+.riskLink { font-size: 12px; font-weight: 600; margin-top: 2px; }
+.moreLink { display: inline-block; font-size: 13px; font-weight: 600; padding: 12px 20px 0; }
+
+/* ---- faq clusters ---- */
+.cluster { padding: 14px 20px 0; }
+.clusterHead { display: flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal); border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.clusterN { font-size: 10.5px; font-weight: 500; color: var(--ink-3); background: var(--bg-2); border: 1px solid var(--line); padding: 0 5px; letter-spacing: 0; }
+.faqList { list-style: none; margin-top: 8px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 6px 20px; }
+.faqList li { font-size: 13.5px; line-height: 1.45; }
+
+/* ---- sidebar cards ---- */
+.facts, .nearby { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
+.factsHead, .nearbyHead { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 9px; }
+.factList { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 6px 12px; }
+.factL { font-size: 11.5px; font-weight: 700; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.05em; }
+.factV { font-size: 13px; color: var(--ink-2); line-height: 1.45; }
+.wiki { display: inline-block; margin-top: 11px; font-size: 12.5px; }
+.nearby ul { list-style: none; display: flex; flex-direction: column; gap: 7px; font-size: 13.5px; }
+
+.pageFoot { background: var(--mast); color: #a7bab0; padding: 34px 0; font-size: 13px; }
+.pageFoot :global(.wrap) { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .side { position: static; }
+  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .head { padding: 18px 16px; }
+  .blockHead, .subHead, .subNote, .buildingList, .linkList, .cluster, .moreLink { padding-left: 16px; padding-right: 16px; }
+}

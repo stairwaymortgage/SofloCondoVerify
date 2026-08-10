@@ -2,10 +2,12 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import SignalTable, { SignalLegend } from "@/components/SignalTable";
 import JsonLd from "@/components/JsonLd";
 import { getBuilding, getPriorityBuildingIds } from "@/lib/buildings";
 import { buildSignals, hasStackedFlags, recordId } from "@/lib/signals";
+import { cityHubHref, countyByDb, getCityHubForBuilding } from "@/lib/cities";
 import { breadcrumbSchema, buildingSchema } from "@/lib/schema";
 import styles from "./page.module.css";
 
@@ -52,24 +54,31 @@ export default async function BuildingPage({ params }: { params: { id: string } 
     .filter(Boolean)
     .join(" · ");
 
+  // Home > County > City > Building, wherever the record has a city hub.
+  const hub = await getCityHubForBuilding(building);
+  const county = countyByDb(building.county);
+  const hubHref = hub ? cityHubHref(hub) : null;
+
+  const trail = [
+    { name: "Home", path: "/" },
+    ...(county ? [{ name: `${county.name} County`, path: `/condos/${county.slug}` }] : []),
+    ...(hub?.city && hubHref ? [{ name: hub.city, path: hubHref }] : []),
+    { name, path: `/building/${building.id}` },
+  ];
+
   return (
     <>
-      <JsonLd
-        schemas={[
-          buildingSchema(building),
-          breadcrumbSchema([
-            { name: "Home", path: "/" },
-            { name, path: `/building/${building.id}` },
-          ]),
-        ]}
-      />
+      <JsonLd schemas={[buildingSchema(building), breadcrumbSchema(trail)]} />
       <Masthead />
 
       <section className={styles.page}>
         <div className="wrap">
-          <div className={`${styles.crumb} mono`}>
-            <Link href="/">Home</Link> / Condo verification lookup / {name}
-          </div>
+          <Breadcrumbs
+            trail={trail.map((crumb, index) => ({
+              name: crumb.name,
+              href: index < trail.length - 1 ? crumb.path : undefined,
+            }))}
+          />
 
           <div className={styles.grid}>
             <main>
@@ -181,6 +190,19 @@ export default async function BuildingPage({ params }: { params: { id: string } 
               </div>
 
               <SignalLegend />
+
+              {hubHref && hub?.city && (
+                <div className={styles.hubCard}>
+                  <div className={styles.hubHead}>In this city</div>
+                  <Link href={hubHref}>
+                    {hub.city} condo verification data →
+                  </Link>
+                  <p>
+                    Current counts for {hub.city}, the buildings worth a closer
+                    look, and answers to what buyers and sellers ask here.
+                  </p>
+                </div>
+              )}
             </aside>
           </div>
         </div>

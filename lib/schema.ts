@@ -98,6 +98,27 @@ export function preconSchema(project: PreconProject): Json {
   });
 }
 
+/**
+ * One question and its answer. FAQPage is only emitted for answers that pass
+ * the thin-content guard — marking up a one-line answer invites a manual
+ * action rather than a rich result.
+ */
+export function faqPageSchema(question: string, answer: string, path: string): Json {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": siteUrl(path),
+    url: siteUrl(path),
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: question,
+        acceptedAnswer: { "@type": "Answer", text: answer },
+      },
+    ],
+  };
+}
+
 export interface Crumb {
   name: string;
   path: string;

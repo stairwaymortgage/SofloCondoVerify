@@ -1,0 +1,9 @@
+.page { padding: 34px 0 72px; min-height: 60vh; }
+.card { max-width: 640px; background: var(--panel); border: 1px solid var(--line-strong); border-top: 4px solid var(--teal); padding: 26px 24px 28px; }
+.doc { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.card h1 { font-size: 26px; font-weight: 800; letter-spacing: -0.015em; margin-top: 7px; }
+.card p { margin-top: 12px; font-size: 15px; color: var(--ink-2); line-height: 1.55; max-width: 54ch; }
+.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+.btn { display: inline-block; background: var(--teal); color: #fff; text-decoration: none; font-weight: 700; font-size: 14px; padding: 10px 16px; border: 1.5px solid var(--teal); }
+.btn:hover { background: #0c5a63; }
+.plain { display: inline-block; margin-top: 16px; font-size: 13.5px; }

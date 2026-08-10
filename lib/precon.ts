@@ -192,6 +192,36 @@ export async function getRelatedPrecon(
   return rows.filter((row) => row.slug).sort(byProjectName).slice(0, limit);
 }
 
+/**
+ * Projects whose area matches a city name. Broward rows carry a city, Miami
+ * rows carry a neighborhood — which lines up for the tower cities that have
+ * their own hub (Miami Beach, Aventura, Coral Gables) and simply returns
+ * nothing where it doesn't.
+ */
+export async function getPreconInArea(
+  area: string,
+  limit = 8
+): Promise<PreconProject[]> {
+  const name = area.trim();
+  if (!name) return [];
+
+  const [miami, broward] = await Promise.all([
+    supabase.from("precon_miami").select("*").ilike("neighborhood", name).limit(limit),
+    supabase.from("precon_broward").select("*").ilike("city", name).limit(limit),
+  ]);
+
+  if (miami.error) console.error("[precon/area] miami:", miami.error.message);
+  if (broward.error) console.error("[precon/area] broward:", broward.error.message);
+
+  return [
+    ...(miami.data ?? []).map(fromMiami),
+    ...(broward.data ?? []).map(fromBroward),
+  ]
+    .filter((project) => project.slug)
+    .sort(byProjectName)
+    .slice(0, limit);
+}
+
 /* ------------------------------------------------------------------ */
 /* presentation helpers                                                */
 /* ------------------------------------------------------------------ */
