@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SignalTable, { SignalLegend } from "@/components/SignalTable";
+import SponsorSlot from "@/components/SponsorSlot";
 import JsonLd from "@/components/JsonLd";
+import SiteFooter from "@/components/SiteFooter";
 import { getBuilding, getPriorityBuildingIds } from "@/lib/buildings";
 import {
   buildSignals,
@@ -261,6 +263,10 @@ export default async function RiskPage({ params }: { params: { id: string } }) {
                 </article>
               </section>
 
+              {/* Paid placement, clearly labeled — the neutral matching card
+                  in the sidebar is unaffected by it. */}
+              <SponsorSlot page="risk" variant="leaderboard" />
+
               <footer className={styles.disclaimer}>
                 <div className={styles.disclaimerHead}>
                   How to read this page
@@ -332,16 +338,7 @@ export default async function RiskPage({ params }: { params: { id: string } }) {
           </div>
         </div>
       </section>
-
-      <footer className={styles.pageFoot}>
-        <div className="wrap">
-          <div>© 2026 SoFloCondoVerify.com · Miami-Dade · Broward · Palm Beach</div>
-          <div>
-            Independent record · Ads are labeled “Advertisement” · Not legal or
-            financial advice
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

@@ -631,6 +631,9 @@ export type Database = {
           message: string | null
           name: string
           phone: string | null
+          routed_to: string | null
+          routing_tier: string
+          status: string
         }
         Insert: {
           building_id?: number | null
@@ -641,6 +644,9 @@ export type Database = {
           message?: string | null
           name: string
           phone?: string | null
+          routed_to?: string | null
+          routing_tier?: string
+          status?: string
         }
         Update: {
           building_id?: number | null
@@ -651,6 +657,9 @@ export type Database = {
           message?: string | null
           name?: string
           phone?: string | null
+          routed_to?: string | null
+          routing_tier?: string
+          status?: string
         }
         Relationships: [
           {
@@ -1005,6 +1014,48 @@ export type Database = {
           owner_accessible?: string | null
           record_category?: string | null
           retention_period?: string | null
+        }
+        Relationships: []
+      }
+      sponsors: {
+        Row: {
+          active: boolean
+          created_at: string
+          credential_line: string | null
+          id: number
+          link_url: string | null
+          logo_initials: string | null
+          name: string
+          priority: number
+          tagline: string | null
+          target_pages: string[]
+          type: string
+        }
+        Insert: {
+          active?: boolean
+          created_at?: string
+          credential_line?: string | null
+          id?: never
+          link_url?: string | null
+          logo_initials?: string | null
+          name: string
+          priority?: number
+          tagline?: string | null
+          target_pages?: string[]
+          type: string
+        }
+        Update: {
+          active?: boolean
+          created_at?: string
+          credential_line?: string | null
+          id?: never
+          link_url?: string | null
+          logo_initials?: string | null
+          name?: string
+          priority?: number
+          tagline?: string | null
+          target_pages?: string[]
+          type?: string
         }
         Relationships: []
       }

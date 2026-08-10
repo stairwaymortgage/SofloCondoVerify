@@ -1,0 +1,9 @@
+.footer { background: var(--mast); color: #a7bab0; padding: 30px 0 34px; font-size: 13px; }
+.inner { display: flex; flex-direction: column; gap: 16px; }
+
+.links { display: flex; flex-wrap: wrap; gap: 8px 20px; border-bottom: 1px solid #23494e; padding-bottom: 14px; }
+.links a { color: #cadadb; text-decoration: none; font-weight: 600; }
+.links a:hover { color: #fff; text-decoration: underline; }
+
+.lines { display: flex; justify-content: space-between; gap: 10px 24px; flex-wrap: wrap; }
+.lines div:last-child { color: #93aaab; }

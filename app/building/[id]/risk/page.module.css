@@ -65,10 +65,6 @@
 
 .back { background: var(--panel); border: 1px solid var(--line); padding: 12px 16px; font-size: 13px; }
 
-/* ---- footer ---- */
-.pageFoot { background: var(--mast); color: #a7bab0; padding: 34px 0; font-size: 13px; }
-.pageFoot :global(.wrap) { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; }
   .side { position: static; }

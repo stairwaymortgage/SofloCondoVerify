@@ -16,6 +16,9 @@ export type BuildingInsert = TablesInsert<"buildings">
 export type Lead = Tables<"leads">
 export type LeadInsert = TablesInsert<"leads">
 
+// Advertising inventory — public by design, always rendered labeled.
+export type Sponsor = Tables<"sponsors">
+
 // Precon / existing inventory
 export type PreconMiami = Tables<"precon_miami">
 export type PreconBroward = Tables<"precon_broward">

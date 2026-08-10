@@ -1,0 +1,40 @@
+.page { padding: 34px 0 56px; min-height: 60vh; }
+
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 316px; gap: 28px; align-items: start; }
+.main { min-width: 0; }
+.side { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 20px; }
+
+.article { background: var(--panel); border: 1px solid var(--line-strong); }
+.head { border-bottom: 2px solid var(--ink); padding: 22px; }
+.doc { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.head h1 { font-size: clamp(23px, 3vw, 31px); font-weight: 800; letter-spacing: -0.02em; margin-top: 6px; line-height: 1.15; }
+.stand { font-size: 15px; color: var(--ink-2); line-height: 1.6; margin-top: 10px; max-width: 68ch; }
+
+.body { padding: 20px 22px 24px; }
+.body h2 { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; margin-top: 26px; padding-bottom: 7px; border-bottom: 1px solid var(--line); }
+.body h2:first-child { margin-top: 0; }
+.body p { font-size: 15px; color: var(--ink); line-height: 1.7; margin-top: 12px; max-width: 72ch; }
+.body b { font-weight: 700; }
+
+.steps { list-style: none; margin-top: 14px; display: flex; flex-direction: column; gap: 13px; }
+.steps li { display: flex; gap: 12px; font-size: 15px; color: var(--ink); line-height: 1.65; max-width: 72ch; }
+.stepN { flex: none; width: 24px; height: 24px; background: var(--teal); color: #fff; font-size: 12.5px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; margin-top: 2px; }
+
+.plain { list-style: none; margin-top: 13px; display: flex; flex-direction: column; gap: 11px; }
+.plain li { font-size: 14.5px; color: var(--ink-2); line-height: 1.65; padding-left: 12px; border-left: 2px solid var(--line); max-width: 74ch; }
+.plain b { color: var(--ink); }
+
+.foot { border-top: 1px solid var(--line); background: #fafbfb; padding: 13px 22px; }
+.foot p { font-size: 11px; color: var(--ink-3); }
+
+.nearby { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
+.nearbyHead { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 9px; }
+.nearby ul { list-style: none; display: flex; flex-direction: column; gap: 7px; font-size: 13.5px; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .side { position: static; }
+}
+@media (max-width: 560px) {
+  .head, .body, .foot { padding-left: 16px; padding-right: 16px; }
+}

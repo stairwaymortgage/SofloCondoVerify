@@ -5,6 +5,8 @@ import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ConnectCta from "@/components/ConnectCta";
 import JsonLd from "@/components/JsonLd";
+import SponsorSlot from "@/components/SponsorSlot";
+import SiteFooter from "@/components/SiteFooter";
 import {
   cityHubHref,
   citySlug,
@@ -142,6 +144,10 @@ export default async function CityHubPage({
 
           <div className={styles.grid}>
             <main className={styles.main}>
+              {/* Paid placement, labeled — the neutral matching card in the
+                  sidebar is unaffected by it. */}
+              <SponsorSlot page="city" variant="leaderboard" />
+
               {/* ---- buildings ---- */}
               {(flagged.length > 0 || approved.length > 0) && (
                 <section className={styles.block}>
@@ -291,16 +297,7 @@ export default async function CityHubPage({
           </div>
         </div>
       </section>
-
-      <footer className={styles.pageFoot}>
-        <div className="wrap">
-          <div>© 2026 SoFloCondoVerify.com · Miami-Dade · Broward · Palm Beach</div>
-          <div>
-            Independent record · Ads are labeled “Advertisement” · Not legal or
-            financial advice
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

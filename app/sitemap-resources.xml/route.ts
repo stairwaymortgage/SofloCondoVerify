@@ -11,6 +11,9 @@ export function GET() {
       ...RULE_TOPICS.map((topic) => ({ path: `/rules/${topic.slug}` })),
       { path: "/forms" },
       { path: "/for-boards" },
+      { path: "/how-matching-works" },
+      { path: "/privacy" },
+      { path: "/advertise" },
     ])
   );
 }

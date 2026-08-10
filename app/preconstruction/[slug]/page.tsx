@@ -3,6 +3,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import JsonLd from "@/components/JsonLd";
+import SponsorSlot from "@/components/SponsorSlot";
+import SiteFooter from "@/components/SiteFooter";
 import { breadcrumbSchema, preconSchema } from "@/lib/schema";
 import { cityHubHref, getCityHubForBuilding } from "@/lib/cities";
 import {
@@ -345,6 +347,10 @@ export default async function PreconProjectPage({
                 </div>
               </div>
 
+              {/* Paid placement — alongside the neutral card above, not
+                  instead of it. */}
+              <SponsorSlot page="precon" variant="card" />
+
               <div className={styles.note}>
                 <div className={styles.noteHead}>What a precon record is</div>
                 <p>
@@ -358,16 +364,7 @@ export default async function PreconProjectPage({
           </div>
         </div>
       </section>
-
-      <footer className={styles.pageFoot}>
-        <div className="wrap">
-          <div>© 2026 SoFloCondoVerify.com · Miami-Dade · Broward · Palm Beach</div>
-          <div>
-            Independent record · Ads are labeled “Advertisement” · Not legal or
-            financial advice
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

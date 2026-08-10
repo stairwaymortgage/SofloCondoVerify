@@ -213,6 +213,10 @@ export default function ConnectForm({
             working with anyone, and you can decline any contact you receive.
           </li>
         </ul>
+        <p className={styles.disclosureLinks}>
+          <Link href="/how-matching-works">How matching works</Link> ·{" "}
+          <Link href="/privacy">Privacy notice</Link>
+        </p>
       </div>
 
       {error && (

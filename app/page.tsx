@@ -1,5 +1,6 @@
 import Masthead from "@/components/Masthead";
 import LookupForm from "@/components/LookupForm";
+import SiteFooter from "@/components/SiteFooter";
 import { getTriCountyBuildingCount } from "@/lib/counts";
 import { num } from "@/lib/format";
 import styles from "./page.module.css";
@@ -105,16 +106,7 @@ export default async function Home() {
           </p>
         </div>
       </section>
-
-      <footer className={styles.footer}>
-        <div className="wrap">
-          <div>© 2026 SoFloCondoVerify.com · Miami-Dade · Broward · Palm Beach</div>
-          <div>
-            Independent record · Ads are labeled “Advertisement” · Not legal or
-            financial advice · Not affiliated with any government agency
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

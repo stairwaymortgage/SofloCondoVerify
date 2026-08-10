@@ -34,6 +34,7 @@
 .disclosure li { font-size: 13px; color: var(--ink-2); line-height: 1.55; padding-left: 16px; position: relative; }
 .disclosure li::before { content: ""; position: absolute; left: 0; top: 7px; width: 7px; height: 7px; background: var(--teal); }
 .disclosure b { color: var(--ink); }
+.disclosureLinks { margin-top: 11px; padding-top: 10px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--ink-3); }
 
 .error { background: var(--flag-bg); border: 1px solid #e3c3c3; border-left: 3px solid var(--flag); color: var(--flag); font-size: 13.5px; font-weight: 600; padding: 12px 14px; }
 

@@ -63,10 +63,6 @@
 
 .foot { font-size: 12px; color: var(--ink-3); line-height: 1.6; margin-top: 34px; max-width: 82ch; }
 
-/* ---- footer ---- */
-.pageFoot { background: var(--mast); color: #a7bab0; padding: 34px 0; font-size: 13px; }
-.pageFoot :global(.wrap) { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-
 @media (max-width: 760px) {
   .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

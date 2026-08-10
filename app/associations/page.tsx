@@ -4,6 +4,7 @@ import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ConnectCta from "@/components/ConnectCta";
 import JsonLd from "@/components/JsonLd";
+import SiteFooter from "@/components/SiteFooter";
 import { getAssociations, groupByCity } from "@/lib/associations";
 import { breadcrumbSchema } from "@/lib/schema";
 import { num } from "@/lib/format";
@@ -117,16 +118,7 @@ export default async function AssociationsIndex() {
           </div>
         </div>
       </section>
-
-      <footer className={styles.pageFoot}>
-        <div className="wrap">
-          <div>© 2026 SoFloCondoVerify.com · Miami-Dade · Broward · Palm Beach</div>
-          <div>
-            Independent record · Ads are labeled “Advertisement” · Not legal or
-            financial advice
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import ConnectForm from "@/components/ConnectForm";
+import SiteFooter from "@/components/SiteFooter";
 import { supabase } from "@/lib/supabase";
 import { normalizeIntent } from "@/lib/intents";
 import { getPreconBySlug } from "@/lib/precon";
@@ -128,16 +129,7 @@ export default async function ConnectPage({
           </div>
         </div>
       </section>
-
-      <footer className={styles.pageFoot}>
-        <div className="wrap">
-          <div>© 2026 SoFloCondoVerify.com · Miami-Dade · Broward · Palm Beach</div>
-          <div>
-            Independent record · Ads are labeled “Advertisement” · Not legal or
-            financial advice
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

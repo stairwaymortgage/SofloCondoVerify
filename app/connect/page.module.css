@@ -15,9 +15,6 @@
 .steps li { display: flex; gap: 10px; align-items: flex-start; font-size: 13px; color: var(--ink-2); line-height: 1.5; }
 .stepN { flex: none; width: 20px; height: 20px; background: var(--teal); color: #fff; font-size: 11.5px; font-weight: 800; display: grid; place-items: center; margin-top: 1px; }
 
-.pageFoot { background: var(--mast); color: #a7bab0; padding: 34px 0; font-size: 13px; }
-.pageFoot :global(.wrap) { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-
 @media (max-width: 900px) {
   .grid { grid-template-columns: 1fr; }
   .side { position: static; }

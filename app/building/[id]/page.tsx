@@ -4,7 +4,9 @@ import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import SignalTable, { SignalLegend } from "@/components/SignalTable";
+import SponsorSlot from "@/components/SponsorSlot";
 import JsonLd from "@/components/JsonLd";
+import SiteFooter from "@/components/SiteFooter";
 import { getBuilding, getPriorityBuildingIds } from "@/lib/buildings";
 import { buildSignals, hasStackedFlags, recordId } from "@/lib/signals";
 import { cityHubHref, countyByDb, getCityHubForBuilding } from "@/lib/cities";
@@ -191,6 +193,10 @@ export default async function BuildingPage({ params }: { params: { id: string } 
 
               <SignalLegend />
 
+              {/* Paid placement — sits alongside the neutral card above, never
+                  in place of it. */}
+              <SponsorSlot page="building" variant="card" />
+
               {hubHref && hub?.city && (
                 <div className={styles.hubCard}>
                   <div className={styles.hubHead}>In this city</div>
@@ -207,16 +213,7 @@ export default async function BuildingPage({ params }: { params: { id: string } 
           </div>
         </div>
       </section>
-
-      <footer className={styles.pageFoot}>
-        <div className="wrap">
-          <div>© 2026 SoFloCondoVerify.com · Miami-Dade · Broward · Palm Beach</div>
-          <div>
-            Independent record · Ads are labeled “Advertisement” · Not legal or financial
-            advice
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </>
   );
 }

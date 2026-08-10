@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase";
 import { isIntent } from "@/lib/intents";
+import { routeLead } from "@/lib/routing";
 
 export const dynamic = "force-dynamic";
 
@@ -86,6 +87,8 @@ export async function POST(request: Request) {
       email: email || null,
       phone: phone || null,
       message: message || null,
+      // Stamped server-side: the client never chooses its own tier.
+      ...routeLead(intent),
     });
 
     if (error) {
