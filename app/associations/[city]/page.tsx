@@ -42,6 +42,7 @@ export async function generateMetadata({
   return {
     title: `${city} condo & HOA association registry · SoFloCondoVerify`,
     description: `Association registration entries in ${city} — name, type, registration status and enforcement flag as they appear in the public ordinance registry.`,
+    alternates: { canonical: `/associations/${params.city}` },
   };
 }
 

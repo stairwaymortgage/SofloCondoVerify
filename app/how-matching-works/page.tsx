@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "How matching works · SoFloCondoVerify",
   description:
     "What happens when you send a request: we pass it to licensed professionals in our network who handle your kind of question. Free to you, no obligation, and you choose whether to proceed.",
+  alternates: { canonical: "/how-matching-works" },
 };
 
 export default function HowMatchingWorks() {

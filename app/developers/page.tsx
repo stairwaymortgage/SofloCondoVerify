@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: "Condo developers, architects and design firms · SoFloCondoVerify",
   description:
     "Every developer, architecture, interior and landscape firm behind the South Florida condo projects we track — with the buildings and preconstruction projects linked to each.",
+  alternates: { canonical: "/developers" },
 };
 
 /** Sections in the order a reader cares about them. */

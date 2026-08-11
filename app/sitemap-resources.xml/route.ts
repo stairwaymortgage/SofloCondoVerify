@@ -3,7 +3,14 @@ import { urlSet, xmlResponse } from "@/lib/sitemap";
 
 export const revalidate = 3600;
 
-/** The hand-written explainers and libraries: rules, forms, board hub. */
+/**
+ * The hand-written explainers and libraries: rules, forms, board hub.
+ *
+ * /privacy is deliberately absent. It carries `noindex` while the notice is
+ * a draft, and submitting a noindexed URL in a sitemap is a contradiction —
+ * it asks Search Console to index a page the page itself refuses. /connect
+ * is absent for the same reason.
+ */
 export function GET() {
   return xmlResponse(
     urlSet([
@@ -12,7 +19,6 @@ export function GET() {
       { path: "/forms" },
       { path: "/for-boards" },
       { path: "/how-matching-works" },
-      { path: "/privacy" },
       { path: "/advertise" },
     ])
   );

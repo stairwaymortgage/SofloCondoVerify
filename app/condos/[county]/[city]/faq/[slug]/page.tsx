@@ -56,6 +56,9 @@ export async function generateMetadata({
   return {
     title: `${faq.question} · SoFloCondoVerify`,
     description,
+    // resolve() already refused anything that isn't the one true route for
+    // this answer, so faqHref is by definition self-referencing here.
+    alternates: { canonical: faqHref(faq) ?? undefined },
     // Thin answers stay reachable and linked, but out of the index.
     robots: isThin(faq) ? { index: false, follow: true } : undefined,
   };

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import styles from "./ConnectForm.module.css";
+import { track } from "@/lib/analytics";
 import { INTENTS, type IntentValue } from "@/lib/intents";
 
 interface Props {
@@ -57,6 +58,17 @@ export default function ConnectForm({
         return;
       }
       setSent(true);
+
+      // Accepted leads only — a validation rejection returns above. No
+      // name, email, phone or message is sent to GA: the intent and whether
+      // a record was attached is the whole of what analytics needs, and the
+      // rest is exactly the data the privacy notice promises we route to the
+      // network rather than broadcast.
+      track("connect_submitted", {
+        intent,
+        has_building: buildingId !== null || building.trim() !== "",
+        building_id: buildingId ?? undefined,
+      });
     } catch {
       setError("We couldn’t reach the server. Please try again.");
     } finally {

@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import SignalTable, { SignalLegend } from "@/components/SignalTable";
 import SponsorSlot from "@/components/SponsorSlot";
 import JsonLd from "@/components/JsonLd";
+import TrackRecordView from "@/components/TrackRecordView";
 import SiteFooter from "@/components/SiteFooter";
 import { getBuilding, getPriorityBuildingIds } from "@/lib/buildings";
 import { buildSignals, hasStackedFlags, recordId } from "@/lib/signals";
@@ -42,6 +43,9 @@ export async function generateMetadata({
     description: `Public-record verification for ${
       building.building_name ?? "this building"
     }: FHA and VA standing, milestone and reserve signals, registry and recertification.`,
+    // Keyed off the resolved row, not params.id — "01" and "1" are the same
+    // record and must not compete as two URLs.
+    alternates: { canonical: `/building/${building.id}` },
   };
 }
 
@@ -71,6 +75,11 @@ export default async function BuildingPage({ params }: { params: { id: string } 
   return (
     <>
       <JsonLd schemas={[buildingSchema(building), breadcrumbSchema(trail)]} />
+      <TrackRecordView
+        recordType="building"
+        recordId={building.id}
+        recordName={building.building_name}
+      />
       <Masthead />
 
       <section className={styles.page}>

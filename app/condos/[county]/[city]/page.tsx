@@ -53,6 +53,7 @@ export async function generateMetadata({
     description: `Condo verification for ${hub.city}, ${
       county?.name ?? "South Florida"
     }: current counts of FHA-approved and VA-accepted buildings, preconstruction, buildings carrying flagged signals, and answers to the questions buyers and sellers ask here.`,
+    alternates: { canonical: cityHubHref(hub) ?? undefined },
   };
 }
 

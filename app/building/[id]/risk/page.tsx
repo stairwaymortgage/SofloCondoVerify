@@ -6,6 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import SignalTable, { SignalLegend } from "@/components/SignalTable";
 import SponsorSlot from "@/components/SponsorSlot";
 import JsonLd from "@/components/JsonLd";
+import TrackRecordView from "@/components/TrackRecordView";
 import SiteFooter from "@/components/SiteFooter";
 import { getBuilding, getPriorityBuildingIds } from "@/lib/buildings";
 import {
@@ -43,6 +44,7 @@ export async function generateMetadata({
   return {
     title: `${name} — risk & due-diligence read · SoFloCondoVerify`,
     description: `What the public record shows for ${name} in ${where}, read for buyers, sellers and cash purchasers: FHA and VA standing, reserve and recertification filings, and the questions worth asking before you go further.`,
+    alternates: { canonical: `/building/${building.id}/risk` },
   };
 }
 
@@ -85,6 +87,11 @@ export default async function RiskPage({ params }: { params: { id: string } }) {
   return (
     <>
       <JsonLd schemas={[buildingSchema(building), breadcrumbSchema(trail)]} />
+      <TrackRecordView
+        recordType="risk"
+        recordId={building.id}
+        recordName={building.building_name}
+      />
       <Masthead />
 
       <section className={styles.page}>

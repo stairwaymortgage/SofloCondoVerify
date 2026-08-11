@@ -5,6 +5,7 @@ import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ConnectCta from "@/components/ConnectCta";
 import JsonLd from "@/components/JsonLd";
+import TrackRecordView from "@/components/TrackRecordView";
 import SiteFooter from "@/components/SiteFooter";
 import {
   companySlug,
@@ -54,6 +55,11 @@ export async function generateMetadata({
     description: `Every South Florida condo project and building in our file linked to ${
       company.company
     }${company.type ? `, ${company.type.toLowerCase()}` : ""} — with status, delivery and verification records for each.`,
+    // The stored url_slug carries a prefix the route drops, and the prefixed
+    // form still resolves — canonicalise on the stripped one.
+    alternates: {
+      canonical: `/developers/${companySlug(company.url_slug) ?? params.slug}`,
+    },
   };
 }
 
@@ -84,6 +90,11 @@ export default async function DeveloperPage({ params }: { params: { slug: string
             { name, path },
           ]),
         ]}
+      />
+      <TrackRecordView
+        recordType="developer"
+        recordId={segment}
+        recordName={name}
       />
       <Masthead />
 

@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Advertise — SoFloCondoVerify",
   description:
     "Reach high-intent South Florida condo traffic. For licensed lenders, agents, foreign-national specialists, and HOA-approval firms.",
+  alternates: { canonical: "/advertise" },
 };
 
 export default function Advertise() {

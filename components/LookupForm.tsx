@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import styles from "./LookupForm.module.css";
+import { track } from "@/lib/analytics";
 import { chipLabel, fhaTone, vaTone, type Tone } from "@/lib/signals";
 import type { SearchResult } from "@/app/api/search/route";
 
@@ -46,6 +47,16 @@ export default function LookupForm({
       const payload = (await response.json()) as { results: SearchResult[] };
       if (requestId !== requestRef.current) return;
       setResults(payload.results);
+
+      // Only settled searches are reported: the 300ms debounce collapses a
+      // burst of typing into one request, and superseded responses return
+      // above rather than reaching here. A slow typist still produces a few
+      // events per query — acceptable, and the zero-result ones are the
+      // interesting ones anyway.
+      track("search_performed", {
+        search_term: trimmed,
+        results_count: payload.results.length,
+      });
     } catch {
       if (requestId !== requestRef.current) return;
       setResults(null);

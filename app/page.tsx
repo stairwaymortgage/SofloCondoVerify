@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import LookupForm from "@/components/LookupForm";
 import SiteFooter from "@/components/SiteFooter";
@@ -7,6 +8,20 @@ import styles from "./page.module.css";
 
 /** Re-check the building count hourly rather than on every request. */
 export const revalidate = 3600;
+
+/**
+ * Title and description are inherited from the root layout; this exists so
+ * the home page gets a canonical of its own. Without it the site's most
+ * linked page is the only one without one.
+ *
+ * Next normalises this to a bare "https://soflocondoverify.com" while
+ * sitemap-cities.xml lists the home page with a trailing slash. That is the
+ * same URL — RFC 3986 treats an empty path as "/" — and passing the absolute
+ * form here does not change the output, so it is left alone.
+ */
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 export default async function Home() {
   const buildingCount = await getTriCountyBuildingCount();

@@ -36,6 +36,11 @@ export const metadata: Metadata = {
   title: "Privacy notice · SoFloCondoVerify",
   description:
     "What we collect when you send a request, who we share it with, how long we keep it, and how to ask us to stop.",
+  alternates: { canonical: "/privacy" },
+  // Out of the index while the notice is still a draft — a privacy notice
+  // that ranks before counsel has read it is the wrong page to be found on.
+  // `follow` stays on so the links out of it still carry.
+  robots: { index: false, follow: true },
 };
 
 const UPDATED = "10 August 2026";

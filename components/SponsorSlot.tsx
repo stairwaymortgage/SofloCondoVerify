@@ -7,6 +7,7 @@ import {
   type SponsorVariant,
 } from "@/lib/sponsors";
 import type { Sponsor } from "@/lib/database.types";
+import SponsorLink from "./SponsorLink";
 import styles from "./SponsorSlot.module.css";
 
 interface Props {
@@ -39,14 +40,20 @@ export default async function SponsorSlot({ page, variant = "card" }: Props) {
 
       <div className={styles.body}>
         {sponsors.map((sponsor) => (
-          <SponsorUnit key={sponsor.id} sponsor={sponsor} />
+          <SponsorUnit key={sponsor.id} sponsor={sponsor} page={page} />
         ))}
       </div>
     </aside>
   );
 }
 
-function SponsorUnit({ sponsor }: { sponsor: Sponsor }) {
+function SponsorUnit({
+  sponsor,
+  page,
+}: {
+  sponsor: Sponsor;
+  page: SponsorPage;
+}) {
   const href = sponsorHref(sponsor);
 
   const inner = (
@@ -72,17 +79,19 @@ function SponsorUnit({ sponsor }: { sponsor: Sponsor }) {
     </>
   );
 
-  // rel="sponsored nofollow" is the correct signal for a paid link, and
-  // noopener closes the tab-nabbing hole on any external destination.
+  // SponsorLink owns rel="sponsored nofollow noopener" and the click event.
+  // A sponsor with no destination still renders — as a plain div, never as an
+  // unlinked stand-in for a link.
   return href ? (
-    <a
+    <SponsorLink
       className={`${styles.unit} ${styles.linked}`}
       href={href}
-      rel="sponsored nofollow noopener"
-      target="_blank"
+      sponsorName={sponsor.name}
+      sponsorType={sponsor.type}
+      page={page}
     >
       {inner}
-    </a>
+    </SponsorLink>
   ) : (
     <div className={styles.unit}>{inner}</div>
   );

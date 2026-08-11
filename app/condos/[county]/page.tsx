@@ -10,6 +10,7 @@ import {
   COUNTIES,
   cityHubHref,
   countyBySlug,
+  countyHref,
   countsFor,
   getCityHubsInCounty,
   getCountyCityCounts,
@@ -37,6 +38,9 @@ export async function generateMetadata({
   return {
     title: `${county.name} County condos — verification by city · SoFloCondoVerify`,
     description: `Every ${county.name} County city we track, with current counts of condo buildings, FHA-approved and VA-accepted projects, preconstruction, and buildings carrying flagged signals.`,
+    // countyBySlug matches case-insensitively; the canonical is the lowercase
+    // slug it resolved to, so /condos/Miami-Dade doesn't self-canonicalise.
+    alternates: { canonical: countyHref(county) },
   };
 }
 

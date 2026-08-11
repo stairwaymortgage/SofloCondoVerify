@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Condo forms & templates · SoFloCondoVerify",
   description:
     "The documents that come up around a Florida condo transaction — estoppel requests, records inspection requests, lender questionnaires, FHA project certification — with the authority behind each.",
+  alternates: { canonical: "/forms" },
 };
 
 /**

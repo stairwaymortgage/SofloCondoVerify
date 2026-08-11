@@ -23,6 +23,7 @@ export const metadata: Metadata = {
   title: "Preconstruction condos in South Florida · SoFloCondoVerify",
   description:
     "Every preconstruction condo project we track in Miami-Dade and Broward — status, price from, delivery year, and whether short-term rentals are allowed. Foreign-national financing options explained.",
+  alternates: { canonical: "/preconstruction" },
 };
 
 interface AreaGroup {

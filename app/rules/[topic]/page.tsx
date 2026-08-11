@@ -31,6 +31,7 @@ export async function generateMetadata({
   return {
     title: `${topic.title} · SoFloCondoVerify`,
     description: topic.standfirst,
+    alternates: { canonical: `/rules/${topic.slug}` },
   };
 }
 

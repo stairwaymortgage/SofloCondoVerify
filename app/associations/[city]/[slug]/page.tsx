@@ -5,6 +5,7 @@ import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ConnectCta from "@/components/ConnectCta";
 import JsonLd from "@/components/JsonLd";
+import TrackRecordView from "@/components/TrackRecordView";
 import SiteFooter from "@/components/SiteFooter";
 import {
   getAssociationBySlug,
@@ -32,6 +33,7 @@ export async function generateMetadata({
   return {
     title: `${association.name} — association registry record · SoFloCondoVerify`,
     description: `Public registration record for ${association.name} in ${association.city}: registration number, type, registration status and enforcement flag. Ordinance registration standing only.`,
+    alternates: { canonical: `/associations/${params.city}/${params.slug}` },
   };
 }
 
@@ -62,6 +64,11 @@ export default async function AssociationPage({
             { name: association.name, path },
           ]),
         ]}
+      />
+      <TrackRecordView
+        recordType="association"
+        recordId={`${params.city}/${params.slug}`}
+        recordName={association.name}
       />
       <Masthead />
 

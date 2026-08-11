@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "Condo & HOA association registry by city · SoFloCondoVerify",
   description:
     "Association registration records by city — registration status, type and enforcement flags as they appear in the public ordinance registry. Registration standing only; not a structural or financial assessment.",
+  alternates: { canonical: "/associations" },
 };
 
 export default async function AssociationsIndex() {

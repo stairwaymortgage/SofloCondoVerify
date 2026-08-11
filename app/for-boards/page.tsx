@@ -16,6 +16,7 @@ export const metadata: Metadata = {
   title: "For condo boards: getting your building back on the lenders' lists · SoFloCondoVerify",
   description:
     "Lost FHA approval and sales stalled? What FHA and GSE standing does to your owners' resale values, what re-approval involves, and how to get connected with professionals who handle it.",
+  alternates: { canonical: "/for-boards" },
 };
 
 /** How many tri-county buildings sit in each position, read live. */

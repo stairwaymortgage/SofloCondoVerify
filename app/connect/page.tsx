@@ -14,6 +14,11 @@ export const metadata: Metadata = {
   title: "Get connected — free · SoFloCondoVerify",
   description:
     "Tell us what you need and we’ll pass your request to licensed professionals in our network. Free, no obligation.",
+  // A form, not a record. It also takes ?record= and ?intent=, so every
+  // record page would otherwise spawn its own indexable near-duplicate.
+  // Canonicalised to the bare path and kept out of the index entirely.
+  alternates: { canonical: "/connect" },
+  robots: { index: false, follow: true },
 };
 
 /**

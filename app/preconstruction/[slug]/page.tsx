@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import JsonLd from "@/components/JsonLd";
+import TrackRecordView from "@/components/TrackRecordView";
 import SponsorSlot from "@/components/SponsorSlot";
 import SiteFooter from "@/components/SiteFooter";
 import { breadcrumbSchema, preconSchema } from "@/lib/schema";
@@ -53,6 +54,9 @@ export async function generateMetadata({
     ]
       .filter(Boolean)
       .join(" "),
+    // getPreconBySlug accepts the slug with or without its "preconstruction-"
+    // prefix. Both forms render; only the stored slug is canonical.
+    alternates: { canonical: `/preconstruction/${project.slug}` },
   };
 }
 
@@ -93,6 +97,11 @@ export default async function PreconProjectPage({
             { name: project.project, path: `/preconstruction/${project.slug}` },
           ]),
         ]}
+      />
+      <TrackRecordView
+        recordType="preconstruction"
+        recordId={project.slug}
+        recordName={project.project}
       />
       <Masthead />
 

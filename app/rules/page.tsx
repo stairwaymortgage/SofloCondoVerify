@@ -15,6 +15,7 @@ export const metadata: Metadata = {
   title: "Florida condo rules, explained · SoFloCondoVerify",
   description:
     "Chapter 718 records law, SB 4D milestone inspections, structural integrity reserve studies, the 2026 conventional Full Review change and FHA project approval — in plain English, with the citations.",
+  alternates: { canonical: "/rules" },
 };
 
 export default async function RulesIndex() {
