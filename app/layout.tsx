@@ -45,6 +45,13 @@ export const metadata: Metadata = {
   title: "SoFloCondoVerify — Check any South Florida condo",
   description:
     "An independent condo verification record for South Florida (Miami-Dade, Broward, Palm Beach). FHA & VA status, reserve and structural signals, from official public records.",
+  // Search Console property verification. Declared in the root layout so it
+  // is present in every page's <head>, which is what keeps the property
+  // verified if the home page is ever restructured. Not a secret — the token
+  // only proves control of a domain someone already has to own.
+  verification: {
+    google: "4gL9dTHqFS__K4iDV8AtLNz5PdFjMdl2B046wTbo6ww",
+  },
 };
 
 export default function RootLayout({
