@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase";
 import { isIntent } from "@/lib/intents";
 import { routeLead } from "@/lib/routing";
+import { pushLeadToGhl } from "@/lib/ghl";
 
 export const dynamic = "force-dynamic";
 
@@ -78,32 +79,78 @@ export async function POST(request: Request) {
   const buildingId =
     Number.isInteger(buildingIdRaw) && buildingIdRaw > 0 ? buildingIdRaw : null;
 
-  try {
-    const admin = createAdminClient();
-    const { error } = await admin.from("leads").insert({
-      intent,
-      building_id: buildingId,
-      name,
-      email: email || null,
-      phone: phone || null,
-      message: message || null,
-      // Stamped server-side: the client never chooses its own tier.
-      ...routeLead(intent),
-    });
+  let admin;
+  let leadId: number;
 
-    if (error) {
-      console.error("[api/leads]", error.message);
+  // Step 1 — Supabase. This is the one that is allowed to fail the request:
+  // it is the record of the lead, and if it didn't land, nothing did.
+  try {
+    admin = createAdminClient();
+    const { data, error } = await admin
+      .from("leads")
+      .insert({
+        intent,
+        building_id: buildingId,
+        name,
+        email: email || null,
+        phone: phone || null,
+        message: message || null,
+        // Stamped server-side: the client never chooses its own tier.
+        ...routeLead(intent),
+      })
+      .select("id")
+      .single();
+
+    if (error || !data) {
+      console.error("[api/leads]", error?.message ?? "insert returned no row");
       return NextResponse.json(
         { error: "We couldn’t save your request. Please try again." },
         { status: 500 }
       );
     }
+    leadId = data.id;
   } catch (error) {
     console.error("[api/leads]", error);
     return NextResponse.json(
       { error: "We couldn’t save your request. Please try again." },
       { status: 500 }
     );
+  }
+
+  // Step 2 — GoHighLevel. Delivery, not capture. The lead is already safe, so
+  // every outcome here ends in the same 200: a CRM that is down, throttled,
+  // misconfigured or simply switched off must not read to the person on the
+  // form as "your request failed, try again" — that produces duplicates of a
+  // lead we already hold.
+  const ghl = await pushLeadToGhl({
+    intent,
+    name,
+    email: email || null,
+    phone: phone || null,
+    building: buildingName || null,
+    buildingId,
+    message: note || null,
+  });
+
+  if (ghl.status === "synced") {
+    const { error } = await admin
+      .from("leads")
+      .update({ ghl_synced: true, ghl_contact_id: ghl.contactId })
+      .eq("id", leadId);
+
+    // The contact exists in GHL either way; only our bookkeeping is off, and
+    // the row shows as unsynced, which is the safe direction to be wrong in.
+    if (error) {
+      console.error(
+        `[api/leads] lead ${leadId} synced to GHL ${ghl.contactId} but the flag did not save:`,
+        error.message
+      );
+    }
+  } else if (ghl.status === "skipped") {
+    console.info(`[api/leads] lead ${leadId}: ${ghl.reason}`);
+  } else {
+    // Left with ghl_synced = false on purpose — this is the retry queue.
+    console.error(`[api/leads] lead ${leadId} GHL push failed: ${ghl.reason}`);
   }
 
   return NextResponse.json({ ok: true });

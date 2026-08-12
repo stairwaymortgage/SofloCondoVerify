@@ -626,6 +626,8 @@ export type Database = {
           building_id: number | null
           created_at: string
           email: string | null
+          ghl_contact_id: string | null
+          ghl_synced: boolean
           id: number
           intent: string
           message: string | null
@@ -639,6 +641,8 @@ export type Database = {
           building_id?: number | null
           created_at?: string
           email?: string | null
+          ghl_contact_id?: string | null
+          ghl_synced?: boolean
           id?: never
           intent: string
           message?: string | null
@@ -652,6 +656,8 @@ export type Database = {
           building_id?: number | null
           created_at?: string
           email?: string | null
+          ghl_contact_id?: string | null
+          ghl_synced?: boolean
           id?: never
           intent?: string
           message?: string | null
