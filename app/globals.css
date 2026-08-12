@@ -26,13 +26,39 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
+
+/* ---- site-wide horizontal-overflow discipline ----
+   Applied here rather than per page so every route inherits it, including
+   ones added later.
+
+   `overflow-x: clip` is the backstop, and it is clip rather than hidden on
+   purpose: `hidden` turns the root into a scroll container, which silently
+   kills `position: sticky` on the record sidebars. `clip` contains the
+   overflow without creating a scroll container, so sticky keeps working.
+   It is a net, not a substitute for fixing causes — the grid tracks and the
+   table wrappers below still do the real work.
+
+   `-webkit-text-size-adjust: 100%` stops iOS Safari inflating text in some
+   block layouts. That autosizing is the usual reason a page measures clean
+   in Chrome at 390px and still scrolls sideways on an actual iPhone. */
+html {
+  scroll-behavior: smooth;
+  overflow-x: clip;
+  max-width: 100%;
+  -webkit-text-size-adjust: 100%;
+}
 body {
   font-family: var(--font-public-sans), system-ui, -apple-system, sans-serif;
   background: var(--bg);
   color: var(--ink);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  max-width: 100%;
+  overflow-x: clip;
+  /* Inherited, so it reaches every element: a long unbroken token — a
+     building name, a url slug, an email someone typed — wraps instead of
+     setting the width of the page. */
+  overflow-wrap: break-word;
 }
 a { color: var(--link); }
 .mono { font-family: var(--font-roboto-mono), ui-monospace, monospace; }
@@ -42,12 +68,22 @@ a { color: var(--link); }
    Record tables have a min-content width well over a phone viewport — left
    alone they pushed every page sideways. `max-width:100%` is the half that
    actually contains it; `overflow-x:auto` is what makes the table reachable
-   once contained. Deliberately NOT `overflow-x:hidden` on body: that hides
-   the symptom, and it breaks the sticky sidebars. */
+   once contained. */
 .tscroll { max-width: 100%; overflow-x: auto; }
+
+/* Any table, wrapped or not, is capped at its container and scrolls itself.
+   Belt and braces for tables added later without a .tscroll wrapper. */
+table { max-width: 100%; }
 
 /* Nothing should be able to exceed its container's width. */
 img, svg, video, canvas, iframe { max-width: 100%; }
+
+/* Media queries can't reach the fixed 316px sidebar track, so the guard for
+   a narrow viewport lives here: no grid or flex child may demand more room
+   than it has been given. */
+@media (max-width: 900px) {
+  .wrap > *, main, aside { min-width: 0; }
+}
 
 /* focus visibility (accessibility floor) */
 :focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
