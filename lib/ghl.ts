@@ -16,8 +16,11 @@ const API = "https://services.leadconnectorhq.com";
 const API_VERSION = "2021-07-28";
 const SOURCE = "SoFloCondoVerify";
 
-/** Applied to every contact, so the whole cohort is one filter in GHL. */
-const SITE_TAG = "soflocondoverify.com";
+/**
+ * The one and only tag. Every contact this site produces carries it and
+ * nothing else, so the cohort is a single clean filter in GHL.
+ */
+const SITE_TAG = "site-sfcv";
 
 /** Nothing should hang a lead submission — GHL gets a short leash. */
 const TIMEOUT_MS = 8000;
@@ -107,12 +110,16 @@ export function splitName(full: string): { firstName: string; lastName: string }
 }
 
 /**
- * SITE_TAG is the one that must always be present — it is how every contact
- * this site produced is found in GHL. The intent tag rides along so the
- * cohort can be split without depending on the dropdown having resolved.
+ * Exactly one tag, always. The intent used to ride along here as a second
+ * tag; it now lives only in the `intent` custom field and in the note, which
+ * is worth knowing about — if the custom-field write ever degrades to the
+ * `none` mode below, the note becomes the sole record of the intent.
+ *
+ * `lead` is unused and stays in the signature so the tag set can depend on
+ * the lead again without touching every call site.
  */
-export function leadTags(lead: GhlLead): string[] {
-  return [SITE_TAG, `intent: ${lead.intent}`];
+export function leadTags(_lead: GhlLead): string[] {
+  return [SITE_TAG];
 }
 
 /**
@@ -326,8 +333,8 @@ function errorText(json: Record<string, unknown>, status: number): string {
  * addressed, so retrying it just burns the timeout budget.
  *
  * Dropping to no custom fields at all is the last resort and still a
- * success: SITE_TAG, the intent tag and the note carry the lead, and a
- * contact in the CRM missing three field values beats no contact.
+ * success: SITE_TAG and the note carry the lead, and a contact in the CRM
+ * missing its field values beats no contact at all.
  */
 export async function pushLeadToGhl(lead: GhlLead): Promise<GhlResult> {
   const cfg = config();
