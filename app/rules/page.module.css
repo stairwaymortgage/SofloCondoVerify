@@ -26,7 +26,7 @@
 .nearby ul { list-style: none; display: flex; flex-direction: column; gap: 7px; font-size: 13.5px; }
 
 @media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
   .side { position: static; }
 }
 @media (max-width: 560px) { .head { padding: 18px 16px; } }

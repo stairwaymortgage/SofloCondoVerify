@@ -16,6 +16,6 @@
 .stepN { flex: none; width: 20px; height: 20px; background: var(--teal); color: #fff; font-size: 11.5px; font-weight: 800; display: grid; place-items: center; margin-top: 1px; }
 
 @media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
   .side { position: static; }
 }

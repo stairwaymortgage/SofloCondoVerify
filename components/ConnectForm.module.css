@@ -51,8 +51,8 @@
 .doneBtn:hover { background: #0c5a63; }
 
 @media (max-width: 620px) {
-  .intents { grid-template-columns: 1fr; }
-  .row { grid-template-columns: 1fr; }
+  .intents { grid-template-columns: minmax(0, 1fr); }
+  .row { grid-template-columns: minmax(0, 1fr); }
   .fieldNote { padding-top: 0; }
   .submit { align-self: stretch; text-align: center; }
 }

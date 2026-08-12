@@ -28,11 +28,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
   min-height: 72px;
   padding-top: 12px;
   padding-bottom: 12px;
 }
-.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+/* min-width:0 lets the brand shrink instead of forcing the flex row wider
+   than the viewport — it was part of the 30px overflow on every page. */
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
 .seal {
   width: 42px;
   height: 42px;
@@ -68,8 +71,75 @@
 }
 .cta:hover { background: #0c5a63; }
 
+/* ---- hamburger + mobile panel ----
+   Both are display:none above the breakpoint, so desktop is untouched. */
+.burger {
+  display: none;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  /* 44px tall: the minimum comfortable tap target. */
+  min-height: 44px;
+  padding: 0 14px;
+  cursor: pointer;
+  flex: none;
+}
+.burger:hover { border-color: var(--teal-l); color: var(--teal-l); }
+.burgerBars { display: grid; gap: 4px; width: 18px; }
+.burgerBars span {
+  display: block;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.16s ease, opacity 0.16s ease;
+}
+/* ☰ becomes ✕ while the panel is open. */
+.burgerBars span[data-open]:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.burgerBars span[data-open]:nth-child(2) { opacity: 0; }
+.burgerBars span[data-open]:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+.panel { display: none; background: var(--mast-2); border-top: 1px solid rgba(255, 255, 255, 0.12); }
+.panel[hidden] { display: none; }
+.panel nav { display: flex; flex-direction: column; padding: 6px 0 12px; }
+.panel a {
+  color: #e7ede9;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  /* Generous rows — this is the only way to navigate on a phone. */
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.panel a:active, .panel a:hover { background: var(--mast); color: #fff; }
+.panelCta {
+  margin: 12px 24px 0;
+  background: var(--teal);
+  color: #fff !important;
+  text-align: center;
+  font-weight: 700 !important;
+  border-bottom: none !important;
+  padding: 15px 16px !important;
+}
+.panelCta:hover { background: #0c5a63; }
+
 @media (max-width: 1300px) { .s { display: none; } }
 @media (max-width: 720px) {
-  .links a:not(.cta) { display: none; }
+  /* The inline nav goes entirely — including the CTA, which now lives in the
+     panel. Leaving the CTA behind is what pushed the header past 375px. */
+  .links { display: none; }
   .right { display: none; }
+  .burger { display: inline-flex; }
+  .panel { display: block; }
+  .panel[hidden] { display: none; }
+  .t { font-size: 17px; }
+}
+@media (max-width: 360px) {
+  .burgerText { display: none; }
+  .burger { padding: 0 12px; }
 }

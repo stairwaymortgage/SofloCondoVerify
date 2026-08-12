@@ -110,6 +110,14 @@ export default async function FormsPage() {
 
           <div className={styles.grid}>
             <main>
+              {/* Four columns — the widest table on the site. It scrolls in
+                  its own box on a phone. */}
+              <div
+                className="tscroll"
+                tabIndex={0}
+                role="region"
+                aria-label="Condo forms and templates"
+              >
               <table className={styles.table}>
                 <thead>
                   <tr>
@@ -149,6 +157,7 @@ export default async function FormsPage() {
                   })}
                 </tbody>
               </table>
+              </div>
 
               <div className={styles.note}>
                 <div className={styles.noteHead}>Where these come from</div>

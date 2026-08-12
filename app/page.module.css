@@ -47,12 +47,12 @@
 /* FOOTER */
 
 @media (max-width: 900px) {
-  .herogrid { grid-template-columns: 1fr; gap: 28px; }
+  .herogrid { grid-template-columns: minmax(0, 1fr); gap: 28px; }
   .statgrid { grid-template-columns: 1fr 1fr; }
   .st:nth-child(2) { border-right: none; }
   .st { border-bottom: 1px solid #33443b; }
 }
 @media (max-width: 640px) {
-  .statgrid { grid-template-columns: 1fr; }
+  .statgrid { grid-template-columns: minmax(0, 1fr); }
   .st { border-right: none; }
 }

@@ -96,24 +96,33 @@ export default async function Home() {
                 RECORD <b>#SIB-33160-1450</b> · Pulled 2026-07-24
               </div>
             </div>
-            <table className={styles.sig}>
-              <thead>
-                <tr>
-                  <th>Signal</th>
-                  <th>Status</th>
-                  <th>As of</th>
-                </tr>
-              </thead>
-              <tbody>
+            {/* Scrolls inside the record card on a phone rather than taking
+                the page sideways with it. */}
+            <div
+              className="tscroll"
+              tabIndex={0}
+              role="region"
+              aria-label="Sample verification record"
+            >
+              <table className={styles.sig}>
+                <thead>
+                  <tr>
+                    <th>Signal</th>
+                    <th>Status</th>
+                    <th>As of</th>
+                  </tr>
+                </thead>
+                <tbody>
                 <Row name="FHA approval" src="HUD condolook" s="ok" v="Approved (HRAP)" as="exp 2027-04-11" />
                 <Row name="VA approval" src="VA condo report" s="no" v="Rejected" as="2025-09" />
                 <Row name="Conventional (Fannie/Freddie)" src="not publishable — checked privately" s="ca" v="Check with us" as="—" />
                 <Row name="Milestone (SB4D)" src="FL DBPR" s="ok" v="In program" as="3+ stories" />
                 <Row name="Reserve study (SIRS)" src="FL DBPR filing" s="ca" v="Unconfirmed — none on file" as="—" />
                 <Row name="Association registry" src="county / state — ordinance only" s="ok" v="In good standing" as="2026-06" />
-                <Row name="Recertification (40-yr)" src="county portal" s="ok" v="Not yet due" as="due 2031" />
-              </tbody>
-            </table>
+                  <Row name="Recertification (40-yr)" src="county portal" s="ok" v="Not yet due" as="due 2031" />
+                </tbody>
+              </table>
+            </div>
           </div>
           <p className={`${styles.recfoot} mono`}>
             Every status links to its official source · Framing follows

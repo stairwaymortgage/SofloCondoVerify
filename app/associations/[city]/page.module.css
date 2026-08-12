@@ -27,7 +27,7 @@
 .back { margin-top: 18px; font-size: 13.5px; }
 
 @media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
   .side { position: static; }
 }
 @media (max-width: 560px) {

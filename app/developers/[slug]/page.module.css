@@ -62,10 +62,10 @@ a.cardLink:hover { border-color: var(--teal-l); border-left-color: var(--teal); 
 .note p { font-size: 12.5px; color: var(--ink-3); line-height: 1.6; }
 
 @media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: minmax(0, 1fr); }
   .side { position: static; }
 }
 @media (max-width: 560px) {
   .recHead, .intro, .blockHead, .blockNote, .cards, .finance { padding-left: 16px; padding-right: 16px; }
-  .cards { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: minmax(0, 1fr); }
 }

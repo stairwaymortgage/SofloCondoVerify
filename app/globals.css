@@ -38,6 +38,17 @@ a { color: var(--link); }
 .mono { font-family: var(--font-roboto-mono), ui-monospace, monospace; }
 .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
 
+/* Wide content scrolls inside its own box rather than widening the page.
+   Record tables have a min-content width well over a phone viewport — left
+   alone they pushed every page sideways. `max-width:100%` is the half that
+   actually contains it; `overflow-x:auto` is what makes the table reachable
+   once contained. Deliberately NOT `overflow-x:hidden` on body: that hides
+   the symptom, and it breaks the sticky sidebars. */
+.tscroll { max-width: 100%; overflow-x: auto; }
+
+/* Nothing should be able to exceed its container's width. */
+img, svg, video, canvas, iframe { max-width: 100%; }
+
 /* focus visibility (accessibility floor) */
 :focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
 

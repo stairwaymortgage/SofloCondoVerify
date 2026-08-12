@@ -132,20 +132,27 @@ export default async function RulePage({ params }: { params: { topic: string } }
                         {statutes.length} provision{statutes.length === 1 ? "" : "s"}
                       </span>
                     </div>
-                    <table className={styles.table}>
-                      <thead>
-                        <tr>
-                          <th scope="col">Citation</th>
-                          <th scope="col">Requirement</th>
-                          <th scope="col">Deadline / retention</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {statutes.map((statute) => (
-                          <StatuteRow key={statute.id} statute={statute} />
-                        ))}
-                      </tbody>
-                    </table>
+                    <div
+                      className="tscroll"
+                      tabIndex={0}
+                      role="region"
+                      aria-label="What the statute says"
+                    >
+                      <table className={styles.table}>
+                        <thead>
+                          <tr>
+                            <th scope="col">Citation</th>
+                            <th scope="col">Requirement</th>
+                            <th scope="col">Deadline / retention</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {statutes.map((statute) => (
+                            <StatuteRow key={statute.id} statute={statute} />
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
                   </>
                 ) : (
                   <div className={styles.noStatute}>
