@@ -18,6 +18,10 @@ export function GET() {
       ...RULE_TOPICS.map((topic) => ({ path: `/rules/${topic.slug}` })),
       { path: "/forms" },
       { path: "/for-boards" },
+      // The audience landing pages the masthead points at.
+      { path: "/buyers" },
+      { path: "/sellers" },
+      { path: "/foreign-buyers" },
       { path: "/how-matching-works" },
       { path: "/advertise" },
     ])

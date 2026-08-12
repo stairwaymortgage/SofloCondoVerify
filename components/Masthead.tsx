@@ -35,9 +35,9 @@ export default function Masthead() {
             <Link href="/">Look up</Link>
             <Link href="/preconstruction">Preconstruction</Link>
             <Link href="/developers">Developers</Link>
-            <Link href="/#buyers">Buyers</Link>
-            <Link href="/#sellers">Sellers</Link>
-            <Link href="/#foreign">Foreign buyers</Link>
+            <Link href="/buyers">Buyers</Link>
+            <Link href="/sellers">Sellers</Link>
+            <Link href="/foreign-buyers">Foreign buyers</Link>
             <Link href="/rules">Rules</Link>
             <Link href="/for-boards">For boards</Link>
             <Link href="/advertise" className={styles.cta}>

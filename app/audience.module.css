@@ -1,0 +1,82 @@
+/* Shared layout for the three audience landing pages: /buyers, /sellers and
+   /foreign-buyers.
+ *
+ * One module rather than a page.module.css per route, because these pages are
+ * the same page with different copy — three identical copies of this file
+ * would drift apart the first time one of them was tweaked. Lifted from
+ * for-boards/page.module.css, which is the pattern they match.
+ *
+ * Colour rule, as everywhere: green = cleared status only. Teal is brand. */
+
+.page { padding: 34px 0 56px; }
+
+/* ---- hero ---- */
+.hero { background: var(--mast); border-left: 4px solid var(--teal-l); padding: 28px 26px; }
+.kicker { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal-l); }
+.hero h1 { color: #fff; font-size: clamp(23px, 3.2vw, 34px); font-weight: 800; letter-spacing: -0.02em; margin-top: 8px; line-height: 1.15; max-width: 24ch; }
+.lede { color: #cadadb; font-size: 15px; line-height: 1.7; margin-top: 13px; max-width: 70ch; }
+.heroBtn { display: inline-block; margin-top: 18px; background: var(--teal-l); color: var(--mast-2); text-decoration: none; font-weight: 700; font-size: 15px; padding: 13px 22px; border: 1.5px solid var(--teal-l); }
+.heroBtn:hover { background: #fff; border-color: #fff; }
+.heroFine { font-size: 11.5px; color: #93aaab; margin-top: 10px; }
+
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line-strong); border-top: none; }
+.stat { background: var(--panel); padding: 14px 18px; }
+.statN { font-size: 21px; font-weight: 800; letter-spacing: -0.02em; color: var(--teal); }
+.statL { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-3); margin-top: 3px; }
+.statsNote { font-size: 11.5px; color: var(--ink-3); line-height: 1.6; margin-top: 9px; max-width: 84ch; }
+
+.grid { display: grid; grid-template-columns: minmax(0, 1fr) 316px; gap: 28px; align-items: start; margin-top: 26px; }
+.main { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+.side { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 20px; }
+
+.block { background: var(--panel); border: 1px solid var(--line-strong); padding-bottom: 18px; }
+.blockHead { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; padding: 15px 20px; border-bottom: 2px solid var(--ink); }
+.blockLede { font-size: 13.5px; color: var(--ink-2); line-height: 1.6; padding: 14px 20px 0; max-width: 78ch; }
+.blockNote { font-size: 12.5px; color: var(--ink-3); line-height: 1.6; padding: 14px 20px 0; max-width: 80ch; }
+
+.points { list-style: none; padding: 14px 20px 0; display: flex; flex-direction: column; gap: 11px; }
+.points li { font-size: 13.5px; color: var(--ink-2); line-height: 1.65; padding-left: 12px; border-left: 2px solid var(--line); max-width: 80ch; }
+.points b { color: var(--ink); }
+
+.steps { list-style: none; padding: 14px 20px 0; display: flex; flex-direction: column; gap: 12px; }
+.steps li { display: flex; gap: 11px; font-size: 13.5px; color: var(--ink-2); line-height: 1.65; max-width: 80ch; }
+.steps b { color: var(--ink); }
+.stepN { flex: none; width: 22px; height: 22px; background: var(--teal); color: #fff; font-size: 12px; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; margin-top: 1px; }
+
+.linkRow { display: flex; flex-wrap: wrap; gap: 8px 20px; padding: 16px 20px 0; font-size: 13.5px; font-weight: 600; }
+
+/* ---- example records (flagged buildings, city hubs) ---- */
+.records { list-style: none; padding: 14px 20px 0; display: flex; flex-direction: column; gap: 1px; background: var(--line); }
+.records li { background: var(--panel); }
+.records a { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 10px 12px; text-decoration: none; border: 1px solid var(--line); }
+.records a:hover { border-color: var(--teal); background: var(--teal-bg); }
+.recName { font-size: 13.5px; font-weight: 700; color: var(--ink); }
+.recWhere { font-size: 11.5px; color: var(--ink-3); }
+.recFlags { flex: none; font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--caution); background: var(--caution-bg); border: 1px solid var(--caution); padding: 2px 7px; }
+
+/* ---- side-by-side comparison (cash vs financed) ---- */
+.compare { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; padding: 14px 20px 0; }
+.compareCol { border: 1px solid var(--line-strong); padding: 13px 14px; background: var(--bg); }
+.compareOn { border-color: var(--teal); background: var(--teal-bg); }
+.compareLabel { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-3); }
+.compareBig { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); margin-top: 5px; }
+.compareNote { font-size: 12px; color: var(--ink-2); line-height: 1.55; margin-top: 7px; }
+
+.disclaimer { background: var(--bg-2); border: 1px solid var(--line-strong); padding: 15px 18px; display: flex; flex-direction: column; gap: 8px; }
+.disclaimer p { font-size: 12.5px; color: var(--ink-2); line-height: 1.6; max-width: 82ch; }
+.disclaimer p:last-child { font-size: 11px; color: var(--ink-3); }
+
+.nearby { background: var(--panel); border: 1px solid var(--line); padding: 14px 16px; }
+.nearbyHead { font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 9px; }
+.nearby ul { list-style: none; display: flex; flex-direction: column; gap: 7px; font-size: 13.5px; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+  .side { position: static; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .hero { padding: 22px 16px; }
+  .blockHead, .blockLede, .blockNote, .points, .steps, .linkRow, .records, .compare { padding-left: 16px; padding-right: 16px; }
+  .compare { grid-template-columns: 1fr; }
+}
