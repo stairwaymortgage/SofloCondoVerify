@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import styles from "./Masthead.module.css";
 
@@ -79,12 +80,19 @@ export default function Masthead() {
       <header className={styles.mast}>
         <div className={`wrap ${styles.inner}`}>
           <Link href="/" className={styles.brand}>
-            <span className={styles.seal} aria-hidden>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-                <path d="M12 2l7 3.5v6c0 5-3.4 8-7 10-3.6-2-7-5-7-10v-6z" />
-                <path d="M9 12l2 2 4-4.5" />
-              </svg>
-            </span>
+            {/* alt="" on purpose: the wordmark beside it already names the
+                site, so announcing the mark again would just be noise. The
+                source is a square with a white margin, clipped to a circle
+                in CSS — next/image serves it down to the 42px it renders at
+                rather than shipping the 1536px original. */}
+            <Image
+              src="/logo.jpeg"
+              alt=""
+              width={42}
+              height={42}
+              className={styles.seal}
+              priority
+            />
             <span className={styles.wm}>
               <span className={styles.t}>
                 SoFloCondo<span>Verify</span>

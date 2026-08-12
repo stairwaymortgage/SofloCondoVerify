@@ -36,17 +36,19 @@
 /* min-width:0 lets the brand shrink instead of forcing the flex row wider
    than the viewport — it was part of the 30px overflow on every page. */
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; min-width: 0; }
+/* The Florida mark. The source JPEG is a square with a white margin around
+   a teal disc, so it is clipped to a circle here — the disc's own white
+   outline then reads as the border the old shield had, which is why there
+   is no border property. White background so a subpixel gap at the clip
+   edge shows as white rather than as a dark seam. */
 .seal {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  border: 2px solid #fff;
-  display: grid;
-  place-items: center;
-  background: var(--mast-2);
+  object-fit: cover;
+  background: #fff;
   flex: none;
 }
-.seal svg { width: 23px; height: 23px; color: #fff; }
 .wm { line-height: 1.15; }
 .t { font-size: 18px; font-weight: 800; color: #fff; letter-spacing: -0.01em; display: block; }
 .t span { color: var(--teal-l); }
