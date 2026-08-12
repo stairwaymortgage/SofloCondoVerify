@@ -1,4 +1,4 @@
-import { intentLabel, type IntentValue } from "./intents";
+import type { IntentValue } from "./intents";
 
 /**
  * GoHighLevel delivery.
@@ -16,6 +16,9 @@ const API = "https://services.leadconnectorhq.com";
 const API_VERSION = "2021-07-28";
 const SOURCE = "SoFloCondoVerify";
 
+/** Applied to every contact, so the whole cohort is one filter in GHL. */
+const SITE_TAG = "soflocondoverify.com";
+
 /** Nothing should hang a lead submission — GHL gets a short leash. */
 const TIMEOUT_MS = 8000;
 
@@ -26,16 +29,57 @@ export interface GhlLead {
   phone: string | null;
   /** Building name as typed on the form, if any. */
   building: string | null;
-  /** buildings.id when the form was opened from a record page. */
+  /** buildings.id when the form was opened from a building record. */
   buildingId: number | null;
   /** Free-text "anything else" from the form. */
   message: string | null;
+  /** Path the request was started from, e.g. /building/1443. */
+  sourcePage: string | null;
+  /** Raw ?record= token — a buildings id, or a precon slug. */
+  recordId: string | null;
 }
 
 export type GhlResult =
-  | { status: "synced"; contactId: string; noteAdded: boolean }
+  | { status: "synced"; contactId: string; noteAdded: boolean; fieldMode: FieldMode }
   | { status: "skipped"; reason: string }
   | { status: "failed"; reason: string };
+
+/** How the customFields array was addressed on the attempt that succeeded. */
+export type FieldMode = "id" | "key" | "none";
+
+/**
+ * The Intent dropdown in GHL. Its options are configured over there, and a
+ * value that isn't an exact match silently fails to select — so this map is
+ * a contract with the CRM, not display copy.
+ *
+ * Deliberately NOT intentLabel(): that is the wording shown to visitors on
+ * the site and someone will reasonably reword it one day. "I'm on a condo
+ * board" reads well in a form; the GHL option is "HOA board help". Tying the
+ * two together would mean a copy edit quietly breaking the dropdown.
+ */
+const INTENT_OPTION: Record<IntentValue, string> = {
+  finance: "Finance a purchase",
+  "foreign-national": "Foreign-national loan",
+  sell: "Sell my unit",
+  board: "HOA board help",
+  "check-building": "Check a building",
+};
+
+/**
+ * Our logical field name -> the fieldKey GHL reports for it. GHL prefixes
+ * contact-level custom fields with "contact."; the short name is what the
+ * write API accepts in `key` form.
+ */
+const FIELD_KEYS = {
+  intent: "contact.intent",
+  building_name: "contact.building_name",
+  building_id: "contact.building_id",
+  message: "contact.message",
+  source_page: "contact.source_page",
+  record_id: "contact.record_id",
+} as const;
+
+type FieldName = keyof typeof FIELD_KEYS;
 
 /** Both halves of the config, or null when the integration is switched off. */
 function config(): { token: string; locationId: string } | null {
@@ -63,60 +107,73 @@ export function splitName(full: string): { firstName: string; lastName: string }
 }
 
 /**
- * Tags carry the intent even when no custom field exists to hold it. They are
- * the durable copy: tags cannot be rejected for referencing an unconfigured
- * field, so this is what survives a fresh GHL location.
+ * SITE_TAG is the one that must always be present — it is how every contact
+ * this site produced is found in GHL. The intent tag rides along so the
+ * cohort can be split without depending on the dropdown having resolved.
  */
 export function leadTags(lead: GhlLead): string[] {
-  const tags = ["soflocondoverify", `intent: ${lead.intent}`];
-  if (lead.building || lead.buildingId) tags.push("has-building");
-  return tags;
+  return [SITE_TAG, `intent: ${lead.intent}`];
 }
 
-/** The note body — building and message, which no tag could hold. */
+/**
+ * The note is now a readable summary rather than the only copy of the data —
+ * every value below also lands in its own custom field. It stays because a
+ * note is what a human sees first when they open the contact.
+ */
 export function leadNote(lead: GhlLead): string {
   return [
     `Source: ${SOURCE}`,
-    `Intent: ${intentLabel(lead.intent)} (${lead.intent})`,
+    `Intent: ${INTENT_OPTION[lead.intent]} (${lead.intent})`,
     lead.building ? `Building: ${lead.building}` : null,
     lead.buildingId
       ? `Record: https://soflocondoverify.com/building/${lead.buildingId}`
       : null,
+    lead.sourcePage ? `From: ${lead.sourcePage}` : null,
     lead.message ? `\nMessage:\n${lead.message}` : null,
   ]
     .filter(Boolean)
     .join("\n");
 }
 
-function customFields(lead: GhlLead) {
-  const fields: { key: string; field_value: string }[] = [
-    { key: "intent", field_value: lead.intent },
-  ];
-  if (lead.building) fields.push({ key: "building", field_value: lead.building });
-  if (lead.buildingId) {
-    fields.push({ key: "building_id", field_value: String(lead.buildingId) });
-  }
-  return fields;
+/** The values to write, keyed by logical field name. Empties are dropped. */
+function fieldValues(lead: GhlLead): Partial<Record<FieldName, string>> {
+  const values: Partial<Record<FieldName, string>> = {
+    intent: INTENT_OPTION[lead.intent],
+  };
+  if (lead.building) values.building_name = lead.building;
+  if (lead.buildingId) values.building_id = String(lead.buildingId);
+  if (lead.message) values.message = lead.message;
+  if (lead.sourcePage) values.source_page = lead.sourcePage;
+  if (lead.recordId) values.record_id = lead.recordId;
+  return values;
+}
+
+/* ------------------------------------------------------------------ HTTP */
+
+interface GhlResponse {
+  ok: boolean;
+  status: number;
+  json: Record<string, unknown>;
 }
 
 async function ghlFetch(
   path: string,
   token: string,
-  body: unknown
-): Promise<{ ok: boolean; status: number; json: Record<string, unknown> }> {
+  init: { method: "GET" | "POST"; body?: unknown }
+): Promise<GhlResponse> {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), TIMEOUT_MS);
 
   try {
     const response = await fetch(`${API}${path}`, {
-      method: "POST",
+      method: init.method,
       headers: {
         Authorization: `Bearer ${token}`,
         Version: API_VERSION,
         "Content-Type": "application/json",
         Accept: "application/json",
       },
-      body: JSON.stringify(body),
+      body: init.body === undefined ? undefined : JSON.stringify(init.body),
       signal: controller.signal,
       cache: "no-store",
     });
@@ -132,6 +189,108 @@ async function ghlFetch(
   } finally {
     clearTimeout(timer);
   }
+}
+
+/* -------------------------------------------------- custom field lookup */
+
+interface FieldCache {
+  /** logical name -> GHL custom field id */
+  ids: Partial<Record<FieldName, string>>;
+  at: number;
+}
+
+let cache: FieldCache | null = null;
+
+/** Long enough that a burst of leads costs one lookup; short enough that
+ *  creating a missing field in GHL takes effect the same day. */
+const CACHE_MS = 10 * 60 * 1000;
+
+/**
+ * Resolve the location's custom fields to ids.
+ *
+ * Ids are unambiguous where `key` is not: the write API's key form has
+ * shifted between GHL versions, and a key it doesn't recognise is rejected
+ * or silently dropped. Looking the ids up once and caching them buys the
+ * accurate path for one extra request per ten minutes.
+ *
+ * Returns an empty map on any failure — a Private Integration Token without
+ * the locations scope will 401 here, and that must degrade to the key form
+ * rather than stop the lead.
+ */
+async function resolveFieldIds(
+  token: string,
+  locationId: string
+): Promise<Partial<Record<FieldName, string>>> {
+  if (cache && Date.now() - cache.at < CACHE_MS) return cache.ids;
+
+  const ids: Partial<Record<FieldName, string>> = {};
+  try {
+    const response = await ghlFetch(
+      `/locations/${locationId}/customFields`,
+      token,
+      { method: "GET" }
+    );
+
+    if (!response.ok) {
+      console.warn(
+        `[ghl] custom field lookup failed (${errorText(response.json, response.status)}); using key form`
+      );
+      // Cache the failure too, so every lead doesn't re-pay the round trip.
+      cache = { ids, at: Date.now() };
+      return ids;
+    }
+
+    const list = (response.json.customFields ??
+      response.json.customField ??
+      []) as { id?: unknown; fieldKey?: unknown }[];
+
+    const byKey = new Map<string, string>();
+    for (const field of Array.isArray(list) ? list : []) {
+      if (typeof field.id === "string" && typeof field.fieldKey === "string") {
+        byKey.set(field.fieldKey.trim().toLowerCase(), field.id);
+      }
+    }
+
+    for (const [name, key] of Object.entries(FIELD_KEYS) as [FieldName, string][]) {
+      const id = byKey.get(key);
+      if (id) ids[name] = id;
+      else console.warn(`[ghl] no custom field in GHL for "${key}"`);
+    }
+  } catch (error) {
+    console.warn("[ghl] custom field lookup threw; using key form:", error);
+  }
+
+  cache = { ids, at: Date.now() };
+  return ids;
+}
+
+/** Test seam: drop the memoised field ids. */
+export function resetFieldCache(): void {
+  cache = null;
+}
+
+/* ---------------------------------------------------------------- shapes */
+
+function customFieldsById(
+  lead: GhlLead,
+  ids: Partial<Record<FieldName, string>>
+): { id: string; field_value: string }[] {
+  return Object.entries(fieldValues(lead))
+    .filter(([name]) => ids[name as FieldName])
+    .map(([name, value]) => ({ id: ids[name as FieldName]!, field_value: value }));
+}
+
+/**
+ * Key form. Both `field_value` and `value` are sent: the two spellings appear
+ * across GHL's own versions of this endpoint, and an unrecognised extra
+ * property is ignored where a missing expected one is not.
+ */
+function customFieldsByKey(lead: GhlLead) {
+  return Object.entries(fieldValues(lead)).map(([key, value]) => ({
+    key,
+    field_value: value,
+    value,
+  }));
 }
 
 /** Pull the contact id out of a create response or a duplicate-contact error. */
@@ -156,20 +315,19 @@ function errorText(json: Record<string, unknown>, status: number): string {
   return `${status}`;
 }
 
+/* ----------------------------------------------------------------- push */
+
 /**
- * Create (or match) the contact and attach the note.
+ * Create (or match) the contact, then attach the note.
  *
- * Two deliberate pieces of defensiveness:
+ * The custom fields are attempted by id, then by key, then abandoned. Each
+ * step down only happens on a request-shaped rejection (400/422) — an auth
+ * or rate-limit failure will fail identically however the fields are
+ * addressed, so retrying it just burns the timeout budget.
  *
- *  1. If the request carrying customFields is rejected, it is retried without
- *     them. `customFields` keyed by name fails when the field has not been
- *     created in the GHL location yet, and losing the whole contact over an
- *     unconfigured field would be the wrong trade — the intent is already in
- *     the tags and the note either way.
- *
- *  2. The note is best-effort and reported separately. A contact that landed
- *     without its note is still a synced lead; failing it would strand a
- *     person who is sitting in the CRM.
+ * Dropping to no custom fields at all is the last resort and still a
+ * success: SITE_TAG, the intent tag and the note carry the lead, and a
+ * contact in the CRM missing three field values beats no contact.
  */
 export async function pushLeadToGhl(lead: GhlLead): Promise<GhlResult> {
   const cfg = config();
@@ -188,29 +346,45 @@ export async function pushLeadToGhl(lead: GhlLead): Promise<GhlResult> {
   };
 
   let contactId: string | null = null;
+  let fieldMode: FieldMode = "none";
   let lastError = "";
 
   try {
-    const withFields = await ghlFetch("/contacts/", cfg.token, {
-      ...base,
-      customFields: customFields(lead),
-    });
-    contactId = contactIdFrom(withFields.json);
+    const ids = await resolveFieldIds(cfg.token, cfg.locationId);
+    const byId = customFieldsById(lead, ids);
 
-    if (!contactId && !withFields.ok) {
-      lastError = errorText(withFields.json, withFields.status);
+    // Attempts in descending fidelity. Each is only reached if the previous
+    // one was rejected for the shape of the request.
+    const attempts: { mode: FieldMode; customFields?: unknown[] }[] = [];
+    if (byId.length > 0) attempts.push({ mode: "id", customFields: byId });
+    attempts.push({ mode: "key", customFields: customFieldsByKey(lead) });
+    attempts.push({ mode: "none" });
 
-      // Retry bare. Auth and rate-limit failures will fail again the same
-      // way, so only a request-shaped rejection is worth a second attempt.
-      if (withFields.status === 400 || withFields.status === 422) {
+    for (const attempt of attempts) {
+      const body =
+        attempt.customFields === undefined
+          ? base
+          : { ...base, customFields: attempt.customFields };
+
+      const response = await ghlFetch("/contacts/", cfg.token, {
+        method: "POST",
+        body,
+      });
+
+      contactId = contactIdFrom(response.json);
+      if (contactId) {
+        fieldMode = attempt.mode;
+        break;
+      }
+
+      lastError = errorText(response.json, response.status);
+      if (response.status !== 400 && response.status !== 422) break;
+
+      const next = attempts[attempts.indexOf(attempt) + 1];
+      if (next) {
         console.warn(
-          `[ghl] create with customFields rejected (${lastError}); retrying without them`
+          `[ghl] create rejected with customFields by ${attempt.mode} (${lastError}); retrying by ${next.mode}`
         );
-        const bare = await ghlFetch("/contacts/", cfg.token, base);
-        contactId = contactIdFrom(bare.json);
-        if (!contactId && !bare.ok) {
-          lastError = errorText(bare.json, bare.status);
-        }
       }
     }
   } catch (error) {
@@ -221,18 +395,28 @@ export async function pushLeadToGhl(lead: GhlLead): Promise<GhlResult> {
     return { status: "failed", reason: lastError || "no contact id returned" };
   }
 
+  if (fieldMode === "none") {
+    console.warn(
+      `[ghl] contact ${contactId} created without custom fields — check the ` +
+        `SoFloCondoVerify field keys in GHL. Tags and note still carry the lead.`
+    );
+  }
+
   let noteAdded = false;
   try {
     const note = await ghlFetch(`/contacts/${contactId}/notes`, cfg.token, {
-      body: leadNote(lead),
+      method: "POST",
+      body: { body: leadNote(lead) },
     });
     noteAdded = note.ok;
     if (!note.ok) {
-      console.warn(`[ghl] note failed for ${contactId}: ${errorText(note.json, note.status)}`);
+      console.warn(
+        `[ghl] note failed for ${contactId}: ${errorText(note.json, note.status)}`
+      );
     }
   } catch (error) {
     console.warn(`[ghl] note threw for ${contactId}:`, error);
   }
 
-  return { status: "synced", contactId, noteAdded };
+  return { status: "synced", contactId, noteAdded, fieldMode };
 }

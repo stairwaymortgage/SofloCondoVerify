@@ -6,7 +6,15 @@ import { pushLeadToGhl } from "@/lib/ghl";
 
 export const dynamic = "force-dynamic";
 
-const MAX = { name: 120, email: 200, phone: 40, message: 2000, building: 200 };
+const MAX = {
+  name: 120,
+  email: 200,
+  phone: 40,
+  message: 2000,
+  building: 200,
+  record: 200,
+  sourcePage: 300,
+};
 
 /** Deliberately loose — just enough to reject obvious typos. */
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -19,6 +27,8 @@ interface LeadBody {
   email?: unknown;
   phone?: unknown;
   message?: unknown;
+  record_id?: unknown;
+  source_page?: unknown;
   /** Honeypot — real users never see this field, so a value means a bot. */
   company?: unknown;
 }
@@ -79,6 +89,16 @@ export async function POST(request: Request) {
   const buildingId =
     Number.isInteger(buildingIdRaw) && buildingIdRaw > 0 ? buildingIdRaw : null;
 
+  // Context for the CRM, supplied by the client and therefore not trusted.
+  // record_id is a slug or a number; source_page must look like one of our
+  // own paths, so a crafted value can't put an arbitrary URL in front of
+  // whoever works the lead.
+  const recordRaw = str(body.record_id, MAX.record);
+  const recordId = /^[A-Za-z0-9\-_]+$/.test(recordRaw) ? recordRaw : null;
+
+  const pageRaw = str(body.source_page, MAX.sourcePage);
+  const sourcePage = /^\/[A-Za-z0-9\-_/?=&.%]*$/.test(pageRaw) ? pageRaw : null;
+
   let admin;
   let leadId: number;
 
@@ -130,6 +150,8 @@ export async function POST(request: Request) {
     building: buildingName || null,
     buildingId,
     message: note || null,
+    sourcePage,
+    recordId,
   });
 
   if (ghl.status === "synced") {
@@ -144,6 +166,11 @@ export async function POST(request: Request) {
       console.error(
         `[api/leads] lead ${leadId} synced to GHL ${ghl.contactId} but the flag did not save:`,
         error.message
+      );
+    } else {
+      console.info(
+        `[api/leads] lead ${leadId} -> GHL ${ghl.contactId} ` +
+          `(customFields by ${ghl.fieldMode}, note ${ghl.noteAdded ? "added" : "failed"})`
       );
     }
   } else if (ghl.status === "skipped") {

@@ -10,12 +10,39 @@ interface Props {
   defaultIntent: IntentValue;
   buildingId: number | null;
   buildingLabel: string;
+  /** Raw ?record= token: a buildings id, or a preconstruction slug. */
+  recordId: string | null;
+}
+
+/**
+ * Where the person actually came from.
+ *
+ * The referrer is the interesting answer — /connect is just the form, while
+ * the referrer is the specific record whose "Get connected" button they
+ * pressed. Same-origin only, and path plus query rather than the full URL,
+ * so nothing but our own routes is ever forwarded to the CRM. Falls back to
+ * the current URL when the referrer is missing or external.
+ */
+function sourcePage(): string {
+  if (typeof window === "undefined") return "";
+
+  const referrer = document.referrer;
+  if (referrer) {
+    try {
+      const url = new URL(referrer);
+      if (url.origin === window.location.origin) return url.pathname + url.search;
+    } catch {
+      // Unparseable referrer — fall through to the current location.
+    }
+  }
+  return window.location.pathname + window.location.search;
 }
 
 export default function ConnectForm({
   defaultIntent,
   buildingId,
   buildingLabel,
+  recordId,
 }: Props) {
   const [intent, setIntent] = useState<IntentValue>(defaultIntent);
   const [building, setBuilding] = useState(buildingLabel);
@@ -49,6 +76,8 @@ export default function ConnectForm({
           phone,
           message,
           company,
+          record_id: recordId,
+          source_page: sourcePage(),
         }),
       });
 

@@ -98,6 +98,10 @@ export default async function ConnectPage({
                 defaultIntent={intent}
                 buildingId={building?.id ?? null}
                 buildingLabel={building?.label ?? ""}
+                // The raw token, not building.id: a preconstruction project
+                // has no buildings row, so this is the only identifier that
+                // survives for those leads.
+                recordId={searchParams.record?.trim() || null}
               />
             </main>
 
