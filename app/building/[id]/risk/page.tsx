@@ -16,7 +16,7 @@ import {
   recordId,
 } from "@/lib/signals";
 import { cityHubHref, countyByDb, getCityHubForBuilding } from "@/lib/cities";
-import { breadcrumbSchema, buildingSchema } from "@/lib/schema";
+import { breadcrumbSchema, buildingSchema, recordPageSchema } from "@/lib/schema";
 import type { Building } from "@/lib/database.types";
 import styles from "./page.module.css";
 
@@ -35,14 +35,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const building = await getBuilding(params.id);
   if (!building || !hasStackedFlags(building)) {
-    return { title: "Record not found · SoFloCondoVerify" };
+    return { title: "Record not found" };
   }
 
   const name = building.building_name ?? "This building";
   const where = [building.city, "FL"].filter(Boolean).join(", ");
 
   return {
-    title: `${name} — risk & due-diligence read · SoFloCondoVerify`,
+    title: `${name} — risk & due-diligence read`,
     description: `What the public record shows for ${name} in ${where}, read for buyers, sellers and cash purchasers: FHA and VA standing, reserve and recertification filings, and the questions worth asking before you go further.`,
     alternates: { canonical: `/building/${building.id}/risk` },
   };
@@ -86,7 +86,20 @@ export default async function RiskPage({ params }: { params: { id: string } }) {
 
   return (
     <>
-      <JsonLd schemas={[buildingSchema(building), breadcrumbSchema(trail)]} />
+      <JsonLd
+        schemas={[
+          buildingSchema(building),
+          // about → the building's own record, not this page: the risk read
+          // is a second view of the same subject, so both pages point at one
+          // Residence node rather than creating a duplicate entity.
+          recordPageSchema(
+            `/building/${building.id}/risk`,
+            `/building/${building.id}`,
+            `${name} — risk and due-diligence read`
+          ),
+          breadcrumbSchema(trail),
+        ]}
+      />
       <TrackRecordView
         recordType="risk"
         recordId={building.id}
@@ -242,8 +255,9 @@ export default async function RiskPage({ params }: { params: { id: string } }) {
                       and what the county is still waiting on
                     </Check>
                     <Check>
-                      Reserve balances against the funding plan, and whether
-                      reserves are fully funded or waived
+                      Reserve balances against the funding plan, whether reserves
+                      are fully funded, and whether they were waived in prior
+                      years
                     </Check>
                     <Check>
                       Special assessment history, plus anything voted on, pending,

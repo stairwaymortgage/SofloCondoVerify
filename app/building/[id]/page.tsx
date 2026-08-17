@@ -11,7 +11,7 @@ import SiteFooter from "@/components/SiteFooter";
 import { getBuilding, getPriorityBuildingIds } from "@/lib/buildings";
 import { buildSignals, hasStackedFlags, recordId } from "@/lib/signals";
 import { cityHubHref, countyByDb, getCityHubForBuilding } from "@/lib/cities";
-import { breadcrumbSchema, buildingSchema } from "@/lib/schema";
+import { breadcrumbSchema, buildingSchema, recordPageSchema } from "@/lib/schema";
 import styles from "./page.module.css";
 
 /**
@@ -29,20 +29,66 @@ export async function generateStaticParams() {
   return ids.map((id) => ({ id: String(id) }));
 }
 
+/** Target title length, and what the root layout's template costs. */
+const TITLE_BUDGET = 60;
+const BRAND_LEN = " · SoFloCondoVerify".length;
+
+/**
+ * Trim a building name to fit the title budget.
+ *
+ * Word boundaries only — these are legal association names ("… VILLAGE HOMES
+ * CONDOMINIUM NO. THREE MAINTENANCE ASSOCIATION, INC."), and a mid-word cut
+ * reads as a typo rather than an abbreviation. When not even the first word
+ * fits, the first word is kept whole and the title runs long: an intact word
+ * over budget beats a mangled one inside it.
+ */
+function fitName(value: string, budget: number): string {
+  const name = value.trim();
+  if (name.length <= budget) return name;
+
+  const cut = name.slice(0, Math.max(budget - 1, 0));
+  const boundary = cut.lastIndexOf(" ");
+  const head = boundary > 0 ? cut.slice(0, boundary) : name.split(/\s+/)[0];
+  return `${head.replace(/[\s,;:.\-—]+$/, "")}…`;
+}
+
 export async function generateMetadata({
   params,
 }: {
   params: { id: string };
 }): Promise<Metadata> {
   const building = await getBuilding(params.id);
-  if (!building) return { title: "Record not found · SoFloCondoVerify" };
+  if (!building) return { title: "Record not found" };
 
-  const where = [building.city, "FL", building.zip].filter(Boolean).join(" ");
+  // The city and "Condo" live in the fixed tail, so they survive any
+  // truncation — a title can lose part of the building's name but never its
+  // geography or the word the query is built on.
+  const city = building.city ?? "South Florida";
+  const tail = ` — ${city} FL Condo`;
+  const name = fitName(
+    building.building_name ?? "Condo record",
+    TITLE_BUDGET - BRAND_LEN - tail.length
+  );
+
+  // The description carries the name, the city and "condo" — the three terms
+  // this page's long-tail query is built from. The name is never trimmed
+  // here: it leads the sentence, so it is the last thing that should go.
+  // Instead the trailing signal list steps down through shorter forms and
+  // finally drops, which is what keeps every description inside 155.
+  const head = `${building.building_name ?? "This building"}, a condo building in ${
+    building.city ? `${building.city} FL` : "Florida"
+  }.`;
+  const tails = [
+    " FHA and VA standing, milestone and reserve signals, registry and recertification.",
+    " FHA and VA standing, reserve and structural signals.",
+    " FHA and VA standing from the public record.",
+  ];
+  const description =
+    head + (tails.find((option) => head.length + option.length <= 155) ?? "");
+
   return {
-    title: `${building.building_name ?? "Condo record"} — ${where} · SoFloCondoVerify`,
-    description: `Public-record verification for ${
-      building.building_name ?? "this building"
-    }: FHA and VA standing, milestone and reserve signals, registry and recertification.`,
+    title: `${name}${tail}`,
+    description,
     // Keyed off the resolved row, not params.id — "01" and "1" are the same
     // record and must not compete as two URLs.
     alternates: { canonical: `/building/${building.id}` },
@@ -74,7 +120,17 @@ export default async function BuildingPage({ params }: { params: { id: string } 
 
   return (
     <>
-      <JsonLd schemas={[buildingSchema(building), breadcrumbSchema(trail)]} />
+      <JsonLd
+        schemas={[
+          buildingSchema(building),
+          recordPageSchema(
+            `/building/${building.id}`,
+            `/building/${building.id}`,
+            `${name}${building.city ? `, ${building.city}` : ""}`
+          ),
+          breadcrumbSchema(trail),
+        ]}
+      />
       <TrackRecordView
         recordType="building"
         recordId={building.id}
@@ -96,7 +152,15 @@ export default async function BuildingPage({ params }: { params: { id: string } 
               <article className={styles.record}>
                 <header className={styles.recHead}>
                   <div className={`${styles.doc} mono`}>Condo Verification Record</div>
-                  <h1>{name}</h1>
+                  {/* City rides in the h1 because the page's whole query is
+                      "{building} {city}" — the address line below carries it
+                      too, but a heading a crawler reads should not depend on
+                      the line under it. No region term: "South Florida"
+                      belongs to the home page, not to 8,700 records. */}
+                  <h1>
+                    {name}
+                    {building.city ? `, ${building.city}` : ""}
+                  </h1>
                   <div className={`${styles.addr} mono`}>
                     {building.address ?? "Address not on file"}
                     {location ? ` · ${location}` : ""}

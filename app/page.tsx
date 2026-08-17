@@ -1,7 +1,9 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import LookupForm from "@/components/LookupForm";
 import SiteFooter from "@/components/SiteFooter";
+import { COUNTIES, countyHref } from "@/lib/cities";
 import { getTriCountyBuildingCount } from "@/lib/counts";
 import { num } from "@/lib/format";
 import styles from "./page.module.css";
@@ -10,16 +12,27 @@ import styles from "./page.module.css";
 export const revalidate = 3600;
 
 /**
- * Title and description are inherited from the root layout; this exists so
- * the home page gets a canonical of its own. Without it the site's most
- * linked page is the only one without one.
+ * The home page targets the head term "South Florida condos", so both halves
+ * of the snippet are written here rather than inherited from the root layout.
  *
- * Next normalises this to a bare "https://soflocondoverify.com" while
- * sitemap-cities.xml lists the home page with a trailing slash. That is the
- * same URL — RFC 3986 treats an empty path as "/" — and passing the absolute
- * form here does not change the output, so it is left alone.
+ * Next normalises the canonical to a bare "https://soflocondoverify.com"
+ * while sitemap-cities.xml lists the home page with a trailing slash. That is
+ * the same URL — RFC 3986 treats an empty path as "/" — and passing the
+ * absolute form here does not change the output, so it is left alone.
  */
 export const metadata: Metadata = {
+  // Absolute so the root layout's "%s · SoFloCondoVerify" template does not
+  // append the brand a second time — it is already carried below.
+  //
+  // The exact phrase leads: it used to sit at character 30 in the singular
+  // ("…any South Florida condo"), which is the weaker position for the one
+  // query this page exists to win. 60 characters exactly, so anything added
+  // here has to buy its room from somewhere else.
+  title: {
+    absolute: "South Florida Condos — Check Any Building · SoFloCondoVerify",
+  },
+  description:
+    "Look up any South Florida condo building free. FHA and VA approval status, reserve and structural signals, straight from official public records.",
   alternates: { canonical: "/" },
 };
 
@@ -62,6 +75,19 @@ export default async function Home() {
                   on a building.
                 </li>
               </ul>
+
+              {/* The county tier had no route in from the home page, so the
+                  three hubs got none of its authority. The lede above already
+                  names all three counties in prose; this turns them into the
+                  actual way down into the county → city → building ladder. */}
+              <div className={styles.counties}>
+                <span>Browse by county:</span>
+                {COUNTIES.map((county) => (
+                  <Link key={county.slug} href={countyHref(county)}>
+                    {county.name} condos
+                  </Link>
+                ))}
+              </div>
             </div>
             <LookupForm buildingCountLabel={buildingCountLabel} />
           </div>

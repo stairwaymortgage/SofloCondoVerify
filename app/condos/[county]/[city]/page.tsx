@@ -45,11 +45,22 @@ export async function generateMetadata({
   params: { county: string; city: string };
 }): Promise<Metadata> {
   const hub = await getCityHub(params.county, params.city);
-  if (!hub) return { title: "City not found · SoFloCondoVerify" };
+  if (!hub) return { title: "City not found" };
 
   const county = countyByDb(hub.county);
+
+  // ", South Florida" is the first thing to go when the title runs long. The
+  // county name is already geographic, so dropping the region costs the title
+  // nothing it cannot spare — and headline(hub) always carries "condos".
+  const countyName = county?.name ?? "South Florida";
+  const full = `${headline(hub)} — ${countyName}, South Florida`;
+  const title =
+    full.length + BRAND_LEN > TITLE_BUDGET
+      ? `${headline(hub)} — ${countyName}`
+      : full;
+
   return {
-    title: `${headline(hub)} — verification record · SoFloCondoVerify`,
+    title,
     description: `Condo verification for ${hub.city}, ${
       county?.name ?? "South Florida"
     }: current counts of FHA-approved and VA-accepted buildings, preconstruction, buildings carrying flagged signals, and answers to the questions buyers and sellers ask here.`,
@@ -61,6 +72,10 @@ export async function generateMetadata({
 function headline(hub: CityHub): string {
   return hub.primary_keyword?.trim() || `${hub.city} condos`;
 }
+
+/** Target title length, and what the root layout's brand template costs. */
+const TITLE_BUDGET = 60;
+const BRAND_LEN = " · SoFloCondoVerify".length;
 
 export default async function CityHubPage({
   params,

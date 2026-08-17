@@ -543,27 +543,33 @@ export type Database = {
       forms: {
         Row: {
           created_at: string
+          file_path: string | null
           form_template: string | null
           host_or_link: string | null
           id: number
+          link_url: string | null
           purpose: string | null
           source_authority: string | null
           status: string | null
         }
         Insert: {
           created_at?: string
+          file_path?: string | null
           form_template?: string | null
           host_or_link?: string | null
           id?: never
+          link_url?: string | null
           purpose?: string | null
           source_authority?: string | null
           status?: string | null
         }
         Update: {
           created_at?: string
+          file_path?: string | null
           form_template?: string | null
           host_or_link?: string | null
           id?: never
+          link_url?: string | null
           purpose?: string | null
           source_authority?: string | null
           status?: string | null

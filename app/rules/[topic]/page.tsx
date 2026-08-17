@@ -26,10 +26,10 @@ export async function generateMetadata({
   params: { topic: string };
 }): Promise<Metadata> {
   const topic = ruleTopic(params.topic);
-  if (!topic) return { title: "Rule not found · SoFloCondoVerify" };
+  if (!topic) return { title: "Rule not found" };
 
   return {
-    title: `${topic.title} · SoFloCondoVerify`,
+    title: `${topic.title}`,
     description: topic.standfirst,
     alternates: { canonical: `/rules/${topic.slug}` },
   };

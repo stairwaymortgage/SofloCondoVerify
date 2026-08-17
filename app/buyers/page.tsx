@@ -19,9 +19,11 @@ const TITLE =
   "Buying a South Florida condo? Check the building before you fall in love.";
 
 export const metadata: Metadata = {
-  title: "For condo buyers: check the building before you fall in love · SoFloCondoVerify",
+  // Owns "South Florida condo approval" — the building's lender standing.
+  // Never "financing": that is the loan itself and belongs to /foreign-buyers.
+  title: "South Florida Condo Approval Check",
   description:
-    "You found the unit — but will a lender approve the building? FHA and VA standing is public record and free to look up here. Conventional standing isn't publishable, so a licensed pro checks that one.",
+    "Will a lender approve this condo building? Check FHA and VA standing free before you make an offer on a South Florida condo.",
   alternates: { canonical: PATH },
 };
 
@@ -56,8 +58,8 @@ export default async function Buyers() {
           <header className={styles.hero}>
             <div className={`${styles.kicker} mono`}>For condo buyers</div>
             <h1>
-              Buying a South Florida condo? Check the building before you fall in
-              love.
+              Buying a South Florida condo? Check the building&rsquo;s approval
+              before you fall in love.
             </h1>
             <p className={styles.lede}>
               A condo mortgage has two borrowers: you, and the building. You can

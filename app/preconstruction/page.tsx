@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import JsonLd from "@/components/JsonLd";
 import SiteFooter from "@/components/SiteFooter";
+import InquiryForm from "@/components/InquiryForm";
 import { breadcrumbSchema } from "@/lib/schema";
 import { num } from "@/lib/format";
 import {
@@ -20,9 +21,11 @@ import styles from "./page.module.css";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Preconstruction condos in South Florida · SoFloCondoVerify",
+  // Owns "South Florida preconstruction condos". The state qualifier is the
+  // whole differentiator — no existing-inventory page may use it.
+  title: "South Florida Preconstruction Condos",
   description:
-    "Every preconstruction condo project we track in Miami-Dade and Broward — status, price from, delivery year, and whether short-term rentals are allowed. Foreign-national financing options explained.",
+    "Every preconstruction condo project we track in Miami-Dade and Broward: status, price from, delivery year and short-term rental rules.",
   alternates: { canonical: "/preconstruction" },
 };
 
@@ -69,6 +72,51 @@ function areaAnchor(county: string, area: string): string {
   return `${county}-${area}`.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 }
 
+/**
+ * An unwritten slot.
+ *
+ * Every one of these is copy that has to come from Jim (financing, NMLS
+ * attributed) or Olga (real estate) and must not be drafted here. It renders
+ * loud on purpose — amber, monospace, dashed — so a page that still has one
+ * in it cannot be mistaken for a finished page at a glance.
+ */
+function Ph({ children }: { children: React.ReactNode }) {
+  return <span className={`${styles.ph} mono`}>{children}</span>;
+}
+
+/** The three steps. Body lines are placeholders, the sequence is not. */
+const STEPS = [
+  {
+    heading: "Free consultation",
+    body: <Ph>[[OLGA: step 1 body — one line]]</Ph>,
+  },
+  {
+    heading: "Your customized top 10 buildings",
+    body: <Ph>[[OLGA: step 2 body — one line]]</Ph>,
+  },
+  {
+    heading: "The tour",
+    body: <Ph>[[OLGA: step 3 body — one line]]</Ph>,
+  },
+];
+
+const TEAM = [
+  {
+    key: "jim",
+    photoSlot: "[[JIM: photo]]",
+    name: <Ph>[[JIM: display name]]</Ph>,
+    role: <Ph>[[JIM: role line]]</Ph>,
+    credential: <Ph>[[JIM: NMLS #]]</Ph>,
+  },
+  {
+    key: "olga",
+    photoSlot: "[[OLGA: photo]]",
+    name: <Ph>[[OLGA: display name]]</Ph>,
+    role: <Ph>[[OLGA: role line]]</Ph>,
+    credential: <Ph>[[OLGA: license #]]</Ph>,
+  },
+];
+
 export default async function PreconstructionIndex() {
   const projects = await getPreconProjects();
   const counties = group(projects);
@@ -92,8 +140,91 @@ export default async function PreconstructionIndex() {
             <Link href="/">Home</Link> / Preconstruction
           </div>
 
+          {/* ---- hero + process + CTA ----------------------------------
+              One grid so the hero, the three steps and the form share a
+              viewport on a desktop screen: the pitch and the way to respond
+              to it should not be separated by a scroll. */}
+          <div className={styles.intro}>
+            <div className={styles.introMain}>
+              <header className={styles.hero}>
+                <div className={`${styles.doc} mono`}>
+                  Preconstruction · buyer representation
+                </div>
+                {/* h2, not h1, and deliberately so: the page's one h1 is the
+                    keyword-bearing index heading further down. This is sales
+                    copy that may not carry the keyword at all. It is styled
+                    larger than that h1 — visual hierarchy and heading
+                    hierarchy answer to different things. */}
+                <h2 className={styles.heroHead}>
+                  <Ph>[[JIM: hero headline]]</Ph>
+                </h2>
+                <p className={styles.heroSub}>
+                  <Ph>[[JIM: subhead]]</Ph>
+                </p>
+              </header>
+
+              {/* Numbered sequence, not three cards: one connecting rule
+                  runs behind the numerals and the steps share a row. */}
+              <ol className={styles.steps} aria-label="How this works">
+                {STEPS.map((step, index) => (
+                  <li key={step.heading} className={styles.step}>
+                    <span className={`${styles.stepN} mono`} aria-hidden>
+                      {index + 1}
+                    </span>
+                    <span className={styles.stepHead}>{step.heading}</span>
+                    <span className={styles.stepBody}>{step.body}</span>
+                  </li>
+                ))}
+              </ol>
+
+              {/* Step 3 continued: the buyer who cannot get on a plane. */}
+              <div className={styles.remote}>
+                <span className={`${styles.remoteKicker} mono`}>
+                  Can&rsquo;t travel?
+                </span>
+                <span className={styles.remoteBody}>
+                  <Ph>
+                    [[OLGA: remote-buyer line — video tours by phone, photo and
+                    video packages per building]]
+                  </Ph>
+                </span>
+              </div>
+            </div>
+
+            <aside className={styles.introCta} aria-label="Request a consultation">
+              <InquiryForm
+                source="/preconstruction"
+                intent="finance"
+                heading="[[JIM: form heading]]"
+                buttonLabel="[[JIM: button label]]"
+                disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
+              />
+            </aside>
+          </div>
+
+          {/* ---- team ---- */}
+          <section className={styles.team} aria-label="Who you will be working with">
+            {TEAM.map((person) => (
+              <div key={person.key} className={styles.member}>
+                {/* Neutral frame, not a portrait: a stand-in face is worse
+                    than an obviously empty slot. */}
+                <div className={styles.photo} aria-hidden>
+                  <span className={`${styles.photoNote} mono`}>
+                    {person.photoSlot}
+                  </span>
+                </div>
+                <div className={styles.memberBody}>
+                  <div className={styles.memberName}>{person.name}</div>
+                  <div className={styles.memberRole}>{person.role}</div>
+                  <div className={styles.memberCred}>{person.credential}</div>
+                </div>
+              </div>
+            ))}
+          </section>
+
           <header className={styles.head}>
             <div className={`${styles.doc} mono`}>Preconstruction index</div>
+            {/* The page's only h1: it carries the primary keyword. */}
             <h1>Preconstruction condos in South Florida</h1>
             <p className={styles.lede}>
               Every project we track in Miami-Dade and Broward, grouped by

@@ -35,3 +35,5 @@ data/cam_licensees.csv
 
 # typescript
 *.tsbuildinfo
+
+supabase/.temp/

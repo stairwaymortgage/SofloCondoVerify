@@ -13,7 +13,7 @@ import styles from "./page.module.css";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Condo forms & templates · SoFloCondoVerify",
+  title: "Condo forms & templates",
   description:
     "The documents that come up around a Florida condo transaction — estoppel requests, records inspection requests, lender questionnaires, FHA project certification — with the authority behind each.",
   alternates: { canonical: "/forms" },
@@ -71,8 +71,63 @@ function statusTone(status: string | null): "caution" | "none" {
   return status?.trim() === "Draft" ? "caution" : "none";
 }
 
+/**
+ * Where a row actually goes, if anywhere.
+ *
+ * link_url leaves the site; file_path is ours. A row with neither is not a
+ * link at all — no href, no anchor, exactly the plain text it renders today.
+ * That distinction is the whole point of the two columns: guessing from a
+ * single value would eventually send someone off-site without warning.
+ */
+type Destination =
+  | { kind: "external"; href: string }
+  | { kind: "download"; href: string }
+  | null;
+
+function destination(form: Form): Destination {
+  const external = form.link_url?.trim();
+  if (external) return { kind: "external", href: external };
+
+  const hosted = form.file_path?.trim();
+  if (hosted) return { kind: "download", href: hosted };
+
+  return null;
+}
+
+/** The document name, linked only when there is somewhere for it to go. */
+function DocumentName({ form }: { form: Form }) {
+  const target = destination(form);
+  const name = form.form_template;
+
+  if (!target) return <>{name}</>;
+
+  if (target.kind === "download") {
+    return (
+      <a className={styles.docLink} href={target.href} download>
+        {name}
+      </a>
+    );
+  }
+
+  return (
+    <a
+      className={styles.docLink}
+      href={target.href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      {name}
+      <span className={styles.ext} aria-hidden>
+        ↗
+      </span>
+      <span className={styles.srOnly}> (opens in a new tab)</span>
+    </a>
+  );
+}
+
 export default async function FormsPage() {
   const forms = await getForms();
+  const linked = forms.filter((form) => destination(form) !== null).length;
 
   return (
     <>
@@ -98,14 +153,31 @@ export default async function FormsPage() {
               transaction moves or stalls — what each one is for, and the statute
               or programme behind it.
             </p>
-            <p className={styles.warn}>
-              <b>Seed catalog — nothing here is downloadable yet.</b> This is the
-              working list of what we intend to publish or link, with{" "}
-              {forms.length} entries so far. Where a row names an official form, go
-              to the authority named in its row; where it names a template, it is
-              something we plan to write. We would rather show the list honestly
-              than link to files that don&rsquo;t exist.
-            </p>
+            {/* The banner has to follow the data. It used to assert that
+                nothing was downloadable, which stops being true the moment a
+                single row gets a link_url or a file_path. */}
+            {linked === 0 ? (
+              <p className={styles.warn}>
+                <b>Seed catalog — nothing here is downloadable yet.</b> This is the
+                working list of what we intend to publish or link, with{" "}
+                {forms.length} entries so far. Where a row names an official form, go
+                to the authority named in its row; where it names a template, it is
+                something we plan to write. We would rather show the list honestly
+                than link to files that don&rsquo;t exist.
+              </p>
+            ) : (
+              <p className={styles.warn}>
+                <b>
+                  {linked} of {forms.length}{" "}
+                  {linked === 1 ? "entry is" : "entries are"} available now.
+                </b>{" "}
+                The rest are the working list of what we intend to publish or link.
+                Where a row names an official form, go to the authority named in its
+                row; where it names a template, it is something we plan to write. We
+                would rather show the list honestly than link to files that
+                don&rsquo;t exist.
+              </p>
+            )}
           </header>
 
           <div className={styles.grid}>
@@ -133,7 +205,7 @@ export default async function FormsPage() {
                     return (
                       <tr key={form.id}>
                         <th scope="row" className={styles.name}>
-                          {form.form_template}
+                          <DocumentName form={form} />
                           <span className={styles.avail}>{source.label}</span>
                         </th>
                         <td className={styles.purpose}>

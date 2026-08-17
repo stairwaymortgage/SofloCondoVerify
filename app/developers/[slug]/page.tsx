@@ -48,10 +48,10 @@ export async function generateMetadata({
   params: { slug: string };
 }): Promise<Metadata> {
   const company = await getCompanyBySlug(params.slug);
-  if (!company?.company) return { title: "Company not found · SoFloCondoVerify" };
+  if (!company?.company) return { title: "Company not found" };
 
   return {
-    title: `${company.company} — condo projects and buildings · SoFloCondoVerify`,
+    title: `${company.company} — condo projects and buildings`,
     description: `Every South Florida condo project and building in our file linked to ${
       company.company
     }${company.type ? `, ${company.type.toLowerCase()}` : ""} — with status, delivery and verification records for each.`,

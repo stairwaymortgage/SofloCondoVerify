@@ -12,7 +12,7 @@ import styles from "./page.module.css";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Florida condo rules, explained · SoFloCondoVerify",
+  title: "Florida condo rules, explained",
   description:
     "Chapter 718 records law, SB 4D milestone inspections, structural integrity reserve studies, the 2026 conventional Full Review change and FHA project approval — in plain English, with the citations.",
   alternates: { canonical: "/rules" },

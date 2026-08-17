@@ -18,9 +18,11 @@ const PATH = "/sellers";
 const TITLE = "Selling a condo buyers can't finance? There's still a way.";
 
 export const metadata: Metadata = {
-  title: "For condo sellers: selling in a flagged building · SoFloCondoVerify",
+  // Owns "selling a South Florida condo". Sell-side verb, and deliberately
+  // carries no buyer, approval or financing term.
+  title: "Selling a South Florida Condo",
   description:
-    "When a building's FHA approval has lapsed, the VA has turned it down or no reserve study is on file, financed offers fall through late. The fix is finding the buyers who can still close — and pricing and positioning for them.",
+    "Lapsed FHA approval or a missing reserve study kills financed offers late. How to price and position a South Florida condo and still close.",
   alternates: { canonical: PATH },
 };
 
@@ -54,7 +56,10 @@ export default async function Sellers() {
 
           <header className={styles.hero}>
             <div className={`${styles.kicker} mono`}>For owners and sellers</div>
-            <h1>Selling a condo buyers can&rsquo;t finance? There&rsquo;s still a way.</h1>
+            <h1>
+              Selling a South Florida condo buyers can&rsquo;t finance?
+              There&rsquo;s still a way.
+            </h1>
             <p className={styles.lede}>
               If your building&rsquo;s FHA approval has lapsed, the VA has turned
               it down, or no reserve study has been filed, you have probably

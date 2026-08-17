@@ -33,11 +33,14 @@ export async function generateMetadata({
   params: { county: string };
 }): Promise<Metadata> {
   const county = countyBySlug(params.county);
-  if (!county) return { title: "County not found · SoFloCondoVerify" };
+  if (!county) return { title: "County not found" };
 
+  // "Miami-Dade condos" is the phrase this tier owns, so it leads and the
+  // word "County" comes out — it pushed the exact phrase off the front and
+  // cost six characters the title did not have.
   return {
-    title: `${county.name} County condos — verification by city · SoFloCondoVerify`,
-    description: `Every ${county.name} County city we track, with current counts of condo buildings, FHA-approved and VA-accepted projects, preconstruction, and buildings carrying flagged signals.`,
+    title: `${county.name} Condos — Every City We Verify`,
+    description: `Every ${county.name} city we track, with counts of condo buildings, FHA-approved and VA-accepted projects, preconstruction and flagged signals.`,
     // countyBySlug matches case-insensitively; the canonical is the lowercase
     // slug it resolved to, so /condos/Miami-Dade doesn't self-canonicalise.
     alternates: { canonical: countyHref(county) },

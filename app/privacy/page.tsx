@@ -33,7 +33,7 @@ import styles from "./page.module.css";
 */
 
 export const metadata: Metadata = {
-  title: "Privacy notice · SoFloCondoVerify",
+  title: "Privacy notice",
   description:
     "What we collect when you send a request, who we share it with, how long we keep it, and how to ask us to stop.",
   alternates: { canonical: "/privacy" },

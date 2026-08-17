@@ -38,13 +38,13 @@ export async function generateMetadata({
   params: { slug: string };
 }): Promise<Metadata> {
   const project = await getPreconBySlug(params.slug);
-  if (!project) return { title: "Project not found · SoFloCondoVerify" };
+  if (!project) return { title: "Project not found" };
 
   const where = [project.area, project.county].filter(Boolean).join(", ");
   const price = formatPrice(project.priceFrom);
 
   return {
-    title: `${project.project} — preconstruction in ${where} · SoFloCondoVerify`,
+    title: `${project.project} — preconstruction in ${where}`,
     description: [
       `${project.project} is a preconstruction condo project in ${where}.`,
       project.status ? `Status: ${statusLabel(project.status)}.` : null,

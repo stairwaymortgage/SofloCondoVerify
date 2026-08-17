@@ -13,7 +13,7 @@ import styles from "./page.module.css";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "For condo boards: getting your building back on the lenders' lists · SoFloCondoVerify",
+  title: "For condo boards: getting your building back on the lenders' lists",
   description:
     "Lost FHA approval and sales stalled? What FHA and GSE standing does to your owners' resale values, what re-approval involves, and how to get connected with professionals who handle it.",
   alternates: { canonical: "/for-boards" },

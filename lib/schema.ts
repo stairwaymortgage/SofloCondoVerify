@@ -1,5 +1,6 @@
 import type { Building } from "./database.types";
 import type { PreconProject } from "./precon";
+import { recordId } from "./signals";
 
 /**
  * JSON-LD for building and preconstruction pages.
@@ -64,11 +65,50 @@ export function buildingSchema(building: Building): Json {
     "@id": siteUrl(path),
     name: text(building.building_name) ?? "Condominium",
     url: siteUrl(path),
+    // Our own record number, exactly as the page prints it above the table.
+    // Nothing is asserted about the building by it — it identifies the record.
+    identifier: recordId(building),
     address: postalAddress({
       street: building.address,
       locality: building.city,
       postalCode: building.zip,
     }),
+  });
+}
+
+/** The publisher of the record. The only claim here is who wrote the page. */
+const PUBLISHER: Json = {
+  "@type": "Organization",
+  name: "SoFloCondoVerify",
+  url: siteUrl("/"),
+};
+
+/**
+ * The page that carries a record, as distinct from the thing it describes.
+ *
+ * This exists to answer "who published this" — a question every page on the
+ * site left unanswered outside the nested publisher on Article pages. It
+ * asserts nothing about the building: `about` points at the Residence node,
+ * and the status columns the page displays are deliberately absent. FHA and
+ * VA standing are dated public-record readings, not ratings, and there is no
+ * schema.org property that carries them without implying an endorsement.
+ */
+export function recordPageSchema(
+  /** The page being described, e.g. /building/1 or /building/1/risk. */
+  path: string,
+  /** The subject's canonical node — the Residence's @id, which is its path. */
+  aboutPath: string,
+  name: string
+): Json {
+  return compact({
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${siteUrl(path)}#page`,
+    url: siteUrl(path),
+    name,
+    about: { "@id": siteUrl(aboutPath) },
+    isPartOf: { "@type": "WebSite", name: "SoFloCondoVerify", url: siteUrl("/") },
+    publisher: PUBLISHER,
   });
 }
 

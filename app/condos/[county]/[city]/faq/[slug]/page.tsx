@@ -49,12 +49,12 @@ export async function generateMetadata({
   params: { county: string; city: string; slug: string };
 }): Promise<Metadata> {
   const faq = await resolve(params);
-  if (!faq) return { title: "Answer not found · SoFloCondoVerify" };
+  if (!faq) return { title: "Answer not found" };
 
   const description = (faq.answer ?? "").trim().slice(0, 300);
 
   return {
-    title: `${faq.question} · SoFloCondoVerify`,
+    title: `${faq.question}`,
     description,
     // resolve() already refused anything that isn't the one true route for
     // this answer, so faqHref is by definition self-referencing here.

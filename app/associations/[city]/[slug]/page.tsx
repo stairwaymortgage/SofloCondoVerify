@@ -28,10 +28,10 @@ export async function generateMetadata({
   params: { city: string; slug: string };
 }): Promise<Metadata> {
   const association = await getAssociationBySlug(params.city, params.slug);
-  if (!association) return { title: "Association not found · SoFloCondoVerify" };
+  if (!association) return { title: "Association not found" };
 
   return {
-    title: `${association.name} — association registry record · SoFloCondoVerify`,
+    title: `${association.name} — association registry record`,
     description: `Public registration record for ${association.name} in ${association.city}: registration number, type, registration status and enforcement flag. Ordinance registration standing only.`,
     alternates: { canonical: `/associations/${params.city}/${params.slug}` },
   };

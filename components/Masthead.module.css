@@ -21,10 +21,15 @@
 .authstrip b { color: #fff; }
 .right { margin-left: auto; font-size: 11.5px; color: #7fa0a2; }
 
+/* Stacked above the page so the Resources dropdown paints over the content
+   below it rather than sliding under a section that starts its own stacking
+   context. */
 .mast {
   background: var(--mast);
   color: #fff;
   border-bottom: 3px solid var(--teal);
+  position: relative;
+  z-index: 20;
 }
 .inner {
   display: flex;
@@ -62,11 +67,60 @@
   font-weight: 600;
   display: block;
 }
-/* Nine items: never break a label mid-word, and drop to a second row rather
-   than overflowing when the viewport is tight. */
+/* Seven items plus the Resources group: never break a label mid-word, and
+   drop to a second row rather than overflowing when the viewport is tight. */
 .links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 10px 17px; align-items: center; }
 .links a { color: #e7ede9; text-decoration: none; font-size: 14.5px; font-weight: 600; white-space: nowrap; }
 .links a:hover { color: #fff; }
+
+/* Current section. Teal — the brand/action colour; --go is status-only and
+   never appears in the nav. The underline carries the state as well as the
+   colour, so it survives a colour-blind reading. */
+.on { color: #fff !important; box-shadow: inset 0 -2px 0 0 var(--teal-l); }
+
+/* ---- Resources dropdown (desktop) ---- */
+.group { position: relative; display: flex; align-items: center; }
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  font: inherit;
+  font-size: 14.5px;
+  font-weight: 600;
+  color: #e7ede9;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.trigger:hover { color: #fff; }
+.caret { font-size: 10px; line-height: 1; }
+
+/* Opens below the trigger and over whatever follows. `hidden` is what closes
+   it, so the links stay in the document either way. */
+.menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  z-index: 30;
+  min-width: 190px;
+  list-style: none;
+  background: var(--mast-2);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-top: 3px solid var(--teal);
+  padding: 6px 0;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32);
+}
+.menu[hidden] { display: none; }
+.menu a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 14.5px;
+  color: #e7ede9;
+}
+.menu a:hover { background: var(--mast); color: #fff; }
+.menuOn { color: #fff !important; box-shadow: inset 3px 0 0 0 var(--teal-l); }
 
 /* ---- hamburger + mobile panel ----
    Both are display:none above the breakpoint, so desktop is untouched. */
@@ -114,6 +168,22 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 .panel a:active, .panel a:hover { background: var(--mast); color: #fff; }
+.panelOn { color: #fff !important; box-shadow: inset 3px 0 0 0 var(--teal-l); }
+
+/* ---- Resources on mobile ----
+   A heading with its children open beneath it, not a disclosure: hover does
+   not exist here and an extra tap to reach an indexed page is a tax. */
+.panelGroup { display: flex; flex-direction: column; }
+.panelGroupHead {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #93b3b5;
+  padding: 16px 24px 7px;
+}
+/* Indented so the grouping is visible without a second tap. */
+.panel .panelChild { padding-left: 38px; font-size: 15px; }
 
 @media (max-width: 1300px) { .s { display: none; } }
 

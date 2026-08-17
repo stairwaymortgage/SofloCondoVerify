@@ -5,6 +5,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import JsonLd from "@/components/JsonLd";
 import ConnectCta from "@/components/ConnectCta";
 import SiteFooter from "@/components/SiteFooter";
+import { COUNTIES, countyHref } from "@/lib/cities";
 import {
   companyHref,
   getCompanies,
@@ -20,7 +21,7 @@ import styles from "./page.module.css";
 export const revalidate = 3600;
 
 export const metadata: Metadata = {
-  title: "Condo developers, architects and design firms · SoFloCondoVerify",
+  title: "Condo developers, architects and design firms",
   description:
     "Every developer, architecture, interior and landscape firm behind the South Florida condo projects we track — with the buildings and preconstruction projects linked to each.",
   alternates: { canonical: "/developers" },
@@ -209,9 +210,13 @@ export default async function DevelopersIndex() {
                   <li>
                     <Link href="/preconstruction">Preconstruction projects</Link>
                   </li>
-                  <li>
-                    <Link href="/condos/miami-dade">Miami-Dade cities</Link>
-                  </li>
+                  {COUNTIES.map((county) => (
+                    <li key={county.slug}>
+                      <Link href={countyHref(county)}>
+                        {county.name} condos
+                      </Link>
+                    </li>
+                  ))}
                   <li>
                     <Link href="/">Look up a specific building</Link>
                   </li>

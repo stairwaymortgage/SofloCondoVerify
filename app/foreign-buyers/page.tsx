@@ -22,9 +22,13 @@ const DOWN_PCT = Math.round(FOREIGN_NATIONAL_DOWN * 100);
 const FINANCED_PCT = 100 - DOWN_PCT;
 
 export const metadata: Metadata = {
-  title: "Foreign-national condo buyers: financing without US credit · SoFloCondoVerify",
+  // Owns "South Florida condo financing" — the loan, not the building's
+  // standing (/buyers has that). The non-resident qualifier rides in the
+  // description: there is no room for it inside 60 characters, and the
+  // phrase is worth more intact than shortened to fit a modifier.
+  title: "South Florida Condo Financing",
   description:
-    "Non-resident buyers don't automatically have to pay all cash for a South Florida condo. How foreign-national programs work without US credit or income history, and what they typically ask for.",
+    "Non-resident buyers don’t always need all cash. How foreign-national condo financing works in South Florida without US credit history.",
   alternates: { canonical: PATH },
 };
 
@@ -70,7 +74,10 @@ export default async function ForeignBuyers() {
             <div className={`${styles.kicker} mono`}>
               For international &amp; non-resident buyers
             </div>
-            <h1>Buying from overseas? You may not need to pay all cash.</h1>
+            <h1>
+              Buying a South Florida condo from overseas? You may be able to
+              finance it, not pay all cash.
+            </h1>
             <p className={styles.lede}>
               Most non-resident buyers are told the same thing: no US credit
               history, no US tax returns, no mortgage — bring the whole purchase

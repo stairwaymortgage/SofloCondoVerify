@@ -11,7 +11,7 @@ import styles from "./page.module.css";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: "Get connected — free · SoFloCondoVerify",
+  title: "Get connected — free",
   description:
     "Tell us what you need and we’ll pass your request to licensed professionals in our network. Free, no obligation.",
   // A form, not a record. It also takes ?record= and ?intent=, so every

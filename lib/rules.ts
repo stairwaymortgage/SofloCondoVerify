@@ -99,7 +99,7 @@ export const RULE_TOPICS: RuleTopic[] = [
     ],
     actions: [
       "Ask for the study itself, not a summary — the funding schedule is the part that matters.",
-      "Ask whether reserves are fully funded or have been waived, and what the current balance is against the plan.",
+      "Ask whether reserves are fully funded, whether they were waived in prior years, and what the current balance is against the plan.",
       "Read it alongside the milestone report; the two answer different halves of the same question.",
     ],
     authority: "s. 718.111(12), F.S. (retention) and SB 4D (scope)",

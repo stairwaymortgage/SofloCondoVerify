@@ -37,10 +37,10 @@ export async function generateMetadata({
   params: { city: string };
 }): Promise<Metadata> {
   const city = await cityName(params.city);
-  if (!city) return { title: "City not found · SoFloCondoVerify" };
+  if (!city) return { title: "City not found" };
 
   return {
-    title: `${city} condo & HOA association registry · SoFloCondoVerify`,
+    title: `${city} condo & HOA association registry`,
     description: `Association registration entries in ${city} — name, type, registration status and enforcement flag as they appear in the public ordinance registry.`,
     alternates: { canonical: `/associations/${params.city}` },
   };

@@ -16,6 +16,15 @@
 .table tbody tr:last-child td, .table tbody tr:last-child th { border-bottom: none; }
 
 .name { width: 27%; font-weight: 700; color: var(--ink); line-height: 1.4; }
+/* A document that actually goes somewhere. Underlined rather than colour-only
+   so the link is distinguishable inside a bold table heading cell. */
+.docLink { color: var(--link); text-decoration: underline; text-underline-offset: 2px; }
+.docLink:hover { color: var(--teal); }
+/* Marks an off-site destination; the screen-reader text carries the same
+   meaning for anyone who cannot see the glyph. */
+.ext { font-size: 11px; margin-left: 4px; }
+.srOnly { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
 .avail { display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--teal); margin-top: 4px; }
 .purpose { color: var(--ink-2); line-height: 1.55; }
 .availDetail { display: block; font-size: 11.5px; color: var(--ink-3); margin-top: 4px; line-height: 1.45; }

@@ -42,7 +42,15 @@ export const metadata: Metadata = {
   // NEXT_PUBLIC_SITE_URL the sitemaps and JSON-LD use. Without it, Next
   // silently emits localhost canonicals in a Vercel build.
   metadataBase: new URL(siteUrl("/")),
-  title: "SoFloCondoVerify — Check any South Florida condo",
+  // The brand suffix lives here and nowhere else. Every page sets only its
+  // own half of the title and this appends the brand; `default` covers any
+  // page that sets no title at all. A page that needs the brand omitted —
+  // the home page, whose title already opens with it — sets
+  // `title: { absolute: ... }` to bypass the template.
+  title: {
+    template: `%s · SoFloCondoVerify`,
+    default: "SoFloCondoVerify — Check any South Florida condo",
+  },
   description:
     "An independent condo verification record for South Florida (Miami-Dade, Broward, Palm Beach). FHA & VA status, reserve and structural signals, from official public records.",
   // Search Console property verification. Declared in the root layout so it
