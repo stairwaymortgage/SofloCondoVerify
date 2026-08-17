@@ -23,7 +23,6 @@ export function GET() {
       { path: "/sellers" },
       { path: "/foreign-buyers" },
       { path: "/how-matching-works" },
-      { path: "/advertise" },
     ])
   );
 }

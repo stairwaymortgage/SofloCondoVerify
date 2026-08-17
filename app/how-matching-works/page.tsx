@@ -197,9 +197,6 @@ export default function HowMatchingWorks() {
                     <Link href="/privacy">Privacy notice</Link>
                   </li>
                   <li>
-                    <Link href="/advertise">Advertise with us</Link>
-                  </li>
-                  <li>
                     <Link href="/">Look up a building</Link>
                   </li>
                 </ul>

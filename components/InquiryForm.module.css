@@ -1,0 +1,112 @@
+/* Shared audience-page lead form.
+   Tokens only — every colour here is a variable from globals.css. The primary
+   action is --teal (brand/action). --go is NOT used on any control: green is
+   reserved site-wide for approved status. Mirrors ConnectForm.module.css so
+   the two forms read as the same object. */
+
+.form {
+  background: var(--panel);
+  border: 1px solid var(--line-strong);
+  border-top: 4px solid var(--teal);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heading {
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  line-height: 1.25;
+}
+
+/* ---- fields ---- */
+.row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+.field { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.field label { font-size: 13px; font-weight: 700; color: var(--ink); display: flex; align-items: baseline; gap: 8px; }
+.req { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); }
+.opt { font-size: 10.5px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); }
+
+.field input, .field textarea {
+  border: 1.5px solid var(--line-strong);
+  font-family: inherit;
+  font-size: 15px;
+  padding: 11px 12px;
+  color: var(--ink);
+  background: #fff;
+  width: 100%;
+}
+.field input:focus, .field textarea:focus {
+  border-color: var(--teal);
+  outline: none;
+  box-shadow: inset 0 0 0 1px var(--teal);
+}
+.field textarea { resize: vertical; line-height: 1.5; }
+
+/* An invalid field is outlined as well as described — colour is never the
+   only carrier of the error. */
+.field input[aria-invalid="true"] { border-color: var(--flag); box-shadow: inset 0 0 0 1px var(--flag); }
+.fieldError { font-size: 12.5px; font-weight: 600; color: var(--flag); line-height: 1.45; }
+
+.fieldNote { font-size: 12.5px; color: var(--ink-3); line-height: 1.5; padding-top: 26px; }
+
+/* honeypot — off-screen, never focusable */
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+
+/* ---- disclosure ----
+   Deliberately at body size, not fine print: it sits in its own panel with a
+   teal rule so it reads as a distinct statement rather than boilerplate to
+   scroll past. */
+.disclosure {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--teal);
+  padding: 14px 16px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--ink-2);
+}
+
+.error {
+  background: var(--flag-bg);
+  border: 1px solid #e3c3c3;
+  border-left: 3px solid var(--flag);
+  color: var(--flag);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 12px 14px;
+}
+
+.submit {
+  background: var(--teal);
+  color: #fff;
+  border: 1.5px solid var(--teal);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px 22px;
+  cursor: pointer;
+  align-self: flex-start;
+}
+.submit:hover:not(:disabled) { background: #0c5a63; border-color: #0c5a63; }
+.submit:disabled { opacity: 0.6; cursor: default; }
+
+/* ---- in-place confirmation ---- */
+.done {
+  background: var(--panel);
+  border: 1px solid var(--line-strong);
+  border-top: 4px solid var(--teal);
+  padding: 26px 24px 28px;
+}
+.done:focus { outline: 2px solid var(--teal); outline-offset: 2px; }
+.doneKicker { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--teal); }
+.doneHead { font-size: 22px; font-weight: 800; letter-spacing: -0.015em; margin-top: 8px; color: var(--ink); }
+.doneBody { margin-top: 12px; font-size: 15px; color: var(--ink-2); line-height: 1.6; max-width: 56ch; }
+
+@media (max-width: 620px) {
+  .row { grid-template-columns: minmax(0, 1fr); }
+  .fieldNote { padding-top: 0; }
+  .submit { align-self: stretch; text-align: center; }
+}

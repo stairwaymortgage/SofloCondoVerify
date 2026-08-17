@@ -3,6 +3,7 @@ import { createAdminClient } from "@/lib/supabase";
 import { isIntent } from "@/lib/intents";
 import { routeLead } from "@/lib/routing";
 import { pushLeadToGhl } from "@/lib/ghl";
+import type { LeadInsert } from "@/lib/database.types";
 
 export const dynamic = "force-dynamic";
 
@@ -102,22 +103,27 @@ export async function POST(request: Request) {
   let admin;
   let leadId: number;
 
+  const row: LeadInsert = {
+    intent,
+    building_id: buildingId,
+    name,
+    email: email || null,
+    phone: phone || null,
+    message: message || null,
+    // Which page produced the lead. Validated above, so this is one of our
+    // own paths or null — never an arbitrary string the client chose.
+    source_page: sourcePage,
+    // Stamped server-side: the client never chooses its own tier.
+    ...routeLead(intent),
+  };
+
   // Step 1 — Supabase. This is the one that is allowed to fail the request:
   // it is the record of the lead, and if it didn't land, nothing did.
   try {
     admin = createAdminClient();
     const { data, error } = await admin
       .from("leads")
-      .insert({
-        intent,
-        building_id: buildingId,
-        name,
-        email: email || null,
-        phone: phone || null,
-        message: message || null,
-        // Stamped server-side: the client never chooses its own tier.
-        ...routeLead(intent),
-      })
+      .insert(row)
       .select("id")
       .single();
 

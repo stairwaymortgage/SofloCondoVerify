@@ -16,18 +16,16 @@ const NAV = [
   { href: "/foreign-buyers", label: "Foreign buyers" },
   { href: "/rules", label: "Rules" },
   { href: "/for-boards", label: "For boards" },
+  { href: "/associations", label: "Associations" },
 ];
-
-const ADVERTISE = { href: "/advertise", label: "Advertise with us" };
 
 /**
  * Site masthead.
  *
  * A client component only because the mobile menu needs toggle state. Below
- * 720px the inline nav and the CTA are both hidden and a hamburger takes
- * their place — previously the links were hidden with nothing to open them,
- * which left the entire nav unreachable on a phone, and the brand plus the
- * CTA together overflowed a 375px viewport by 30px on every page.
+ * 720px the inline nav is hidden and a hamburger takes its place —
+ * previously the links were hidden with nothing to open them, which left the
+ * entire nav unreachable on a phone.
  */
 export default function Masthead() {
   const [open, setOpen] = useState(false);
@@ -107,9 +105,6 @@ export default function Masthead() {
                 {item.label}
               </Link>
             ))}
-            <Link href={ADVERTISE.href} className={styles.cta}>
-              {ADVERTISE.label}
-            </Link>
           </nav>
 
           <button
@@ -147,13 +142,6 @@ export default function Masthead() {
                 {item.label}
               </Link>
             ))}
-            <Link
-              href={ADVERTISE.href}
-              className={styles.panelCta}
-              onClick={() => setOpen(false)}
-            >
-              {ADVERTISE.label}
-            </Link>
           </nav>
         </div>
       </header>

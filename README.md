@@ -27,7 +27,6 @@ Open http://localhost:3000
 - `app/layout.tsx` — root layout, Google fonts (Public Sans + Roboto Mono), metadata
 - `app/globals.css` — design tokens (the teal theme)
 - `app/page.tsx` — homepage: hero + lookup form + stat bar + sample verification record
-- `app/advertise/page.tsx` — placeholder advertise page (nav target)
 - `components/Masthead.tsx` — authority strip + nav
 - `components/LookupForm.tsx` — interactive lookup (client component; search wired to Supabase in a later task)
 
@@ -44,7 +43,6 @@ app/
   globals.css
   page.tsx
   page.module.css
-  advertise/page.tsx
 components/
   Masthead.tsx  + .module.css
   LookupForm.tsx + .module.css

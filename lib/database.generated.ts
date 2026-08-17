@@ -1,10 +1,3 @@
-/**
- * GENERATED FILE — do not edit.
- * Regenerate with:  npm run types:gen
- * (npx supabase gen types typescript --project-id erccluueswqqbukaikut)
- * Needs a Supabase access token: run `supabase login` or set SUPABASE_ACCESS_TOKEN.
- */
-
 export type Json =
   | string
   | number
@@ -635,6 +628,7 @@ export type Database = {
           phone: string | null
           routed_to: string | null
           routing_tier: string
+          source_page: string | null
           status: string
         }
         Insert: {
@@ -650,6 +644,7 @@ export type Database = {
           phone?: string | null
           routed_to?: string | null
           routing_tier?: string
+          source_page?: string | null
           status?: string
         }
         Update: {
@@ -665,6 +660,7 @@ export type Database = {
           phone?: string | null
           routed_to?: string | null
           routing_tier?: string
+          source_page?: string | null
           status?: string
         }
         Relationships: [

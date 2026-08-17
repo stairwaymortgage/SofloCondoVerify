@@ -15,7 +15,6 @@ export default function SiteFooter() {
           <Link href="/privacy">Privacy</Link>
           <Link href="/rules">Rules</Link>
           <Link href="/for-boards">For boards</Link>
-          <Link href="/advertise">Advertise with us</Link>
         </nav>
         <div className={styles.lines}>
           <div>© 2026 SoFloCondoVerify.com · Miami-Dade · Broward · Palm Beach</div>
