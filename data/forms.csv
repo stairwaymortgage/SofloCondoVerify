@@ -1,10 +1,10 @@
-form_template,purpose,source_authority,host_or_link,status
-Estoppel Certificate Request,Buyer/closing — request assn financial standing,FL Stat. 718.116(8),Link,To source
-Records Inspection Request,Owner right to inspect official records,FL Stat. 718.111(12),Template,Draft
-SIRS / Milestone summary explainer,Explain reserve study + milestone to buyers,SB 4-D / 718.112,Host,Draft
-Condo Association Dispute — pre-arbitration,Condominium owner-association dispute intake,DBPR 61B / Ch.718,Template,To source
-Condo Questionnaire (lender),Financing — HOA completes for loan review,Fannie/Freddie form 1076/476,Link,To source
-FHA condo project certification,Building seeks/retains FHA approval,HUD HRAP,Link,To source
-Turnover / developer handover checklist,New building association turnover,FL Stat. 718.301,Template,Draft
-Special Assessment notice template,Board → owners assessment notice,FL Stat. 718.112,Template,Draft
-NOTE: seed catalog — expand with the specific forms/PDFs you've collected across threads.,,,,
+form_template,purpose,source_authority,host_or_link,status,link_url,file_path
+Estoppel Certificate — statute reference (no state form),Buyer/closing — what the statute requires in an estoppel certificate,FL Stat. 718.116(8),Link,To source,https://www.flsenate.gov/Laws/Statutes/2024/718.116,
+Records Inspection Request,Owner right to inspect official records,FL Stat. 718.111(12),Template,Draft,,
+SIRS / Milestone summary explainer,Explain reserve study + milestone to buyers,SB 4-D / 718.112,Host,Draft,,
+Condo Association Dispute — pre-arbitration,Condominium owner-association dispute intake,DBPR 61B / Ch.718,Template,To source,,
+Condo Questionnaire (lender),Financing — HOA completes for loan review,Fannie/Freddie form 1076/476,Link,To source,https://singlefamily.fanniemae.com/media/document/pdf/form-1076,
+FHA condo project certification,Building seeks/retains FHA approval,HUD HRAP,Link,To source,https://www.hud.gov/sites/dfiles/OCHCO/documents/9992.pdf,
+Turnover / developer handover checklist,New building association turnover,FL Stat. 718.301,Template,Draft,,
+Special Assessment notice template,Board → owners assessment notice,FL Stat. 718.112,Template,Draft,,
+NOTE: seed catalog — expand with the specific forms/PDFs you've collected across threads.,,,,,,

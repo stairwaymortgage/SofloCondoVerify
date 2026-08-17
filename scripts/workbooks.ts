@@ -208,9 +208,12 @@ export const WORKBOOKS: WorkbookSpec[] = [
     file: "forms.csv",
     expected: 9,
     gated: false,
+    // link_url / file_path are carried here so a reload cannot silently drop
+    // destinations that only exist in the table. Without them the loader
+    // truncates and re-inserts five columns, and every link is lost.
     columns: {
       form_template: T, purpose: T, source_authority: T, host_or_link: T,
-      status: T,
+      status: T, link_url: T, file_path: T,
     },
   },
 
