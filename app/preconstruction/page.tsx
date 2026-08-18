@@ -73,31 +73,19 @@ function areaAnchor(county: string, area: string): string {
   return `${county}-${area}`.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 }
 
-/**
- * An unwritten slot.
- *
- * Every one of these is copy that has to come from Jim (financing, NMLS
- * attributed) or Olga (real estate) and must not be drafted here. It renders
- * loud on purpose — amber, monospace, dashed — so a page that still has one
- * in it cannot be mistaken for a finished page at a glance.
- */
-function Ph({ children }: { children: React.ReactNode }) {
-  return <span className={`${styles.ph} mono`}>{children}</span>;
-}
-
-/** The three steps. Body lines are placeholders, the sequence is not. */
+/** The three steps. Body lines are Olga's words, transcribed. */
 const STEPS = [
   {
     heading: "Free consultation",
-    body: <Ph>[[OLGA: step 1 body — one line]]</Ph>,
+    body: "We talk first — your budget, your criteria, and what matters to you in a building.",
   },
   {
     heading: "Your customized top 10 buildings",
-    body: <Ph>[[OLGA: step 2 body — one line]]</Ph>,
+    body: "We send you our top ten recommended buildings, chosen from that conversation.",
   },
   {
     heading: "The tour",
-    body: <Ph>[[OLGA: step 3 body — one line]]</Ph>,
+    body: "When you visit, we take you to see them.",
   },
 ];
 
@@ -117,7 +105,7 @@ const TEAM = [
     name: "Jim Blackburn",
     photo: "/jim-blackburn.jpeg",
     focus: "50% 18%",
-    role: <Ph>[[JIM: role line]]</Ph>,
+    role: "South Florida lending specialist",
     // Matches the sponsors-table credential_line verbatim. The two must not
     // drift: the same person is presented editorially here and as a paid
     // placement elsewhere on the site, and a reader who spots two different
@@ -131,7 +119,7 @@ const TEAM = [
     name: "Olga Blackburn",
     photo: "/olga-blackburn.jpeg",
     focus: "56% 22%",
-    role: <Ph>[[OLGA: role line]]</Ph>,
+    role: "South Florida real estate specialist",
     // Sponsors-table value, verbatim. Note the SL prefix — the licence number
     // given without it was incomplete.
     credential: "FL Lic. SL3569153 · The Keyes Company",
@@ -185,10 +173,12 @@ export default async function PreconstructionIndex() {
                     larger than that h1 — visual hierarchy and heading
                     hierarchy answer to different things. */}
                 <h2 className={styles.heroHead}>
-                  <Ph>[[JIM: hero headline]]</Ph>
+                  Find out which buildings are offering the best incentives.
                 </h2>
                 <p className={styles.heroSub}>
-                  <Ph>[[JIM: subhead]]</Ph>
+                  Which allow financing, which require cash, and which are built
+                  for the crowd you actually want to be part of. We&rsquo;ll tell
+                  you before you fly in.
                 </p>
               </header>
 
@@ -211,11 +201,12 @@ export default async function PreconstructionIndex() {
                 <span className={`${styles.remoteKicker} mono`}>
                   Can&rsquo;t travel?
                 </span>
+                {/* Olga's line, verbatim from "We'll" on. Her original opened
+                    with "Can't travel yet?", which the kicker beside it
+                    already says — the sentence starts after it. */}
                 <span className={styles.remoteBody}>
-                  <Ph>
-                    [[OLGA: remote-buyer line — video tours by phone, photo and
-                    video packages per building]]
-                  </Ph>
+                  We&rsquo;ll walk you through every building by video tour over
+                  the phone, and send you as many photos and videos as you need.
                 </span>
               </div>
             </div>
@@ -224,8 +215,8 @@ export default async function PreconstructionIndex() {
               <InquiryForm
                 source="/preconstruction"
                 intent="finance"
-                heading="[[JIM: form heading]]"
-                buttonLabel="[[JIM: button label]]"
+                heading="Get your top 10 buildings"
+                buttonLabel="Start with a free consultation"
                 disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
               />
             </aside>
