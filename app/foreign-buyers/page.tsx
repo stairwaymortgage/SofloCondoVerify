@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ConnectCta from "@/components/ConnectCta";
+import InquiryForm from "@/components/InquiryForm";
 import JsonLd from "@/components/JsonLd";
 import SponsorSlot from "@/components/SponsorSlot";
 import SiteFooter from "@/components/SiteFooter";
@@ -12,6 +14,7 @@ import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { FOREIGN_NATIONAL_DOWN } from "@/lib/precon";
 import { num } from "@/lib/format";
 import styles from "../audience.module.css";
+import own from "./page.module.css";
 
 export const revalidate = 3600;
 
@@ -31,6 +34,109 @@ export const metadata: Metadata = {
     "Non-resident buyers don’t always need all cash. How foreign-national condo financing works in South Florida without US credit history.",
   alternates: { canonical: PATH },
 };
+
+/**
+ * An unwritten slot.
+ *
+ * Every one of these is financing copy that has to come from Jim (NMLS
+ * attributed) or from compliance, and must not be drafted here. It renders
+ * loud on purpose — amber, monospace, dashed — so a page that still has one
+ * in it cannot be mistaken for a finished page at a glance.
+ */
+function Ph({ children }: { children: React.ReactNode }) {
+  return <span className={`${own.ph} mono`}>{children}</span>;
+}
+
+/**
+ * What a foreign-national programme underwrites instead of a US credit file.
+ * Given facts about the shape of the programme, not claims about an outcome —
+ * whether any of it is available to a given buyer is Jim's to say, and the
+ * body slot beside these is where he says it.
+ */
+const LEVERAGE_BASIS = [
+  "Foreign income",
+  "Foreign credit",
+  "No US residency",
+];
+
+/**
+ * The two classes of building, as categories.
+ *
+ * The hard rule for this block: it describes classes of building and nothing
+ * else. No building may be named in it, no category may be linked to a
+ * building, and nothing in it may suggest this page will tell a buyer which
+ * category a specific project falls into.
+ */
+const CATEGORIES = [
+  {
+    key: "financeable",
+    label: "Financeable",
+    body: <Ph>[[JIM: what makes a building financeable]]</Ph>,
+  },
+  {
+    key: "cash",
+    label: "100% cash required",
+    body: <Ph>[[JIM: what puts a building in the cash-only category]]</Ph>,
+  },
+];
+
+/**
+ * Remote-preview services, for the buyer who cannot get on a plane.
+ *
+ * Olga's slots, not Jim's: showing property remotely is the agent's side of
+ * the work, and the equivalent slot on /preconstruction is hers too.
+ */
+const REMOTE = [
+  {
+    key: "video-presentation",
+    label: "Video presentations",
+    body: <Ph>[[OLGA: what a video presentation covers]]</Ph>,
+  },
+  {
+    key: "packages",
+    label: "Photo and video packages per building",
+    body: <Ph>[[OLGA: what a per-building package contains]]</Ph>,
+  },
+  {
+    key: "walkthrough",
+    label: "Remote walkthroughs",
+    body: <Ph>[[OLGA: how a remote walkthrough is run]]</Ph>,
+  },
+];
+
+/**
+ * Same two people, same data, same shape as /sellers, /buyers and
+ * /preconstruction. Credentials are the sponsors-table values verbatim — the
+ * four team blocks and the sponsor card must not drift from each other.
+ */
+const TEAM = [
+  {
+    key: "jim",
+    name: "Jim Blackburn",
+    photo: "/jim-blackburn.jpeg",
+    focus: "50% 18%",
+    role: <Ph>[[JIM: role line]]</Ph>,
+    credential: "NMLS #1072866 · Equal Housing Lender · Stairway Mortgage",
+    phone: { label: "(954) 993-1625", href: "tel:+19549931625" },
+    website: "https://jamesjblackburn.com/",
+  },
+  {
+    key: "olga",
+    name: "Olga Blackburn",
+    photo: "/olga-blackburn.jpeg",
+    focus: "56% 22%",
+    role: <Ph>[[OLGA: role line]]</Ph>,
+    credential: "FL Lic. SL3569153 · The Keyes Company",
+    // The vanity spelling is given alongside the digits; it stays visible as
+    // written, but the tappable target is the dialable number.
+    phone: {
+      label: "786-225-5654",
+      href: "tel:+17862255654",
+      alt: "(786-CALL-OLG)",
+    },
+    website: "https://www.olgablackburn.com/",
+  },
+];
 
 export default async function ForeignBuyers() {
   const [counts, preconCount, projects] = await Promise.all([
@@ -64,37 +170,168 @@ export default async function ForeignBuyers() {
       />
       <Masthead />
 
-      <section className={styles.page}>
+      <section className={`${styles.page} ${own.pageTight}`}>
         <div className="wrap">
           <Breadcrumbs
             trail={[{ name: "Home", href: "/" }, { name: "Foreign buyers" }]}
           />
 
-          <header className={styles.hero}>
-            <div className={`${styles.kicker} mono`}>
-              For international &amp; non-resident buyers
-            </div>
-            <h1>
-              Buying a South Florida condo from overseas? You may be able to
-              finance it, not pay all cash.
-            </h1>
-            <p className={styles.lede}>
-              Most non-resident buyers are told the same thing: no US credit
-              history, no US tax returns, no mortgage — bring the whole purchase
-              price. That is often simply out of date. Foreign-national programs
-              exist precisely for buyers with no US credit file, and they are
-              built around documents you already have at home. Financing the bulk
-              of the price keeps the rest of your capital working somewhere else.
-            </p>
-            <Link className={styles.heroBtn} href="/connect?intent=foreign-national">
-              Ask about foreign-national financing
-            </Link>
-            <div className={styles.heroFine}>
-              Free · no account required · no obligation
-            </div>
-          </header>
+          {/* ---- hero + leverage + CTA --------------------------------
+              One grid so the language promise, the thing most non-resident
+              buyers do not know, and the way to ask about it share a
+              viewport on a desktop screen. */}
+          <div className={own.intro}>
+            <div className={own.introMain}>
+              <header className={`${styles.hero} ${own.heroTight}`}>
+                <div className={`${styles.kicker} mono`}>
+                  For international &amp; non-resident buyers
+                </div>
+                {/* The page's one h1, unchanged: it carries the ranking
+                    phrase and is not Jim's to rewrite. The two slots under
+                    it are. */}
+                <h1>
+                  Buying a South Florida condo from overseas? You may be able to
+                  finance it, not pay all cash.
+                </h1>
+                <div className={own.heroSlot}>
+                  <Ph>
+                    [[JIM: hero headline — partners on the team speak just
+                    about every language spoken in America]]
+                  </Ph>
+                </div>
+                <div className={own.heroSlotSub}>
+                  <Ph>
+                    [[JIM: hero subhead — whatever country you are from and
+                    whatever language you are most comfortable in, tell us and
+                    we make sure you have someone who speaks it, start to
+                    finish]]
+                  </Ph>
+                </div>
+              </header>
 
-          <div className={styles.stats}>
+              {/* ---- leverage ----
+                  General programme education. No lender named, no building
+                  named, and nothing here states an approval — the range is
+                  the shape of a programme, and what any individual buyer
+                  qualifies for is a conversation, not a page. */}
+              <section className={own.panel} aria-labelledby="lev-head">
+                <div className={own.panelHead}>
+                  <div className={`${own.panelKicker} mono`}>
+                    Financing from overseas
+                  </div>
+                  <h2 className={own.panelH} id="lev-head">
+                    <Ph>[[JIM: leverage block heading]]</Ph>
+                  </h2>
+                </div>
+
+                <div className={own.levBody}>
+                  {/* The figure is a slot, not a number. Any leverage
+                      percentage stated here has to agree with
+                      FOREIGN_NATIONAL_DOWN in lib/precon.ts, which already
+                      drives the stat strip and the compare block further
+                      down this page and the financing illustration on every
+                      preconstruction project page. One number, one place. */}
+                  <div className={own.levFigure}>
+                    <div className={own.levSlot}>
+                      <Ph>[[JIM: leverage figure]]</Ph>
+                    </div>
+                    <div className={own.levCap}>Leverage from a US bank</div>
+                  </div>
+                  <div className={own.levSide}>
+                    <div className={own.chips}>
+                      {LEVERAGE_BASIS.map((basis) => (
+                        <span key={basis} className={`${own.chip} mono`}>
+                          {basis}
+                        </span>
+                      ))}
+                    </div>
+                    <div className={own.levText}>
+                      <Ph>
+                        [[JIM: what this means for a non-resident buyer — a
+                        programme description, not a guarantee and not an
+                        approval]]
+                      </Ph>
+                    </div>
+                  </div>
+                </div>
+
+                <div className={own.panelFoot}>
+                  <div className={own.panelNote}>
+                    <Ph>
+                      [[COMPLIANCE: not an offer of credit, a quote, a rate or
+                      a commitment to lend — terms depend on lender, programme
+                      and circumstances]]
+                    </Ph>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <aside
+              className={own.introCta}
+              aria-label="Ask about foreign-national financing"
+            >
+              <InquiryForm
+                source="/foreign-buyers"
+                intent="foreign-national"
+                heading="[[JIM: form heading]]"
+                buttonLabel="[[JIM: button label]]"
+                disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
+              />
+            </aside>
+          </div>
+
+          {/* ---- financeable vs cash, and remote preview ---------------- */}
+          <div className={own.duo}>
+            <section className={own.panel} aria-labelledby="cat-head">
+              <div className={own.panelHead}>
+                <div className={`${own.panelKicker} mono`}>
+                  Which buildings can be financed
+                </div>
+                <h2 className={own.panelH} id="cat-head">
+                  <Ph>[[JIM: financeable-vs-cash heading]]</Ph>
+                </h2>
+              </div>
+              <ul className={own.catList}>
+                {CATEGORIES.map((category) => (
+                  <li key={category.key} className={own.cat}>
+                    <span className={own.catLabel}>{category.label}</span>
+                    <span className={own.catBody}>{category.body}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className={own.panelFoot}>
+                <div className={own.panelNote}>
+                  <Ph>
+                    [[COMPLIANCE: categories only — not a statement about any
+                    building, and no building's status is published here]]
+                  </Ph>
+                </div>
+              </div>
+            </section>
+
+            <section className={own.panel} aria-labelledby="remote-head">
+              <div className={own.panelHead}>
+                <div className={`${own.panelKicker} mono`}>
+                  If you cannot travel
+                </div>
+                <h2 className={own.panelH} id="remote-head">
+                  <Ph>[[OLGA: remote-preview heading]]</Ph>
+                </h2>
+              </div>
+              <ul className={own.remoteList}>
+                {REMOTE.map((item) => (
+                  <li key={item.key} className={own.remoteItem}>
+                    <span className={own.remoteLabel}>{item.label}</span>
+                    <span className={own.remoteBody}>{item.body}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className={own.panelFoot} />
+            </section>
+          </div>
+
+          <div className={`${styles.stats} ${own.statsDetached}`}>
             <Stat n={num(preconCount)} l="Preconstruction projects on file" />
             <Stat n={num(counts.triCounty)} l="Tri-county buildings on file" />
             <Stat n={`~${DOWN_PCT}%`} l="Typical starting down payment" />
@@ -105,6 +342,48 @@ export default async function ForeignBuyers() {
             percentages are a common starting point for non-resident programs,
             not a quote — see the note at the foot of this page.
           </p>
+
+          {/* ---- team ---- */}
+          <section className={own.team} aria-label="Who you will be working with">
+            {TEAM.map((person) => (
+              <div key={person.key} className={own.member}>
+                {/* Served at 192px for a 96px square so it stays sharp on a
+                    2x screen; the square crop is done in CSS, not in the
+                    file, so the originals stay untouched. */}
+                <Image
+                  className={own.photo}
+                  src={person.photo}
+                  alt={person.name}
+                  width={192}
+                  height={192}
+                  style={{ objectPosition: person.focus }}
+                />
+                <div className={own.memberBody}>
+                  <div className={own.memberName}>{person.name}</div>
+                  <div className={own.memberRole}>{person.role}</div>
+                  <div className={own.memberCred}>{person.credential}</div>
+                  <div className={own.memberContact}>
+                    <a className={own.memberLink} href={person.phone.href}>
+                      {person.phone.label}
+                    </a>
+                    {person.phone.alt && (
+                      <span className={`${own.memberAlt} mono`}>
+                        {person.phone.alt}
+                      </span>
+                    )}
+                  </div>
+                  <a
+                    className={own.memberLink}
+                    href={person.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {person.website}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </section>
 
           <div className={styles.grid}>
             <main className={styles.main}>

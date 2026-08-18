@@ -1,8 +1,10 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ConnectCta from "@/components/ConnectCta";
+import InquiryForm from "@/components/InquiryForm";
 import JsonLd from "@/components/JsonLd";
 import SponsorSlot from "@/components/SponsorSlot";
 import SiteFooter from "@/components/SiteFooter";
@@ -11,6 +13,7 @@ import { COUNTIES, countyHref } from "@/lib/cities";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { num } from "@/lib/format";
 import styles from "../audience.module.css";
+import own from "./page.module.css";
 
 export const revalidate = 3600;
 
@@ -25,6 +28,86 @@ export const metadata: Metadata = {
     "Lapsed FHA approval or a missing reserve study kills financed offers late. How to price and position a South Florida condo and still close.",
   alternates: { canonical: PATH },
 };
+
+/**
+ * An unwritten slot.
+ *
+ * Every one of these is sell-side copy that has to come from Olga (brokerage
+ * attributed) or from compliance, and must not be drafted here. It renders
+ * loud on purpose — amber, monospace, dashed — so a page that still has one
+ * in it cannot be mistaken for a finished page at a glance.
+ */
+function Ph({ children }: { children: React.ReactNode }) {
+  return <span className={`${own.ph} mono`}>{children}</span>;
+}
+
+/**
+ * The three buyer pools, as categories.
+ *
+ * `need` is what the buyer brings and is the given structure of the block.
+ * `body` is Olga's: who that pool is, where they look, and why the marketing
+ * for them is not the marketing for the other two.
+ *
+ * The hard rule for this block: it describes classes of buyer and nothing
+ * else. No building may be named in it, no pool may be linked to a building,
+ * and nothing in it may suggest this page will tell an owner which pool
+ * their own building draws.
+ */
+const POOLS = [
+  {
+    key: "cash",
+    need: "100% cash to buy",
+    body: <Ph>[[OLGA: who this pool is and where they search]]</Ph>,
+  },
+  {
+    key: "forty",
+    need: "40% down to buy",
+    body: <Ph>[[OLGA: who this pool is and where they search]]</Ph>,
+  },
+  {
+    key: "zero",
+    need: "As little as 0% down to buy",
+    body: <Ph>[[OLGA: who this pool is and where they search]]</Ph>,
+  },
+];
+
+/**
+ * Same two people, same data, same shape as /buyers and /preconstruction.
+ * Credentials are the sponsors-table values verbatim — the three team blocks
+ * and the sponsor card must not drift from each other.
+ *
+ * `focus` is the object-position for the square crop: both sources are
+ * white-background headshots framed differently, so each needs its own focal
+ * point rather than a shared centre crop.
+ */
+const TEAM = [
+  {
+    key: "jim",
+    name: "Jim Blackburn",
+    photo: "/jim-blackburn.jpeg",
+    focus: "50% 18%",
+    role: <Ph>[[JIM: role line]]</Ph>,
+    credential: "NMLS #1072866 · Equal Housing Lender · Stairway Mortgage",
+    phone: { label: "(954) 993-1625", href: "tel:+19549931625" },
+    website: "https://jamesjblackburn.com/",
+  },
+  {
+    key: "olga",
+    name: "Olga Blackburn",
+    photo: "/olga-blackburn.jpeg",
+    focus: "56% 22%",
+    role: <Ph>[[OLGA: role line]]</Ph>,
+    credential: "FL Lic. SL3569153 · The Keyes Company",
+    // The vanity spelling is given alongside the digits; it stays visible as
+    // written, but the tappable target is the dialable number.
+    phone: {
+      label: "786-225-5654",
+      href: "tel:+17862255654",
+      alt: "(786-CALL-OLG)",
+    },
+    website: "https://www.olgablackburn.com/",
+  },
+];
 
 export default async function Sellers() {
   const [counts, examples] = await Promise.all([
@@ -50,34 +133,102 @@ export default async function Sellers() {
       />
       <Masthead />
 
-      <section className={styles.page}>
+      <section className={`${styles.page} ${own.pageTight}`}>
         <div className="wrap">
           <Breadcrumbs trail={[{ name: "Home", href: "/" }, { name: "Sellers" }]} />
 
-          <header className={styles.hero}>
-            <div className={`${styles.kicker} mono`}>For owners and sellers</div>
-            <h1>
-              Selling a South Florida condo buyers can&rsquo;t finance?
-              There&rsquo;s still a way.
-            </h1>
-            <p className={styles.lede}>
-              If your building&rsquo;s FHA approval has lapsed, the VA has turned
-              it down, or no reserve study has been filed, you have probably
-              already felt it: offers arrive, then die at underwriting, six weeks
-              in. The unit isn&rsquo;t the problem and neither are you. The
-              answer is not to hope the next buyer&rsquo;s lender misses it — it
-              is to know exactly what the record says and market to the buyers
-              who can still close.
-            </p>
-            <Link className={styles.heroBtn} href="/connect?intent=sell">
-              Talk to someone about selling
-            </Link>
-            <div className={styles.heroFine}>
-              Free · no account required · no obligation
-            </div>
-          </header>
+          {/* ---- hero + pools + CTA ------------------------------------
+              One grid so the offer, the three buyer pools and the way to
+              ask for the report share a viewport on a desktop screen. */}
+          <div className={own.intro}>
+            <div className={own.introMain}>
+              <header className={`${styles.hero} ${own.heroTight}`}>
+                <div className={`${styles.kicker} mono`}>
+                  For owners and sellers
+                </div>
+                {/* The page's one h1, unchanged: it carries the ranking
+                    phrase and is not Olga's to rewrite. The two slots under
+                    it are. */}
+                <h1>
+                  Selling a South Florida condo buyers can&rsquo;t finance?
+                  There&rsquo;s still a way.
+                </h1>
+                <div className={own.heroSlot}>
+                  <Ph>
+                    [[OLGA: hero headline — free complimentary value and
+                    analysis report on the property you are considering
+                    selling]]
+                  </Ph>
+                </div>
+                <div className={own.heroSlotSub}>
+                  <Ph>
+                    [[OLGA: hero subhead — the report is more than a price; it
+                    analyses the building, because the building determines who
+                    can actually buy the unit]]
+                  </Ph>
+                </div>
+              </header>
 
-          <div className={styles.stats}>
+              {/* ---- buyer pools ----
+                  Category education, and only that. The building decides
+                  which pool an owner is actually selling into — which pool a
+                  given building draws is a conversation with a licensed
+                  professional, not something this page answers. */}
+              <section className={own.pools} aria-labelledby="pools-head">
+                <div className={own.poolsHead}>
+                  <div className={`${own.poolsKicker} mono`}>
+                    Who can actually buy
+                  </div>
+                  <h2 className={own.poolsH} id="pools-head">
+                    <Ph>[[OLGA: buyer-pool block heading]]</Ph>
+                  </h2>
+                  <div className={own.poolsLede}>
+                    <Ph>
+                      [[OLGA: buyer-pool intro — the building, not the unit,
+                      decides which of these three groups can buy]]
+                    </Ph>
+                  </div>
+                </div>
+
+                <ul className={own.poolList}>
+                  {POOLS.map((pool) => (
+                    <li key={pool.key} className={own.pool}>
+                      <span className={own.poolNeed}>{pool.need}</span>
+                      <span className={own.poolBody}>{pool.body}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className={own.poolsFoot}>
+                  <div className={own.poolsNote}>
+                    <Ph>
+                      [[OLGA: why three pools means three different marketing
+                      approaches — they search in different places]]
+                    </Ph>
+                  </div>
+                  <div className={own.poolsNote}>
+                    <Ph>
+                      [[COMPLIANCE: general-education disclosure — these are
+                      categories, not a statement about any building, and not
+                      a valuation or a promise about price or outcome]]
+                    </Ph>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <aside className={own.introCta} aria-label="Request the report">
+              <InquiryForm
+                source="/sellers"
+                intent="sell"
+                heading="[[OLGA: form heading]]"
+                buttonLabel="[[OLGA: button label]]"
+                disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
+              />
+            </aside>
+          </div>
+
+          <div className={`${styles.stats} ${own.statsDetached}`}>
             <Stat n={num(counts.flagged)} l="Buildings with 2+ signals" />
             <Stat n={num(counts.fhaExpired)} l="FHA approval lapsed" />
             <Stat n={num(counts.vaRejected)} l="Turned down by the VA" />
@@ -90,6 +241,48 @@ export default async function Sellers() {
             well-understood segment of the South Florida market, and it
             transacts every week.
           </p>
+
+          {/* ---- team ---- */}
+          <section className={own.team} aria-label="Who you will be working with">
+            {TEAM.map((person) => (
+              <div key={person.key} className={own.member}>
+                {/* Served at 192px for a 96px square so it stays sharp on a
+                    2x screen; the square crop is done in CSS, not in the
+                    file, so the originals stay untouched. */}
+                <Image
+                  className={own.photo}
+                  src={person.photo}
+                  alt={person.name}
+                  width={192}
+                  height={192}
+                  style={{ objectPosition: person.focus }}
+                />
+                <div className={own.memberBody}>
+                  <div className={own.memberName}>{person.name}</div>
+                  <div className={own.memberRole}>{person.role}</div>
+                  <div className={own.memberCred}>{person.credential}</div>
+                  <div className={own.memberContact}>
+                    <a className={own.memberLink} href={person.phone.href}>
+                      {person.phone.label}
+                    </a>
+                    {person.phone.alt && (
+                      <span className={`${own.memberAlt} mono`}>
+                        {person.phone.alt}
+                      </span>
+                    )}
+                  </div>
+                  <a
+                    className={own.memberLink}
+                    href={person.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {person.website}
+                  </a>
+                </div>
+              </div>
+            ))}
+          </section>
 
           <div className={styles.grid}>
             <main className={styles.main}>

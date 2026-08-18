@@ -1,0 +1,126 @@
+/* Sellers-only additions.
+ *
+ * The page keeps audience.module.css for everything already shipped — it is
+ * shared with /buyers and /foreign-buyers and must not drift for the sake of
+ * this page. What lives here is the structure only /sellers has: the hero +
+ * buyer-pool + CTA viewport, the buyer-pool block and the team block.
+ *
+ * A near-copy of buyers/page.module.css, deliberately: the two pages carry
+ * the same furniture and should stay a clean diff of each other. The block
+ * classes are named pool* rather than tier* because on this page the three
+ * cards are buyer pools, not down-payment tiers the seller chooses between.
+ *
+ * Colour rule, as everywhere: green = cleared status only. Teal is brand. */
+
+/* ---- unwritten copy ----
+   Amber (the caution token), monospace, dashed. Deliberately the loudest
+   thing on the page: an unfilled slot must be impossible to skim past.
+   Never green — green is approved-status only, sitewide. */
+.ph {
+  display: inline-block;
+  background: var(--caution-bg);
+  color: var(--caution);
+  border: 1.5px dashed var(--caution);
+  font-size: 0.82em;
+  font-weight: 700;
+  line-height: 1.35;
+  padding: 3px 7px;
+}
+
+/* ---- hero + pools + CTA ----
+   Two tracks on desktop: the pitch on the left, the way to answer it on the
+   right. The right track is a fixed 384px so the three pools keep a usable
+   row width instead of both columns shrinking together. The point of the
+   grid is that all three land in one 1440px viewport — an owner who reads
+   the pools and wants the report should not go looking for the form. */
+.intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 384px;
+  gap: 18px;
+  align-items: start;
+}
+.introMain { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.introCta { min-width: 0; }
+
+/* Sellers-only trims, and the reason they exist: hero + pools + form have to
+   land inside one 1440x900 viewport. These override audience.module.css for
+   this page alone.
+   The class is doubled to raise specificity: audience.module.css is emitted
+   after this file, so a single class would tie and lose on source order. */
+.pageTight.pageTight { padding-top: 22px; }
+.heroTight.heroTight { padding: 22px 26px; }
+
+/* Hero slots. The h1 above them is untouched — these sit under it, where the
+   lede used to, and are the two lines Olga writes. */
+.heroSlot { margin-top: 12px; }
+.heroSlotSub { margin-top: 8px; }
+
+/* The stats strip is built to butt against a full-width hero (border-top:
+   none). The hero is a grid column now, so it needs its top edge back. */
+.statsDetached.statsDetached { border-top: 1px solid var(--line-strong); margin-top: 18px; }
+
+/* ---- buyer pools ----
+   Category education. Three columns of equal weight — a rank order would
+   read as a recommendation, and the seller does not choose which pool their
+   unit draws; the building does. */
+.pools { background: var(--panel); border: 1px solid var(--line-strong); border-top: 4px solid var(--teal); }
+.poolsHead { padding: 13px 20px 0; }
+.poolsKicker { font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+.poolsH { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; margin-top: 6px; }
+.poolsLede { font-size: 13px; color: var(--ink-2); line-height: 1.6; margin-top: 8px; max-width: 78ch; }
+
+.poolList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 14px 20px 0;
+}
+.pool { border: 1px solid var(--line-strong); background: var(--bg); padding: 13px 14px; display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+/* What the buyer brings — the thing that separates one pool from the next. */
+.poolNeed { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); line-height: 1.15; }
+/* Pushed to the bottom of the card so the three bodies sit on one line
+   despite the headings above them wrapping to different depths. */
+.poolBody { font-size: 12.5px; color: var(--ink-2); line-height: 1.55; margin-top: auto; padding-top: 4px; }
+
+.poolsFoot { padding: 12px 20px 15px; }
+.poolsNote { font-size: 12px; color: var(--ink-3); line-height: 1.6; max-width: 82ch; }
+
+/* ---- team ---- */
+.team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
+.member { display: flex; gap: 16px; background: var(--panel); border: 1px solid var(--line-strong); border-top: 3px solid var(--teal); padding: 18px; align-items: flex-start; }
+/* Square crop of a white-background headshot. The white ground would dissolve
+   into the panel without a rule around it. Focal point is set per person in
+   the markup. */
+.photo {
+  width: 96px;
+  height: 96px;
+  flex: none;
+  background: var(--bg-2);
+  border: 1px solid var(--line-strong);
+  object-fit: cover;
+}
+.memberBody { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+.memberName { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; }
+.memberRole { font-size: 13.5px; color: var(--ink-2); }
+.memberCred { font-size: 12.5px; color: var(--ink-3); }
+.memberContact { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+.memberAlt { font-size: 12px; color: var(--ink-3); }
+/* Wrap anywhere: a full URL in a two-up card has nowhere else to break. */
+.memberLink { font-size: 12.5px; color: var(--teal); text-decoration: none; overflow-wrap: anywhere; }
+.memberLink:hover { text-decoration: underline; }
+
+@media (max-width: 1040px) {
+  .intro { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 760px) {
+  .team { grid-template-columns: minmax(0, 1fr); }
+  .poolList { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .poolsHead, .poolList, .poolsFoot { padding-left: 16px; padding-right: 16px; }
+  .member { flex-direction: column; }
+  /* Stays square once it is a face: a full-width band would cut a headshot
+     off at the eyes. */
+  .photo { width: 112px; height: 112px; }
+}

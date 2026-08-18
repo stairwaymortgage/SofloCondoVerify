@@ -327,7 +327,14 @@ export function preconRecordId(project: Pick<PreconProject, "slug" | "county">):
   return `SCV-PRE-${county}-${String(hash % 100000).padStart(5, "0")}`;
 }
 
-/** Share of the price a non-resident program typically leaves financed. */
+/**
+ * Share of the price a non-resident program typically asks for as a DOWN
+ * PAYMENT — not the financed share, which is the remainder (1 - this).
+ *
+ * The distinction is the whole point of the name: every caller multiplies a
+ * price by this to get cash-at-closing, so reading it as the financed share
+ * inverts every figure it produces.
+ */
 export const FOREIGN_NATIONAL_DOWN = 0.35;
 
 export interface FinancingIllustration {
