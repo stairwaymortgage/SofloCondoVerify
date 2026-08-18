@@ -43,10 +43,7 @@ function Ph({ children }: { children: React.ReactNode }) {
 }
 
 /**
- * The three tiers, as categories.
- *
- * `need` and `when` are the given structure of the block. `body` is where the
- * term gets explained and is Jim's to write.
+ * The three tiers, as categories. Jim's words, transcribed.
  *
  * The hard rule for this block: it describes classes of building and nothing
  * else. No building may be named in it, no tier may be linked to a building,
@@ -58,22 +55,17 @@ const TIERS = [
   {
     key: "cash",
     need: "All cash",
-    when: "Buildings that are not financeable",
-    body: <Ph>[[JIM: what &ldquo;not financeable&rdquo; means]]</Ph>,
+    when: "For buildings that can't be financed",
   },
   {
     key: "non-warrantable",
     need: "At least 40% down",
-    when: "Buildings that are not warrantable",
-    body: <Ph>[[JIM: what &ldquo;not warrantable&rdquo; means]]</Ph>,
+    when: "For buildings that aren't warrantable",
   },
   {
     key: "warrantable",
     need: "As little as 0% down",
-    when: "Buildings that are warrantable or FHA-approved",
-    body: (
-      <Ph>[[JIM: what &ldquo;warrantable / FHA-approved&rdquo; means]]</Ph>
-    ),
+    when: "For buildings that are warrantable or FHA-approved",
   },
 ];
 
@@ -90,7 +82,7 @@ const TEAM = [
     name: "Jim Blackburn",
     photo: "/jim-blackburn.jpeg",
     focus: "50% 18%",
-    role: <Ph>[[JIM: role line]]</Ph>,
+    role: "South Florida lending specialist",
     // Matches the sponsors-table credential_line verbatim. This page carries
     // both the editorial team block and the paid sponsor card, so the two
     // credentials for the same name sit on one screen — they have to agree.
@@ -103,7 +95,7 @@ const TEAM = [
     name: "Olga Blackburn",
     photo: "/olga-blackburn.jpeg",
     focus: "56% 22%",
-    role: <Ph>[[OLGA: role line]]</Ph>,
+    role: "South Florida real estate specialist",
     // Sponsors-table value, verbatim. Note the SL prefix — the licence number
     // given without it was incomplete.
     credential: "FL Lic. SL3569153 · The Keyes Company",
@@ -161,17 +153,13 @@ export default async function Buyers() {
                   approval before you fall in love.
                 </h1>
                 <div className={own.heroSlot}>
-                  <Ph>
-                    [[JIM: hero headline — a condo mortgage has two borrowers,
-                    you and the building]]
-                  </Ph>
+                  It&rsquo;s not enough to get you approved. The building has to
+                  be approved too.
                 </div>
                 <div className={own.heroSlotSub}>
-                  <Ph>
-                    [[JIM: hero subhead — getting you pre-approved on credit,
-                    income and assets is only half of it; the building has to
-                    be pre-approved too]]
-                  </Ph>
+                  Getting you pre-approved on credit, income and assets is only
+                  half of it. The building has to qualify for the financing you
+                  want — and that&rsquo;s knowable before you tour a single unit.
                 </div>
               </header>
 
@@ -190,10 +178,7 @@ export default async function Buyers() {
                     <Ph>[[JIM: tier block heading]]</Ph>
                   </h2>
                   <div className={own.tiersLede}>
-                    <Ph>
-                      [[JIM: tier block intro — why the building, not the
-                      buyer, sets the down payment]]
-                    </Ph>
+                    Depending on the building, you could be looking at:
                   </div>
                 </div>
 
@@ -202,7 +187,6 @@ export default async function Buyers() {
                     <li key={tier.key} className={own.tier}>
                       <span className={own.tierNeed}>{tier.need}</span>
                       <span className={`${own.tierWhen} mono`}>{tier.when}</span>
-                      <span className={own.tierBody}>{tier.body}</span>
                     </li>
                   ))}
                 </ul>
@@ -223,8 +207,8 @@ export default async function Buyers() {
               <InquiryForm
                 source="/buyers"
                 intent="finance"
-                heading="[[JIM: form heading]]"
-                buttonLabel="[[JIM: button label]]"
+                heading="Find out where you stand — and where the building stands"
+                buttonLabel="Talk to a South Florida condo specialist"
                 disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
               />
             </aside>

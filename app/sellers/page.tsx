@@ -53,22 +53,16 @@ function Ph({ children }: { children: React.ReactNode }) {
  * and nothing in it may suggest this page will tell an owner which pool
  * their own building draws.
  */
+/**
+ * The three cards are the middle of one sentence that runs from the lede
+ * above them ("If you don't know whether your unit needs:") to the close
+ * below ("...then you don't know who you're marketing to"). That is why the
+ * third reads lower-case — it continues a list, it does not head a card.
+ */
 const POOLS = [
-  {
-    key: "cash",
-    need: "100% cash to buy",
-    body: <Ph>[[OLGA: who this pool is and where they search]]</Ph>,
-  },
-  {
-    key: "forty",
-    need: "40% down to buy",
-    body: <Ph>[[OLGA: who this pool is and where they search]]</Ph>,
-  },
-  {
-    key: "zero",
-    need: "As little as 0% down to buy",
-    body: <Ph>[[OLGA: who this pool is and where they search]]</Ph>,
-  },
+  { key: "cash", need: "100% cash to buy" },
+  { key: "forty", need: "40% down to buy" },
+  { key: "zero", need: "as little as 0% down to buy" },
 ];
 
 /**
@@ -86,7 +80,7 @@ const TEAM = [
     name: "Jim Blackburn",
     photo: "/jim-blackburn.jpeg",
     focus: "50% 18%",
-    role: <Ph>[[JIM: role line]]</Ph>,
+    role: "South Florida lending specialist",
     credential: "NMLS #1072866 · Equal Housing Lender · Stairway Mortgage",
     phone: { label: "(954) 993-1625", href: "tel:+19549931625" },
     website: "https://jamesjblackburn.com/",
@@ -96,7 +90,7 @@ const TEAM = [
     name: "Olga Blackburn",
     photo: "/olga-blackburn.jpeg",
     focus: "56% 22%",
-    role: <Ph>[[OLGA: role line]]</Ph>,
+    role: "South Florida real estate specialist",
     credential: "FL Lic. SL3569153 · The Keyes Company",
     // The vanity spelling is given alongside the digits; it stays visible as
     // written, but the tappable target is the dialable number.
@@ -154,18 +148,11 @@ export default async function Sellers() {
                   There&rsquo;s still a way.
                 </h1>
                 <div className={own.heroSlot}>
-                  <Ph>
-                    [[OLGA: hero headline — free complimentary value and
-                    analysis report on the property you are considering
-                    selling]]
-                  </Ph>
+                  Before you list, find out who can actually buy it.
                 </div>
                 <div className={own.heroSlotSub}>
-                  <Ph>
-                    [[OLGA: hero subhead — the report is more than a price; it
-                    analyses the building, because the building determines who
-                    can actually buy the unit]]
-                  </Ph>
+                  Your free value report covers more than price. It analyses the
+                  building — because the building decides your buyer pool.
                 </div>
               </header>
 
@@ -183,10 +170,7 @@ export default async function Sellers() {
                     <Ph>[[OLGA: buyer-pool block heading]]</Ph>
                   </h2>
                   <div className={own.poolsLede}>
-                    <Ph>
-                      [[OLGA: buyer-pool intro — the building, not the unit,
-                      decides which of these three groups can buy]]
-                    </Ph>
+                    If you don&rsquo;t know whether your unit needs:
                   </div>
                 </div>
 
@@ -194,17 +178,16 @@ export default async function Sellers() {
                   {POOLS.map((pool) => (
                     <li key={pool.key} className={own.pool}>
                       <span className={own.poolNeed}>{pool.need}</span>
-                      <span className={own.poolBody}>{pool.body}</span>
                     </li>
                   ))}
                 </ul>
 
                 <div className={own.poolsFoot}>
-                  <div className={own.poolsNote}>
-                    <Ph>
-                      [[OLGA: why three pools means three different marketing
-                      approaches — they search in different places]]
-                    </Ph>
+                  {/* Closes the sentence the lede opened. */}
+                  <div className={own.poolsClose}>
+                    &hellip;then you don&rsquo;t know who you&rsquo;re marketing
+                    to. Those are three different groups of buyers, in three
+                    different places, needing three different campaigns.
                   </div>
                   <div className={own.poolsNote}>
                     <Ph>
@@ -221,8 +204,8 @@ export default async function Sellers() {
               <InquiryForm
                 source="/sellers"
                 intent="sell"
-                heading="[[OLGA: form heading]]"
-                buttonLabel="[[OLGA: button label]]"
+                heading="Get your free value and building report"
+                buttonLabel="Request my free report"
                 disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
               />
             </aside>

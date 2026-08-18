@@ -51,9 +51,26 @@
 .heroTight.heroTight { padding: 22px 26px; }
 
 /* Hero slots. The h1 above them is untouched — these sit under it, where the
-   lede used to, and are the two lines Olga writes. */
-.heroSlot { margin-top: 12px; }
-.heroSlotSub { margin-top: 8px; }
+   lede used to.
+   Colours are not optional here: the hero ground is var(--mast), so text that
+   inherits the default ink lands at 1.3:1 against it. The headline takes the
+   h1's white; the subhead takes the same #cadadb the shipped .lede uses on
+   every other audience hero. */
+.heroSlot {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.45;
+  max-width: 62ch;
+}
+.heroSlotSub {
+  margin-top: 8px;
+  color: #cadadb;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 70ch;
+}
 
 /* The stats strip is built to butt against a full-width hero (border-top:
    none). The hero is a grid column now, so it needs its top edge back. */
@@ -79,11 +96,10 @@
 .pool { border: 1px solid var(--line-strong); background: var(--bg); padding: 13px 14px; display: flex; flex-direction: column; gap: 7px; min-width: 0; }
 /* What the buyer brings — the thing that separates one pool from the next. */
 .poolNeed { font-size: 19px; font-weight: 800; letter-spacing: -0.02em; color: var(--ink); line-height: 1.15; }
-/* Pushed to the bottom of the card so the three bodies sit on one line
-   despite the headings above them wrapping to different depths. */
-.poolBody { font-size: 12.5px; color: var(--ink-2); line-height: 1.55; margin-top: auto; padding-top: 4px; }
-
-.poolsFoot { padding: 12px 20px 15px; }
+.poolsFoot { padding: 12px 20px 15px; display: flex; flex-direction: column; gap: 9px; }
+/* The other half of the sentence the lede starts, so it reads as body copy
+   rather than as a footnote under the cards. */
+.poolsClose { font-size: 13px; color: var(--ink-2); line-height: 1.6; max-width: 82ch; }
 .poolsNote { font-size: 12px; color: var(--ink-3); line-height: 1.6; max-width: 82ch; }
 
 /* ---- team ---- */

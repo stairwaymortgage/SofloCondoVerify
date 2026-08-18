@@ -68,16 +68,8 @@ const LEVERAGE_BASIS = [
  * category a specific project falls into.
  */
 const CATEGORIES = [
-  {
-    key: "financeable",
-    label: "Financeable",
-    body: <Ph>[[JIM: what makes a building financeable]]</Ph>,
-  },
-  {
-    key: "cash",
-    label: "100% cash required",
-    body: <Ph>[[JIM: what puts a building in the cash-only category]]</Ph>,
-  },
+  { key: "financeable", label: "Financeable" },
+  { key: "cash", label: "100% cash required" },
 ];
 
 /**
@@ -87,21 +79,9 @@ const CATEGORIES = [
  * the work, and the equivalent slot on /preconstruction is hers too.
  */
 const REMOTE = [
-  {
-    key: "video-presentation",
-    label: "Video presentations",
-    body: <Ph>[[OLGA: what a video presentation covers]]</Ph>,
-  },
-  {
-    key: "packages",
-    label: "Photo and video packages per building",
-    body: <Ph>[[OLGA: what a per-building package contains]]</Ph>,
-  },
-  {
-    key: "walkthrough",
-    label: "Remote walkthroughs",
-    body: <Ph>[[OLGA: how a remote walkthrough is run]]</Ph>,
-  },
+  { key: "video-presentation", label: "Video presentations" },
+  { key: "packages", label: "Photo and video packages per building" },
+  { key: "walkthrough", label: "Remote walkthroughs" },
 ];
 
 /**
@@ -115,7 +95,7 @@ const TEAM = [
     name: "Jim Blackburn",
     photo: "/jim-blackburn.jpeg",
     focus: "50% 18%",
-    role: <Ph>[[JIM: role line]]</Ph>,
+    role: "South Florida lending specialist",
     credential: "NMLS #1072866 · Equal Housing Lender · Stairway Mortgage",
     phone: { label: "(954) 993-1625", href: "tel:+19549931625" },
     website: "https://jamesjblackburn.com/",
@@ -125,7 +105,7 @@ const TEAM = [
     name: "Olga Blackburn",
     photo: "/olga-blackburn.jpeg",
     focus: "56% 22%",
-    role: <Ph>[[OLGA: role line]]</Ph>,
+    role: "South Florida real estate specialist",
     credential: "FL Lic. SL3569153 · The Keyes Company",
     // The vanity spelling is given alongside the digits; it stays visible as
     // written, but the tappable target is the dialable number.
@@ -194,18 +174,12 @@ export default async function ForeignBuyers() {
                   finance it, not pay all cash.
                 </h1>
                 <div className={own.heroSlot}>
-                  <Ph>
-                    [[JIM: hero headline — partners on the team speak just
-                    about every language spoken in America]]
-                  </Ph>
+                  Buying from overseas? You may be able to finance it — not pay
+                  all cash.
                 </div>
                 <div className={own.heroSlotSub}>
-                  <Ph>
-                    [[JIM: hero subhead — whatever country you are from and
-                    whatever language you are most comfortable in, tell us and
-                    we make sure you have someone who speaks it, start to
-                    finish]]
-                  </Ph>
+                  Whatever language you&rsquo;re most comfortable in, we have
+                  someone on the team who speaks it — start to finish.
                 </div>
               </header>
 
@@ -246,11 +220,9 @@ export default async function ForeignBuyers() {
                       ))}
                     </div>
                     <div className={own.levText}>
-                      <Ph>
-                        [[JIM: what this means for a non-resident buyer — a
-                        programme description, not a guarantee and not an
-                        approval]]
-                      </Ph>
+                      Many buyers are surprised to learn a US bank may lend to
+                      them even without US residency, using foreign income and
+                      foreign credit.
                     </div>
                   </div>
                 </div>
@@ -274,8 +246,8 @@ export default async function ForeignBuyers() {
               <InquiryForm
                 source="/foreign-buyers"
                 intent="foreign-national"
-                heading="[[JIM: form heading]]"
-                buttonLabel="[[JIM: button label]]"
+                heading="See if you qualify to finance from abroad"
+                buttonLabel="Talk to a South Florida condo specialist"
                 disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
               />
             </aside>
@@ -291,12 +263,15 @@ export default async function ForeignBuyers() {
                 <h2 className={own.panelH} id="cat-head">
                   <Ph>[[JIM: financeable-vs-cash heading]]</Ph>
                 </h2>
+                <div className={own.panelLede}>
+                  Some buildings can be financed. Others are cash-only.
+                  We&rsquo;ll tell you which before you commit to one.
+                </div>
               </div>
               <ul className={own.catList}>
                 {CATEGORIES.map((category) => (
                   <li key={category.key} className={own.cat}>
                     <span className={own.catLabel}>{category.label}</span>
-                    <span className={own.catBody}>{category.body}</span>
                   </li>
                 ))}
               </ul>
@@ -318,12 +293,18 @@ export default async function ForeignBuyers() {
                 <h2 className={own.panelH} id="remote-head">
                   <Ph>[[OLGA: remote-preview heading]]</Ph>
                 </h2>
+                <div className={own.panelLede}>
+                  Can&rsquo;t fly in? We put together video presentations and
+                  send all the photos and images you need to evaluate a building
+                  from abroad.
+                </div>
               </div>
+              {/* What that covers, as a list. Olga's line above is the copy;
+                  these are the named services it refers to. */}
               <ul className={own.remoteList}>
                 {REMOTE.map((item) => (
                   <li key={item.key} className={own.remoteItem}>
                     <span className={own.remoteLabel}>{item.label}</span>
-                    <span className={own.remoteBody}>{item.body}</span>
                   </li>
                 ))}
               </ul>

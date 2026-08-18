@@ -50,9 +50,26 @@
 .heroTight.heroTight { padding: 22px 26px; }
 
 /* Hero slots. The h1 above them is untouched — these sit under it, where the
-   lede used to, and are the two lines Jim writes. */
-.heroSlot { margin-top: 12px; }
-.heroSlotSub { margin-top: 8px; }
+   lede used to.
+   Colours are not optional here: the hero ground is var(--mast), so text that
+   inherits the default ink lands at 1.3:1 against it. The headline takes the
+   h1's white; the subhead takes the same #cadadb the shipped .lede uses on
+   every other audience hero. */
+.heroSlot {
+  margin-top: 12px;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.45;
+  max-width: 62ch;
+}
+.heroSlotSub {
+  margin-top: 8px;
+  color: #cadadb;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 70ch;
+}
 
 /* The stats strip is built to butt against a full-width hero (border-top:
    none). The hero is a grid column now, so it needs its top edge back. */
@@ -81,9 +98,6 @@
 /* The condition it hangs on — a property of the building, phrased as a
    category and never as a named project. */
 .tierWhen { font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--teal); line-height: 1.4; }
-/* Pushed to the bottom of the card so the three bodies sit on one line
-   despite the headings above them wrapping to different depths. */
-.tierBody { font-size: 12.5px; color: var(--ink-2); line-height: 1.55; margin-top: auto; padding-top: 4px; }
 
 .tiersFoot { padding: 12px 20px 15px; }
 .tiersNote { font-size: 12px; color: var(--ink-3); line-height: 1.6; max-width: 82ch; }
