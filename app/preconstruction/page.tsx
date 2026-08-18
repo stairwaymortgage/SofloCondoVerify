@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
@@ -100,20 +101,48 @@ const STEPS = [
   },
 ];
 
+/**
+ * Real people, real contact details. The role lines are still unwritten and
+ * stay placeholders — everything else here is given data and is not to be
+ * padded out with titles, brokerage names or descriptive copy.
+ *
+ * `focus` is the object-position for the square crop: both sources are
+ * white-background headshots, but the framing differs (Jim's is a tight
+ * portrait, Olga's is a wide frame with the subject off-centre), so each
+ * needs its own focal point rather than a shared centre crop.
+ */
 const TEAM = [
   {
     key: "jim",
-    photoSlot: "[[JIM: photo]]",
-    name: <Ph>[[JIM: display name]]</Ph>,
+    name: "Jim Blackburn",
+    photo: "/jim-blackburn.jpeg",
+    focus: "50% 18%",
     role: <Ph>[[JIM: role line]]</Ph>,
-    credential: <Ph>[[JIM: NMLS #]]</Ph>,
+    // Matches the sponsors-table credential_line verbatim. The two must not
+    // drift: the same person is presented editorially here and as a paid
+    // placement elsewhere on the site, and a reader who spots two different
+    // credentials for one name has no way to know which is current.
+    credential: "NMLS #1072866 · Equal Housing Lender · Stairway Mortgage",
+    phone: { label: "(954) 993-1625", href: "tel:+19549931625" },
+    website: "https://jamesjblackburn.com/",
   },
   {
     key: "olga",
-    photoSlot: "[[OLGA: photo]]",
-    name: <Ph>[[OLGA: display name]]</Ph>,
+    name: "Olga Blackburn",
+    photo: "/olga-blackburn.jpeg",
+    focus: "56% 22%",
     role: <Ph>[[OLGA: role line]]</Ph>,
-    credential: <Ph>[[OLGA: license #]]</Ph>,
+    // Sponsors-table value, verbatim. Note the SL prefix — the licence number
+    // given without it was incomplete.
+    credential: "FL Lic. SL3569153 · The Keyes Company",
+    // The vanity spelling is given alongside the digits; it stays visible as
+    // written, but the tappable target is the dialable number.
+    phone: {
+      label: "786-225-5654",
+      href: "tel:+17862255654",
+      alt: "(786-CALL-OLG)",
+    },
+    website: "https://www.olgablackburn.com/",
   },
 ];
 
@@ -206,17 +235,39 @@ export default async function PreconstructionIndex() {
           <section className={styles.team} aria-label="Who you will be working with">
             {TEAM.map((person) => (
               <div key={person.key} className={styles.member}>
-                {/* Neutral frame, not a portrait: a stand-in face is worse
-                    than an obviously empty slot. */}
-                <div className={styles.photo} aria-hidden>
-                  <span className={`${styles.photoNote} mono`}>
-                    {person.photoSlot}
-                  </span>
-                </div>
+                {/* Served at 192px for a 96px square so it stays sharp on a
+                    2x screen; the square crop is done in CSS, not in the
+                    file, so the originals stay untouched. */}
+                <Image
+                  className={styles.photo}
+                  src={person.photo}
+                  alt={person.name}
+                  width={192}
+                  height={192}
+                  style={{ objectPosition: person.focus }}
+                />
                 <div className={styles.memberBody}>
                   <div className={styles.memberName}>{person.name}</div>
                   <div className={styles.memberRole}>{person.role}</div>
                   <div className={styles.memberCred}>{person.credential}</div>
+                  <div className={styles.memberContact}>
+                    <a className={styles.memberLink} href={person.phone.href}>
+                      {person.phone.label}
+                    </a>
+                    {person.phone.alt && (
+                      <span className={`${styles.memberAlt} mono`}>
+                        {person.phone.alt}
+                      </span>
+                    )}
+                  </div>
+                  <a
+                    className={styles.memberLink}
+                    href={person.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {person.website}
+                  </a>
                 </div>
               </div>
             ))}

@@ -96,22 +96,26 @@
 /* ---- team ---- */
 .team { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 22px; }
 .member { display: flex; gap: 16px; background: var(--panel); border: 1px solid var(--line-strong); border-top: 3px solid var(--teal); padding: 18px; align-items: flex-start; }
-/* Neutral frame, no face. A placeholder portrait reads as a real person. */
+/* Square crop of a white-background headshot. The white ground would dissolve
+   into the panel without a rule around it, so the frame stays — solid now
+   that there is a face in it. Focal point is set per person in the markup. */
 .photo {
   width: 96px;
   height: 96px;
   flex: none;
   background: var(--bg-2);
-  border: 1.5px dashed var(--line-strong);
-  display: grid;
-  place-items: center;
-  padding: 6px;
+  border: 1px solid var(--line-strong);
+  object-fit: cover;
 }
-.photoNote { font-size: 9.5px; font-weight: 700; color: var(--ink-3); text-align: center; line-height: 1.3; }
 .memberBody { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
 .memberName { font-size: 17px; font-weight: 800; letter-spacing: -0.01em; }
 .memberRole { font-size: 13.5px; color: var(--ink-2); }
 .memberCred { font-size: 12.5px; color: var(--ink-3); }
+.memberContact { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px; }
+.memberAlt { font-size: 12px; color: var(--ink-3); }
+/* Wrap anywhere: a full URL in a two-up card has nowhere else to break. */
+.memberLink { font-size: 12.5px; color: var(--teal); text-decoration: none; overflow-wrap: anywhere; }
+.memberLink:hover { text-decoration: underline; }
 
 /* ---- header ---- */
 .head { background: var(--panel); border: 1px solid var(--line-strong); border-top: 4px solid var(--teal); padding: 22px; margin-top: 26px; }
@@ -204,5 +208,7 @@
   .head, .hookBody, .hero { padding: 18px 16px; }
   .cards { grid-template-columns: minmax(0, 1fr); }
   .member { flex-direction: column; }
-  .photo { width: 100%; height: 128px; }
+  /* Stays square once it is a face: the old full-width band was sized for an
+     empty frame and would cut a headshot off at the eyes. */
+  .photo { width: 112px; height: 112px; }
 }
