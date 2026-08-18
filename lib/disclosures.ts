@@ -24,3 +24,25 @@ export const INTERIM_DISCLOSURE =
   "and is not a statement about any specific building, a loan offer, or a " +
   "commitment to lend. Speak with a licensed professional about your " +
   "situation.";
+
+/**
+ * TCPA express written consent, shown beside the required consent checkbox on
+ * the audience-page lead form.
+ *
+ * Supplied wording, reproduced verbatim. This is the language the checkbox
+ * attests to, so it is the language that would have to be produced as evidence
+ * of consent — do not reword, reflow, abridge or "tidy" it, and do not let a
+ * page pass its own variant. One string, one meaning, every form.
+ *
+ * The named party is the entity that will be calling and texting. If that ever
+ * stops being Olgas Friends LLC, this string is wrong and must be reissued
+ * rather than edited around.
+ */
+export const consentText =
+  "By checking this box and providing my phone number, I consent to receive " +
+  "calls, text messages, and/or pre-recorded voicemails from Olgas Friends " +
+  "LLC via automated technology at the number provided regarding my inquiries " +
+  "and mortgage updates, even if I'm on a Do Not Call list. Consent is not a " +
+  "condition of purchase. Message frequency varies. Message and data rates " +
+  "may apply. Reply STOP to opt out or HELP for help. SMS consent is not " +
+  "shared with third parties.";

@@ -10,7 +10,7 @@ import SponsorSlot from "@/components/SponsorSlot";
 import SiteFooter from "@/components/SiteFooter";
 import { getPreconCount, getStandingCounts } from "@/lib/audiences";
 import { getPreconProjects, preconHref, statusLabel } from "@/lib/precon";
-import { INTERIM_DISCLOSURE } from "@/lib/disclosures";
+import { INTERIM_DISCLOSURE, consentText } from "@/lib/disclosures";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { FOREIGN_NATIONAL_DOWN } from "@/lib/precon";
 import { num } from "@/lib/format";
@@ -248,6 +248,8 @@ export default async function ForeignBuyers() {
                 buttonLabel="Talk to a South Florida condo specialist"
                 /* INTERIM — pending Jim's final wording. lib/disclosures.ts */
                 disclosure={INTERIM_DISCLOSURE}
+                /* TCPA consent, verbatim and identical on all four pages. */
+                consentText={consentText}
               />
             </aside>
           </div>

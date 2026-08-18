@@ -5,7 +5,7 @@ import Masthead from "@/components/Masthead";
 import JsonLd from "@/components/JsonLd";
 import SiteFooter from "@/components/SiteFooter";
 import InquiryForm from "@/components/InquiryForm";
-import { INTERIM_DISCLOSURE } from "@/lib/disclosures";
+import { INTERIM_DISCLOSURE, consentText } from "@/lib/disclosures";
 import { breadcrumbSchema } from "@/lib/schema";
 import { num } from "@/lib/format";
 import {
@@ -220,6 +220,8 @@ export default async function PreconstructionIndex() {
                 buttonLabel="Start with a free consultation"
                 /* INTERIM — pending Jim's final wording. lib/disclosures.ts */
                 disclosure={INTERIM_DISCLOSURE}
+                /* TCPA consent, verbatim and identical on all four pages. */
+                consentText={consentText}
               />
             </aside>
           </div>

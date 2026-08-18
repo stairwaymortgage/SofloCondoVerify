@@ -15,6 +15,7 @@ const MAX = {
   building: 200,
   record: 200,
   sourcePage: 300,
+  consentText: 1000,
 };
 
 /** Deliberately loose — just enough to reject obvious typos. */
@@ -30,6 +31,16 @@ interface LeadBody {
   message?: unknown;
   record_id?: unknown;
   source_page?: unknown;
+  /**
+   * TCPA consent tick from InquiryForm. Tri-state on purpose:
+   *   true      — consent given, the only value that may be submitted
+   *   false     — a form that shows the box and had it unticked: rejected
+   *   undefined — a form that predates the box (ConnectForm on /connect),
+   *               which is allowed through rather than silently losing leads
+   */
+  consent_given?: unknown;
+  /** The consent wording as shown, stored with the tick. */
+  consent_text?: unknown;
   /** Honeypot — real users never see this field, so a value means a bot. */
   company?: unknown;
 }
@@ -55,6 +66,17 @@ export async function POST(request: Request) {
   if (!isIntent(intent)) {
     return NextResponse.json(
       { error: "Choose what you’d like help with." },
+      { status: 400 }
+    );
+  }
+
+  // Consent is checked before anything else about the person is read: if the
+  // box was shown and left unticked there is nothing here we are permitted to
+  // act on, so there is no reason to go further. Absent means a caller that
+  // has no consent box at all — see the LeadBody note.
+  if (body.consent_given !== undefined && body.consent_given !== true) {
+    return NextResponse.json(
+      { error: "Please tick the consent box so we can contact you." },
       { status: 400 }
     );
   }
@@ -100,6 +122,14 @@ export async function POST(request: Request) {
   const pageRaw = str(body.source_page, MAX.sourcePage);
   const sourcePage = /^\/[A-Za-z0-9\-_/?=&.%]*$/.test(pageRaw) ? pageRaw : null;
 
+  // Null rather than false for a caller that has no consent box: "not asked"
+  // and "asked and refused" are different facts, and defaulting to false would
+  // record the second when the first is true. See the 20260819 migration.
+  const consentGiven = body.consent_given === true ? true : null;
+  const consentText = consentGiven
+    ? str(body.consent_text, MAX.consentText) || null
+    : null;
+
   let admin;
   let leadId: number;
 
@@ -113,6 +143,10 @@ export async function POST(request: Request) {
     // Which page produced the lead. Validated above, so this is one of our
     // own paths or null — never an arbitrary string the client chose.
     source_page: sourcePage,
+    // The TCPA record: the tick and the wording it attested to. created_at
+    // supplies the when.
+    consent_given: consentGiven,
+    consent_text: consentText,
     // Stamped server-side: the client never chooses its own tier.
     ...routeLead(intent),
   };

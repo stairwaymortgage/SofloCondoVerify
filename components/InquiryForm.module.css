@@ -69,6 +69,36 @@
   color: var(--ink-2);
 }
 
+/* ---- TCPA consent ----
+   Same panel treatment as the disclosure so the two read as one block of
+   terms, but the rule turns --flag when the tick is missing: the reason the
+   submit button is dead has to be visible next to the control that fixes it,
+   not only in the message below. */
+.consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--teal);
+  padding: 14px 16px;
+}
+.consent[data-invalid="true"] { border-left-color: var(--flag); }
+
+.consent input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 1px;
+  accent-color: var(--teal);
+  cursor: pointer;
+}
+.consent input:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; }
+
+/* The label is the whole statement, so the hit area is the sentence. */
+.consentBody { display: flex; flex-direction: column; gap: 5px; cursor: pointer; min-width: 0; }
+.consentText { font-size: 12.5px; line-height: 1.6; color: var(--ink-2); }
+
 .error {
   background: var(--flag-bg);
   border: 1px solid #e3c3c3;

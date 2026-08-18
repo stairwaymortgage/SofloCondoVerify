@@ -33,6 +33,15 @@ export interface InquiryFormProps {
    * place disclosure wording is authored or edited.
    */
   disclosure: string;
+  /**
+   * TCPA consent wording, rendered beside the required consent checkbox.
+   *
+   * Passed in per page for the same reason as `disclosure`: this component
+   * renders consent language, it never authors it. Every audience page passes
+   * the one shared `consentText` from lib/disclosures.ts — a page must not
+   * supply a variant, because this exact string is what the tick attests to.
+   */
+  consentText: string;
   /** Optional overrides for the in-place confirmation. */
   successHeading?: string;
   successMessage?: string;
@@ -47,6 +56,14 @@ type Errors = Partial<Record<FieldName, string>>;
  * before a round trip. Loose on purpose: just enough to catch a typo.
  */
 const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+/**
+ * Shown when a submission is attempted with the consent box unticked. The
+ * button is disabled until it is ticked, so this is the belt to that braces —
+ * it catches implicit submission (Enter in a field) and anything scripted.
+ */
+const CONSENT_REQUIRED =
+  "Please tick the consent box above so we can contact you about your inquiry.";
 
 const DEFAULT_SUCCESS_HEADING = "Request received.";
 const DEFAULT_SUCCESS_MESSAGE =
@@ -65,6 +82,7 @@ export default function InquiryForm({
   heading,
   buttonLabel,
   disclosure,
+  consentText,
   successHeading = DEFAULT_SUCCESS_HEADING,
   successMessage = DEFAULT_SUCCESS_MESSAGE,
 }: InquiryFormProps) {
@@ -76,6 +94,11 @@ export default function InquiryForm({
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [company, setCompany] = useState(""); // honeypot
+  // TCPA. Starts false and is never defaulted true anywhere: a pre-ticked box
+  // is not consent, and this is the one field where that distinction is the
+  // whole point of the field.
+  const [consent, setConsent] = useState(false);
+  const [consentError, setConsentError] = useState<string | null>(null);
 
   const [errors, setErrors] = useState<Errors>({});
   const [submitting, setSubmitting] = useState(false);
@@ -85,6 +108,7 @@ export default function InquiryForm({
   const nameRef = useRef<HTMLInputElement>(null);
   const emailRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<HTMLInputElement>(null);
+  const consentRef = useRef<HTMLInputElement>(null);
   const doneRef = useRef<HTMLDivElement>(null);
 
   const refs: Record<FieldName, React.RefObject<HTMLInputElement>> = {
@@ -147,6 +171,15 @@ export default function InquiryForm({
       return;
     }
 
+    // No consent, no send. Checked after the field errors so someone who has
+    // both problems is told about the fields first and the consent second,
+    // rather than being sent back to the top twice.
+    if (!consent) {
+      setConsentError(CONSENT_REQUIRED);
+      consentRef.current?.focus();
+      return;
+    }
+
     setSubmitting(true);
     setFailure(null);
 
@@ -161,6 +194,13 @@ export default function InquiryForm({
           phone: phone.trim(),
           message: message.trim(),
           company,
+          // Unreachable as false — handleSubmit returns above without it — so
+          // this records the tick rather than reporting a state.
+          consent_given: consent,
+          // The wording actually shown beside the box, sent with the tick. It
+          // is stored alongside it so a later reissue of consentText cannot
+          // change what an already-captured lead appears to have agreed to.
+          consent_text: consentText,
           // The attribution key. Supabase stores it on the row; GHL gets it as
           // the source_page custom field and in the note.
           source_page: source,
@@ -310,13 +350,48 @@ export default function InquiryForm({
 
       <div className={styles.disclosure}>{disclosure}</div>
 
+      {/* The label wraps the whole consent statement, so the hit area is the
+          sentence rather than an 18px square, and the wording that is ticked
+          is the wording that is read. */}
+      <div
+        className={styles.consent}
+        data-invalid={consentError ? "true" : undefined}
+      >
+        <input
+          id={id("consent")}
+          ref={consentRef}
+          type="checkbox"
+          checked={consent}
+          onChange={(e) => {
+            setConsent(e.target.checked);
+            if (e.target.checked) setConsentError(null);
+          }}
+          aria-invalid={consentError ? true : undefined}
+          aria-describedby={consentError ? id("consent-error") : undefined}
+        />
+        <label htmlFor={id("consent")} className={styles.consentBody}>
+          <span className={styles.req}>required</span>
+          <span className={styles.consentText}>{consentText}</span>
+        </label>
+      </div>
+
+      {consentError && (
+        <div className={styles.error} id={id("consent-error")} role="alert">
+          {consentError}
+        </div>
+      )}
+
       {failure && (
         <div className={styles.error} role="alert">
           {failure}
         </div>
       )}
 
-      <button type="submit" className={styles.submit} disabled={submitting}>
+      <button
+        type="submit"
+        className={styles.submit}
+        disabled={submitting || !consent}
+      >
         {submitting ? "Sending…" : buttonLabel}
       </button>
     </form>

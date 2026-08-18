@@ -623,6 +623,8 @@ export type Database = {
       leads: {
         Row: {
           building_id: number | null
+          consent_given: boolean | null
+          consent_text: string | null
           created_at: string
           email: string | null
           ghl_contact_id: string | null
@@ -639,6 +641,8 @@ export type Database = {
         }
         Insert: {
           building_id?: number | null
+          consent_given?: boolean | null
+          consent_text?: string | null
           created_at?: string
           email?: string | null
           ghl_contact_id?: string | null
@@ -655,6 +659,8 @@ export type Database = {
         }
         Update: {
           building_id?: number | null
+          consent_given?: boolean | null
+          consent_text?: string | null
           created_at?: string
           email?: string | null
           ghl_contact_id?: string | null
