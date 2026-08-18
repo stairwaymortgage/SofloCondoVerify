@@ -10,6 +10,7 @@ import SponsorSlot from "@/components/SponsorSlot";
 import SiteFooter from "@/components/SiteFooter";
 import { getPreconCount, getStandingCounts } from "@/lib/audiences";
 import { getPreconProjects, preconHref, statusLabel } from "@/lib/precon";
+import { INTERIM_DISCLOSURE } from "@/lib/disclosures";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { FOREIGN_NATIONAL_DOWN } from "@/lib/precon";
 import { num } from "@/lib/format";
@@ -228,13 +229,10 @@ export default async function ForeignBuyers() {
                 </div>
 
                 <div className={own.panelFoot}>
-                  <div className={own.panelNote}>
-                    <Ph>
-                      [[COMPLIANCE: not an offer of credit, a quote, a rate or
-                      a commitment to lend — terms depend on lender, programme
-                      and circumstances]]
-                    </Ph>
-                  </div>
+                  {/* INTERIM disclosure — pending Jim's final regulatory
+                      wording. Shared constant so all four audience pages say
+                      exactly the same thing: see lib/disclosures.ts. */}
+                  <div className={own.panelNote}>{INTERIM_DISCLOSURE}</div>
                 </div>
               </section>
             </div>
@@ -248,7 +246,8 @@ export default async function ForeignBuyers() {
                 intent="foreign-national"
                 heading="See if you qualify to finance from abroad"
                 buttonLabel="Talk to a South Florida condo specialist"
-                disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
+                /* INTERIM — pending Jim's final wording. lib/disclosures.ts */
+                disclosure={INTERIM_DISCLOSURE}
               />
             </aside>
           </div>
@@ -276,12 +275,10 @@ export default async function ForeignBuyers() {
                 ))}
               </ul>
               <div className={own.panelFoot}>
-                <div className={own.panelNote}>
-                  <Ph>
-                    [[COMPLIANCE: categories only — not a statement about any
-                    building, and no building's status is published here]]
-                  </Ph>
-                </div>
+                {/* INTERIM disclosure — pending Jim's final regulatory
+                    wording. Shared constant so all four audience pages say
+                    exactly the same thing: see lib/disclosures.ts. */}
+                <div className={own.panelNote}>{INTERIM_DISCLOSURE}</div>
               </div>
             </section>
 

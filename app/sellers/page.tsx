@@ -10,6 +10,7 @@ import SponsorSlot from "@/components/SponsorSlot";
 import SiteFooter from "@/components/SiteFooter";
 import { getFlaggedExamples, getStandingCounts } from "@/lib/audiences";
 import { COUNTIES, countyHref } from "@/lib/cities";
+import { INTERIM_DISCLOSURE } from "@/lib/disclosures";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { num } from "@/lib/format";
 import styles from "../audience.module.css";
@@ -163,12 +164,13 @@ export default async function Sellers() {
                   professional, not something this page answers. */}
               <section className={own.pools} aria-labelledby="pools-head">
                 <div className={own.poolsHead}>
-                  <div className={`${own.poolsKicker} mono`}>
+                  {/* The kicker carries the section's accessible name: the
+                      heading slot above the lede was redundant and is gone,
+                      so `aria-labelledby` on the section points here. This id
+                      must move with it, never be dropped. */}
+                  <div className={`${own.poolsKicker} mono`} id="pools-head">
                     Who can actually buy
                   </div>
-                  <h2 className={own.poolsH} id="pools-head">
-                    <Ph>[[OLGA: buyer-pool block heading]]</Ph>
-                  </h2>
                   <div className={own.poolsLede}>
                     If you don&rsquo;t know whether your unit needs:
                   </div>
@@ -189,13 +191,10 @@ export default async function Sellers() {
                     to. Those are three different groups of buyers, in three
                     different places, needing three different campaigns.
                   </div>
-                  <div className={own.poolsNote}>
-                    <Ph>
-                      [[COMPLIANCE: general-education disclosure — these are
-                      categories, not a statement about any building, and not
-                      a valuation or a promise about price or outcome]]
-                    </Ph>
-                  </div>
+                  {/* INTERIM disclosure — pending Jim's final regulatory
+                      wording. Shared constant so all four audience pages say
+                      exactly the same thing: see lib/disclosures.ts. */}
+                  <div className={own.poolsNote}>{INTERIM_DISCLOSURE}</div>
                 </div>
               </section>
             </div>
@@ -206,7 +205,8 @@ export default async function Sellers() {
                 intent="sell"
                 heading="Get your free value and building report"
                 buttonLabel="Request my free report"
-                disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
+                /* INTERIM — pending Jim's final wording. lib/disclosures.ts */
+                disclosure={INTERIM_DISCLOSURE}
               />
             </aside>
           </div>

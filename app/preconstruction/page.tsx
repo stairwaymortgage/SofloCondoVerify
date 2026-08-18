@@ -5,6 +5,7 @@ import Masthead from "@/components/Masthead";
 import JsonLd from "@/components/JsonLd";
 import SiteFooter from "@/components/SiteFooter";
 import InquiryForm from "@/components/InquiryForm";
+import { INTERIM_DISCLOSURE } from "@/lib/disclosures";
 import { breadcrumbSchema } from "@/lib/schema";
 import { num } from "@/lib/format";
 import {
@@ -217,7 +218,8 @@ export default async function PreconstructionIndex() {
                 intent="finance"
                 heading="Get your top 10 buildings"
                 buttonLabel="Start with a free consultation"
-                disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
+                /* INTERIM — pending Jim's final wording. lib/disclosures.ts */
+                disclosure={INTERIM_DISCLOSURE}
               />
             </aside>
           </div>

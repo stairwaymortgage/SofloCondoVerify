@@ -10,6 +10,7 @@ import SponsorSlot from "@/components/SponsorSlot";
 import SiteFooter from "@/components/SiteFooter";
 import { getFlaggedExamples, getStandingCounts } from "@/lib/audiences";
 import { COUNTIES, countyHref } from "@/lib/cities";
+import { INTERIM_DISCLOSURE } from "@/lib/disclosures";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { num } from "@/lib/format";
 import styles from "../audience.module.css";
@@ -171,12 +172,13 @@ export default async function Buyers() {
                   this page answers. */}
               <section className={own.tiers} aria-labelledby="tiers-head">
                 <div className={own.tiersHead}>
-                  <div className={`${own.tiersKicker} mono`}>
+                  {/* The kicker carries the section's accessible name: the
+                      heading slot above the lede was redundant and is gone,
+                      so `aria-labelledby` on the section points here. This id
+                      must move with it, never be dropped. */}
+                  <div className={`${own.tiersKicker} mono`} id="tiers-head">
                     What the building changes
                   </div>
-                  <h2 className={own.tiersH} id="tiers-head">
-                    <Ph>[[JIM: tier block heading]]</Ph>
-                  </h2>
                   <div className={own.tiersLede}>
                     Depending on the building, you could be looking at:
                   </div>
@@ -192,13 +194,10 @@ export default async function Buyers() {
                 </ul>
 
                 <div className={own.tiersFoot}>
-                  <div className={own.tiersNote}>
-                    <Ph>
-                      [[COMPLIANCE: general-education disclosure — these are
-                      categories, not a statement about any building, and not
-                      a loan offer or commitment to lend]]
-                    </Ph>
-                  </div>
+                  {/* INTERIM disclosure — pending Jim's final regulatory
+                      wording. Shared constant so all four audience pages say
+                      exactly the same thing: see lib/disclosures.ts. */}
+                  <div className={own.tiersNote}>{INTERIM_DISCLOSURE}</div>
                 </div>
               </section>
             </div>
@@ -209,7 +208,8 @@ export default async function Buyers() {
                 intent="finance"
                 heading="Find out where you stand — and where the building stands"
                 buttonLabel="Talk to a South Florida condo specialist"
-                disclosure="[[COMPLIANCE: disclosure text — reviewed wording, do not draft]]"
+                /* INTERIM — pending Jim's final wording. lib/disclosures.ts */
+                disclosure={INTERIM_DISCLOSURE}
               />
             </aside>
           </div>
