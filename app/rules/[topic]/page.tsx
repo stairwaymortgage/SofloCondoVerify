@@ -116,6 +116,29 @@ export default async function RulePage({ params }: { params: { topic: string } }
                   <div className={`${styles.meta} mono`}>
                     {topic.authority} · Read {asOf}
                   </div>
+
+                  {/* The whole act, up top. The table further down is a
+                      summary of selected provisions, and a reader who wants
+                      the statute itself should not have to scroll past a
+                      summary to find out it exists. */}
+                  {topic.fullText && (
+                    <a
+                      className={styles.fullText}
+                      href={topic.fullText.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <span className={styles.fullTextLabel}>
+                        Read the full text
+                      </span>
+                      <span className={styles.fullTextName}>
+                        {topic.fullText.label}
+                      </span>
+                      <span className={`${styles.fullTextHost} mono`}>
+                        flsenate.gov — official ↗
+                      </span>
+                    </a>
+                  )}
                 </header>
 
                 <div className={styles.body}>
@@ -132,6 +155,20 @@ export default async function RulePage({ params }: { params: { topic: string } }
                         {statutes.length} provision{statutes.length === 1 ? "" : "s"}
                       </span>
                     </div>
+                    {/* Named as a summary at the point someone reads it, so
+                        the table is not mistaken for the whole chapter. */}
+                    {topic.fullText && (
+                      <p className={styles.tableNote}>
+                        Selected provisions, summarised.{" "}
+                        <a
+                          href={topic.fullText.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          Read the full chapter on flsenate.gov ↗
+                        </a>
+                      </p>
+                    )}
                     <div
                       className="tscroll"
                       tabIndex={0}

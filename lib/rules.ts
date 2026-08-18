@@ -24,6 +24,18 @@ export interface RuleTopic {
   authority: string;
   /** FAQ cluster whose city answers pair with this topic. */
   faqCluster: string | null;
+  /**
+   * The complete official text, where one exists to link to.
+   *
+   * The statute table on a topic page is a summary of selected provisions, and
+   * a reader who wants the act itself should not have to go looking for it. We
+   * link the source rather than reproducing any of it.
+   *
+   * The year is pinned, matching the 718.116 link in data/forms.csv: an
+   * unpinned URL silently changes underneath a page that carries an as-of
+   * date. Bumping the year is a deliberate edit, not a drift.
+   */
+  fullText?: { label: string; url: string };
 }
 
 /**
@@ -66,6 +78,10 @@ export const RULE_TOPICS: RuleTopic[] = [
     ],
     authority: "Florida Statutes, Chapter 718 (the Condominium Act)",
     faqCluster: "Structural/SIRS",
+    fullText: {
+      label: "Chapter 718, Florida Statutes — the complete Condominium Act",
+      url: "https://www.flsenate.gov/Laws/Statutes/2024/Chapter718",
+    },
   },
   {
     slug: "sb4d-milestone-inspections",
