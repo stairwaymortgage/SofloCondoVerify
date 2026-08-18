@@ -66,8 +66,15 @@ const CONSENT_REQUIRED =
   "Please tick the consent box above so we can contact you about your inquiry.";
 
 const DEFAULT_SUCCESS_HEADING = "Request received.";
+/**
+ * Deliberately says nothing it cannot keep. No name, because leads route to
+ * different people by intent and the person who calls is not known here; no
+ * timeframe, because nothing in this component can commit to one; and no
+ * outcome, because the answer is a licensed conversation, not a result this
+ * form can promise.
+ */
 const DEFAULT_SUCCESS_MESSAGE =
-  "It has been passed to our network. Someone licensed to handle it will reach out directly — there is nothing else for you to do.";
+  "Thank you — we’ve got your request. A licensed specialist on our team will reach out to you personally. Nothing more you need to do.";
 
 /**
  * The shared lead-capture form for the audience pages.
