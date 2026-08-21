@@ -70,6 +70,7 @@ export default async function AssociationsIndex() {
               sourcePage="/associations"
               label="Ask about a building"
               fine="Free &middot; no account required &middot; no obligation"
+              variant="light"
             />
           </header>
 

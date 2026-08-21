@@ -187,6 +187,7 @@ export default async function PreconstructionIndex() {
                   sourcePage="/preconstruction"
                   label="Get my top 10 buildings"
                   fine="Free consultation &middot; no account required &middot; no obligation"
+                  variant="light"
                 />
               </header>
 
@@ -222,7 +223,7 @@ export default async function PreconstructionIndex() {
             <aside className={styles.introCta} aria-label="Request a consultation">
               <InquiryForm
                 source="/preconstruction"
-                intent="finance"
+                intent="preconstruction"
                 heading="Get your top 10 buildings"
                 buttonLabel="Start with a free consultation"
                 /* INTERIM — pending Jim's final wording. lib/disclosures.ts */

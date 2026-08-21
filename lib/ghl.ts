@@ -40,6 +40,8 @@ export interface GhlLead {
   sourcePage: string | null;
   /** Raw ?record= token — a buildings id, or a precon slug. */
   recordId: string | null;
+  /** Qualifier answers from the multi-step modal, if any. */
+  answers: Record<string, unknown> | null;
 }
 
 export type GhlResult =
@@ -137,10 +139,46 @@ export function leadNote(lead: GhlLead): string {
       ? `Record: https://soflocondoverify.com/building/${lead.buildingId}`
       : null,
     lead.sourcePage ? `From: ${lead.sourcePage}` : null,
+    lead.answers ? `\nQualifier: ${answersSummary(lead.answers)}` : null,
     lead.message ? `\nMessage:\n${lead.message}` : null,
   ]
     .filter(Boolean)
     .join("\n");
+}
+
+/**
+ * One-line readable summary of the qualifier answers for the GHL note.
+ * e.g. "Found a unit · Investment / rental · $1.2M · 20–25% down · Not yet
+ * pre-approved · 1–3 months · concerns: Reserves / budget, Insurance"
+ */
+function answersSummary(answers: Record<string, unknown>): string {
+  const parts: string[] = [];
+
+  for (const [key, value] of Object.entries(answers)) {
+    if (key === "building") continue; // already in the Building: line
+    if (value == null) continue;
+
+    if (typeof value === "string") {
+      parts.push(value);
+    } else if (typeof value === "number") {
+      // Price slider
+      parts.push(fmtPrice(value));
+    } else if (Array.isArray(value) && value.length > 0) {
+      parts.push(value.join(", "));
+    } else if (typeof value === "object" && "q" in (value as Record<string, unknown>)) {
+      // building-type object, skip (handled above)
+    }
+  }
+
+  return parts.join(" · ") || "(none)";
+}
+
+function fmtPrice(n: number): string {
+  if (n >= 1_000_000) {
+    const m = n / 1_000_000;
+    return "$" + (m % 1 === 0 ? m : m.toFixed(1)) + "M";
+  }
+  return "$" + Math.round(n / 1_000) + "K";
 }
 
 /** The values to write, keyed by logical field name. Empties are dropped. */

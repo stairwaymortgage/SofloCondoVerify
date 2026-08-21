@@ -205,6 +205,7 @@ export async function POST(request: Request) {
     message: note || null,
     sourcePage,
     recordId,
+    answers,
   });
 
   if (ghl.status === "synced") {
