@@ -83,6 +83,10 @@ const FIELD_KEYS = {
   message: "contact.message",
   source_page: "contact.source_page",
   record_id: "contact.record_id",
+  price_range: "contact.price_range",
+  financing: "contact.financing",
+  purpose: "contact.purpose",
+  timeline_sfcv: "contact.timeline_sfcv",
 } as const;
 
 type FieldName = keyof typeof FIELD_KEYS;
@@ -181,6 +185,82 @@ function fmtPrice(n: number): string {
   return "$" + Math.round(n / 1_000) + "K";
 }
 
+/* ---------------------------------------- answer → custom-field helpers */
+
+/** Safely pull a string answer, or undefined. */
+function ans(answers: Record<string, unknown> | null, key: string): string | undefined {
+  if (!answers) return undefined;
+  const v = answers[key];
+  return typeof v === "string" && v ? v : undefined;
+}
+
+/** Safely pull a number answer, or undefined. */
+function ansNum(answers: Record<string, unknown> | null, key: string): number | undefined {
+  if (!answers) return undefined;
+  const v = answers[key];
+  return typeof v === "number" ? v : undefined;
+}
+
+/**
+ * Extract the price_range value from the answers object.
+ * Present for: finance (buyers), foreign-national, preconstruction.
+ */
+function extractPriceRange(answers: Record<string, unknown> | null): string | undefined {
+  const price = ansNum(answers, "price");
+  return price != null ? fmtPrice(price) : undefined;
+}
+
+/**
+ * Extract the timeline_sfcv value. The answer key differs per flow:
+ *   buyers / foreign-national / sell / check-building → answers.timeline
+ *   preconstruction → answers.delivery
+ *   board → answers.urgency
+ */
+function extractTimeline(
+  intent: IntentValue,
+  answers: Record<string, unknown> | null
+): string | undefined {
+  if (intent === "preconstruction") return ans(answers, "delivery");
+  if (intent === "board") return ans(answers, "urgency");
+  return ans(answers, "timeline");
+}
+
+/**
+ * Extract the financing value. Composed differently per flow:
+ *   finance (buyers) → "down · preapp", e.g. "20–25% down · not pre-approved"
+ *   foreign-national  → answers.down
+ *   preconstruction   → answers.finance
+ *   sell / check-building / board → not applicable
+ */
+function extractFinancing(
+  intent: IntentValue,
+  answers: Record<string, unknown> | null
+): string | undefined {
+  if (intent === "finance") {
+    const down = ans(answers, "down");
+    const preapp = ans(answers, "preapp");
+    if (!down && !preapp) return undefined;
+    return [down, preapp].filter(Boolean).join(" · ");
+  }
+  if (intent === "foreign-national") return ans(answers, "down");
+  if (intent === "preconstruction") return ans(answers, "finance");
+  return undefined;
+}
+
+/**
+ * Extract the purpose value.
+ * Present for: finance (buyers), foreign-national, preconstruction.
+ */
+function extractPurpose(
+  intent: IntentValue,
+  answers: Record<string, unknown> | null
+): string | undefined {
+  if (intent === "finance" || intent === "foreign-national" || intent === "preconstruction") {
+    return ans(answers, "purpose");
+  }
+  return undefined;
+}
+
 /** The values to write, keyed by logical field name. Empties are dropped. */
 function fieldValues(lead: GhlLead): Partial<Record<FieldName, string>> {
   const values: Partial<Record<FieldName, string>> = {
@@ -191,6 +271,20 @@ function fieldValues(lead: GhlLead): Partial<Record<FieldName, string>> {
   if (lead.message) values.message = lead.message;
   if (lead.sourcePage) values.source_page = lead.sourcePage;
   if (lead.recordId) values.record_id = lead.recordId;
+
+  // Qualifier-answer fields — only set when the source answer exists.
+  const pr = extractPriceRange(lead.answers);
+  if (pr) values.price_range = pr;
+
+  const tl = extractTimeline(lead.intent, lead.answers);
+  if (tl) values.timeline_sfcv = tl;
+
+  const fi = extractFinancing(lead.intent, lead.answers);
+  if (fi) values.financing = fi;
+
+  const pu = extractPurpose(lead.intent, lead.answers);
+  if (pu) values.purpose = pu;
+
   return values;
 }
 
