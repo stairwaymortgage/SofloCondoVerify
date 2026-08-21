@@ -27,19 +27,13 @@
   padding: 3px 7px;
 }
 
-/* ---- hero + leverage + CTA ----
-   Two tracks on desktop: the pitch on the left, the way to answer it on the
-   right. Only the hero and the leverage block share the viewport with the
-   form — the category and remote blocks sit below, because four panels in
-   one screen would leave none of them readable. */
+/* ---- hero + leverage ----
+   Single column: the hero CTA button lives inside the hero header. */
 .intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 384px;
-  gap: 18px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
 }
 .introMain { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.introCta { min-width: 0; }
 
 /* Page-only trims so hero + leverage + form land inside one 1440x900
    viewport. The class is doubled to raise specificity: audience.module.css
@@ -140,7 +134,6 @@
 .memberLink:hover { text-decoration: underline; }
 
 @media (max-width: 1040px) {
-  .intro { grid-template-columns: minmax(0, 1fr); }
   .duo { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 760px) {

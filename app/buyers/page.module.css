@@ -25,20 +25,14 @@
   padding: 3px 7px;
 }
 
-/* ---- hero + tiers + CTA ----
-   Two tracks on desktop: the pitch on the left, the way to answer it on the
-   right. The right track is a fixed 384px so the three tiers keep a usable
-   row width instead of both columns shrinking together. The point of the
-   grid is that all three land in one 1440px viewport — someone who reads the
-   tiers and wants to act should not have to go looking for the form. */
+/* ---- hero + tiers ----
+   Single column: the hero CTA button lives inside the hero header, so the
+   intro no longer needs a second grid column for the old aside form. */
 .intro {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 384px;
-  gap: 18px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
 }
 .introMain { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-.introCta { min-width: 0; }
 
 /* Buyers-only trims, and the reason they exist: hero + tiers + form have to
    land inside one 1440x900 viewport. These override audience.module.css for
@@ -126,9 +120,6 @@
 .memberLink { font-size: 12.5px; color: var(--teal); text-decoration: none; overflow-wrap: anywhere; }
 .memberLink:hover { text-decoration: underline; }
 
-@media (max-width: 1040px) {
-  .intro { grid-template-columns: minmax(0, 1fr); }
-}
 @media (max-width: 760px) {
   .team { grid-template-columns: minmax(0, 1fr); }
   .tierList { grid-template-columns: minmax(0, 1fr); }

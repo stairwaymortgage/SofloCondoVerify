@@ -1,33 +1,40 @@
 /* Shared hero CTA button + fine print.
  *
  * Two variants:
- *   - "dark" (default): hero sits on --mast. Button is bold, solid teal-l
- *     on dark, maximum contrast.
- *   - "light": hero sits on --panel. Button is bold, solid --teal on white.
+ *   - "dark" (default): hero sits on --mast. Bold teal-l button, high
+ *     contrast, unmissable on the dark ground.
+ *   - "light": hero sits on --panel. Bold teal button on white.
  *
  * Both are large, prominent, clearly the primary action in the hero.
- * Min 48px tall for mobile tap target. Full-width at 375px.
+ * Min 52px tall for generous mobile tap target.
  * Teal for actions, never green. */
 
 /* ---- dark variant (--mast hero background) ---- */
 .heroBtn {
-  display: block;
-  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
   background: var(--teal-l);
   color: var(--mast-2);
   text-decoration: none;
   font-family: inherit;
   font-weight: 800;
-  font-size: 16px;
-  padding: 16px 32px;
-  border: 2px solid var(--teal-l);
+  font-size: 17px;
+  padding: 18px 36px;
+  border: 2.5px solid var(--teal-l);
   cursor: pointer;
-  text-align: center;
   letter-spacing: -0.01em;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
 }
 .heroBtn:hover {
   background: #fff;
   border-color: #fff;
+  transform: translateY(-1px);
+}
+.heroBtn:active {
+  transform: translateY(0);
 }
 .heroBtn:focus-visible {
   outline: 2px solid var(--teal-l);
@@ -37,28 +44,37 @@
 .heroFine {
   font-size: 11.5px;
   color: #93aaab;
-  margin-top: 10px;
+  margin-top: 12px;
 }
 
 /* ---- light variant (--panel hero background) ---- */
 .heroBtnLight {
-  display: block;
-  margin-top: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
   background: var(--teal);
   color: #fff;
   text-decoration: none;
   font-family: inherit;
   font-weight: 800;
-  font-size: 16px;
-  padding: 16px 32px;
-  border: 2px solid var(--teal);
+  font-size: 17px;
+  padding: 18px 36px;
+  border: 2.5px solid var(--teal);
   cursor: pointer;
-  text-align: center;
   letter-spacing: -0.01em;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s, box-shadow 0.15s;
 }
 .heroBtnLight:hover {
   background: #0c5a63;
   border-color: #0c5a63;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px -8px rgba(15, 109, 120, 0.4);
+}
+.heroBtnLight:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 .heroBtnLight:focus-visible {
   outline: 2px solid var(--teal);
@@ -68,7 +84,19 @@
 .heroFineLight {
   font-size: 11.5px;
   color: var(--ink-3);
-  margin-top: 10px;
+  margin-top: 12px;
+}
+
+/* ---- arrow icon ---- */
+.arrow {
+  width: 18px;
+  height: 18px;
+  flex: none;
+  transition: transform 0.15s;
+}
+.heroBtn:hover .arrow,
+.heroBtnLight:hover .arrow {
+  transform: translateX(3px);
 }
 
 /* ---- mobile: full-width, generous tap target ---- */
@@ -77,6 +105,6 @@
   .heroBtnLight {
     width: 100%;
     padding: 18px 24px;
-    font-size: 15px;
+    font-size: 16px;
   }
 }

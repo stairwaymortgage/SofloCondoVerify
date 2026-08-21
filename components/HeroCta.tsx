@@ -15,9 +15,9 @@ export interface HeroCtaProps {
   fine: string;
   /**
    * Visual variant.
-   * - "dark" (default): hero sits on --mast background — button is light
-   *   teal on dark. Used by /buyers, /sellers, /foreign-buyers, /for-boards.
-   * - "light": hero sits on --panel background — button is solid teal on
+   * - "dark" (default): hero sits on --mast background — button is bold
+   *   teal-l on dark. Used by /buyers, /sellers, /foreign-buyers, /for-boards.
+   * - "light": hero sits on --panel background — button is bold teal on
    *   white. Used by /preconstruction, /associations.
    */
   variant?: "dark" | "light";
@@ -38,22 +38,32 @@ export default function HeroCta({
 }: HeroCtaProps) {
   const [open, setOpen] = useState(false);
 
+  const isLight = variant === "light";
+
   return (
     <>
       <button
-        className={
-          variant === "light" ? styles.heroBtnLight : styles.heroBtn
-        }
+        className={isLight ? styles.heroBtnLight : styles.heroBtn}
         onClick={() => setOpen(true)}
         type="button"
       >
         {label}
+        <svg
+          className={styles.arrow}
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden
+        >
+          <path
+            d="M5 12h14M13 6l6 6-6 6"
+            stroke="currentColor"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
       </button>
-      <div
-        className={
-          variant === "light" ? styles.heroFineLight : styles.heroFine
-        }
-      >
+      <div className={isLight ? styles.heroFineLight : styles.heroFine}>
         {fine}
       </div>
       {open && (
