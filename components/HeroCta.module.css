@@ -1,0 +1,36 @@
+/* Shared hero CTA button + fine print.
+ *
+ * Visually identical to the button already shipping on /for-boards, lifted
+ * here so all six audience pages share one implementation rather than six
+ * copies of the same class.
+ *
+ * Sits on the dark --mast hero ground, so colours are light on dark.
+ * Action colour is --teal-l (light teal on dark), never --go. */
+
+.heroBtn {
+  display: inline-block;
+  margin-top: 18px;
+  background: var(--teal-l);
+  color: var(--mast-2);
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 13px 22px;
+  border: 1.5px solid var(--teal-l);
+  cursor: pointer;
+}
+.heroBtn:hover {
+  background: #fff;
+  border-color: #fff;
+}
+.heroBtn:focus-visible {
+  outline: 2px solid var(--teal-l);
+  outline-offset: 2px;
+}
+
+.heroFine {
+  font-size: 11.5px;
+  color: #93aaab;
+  margin-top: 10px;
+}

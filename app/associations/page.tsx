@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ConnectCta from "@/components/ConnectCta";
+import ConnectCtaModal from "@/components/ConnectCtaModal";
+import HeroCta from "@/components/HeroCta";
 import JsonLd from "@/components/JsonLd";
 import SiteFooter from "@/components/SiteFooter";
 import { getAssociations, groupByCity } from "@/lib/associations";
@@ -64,6 +65,12 @@ export default async function AssociationsIndex() {
               reserves, its finances or its safety, and an enforcement item here is
               a registration matter — never a structural finding.
             </p>
+            <HeroCta
+              intent="check-building"
+              sourcePage="/associations"
+              label="Ask about a building"
+              fine="Free &middot; no account required &middot; no obligation"
+            />
           </header>
 
           <div className={styles.stats}>
@@ -107,13 +114,14 @@ export default async function AssociationsIndex() {
             </main>
 
             <aside className={styles.side}>
-              <ConnectCta
+              <ConnectCtaModal
                 lede="Registration is one narrow record. If you need to know what a building's finances or structure actually look like, that takes a licensed professional — free, and no obligation."
                 actions={[
                   { intent: "check-building", label: "Ask about a building" },
                   { intent: "board", label: "I'm on a condo board" },
                   { intent: "finance", label: "Finance a purchase" },
                 ]}
+                sourcePage="/associations"
               />
             </aside>
           </div>

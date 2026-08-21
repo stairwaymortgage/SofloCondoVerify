@@ -3,7 +3,7 @@
 .ctaBody { padding: 16px; }
 .ctaLede { font-size: 13.5px; color: var(--ink-2); line-height: 1.55; }
 .ctaBtns { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
-.btnPrimary, .btnSecondary { display: block; text-align: center; text-decoration: none; font-weight: 700; font-size: 14px; padding: 11px 14px; border: 1.5px solid var(--teal); }
+.btnPrimary, .btnSecondary { display: block; text-align: center; text-decoration: none; font-family: inherit; font-weight: 700; font-size: 14px; padding: 11px 14px; border: 1.5px solid var(--teal); cursor: pointer; }
 .btnPrimary { background: var(--teal); color: #fff; }
 .btnPrimary:hover { background: #0c5a63; border-color: #0c5a63; }
 .btnSecondary { background: #fff; color: var(--link); }

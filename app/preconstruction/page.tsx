@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import JsonLd from "@/components/JsonLd";
 import SiteFooter from "@/components/SiteFooter";
+import HeroCta from "@/components/HeroCta";
 import InquiryForm from "@/components/InquiryForm";
 import { INTERIM_DISCLOSURE, consentText } from "@/lib/disclosures";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -181,6 +182,12 @@ export default async function PreconstructionIndex() {
                   for the crowd you actually want to be part of. We&rsquo;ll tell
                   you before you fly in.
                 </p>
+                <HeroCta
+                  intent="preconstruction"
+                  sourcePage="/preconstruction"
+                  label="Get my top 10 buildings"
+                  fine="Free consultation &middot; no account required &middot; no obligation"
+                />
               </header>
 
               {/* Numbered sequence, not three cards: one connecting rule

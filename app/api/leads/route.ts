@@ -43,6 +43,8 @@ interface LeadBody {
   consent_text?: unknown;
   /** Honeypot — real users never see this field, so a value means a bot. */
   company?: unknown;
+  /** Qualifier answers from the multi-step modal. Stored as JSONB. */
+  answers?: unknown;
 }
 
 function str(value: unknown, max: number): string {
@@ -130,6 +132,14 @@ export async function POST(request: Request) {
     ? str(body.consent_text, MAX.consentText) || null
     : null;
 
+  // Qualifier answers from the multi-step modal. Plain object or null.
+  const answers =
+    body.answers != null &&
+    typeof body.answers === "object" &&
+    !Array.isArray(body.answers)
+      ? (body.answers as Record<string, unknown>)
+      : null;
+
   let admin;
   let leadId: number;
 
@@ -155,9 +165,12 @@ export async function POST(request: Request) {
   // it is the record of the lead, and if it didn't land, nothing did.
   try {
     admin = createAdminClient();
+    // The `answers` JSONB column exists in the database; the generated types
+    // have not been regenerated to include it yet.
+    const fullRow = answers ? { ...row, answers } : row;
     const { data, error } = await admin
       .from("leads")
-      .insert(row)
+      .insert(fullRow as LeadInsert)
       .select("id")
       .single();
 

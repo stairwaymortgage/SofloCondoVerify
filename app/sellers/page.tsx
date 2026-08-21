@@ -3,7 +3,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ConnectCta from "@/components/ConnectCta";
+import ConnectCtaModal from "@/components/ConnectCtaModal";
+import HeroCta from "@/components/HeroCta";
 import InquiryForm from "@/components/InquiryForm";
 import JsonLd from "@/components/JsonLd";
 import SponsorSlot from "@/components/SponsorSlot";
@@ -155,6 +156,12 @@ export default async function Sellers() {
                   Your free value report covers more than price. It analyses the
                   building — because the building decides your buyer pool.
                 </div>
+                <HeroCta
+                  intent="sell"
+                  sourcePage="/sellers"
+                  label="Get my free value & building report"
+                  fine="Free to you &middot; no obligation"
+                />
               </header>
 
               {/* ---- buyer pools ----
@@ -423,13 +430,14 @@ export default async function Sellers() {
             </main>
 
             <aside className={styles.side}>
-              <ConnectCta
+              <ConnectCtaModal
                 lede="Tell us the building and what you're trying to do. We'll pass it to licensed professionals who work this kind of sale — agents who know the cash and portfolio buyer pool, and lenders who can tell you what's financeable. Free to you, no obligation."
                 actions={[
                   { intent: "sell", label: "Sell my unit" },
                   { intent: "check-building", label: "Check my building" },
                   { intent: "board", label: "I'm on the board" },
                 ]}
+                sourcePage="/sellers"
               />
 
               <SponsorSlot page="city" variant="card" />

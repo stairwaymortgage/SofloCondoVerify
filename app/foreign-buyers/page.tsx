@@ -3,7 +3,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ConnectCta from "@/components/ConnectCta";
+import ConnectCtaModal from "@/components/ConnectCtaModal";
+import HeroCta from "@/components/HeroCta";
 import InquiryForm from "@/components/InquiryForm";
 import JsonLd from "@/components/JsonLd";
 import SponsorSlot from "@/components/SponsorSlot";
@@ -182,6 +183,12 @@ export default async function ForeignBuyers() {
                   Whatever language you&rsquo;re most comfortable in, we have
                   someone on the team who speaks it — start to finish.
                 </div>
+                <HeroCta
+                  intent="foreign-national"
+                  sourcePage="/foreign-buyers"
+                  label="See if I qualify to finance from abroad"
+                  fine="Not a loan offer, a quote, or a commitment to lend"
+                />
               </header>
 
               {/* ---- leverage ----
@@ -553,13 +560,14 @@ export default async function ForeignBuyers() {
             </main>
 
             <aside className={styles.side}>
-              <ConnectCta
+              <ConnectCtaModal
                 lede="Tell us where you're buying from and what you're looking at. We'll pass it to a licensed loan officer who writes foreign-national loans and can give you real terms for your situation. Free to you, no obligation."
                 actions={[
                   { intent: "foreign-national", label: "Foreign-national loan" },
                   { intent: "check-building", label: "Check a building" },
                   { intent: "finance", label: "Finance a purchase" },
                 ]}
+                sourcePage="/foreign-buyers"
               />
 
               <SponsorSlot page="precon" variant="card" />

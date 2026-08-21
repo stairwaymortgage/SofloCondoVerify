@@ -3,7 +3,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ConnectCta from "@/components/ConnectCta";
+import ConnectCtaModal from "@/components/ConnectCtaModal";
+import HeroCta from "@/components/HeroCta";
 import InquiryForm from "@/components/InquiryForm";
 import JsonLd from "@/components/JsonLd";
 import SponsorSlot from "@/components/SponsorSlot";
@@ -162,6 +163,12 @@ export default async function Buyers() {
                   half of it. The building has to qualify for the financing you
                   want — and that&rsquo;s knowable before you tour a single unit.
                 </div>
+                <HeroCta
+                  intent="finance"
+                  sourcePage="/buyers"
+                  label="Check where I stand"
+                  fine="Free &middot; no account required &middot; not a loan offer or commitment to lend"
+                />
               </header>
 
               {/* ---- three tiers ----
@@ -451,13 +458,14 @@ export default async function Buyers() {
             </main>
 
             <aside className={styles.side}>
-              <ConnectCta
+              <ConnectCtaModal
                 lede="Tell us the building you're looking at. We'll pass it to a licensed loan officer who can check what the public record can't show — conventional standing included. Free to you, no obligation."
                 actions={[
                   { intent: "finance", label: "Finance a purchase" },
                   { intent: "check-building", label: "Check a building" },
                   { intent: "foreign-national", label: "Foreign-national loan" },
                 ]}
+                sourcePage="/buyers"
               />
 
               <SponsorSlot page="city" variant="card" />

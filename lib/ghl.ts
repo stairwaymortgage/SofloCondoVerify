@@ -66,6 +66,7 @@ const INTENT_OPTION: Record<IntentValue, string> = {
   sell: "Sell my unit",
   board: "HOA board help",
   "check-building": "Check a building",
+  preconstruction: "Preconstruction top 10",
 };
 
 /**

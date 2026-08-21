@@ -2,7 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import ConnectCta from "@/components/ConnectCta";
+import ConnectCtaModal from "@/components/ConnectCtaModal";
+import HeroCta from "@/components/HeroCta";
 import JsonLd from "@/components/JsonLd";
 import SiteFooter from "@/components/SiteFooter";
 import { supabase } from "@/lib/supabase";
@@ -85,12 +86,12 @@ export default async function ForBoards() {
               sold under asking. Getting the standing back is paperwork, and it is
               work someone can do for your association.
             </p>
-            <Link className={styles.heroBtn} href="/connect?intent=board">
-              Talk to someone about our building
-            </Link>
-            <div className={styles.heroFine}>
-              Free · no account required · no obligation
-            </div>
+            <HeroCta
+              intent="board"
+              sourcePage="/for-boards"
+              label="Talk to someone about our building"
+              fine="Free &middot; no account required &middot; no obligation"
+            />
           </header>
 
           <div className={styles.stats}>
@@ -237,13 +238,14 @@ export default async function ForBoards() {
             </main>
 
             <aside className={styles.side}>
-              <ConnectCta
+              <ConnectCtaModal
                 lede="Tell us what your building needs. We'll pass it to licensed professionals who handle association approvals and lender questionnaires — free to the association, no obligation."
                 actions={[
                   { intent: "board", label: "I'm on a condo board" },
                   { intent: "check-building", label: "Check our building" },
                   { intent: "finance", label: "Finance a purchase" },
                 ]}
+                sourcePage="/for-boards"
               />
 
               <nav className={styles.nearby} aria-label="Elsewhere">

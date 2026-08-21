@@ -25,6 +25,11 @@ export const INTENTS = [
     label: "I'm on a condo board",
     hint: "Your building needs its FHA, VA or lender standing sorted out.",
   },
+  {
+    value: "preconstruction",
+    label: "Preconstruction \u00b7 top 10",
+    hint: "A shortlist chosen to your budget and criteria.",
+  },
 ] as const;
 
 export type IntentValue = (typeof INTENTS)[number]["value"];
