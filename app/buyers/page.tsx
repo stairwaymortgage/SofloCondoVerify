@@ -5,13 +5,12 @@ import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ConnectCtaModal from "@/components/ConnectCtaModal";
 import HeroCta from "@/components/HeroCta";
-import InquiryForm from "@/components/InquiryForm";
 import JsonLd from "@/components/JsonLd";
 import SponsorSlot from "@/components/SponsorSlot";
 import SiteFooter from "@/components/SiteFooter";
 import { getFlaggedExamples, getStandingCounts } from "@/lib/audiences";
 import { COUNTIES, countyHref } from "@/lib/cities";
-import { INTERIM_DISCLOSURE, consentText } from "@/lib/disclosures";
+import { INTERIM_DISCLOSURE } from "@/lib/disclosures";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { num } from "@/lib/format";
 import styles from "../audience.module.css";
@@ -209,18 +208,6 @@ export default async function Buyers() {
               </section>
             </div>
 
-            <aside className={own.introCta} aria-label="Ask about financing">
-              <InquiryForm
-                source="/buyers"
-                intent="finance"
-                heading="Find out where you stand — and where the building stands"
-                buttonLabel="Talk to a South Florida condo specialist"
-                /* INTERIM — pending Jim's final wording. lib/disclosures.ts */
-                disclosure={INTERIM_DISCLOSURE}
-                /* TCPA consent, verbatim and identical on all four pages. */
-                consentText={consentText}
-              />
-            </aside>
           </div>
 
           <div className={`${styles.stats} ${own.statsDetached}`}>

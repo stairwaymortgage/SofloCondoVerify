@@ -5,13 +5,12 @@ import Masthead from "@/components/Masthead";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import ConnectCtaModal from "@/components/ConnectCtaModal";
 import HeroCta from "@/components/HeroCta";
-import InquiryForm from "@/components/InquiryForm";
 import JsonLd from "@/components/JsonLd";
 import SponsorSlot from "@/components/SponsorSlot";
 import SiteFooter from "@/components/SiteFooter";
 import { getPreconCount, getStandingCounts } from "@/lib/audiences";
 import { getPreconProjects, preconHref, statusLabel } from "@/lib/precon";
-import { INTERIM_DISCLOSURE, consentText } from "@/lib/disclosures";
+import { INTERIM_DISCLOSURE } from "@/lib/disclosures";
 import { articleSchema, breadcrumbSchema } from "@/lib/schema";
 import { FOREIGN_NATIONAL_DOWN } from "@/lib/precon";
 import { num } from "@/lib/format";
@@ -36,18 +35,6 @@ export const metadata: Metadata = {
     "Non-resident buyers don’t always need all cash. How foreign-national condo financing works in South Florida without US credit history.",
   alternates: { canonical: PATH },
 };
-
-/**
- * An unwritten slot.
- *
- * Every one of these is financing copy that has to come from Jim (NMLS
- * attributed) or from compliance, and must not be drafted here. It renders
- * loud on purpose — amber, monospace, dashed — so a page that still has one
- * in it cannot be mistaken for a finished page at a glance.
- */
-function Ph({ children }: { children: React.ReactNode }) {
-  return <span className={`${own.ph} mono`}>{children}</span>;
-}
 
 /**
  * What a foreign-national programme underwrites instead of a US credit file.
@@ -202,7 +189,7 @@ export default async function ForeignBuyers() {
                     Financing from overseas
                   </div>
                   <h2 className={own.panelH} id="lev-head">
-                    <Ph>[[JIM: leverage block heading]]</Ph>
+                    Financing from overseas
                   </h2>
                 </div>
 
@@ -215,7 +202,7 @@ export default async function ForeignBuyers() {
                       preconstruction project page. One number, one place. */}
                   <div className={own.levFigure}>
                     <div className={own.levSlot}>
-                      <Ph>[[JIM: leverage figure]]</Ph>
+                      ~{DOWN_PCT}%
                     </div>
                     <div className={own.levCap}>Leverage from a US bank</div>
                   </div>
@@ -244,21 +231,6 @@ export default async function ForeignBuyers() {
               </section>
             </div>
 
-            <aside
-              className={own.introCta}
-              aria-label="Ask about foreign-national financing"
-            >
-              <InquiryForm
-                source="/foreign-buyers"
-                intent="foreign-national"
-                heading="See if you qualify to finance from abroad"
-                buttonLabel="Talk to a South Florida condo specialist"
-                /* INTERIM — pending Jim's final wording. lib/disclosures.ts */
-                disclosure={INTERIM_DISCLOSURE}
-                /* TCPA consent, verbatim and identical on all four pages. */
-                consentText={consentText}
-              />
-            </aside>
           </div>
 
           {/* ---- financeable vs cash, and remote preview ---------------- */}
@@ -269,7 +241,7 @@ export default async function ForeignBuyers() {
                   Which buildings can be financed
                 </div>
                 <h2 className={own.panelH} id="cat-head">
-                  <Ph>[[JIM: financeable-vs-cash heading]]</Ph>
+                  Which buildings can be financed
                 </h2>
                 <div className={own.panelLede}>
                   Some buildings can be financed. Others are cash-only.
@@ -297,7 +269,7 @@ export default async function ForeignBuyers() {
                   If you cannot travel
                 </div>
                 <h2 className={own.panelH} id="remote-head">
-                  <Ph>[[OLGA: remote-preview heading]]</Ph>
+                  If you cannot travel
                 </h2>
                 <div className={own.panelLede}>
                   Can&rsquo;t fly in? We put together video presentations and

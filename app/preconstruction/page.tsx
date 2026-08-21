@@ -5,8 +5,6 @@ import Masthead from "@/components/Masthead";
 import JsonLd from "@/components/JsonLd";
 import SiteFooter from "@/components/SiteFooter";
 import HeroCta from "@/components/HeroCta";
-import InquiryForm from "@/components/InquiryForm";
-import { INTERIM_DISCLOSURE, consentText } from "@/lib/disclosures";
 import { breadcrumbSchema } from "@/lib/schema";
 import { num } from "@/lib/format";
 import {
@@ -220,18 +218,6 @@ export default async function PreconstructionIndex() {
               </div>
             </div>
 
-            <aside className={styles.introCta} aria-label="Request a consultation">
-              <InquiryForm
-                source="/preconstruction"
-                intent="preconstruction"
-                heading="Get your top 10 buildings"
-                buttonLabel="Start with a free consultation"
-                /* INTERIM — pending Jim's final wording. lib/disclosures.ts */
-                disclosure={INTERIM_DISCLOSURE}
-                /* TCPA consent, verbatim and identical on all four pages. */
-                consentText={consentText}
-              />
-            </aside>
           </div>
 
           {/* ---- team ---- */}
