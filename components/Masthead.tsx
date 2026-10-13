@@ -35,6 +35,7 @@ const NAV: NavItem[] = [
   { href: "/foreign-buyers", label: "Foreign buyers" },
   { href: "/associations", label: "Associations" },
   { href: "/for-boards", label: "For boards" },
+  { href: "/blog", label: "Guides" },
   {
     label: "Resources",
     children: [
