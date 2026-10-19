@@ -13,6 +13,7 @@ export function GET() {
       "/sitemap-developers.xml",
       "/sitemap-associations.xml",
       "/sitemap-resources.xml",
+      "/sitemap-blog.xml",
     ])
   );
 }
